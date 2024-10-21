@@ -1,0 +1,13 @@
+{
+  "artifacts" : [
+    {
+      "DgroupId": "ar.com.santanderrio.obp",
+      "DartifactId" : "obp-generated-ws-client",
+      "Dversion" : "1.0",
+      "Dpackaging": "jar",
+      "DrepositoryId": "obp-repository",
+      "Dfile": "/obp-generated-ws-client/target/obp-generated-ws-client-0.0.95-RELEASE.jar",
+      "DpomFile": "/obp-generated-ws-client/pom.xml"
+    }
+  ]
+}

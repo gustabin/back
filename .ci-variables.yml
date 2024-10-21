@@ -1,0 +1,90 @@
+#### USO DE .CI-VARIABLES Y TEMPLATES ####
+# Para que el uso de los templates funcione correctamente, es requerido que las variables definidas en este archivo cotnengan un valor. 
+# No se podrán modificar el nombre de las variables.
+# Solo se puede modificar el valor de la derecha, en caso de no modificar se tomara el valor que esta por defecto en este archivo.
+ 
+variables:
+#### Versión de Java a utilizar. Puede ser 8 u 11. ####
+  JAVA_VERSION: "8.0.372"
+  ARTIFACT_PATH: "obp-ear/target/"  #Ruta de donde dejas tu artefacto
+  LAST_VERSION: "false"
+  WAS_VERSION: "8.5"
+  LAST_VERSION: "true"
+  OBP: "true"
+  ci_new_artifact_file_reader: 1
+
+#### Variables: MVN test ####
+# Para realizar el test utilizando templates deben existir las 4 carpetas de test aunque esten vacías sino tendrá comportamiento errático.
+# Las 4 carpetas son: unit, integration, functional y smoke, también es necesario que tengan estos nombres. 
+# En este caso solo se puede editar: 'true' o 'false'. 
+# False: para evitar el test, así en caso de que no encuentre ningún test, el pipeline correra normalmente dejando una advertencia. 
+# True: el pipeline espera encontrar la carpeta con el test a correr, si no encuentra su carpeta el pipeline se detiene indicando error.
+  PARALLEL_TESTS: "false"
+  UNIT_TESTS_ARE_MANDATORY: "false"
+  FUNCTIONAL_TESTS_ARE_MANDATORY: "false"
+  INTEGRATION_TESTS_ARE_MANDATORY: "false"
+  SMOKE_TESTS_ARE_MANDATORY: "false"
+
+#### TOLERANCIA CERO ####
+# Este parametro impide que se pueda mergear el contenido de una rama si no supera los criterios establecidos en la calidad de codigo. 
+  TOLERANCIA_ZERO: "true"
+
+#### QUALITY SONAR ####
+  SONAR_EXCLUSIONS_FILES: "obp-generated-ws-client/**/*.*,obp-pom/**,obp-ear/**,obp-builder/**,obp-webapp/**,obp-servicios/**/*View.java,obp-servicios/**/*DTO.java,obp-servicios/**/*Entity.java,obp-servicios/**/*Test.java,obp-servicios/**/*IT.java,obp-servicios/**/integration-test/**/*.*,obp-servicios/**/entity/*.java,obp-servicios/**/entities/*.java,obp-servicios/**/scomp/client/domain/*,obp-servicios/**/scomp/client/*"
+  SONAR_TEST_PATH_JUNIT: ""
+
+#### DEPLOY WAS #####
+  EAR_PATH: "obp-ear/target/ws85_hbdesa0.ear"  #Especificar ruta donde esta el ear o war o JAR
+
+#### Servers list variables #### 
+# Reemplazar en cada caso con los servers de deploy WAS correspondiente a cada ambiente
+  SERVERS_DEV_1: 'wasobptbdesa.ar.bsch'
+  #SERVERS_DEV_2: ''
+  #SERVERS_DEV_3: ''
+  #SERVERS_DEV_4: ''
+  SERVERS_STG_1: 'wasobptbhomo.ar.bsch'
+  #SERVERS_STG_2: ''
+  #SERVERS_STG_3: ''
+  #SERVERS_STG_4: ''
+  SERVERS_PROD_1: 'int-wasobptbsrv01.ar.bsch'
+  SERVERS_PROD_2: 'int-wasobptbsrv02.ar.bsch'
+  SERVERS_PROD_3: 'ext-wasobptbsrv01.ar.bsch'
+  SERVERS_PROD_4: 'ext-wasobptbsrv02.ar.bsch'
+
+#### DEPLOY WAS 8.5 ####
+  WAS85: "true"
+
+### F5 BALANCEO #####
+  F5: 'true'
+  DMZ: 'true'
+  #HAVE_F5_DESA: 'false'
+  #HAVE_F5_STG: 'false'
+  #HAVE_F5_PROD: 'true'
+  
+  #Poner los members sin puerto
+  #SERVERS_DEV_MEMBERS_IMPARES: ''
+  #SERVERS_DEV_MEMBERS_PARES: ''
+  #SERVERS_STG_MEMBERS_IMPARES: ''
+  #SERVERS_STG_MEMBERS_PARES: ''
+  SERVERS_PROD_MEMBERS_IMPARES: 'wasobptbsrv01;wasobptbsrv03;wasobptbsrv05;wasobptbsrv07;wasobptbsrv09;wasobptbsrv11;wasobptbsrv13;wasobptbsrv15;wasobptbsrv17'
+  SERVERS_PROD_MEMBERS_PARES:   'wasobptbsrv02;wasobptbsrv04;wasobptbsrv06;wasobptbsrv08;wasobptbsrv10;wasobptbsrv12;wasobptbsrv14;wasobptbsrv16;wasobptbsrv18'
+  
+  #POOL_NAME_DEV_1: ''
+  #POOL_NAME_DEV_2: ''
+  #POOL_NAME_DEV_3: ''
+  #POOL_NAME_DEV_4: ''
+  #POOL_NAME_STG_1: ''
+  #POOL_NAME_STG_2: ''
+  #POOL_NAME_STG_3: ''
+  #POOL_NAME_STG_4: ''
+  POOL_NAME_PROD_1: 'pool_prod_tbanco_int'
+  POOL_NAME_PROD_2: 'pool_prod_tbanco_int'
+  POOL_NAME_PROD_3: 'pool_prod_mobp_ext'
+  POOL_NAME_PROD_4: 'pool_prod_mobp_ext'
+
+
+  #Configuración Nexus ####
+  TECHNOLOGY: "maven"
+  REPOSITORY_TYPE: "hosted"
+  #Nombre del repositorio, si no existe el repositorio lo crea
+  REPOSITORY_NAME: "obp-repository"

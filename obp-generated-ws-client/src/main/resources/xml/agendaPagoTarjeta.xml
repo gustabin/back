@@ -1,0 +1,14 @@
+<agendapagotarjeta>
+    <sucCta>01</sucCta>
+    <tipoCta>10</tipoCta>
+    <momentoPago></momentoPago>
+    <tipoPago></tipoPago>
+    <importePago></importePago>
+    <modoPago></modoPago>
+    <nroCta>000011000</nroCta>
+    <nroCtaTarjeta>9234020</nroCtaTarjeta>
+    <titularidad>Jose Guastavino</titularidad>
+    <nroTarjeta>102939392021'1010101010</nroTarjeta>
+    <sucCtaTarjeta>1902</sucCtaTarjeta>
+    <tipoTarjeta>VISA</tipoTarjeta>
+</agendapagotarjeta>

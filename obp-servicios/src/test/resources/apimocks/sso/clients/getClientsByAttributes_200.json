@@ -1,0 +1,142 @@
+[
+  {
+    "id": "33a9b634-87be-482f-988b-dfb273912b34",
+    "clientId": "pkce-test",
+    "name": "wallet-1",
+    "surrogateAuthRequired": false,
+    "enabled": true,
+    "alwaysDisplayInConsole": false,
+    "clientAuthenticatorType": "client-secret",
+    "redirectUris": [
+      "http://localhost:8082/auth/realms/santander/account"
+    ],
+    "webOrigins": [],
+    "notBefore": 0,
+    "bearerOnly": false,
+    "consentRequired": true,
+    "standardFlowEnabled": true,
+    "implicitFlowEnabled": false,
+    "directAccessGrantsEnabled": true,
+    "serviceAccountsEnabled": false,
+    "publicClient": false,
+    "frontchannelLogout": false,
+    "protocol": "openid-connect",
+    "attributes": {
+      "saml.force.post.binding": "false",
+      "saml.multivalued.roles": "false",
+      "frontchannel.logout.session.required": "false",
+      "oauth2.device.authorization.grant.enabled": "false",
+      "client_type": "wallet",
+      "backchannel.logout.revoke.offline.tokens": "false",
+      "saml.server.signature.keyinfo.ext": "false",
+      "use.refresh.tokens": "true",
+      "oidc.ciba.grant.enabled": "false",
+      "backchannel.logout.session.required": "true",
+      "client_credentials.use_refresh_token": "false",
+      "require.pushed.authorization.requests": "false",
+      "saml.client.signature": "false",
+      "client-type": "wallet",
+      "pkce.code.challenge.method": "S256",
+      "saml.allow.ecp.flow": "false",
+      "id.token.as.detached.signature": "false",
+      "saml.assertion.signature": "false",
+      "client.secret.creation.time": "1675349056",
+      "saml.encrypt": "false",
+      "login_theme": "base-with-attribute",
+      "saml.server.signature": "false",
+      "exclude.session.state.from.auth.response": "false",
+      "saml.artifact.binding": "false",
+      "saml_force_name_id_format": "false",
+      "tls.client.certificate.bound.access.tokens": "false",
+      "acr.loa.map": "{}",
+      "saml.authnstatement": "false",
+      "display.on.consent.screen": "false",
+      "token.response.type.bearer.lower-case": "false",
+      "saml.onetimeuse.condition": "false"
+    },
+    "authenticationFlowBindingOverrides": {
+      "browser": "1f3448fe-0b1b-4139-a663-86acc1e6cece"
+    },
+    "fullScopeAllowed": true,
+    "nodeReRegistrationTimeout": -1,
+    "protocolMappers": [
+      {
+        "id": "04071bd5-dc6b-4df6-86c8-957a75c816d4",
+        "name": "aud",
+        "protocol": "openid-connect",
+        "protocolMapper": "oidc-audience-mapper",
+        "consentRequired": false,
+        "config": {
+          "included.client.audience": "pkce-test",
+          "id.token.claim": "true",
+          "access.token.claim": "true",
+          "userinfo.token.claim": "true"
+        }
+      },
+      {
+        "id": "22f8ffd1-f0b8-42a0-aa30-ae295dd18292",
+        "name": "Trace Id",
+        "protocol": "openid-connect",
+        "protocolMapper": "trace-id-protocol-mapper",
+        "consentRequired": false,
+        "config": {
+          "id.token.claim": "true",
+          "access.token.claim": "true",
+          "claim.name": "trace_id",
+          "userinfo.token.claim": "true"
+        }
+      },
+      {
+        "id": "ac6dd790-bbb3-4612-a627-d86b0bc9ac5d",
+        "name": "Custom Issuer",
+        "protocol": "openid-connect",
+        "protocolMapper": "custom-issuer-protocol-mapper",
+        "consentRequired": false,
+        "config": {
+          "id.token.claim": "true",
+          "access.token.claim": "true",
+          "custom.issuer": "0072",
+          "userinfo.token.claim": "true"
+        }
+      },
+      {
+        "id": "400517d8-5889-4c1d-8d0c-58a6a85086ee",
+        "name": "CUIL as subject",
+        "protocol": "openid-connect",
+        "protocolMapper": "oidc-usermodel-attribute-mapper",
+        "consentRequired": false,
+        "config": {
+          "userinfo.token.claim": "true",
+          "user.attribute": "cuil",
+          "id.token.claim": "true",
+          "access.token.claim": "true",
+          "claim.name": "sub",
+          "jsonType.label": "String"
+        }
+      },
+      {
+        "id": "91b49dc8-35a8-4b82-9e54-f2c5b9d4b402",
+        "name": "Consented Accounts",
+        "protocol": "openid-connect",
+        "protocolMapper": "consented-accounts-protocol-mapper",
+        "consentRequired": false,
+        "config": {
+          "id.token.claim": "true",
+          "access.token.claim": "true",
+          "claim.name": "accounts",
+          "userinfo.token.claim": "true"
+        }
+      }
+    ],
+    "defaultClientScopes": [],
+    "optionalClientScopes": [
+      "offline_access",
+      "accounts.debit"
+    ],
+    "access": {
+      "view": true,
+      "configure": true,
+      "manage": true
+    }
+  }
+]

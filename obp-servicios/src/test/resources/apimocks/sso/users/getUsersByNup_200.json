@@ -1,0 +1,31 @@
+[
+  {
+    "id": "ff35bbfe-f192-4ada-9422-2b625bd98ecb",
+    "createdTimestamp": 1675348547459,
+    "username": "4506879",
+    "enabled": true,
+    "totp": false,
+    "emailVerified": false,
+    "attributes": {
+      "nup": [
+        "03007878"
+      ],
+      "pkce-test": [
+        "0720000788000006013640"
+      ],
+      "cuil": [
+        "20045068790"
+      ]
+    },
+    "disableableCredentialTypes": [],
+    "requiredActions": [],
+    "notBefore": 1677863966,
+    "access": {
+      "manageGroupMembership": true,
+      "view": true,
+      "mapRoles": true,
+      "impersonate": false,
+      "manage": true
+    }
+  }
+]

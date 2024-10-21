@@ -1,0 +1,5 @@
+{
+  "category": "validation_error",
+  "code": "bad.request",
+  "message": "\"nup\" is required"
+}

@@ -1,0 +1,457 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" 
+xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" 
+xmlns:tns1="http://exceptions.WSDelTarj.santanderrio.com.ar" 
+xmlns:intf="http://santanderrio.com.ar/WSDelTarj/" 
+xmlns:impl="http://santanderrio.com.ar/WSDelTarj/" 
+xmlns:apachesoap="http://xml.apache.org/xml-soap" 
+targetNamespace="http://santanderrio.com.ar/WSDelTarj/">
+
+<!--WSDL created by Apache Axis version: 1.3 Built on Oct 05, 2005 (05:23:37 
+EDT)-->
+
+
+
+<wsdl:types>
+
+
+<schema targetNamespace="http://santanderrio.com.ar/WSDelTarj/" 
+xmlns="http://www.w3.org/2001/XMLSchema">
+
+<import namespace="http://exceptions.WSDelTarj.santanderrio.com.ar"/>
+
+
+<element name="consultarTraza">
+
+
+<complexType>
+
+
+<sequence>
+
+<element name="in" type="impl:WSDelTarj_Request"/>
+
+</sequence>
+
+</complexType>
+
+</element>
+
+
+<complexType name="Item">
+
+
+<sequence>
+
+<element name="Sucursal" type="xsd:int"/>
+
+<element name="Cod_Prod" type="xsd:string" nillable="true"/>
+
+<element name="Nro_Id_Comp" type="xsd:long"/>
+
+<element name="Cod_Estado" type="xsd:string" nillable="true"/>
+
+<element name="TipoCuenta" type="xsd:string" nillable="true"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="ArrayOfItem">
+
+
+<sequence>
+
+<element name="item" type="impl:Item" minOccurs="0" maxOccurs="unbounded"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="Dato">
+
+
+<sequence>
+
+<element name="Nro_Pieza" type="xsd:int"/>
+
+<element name="Nro_Id_Componente" type="xsd:string" nillable="true"/>
+
+<element name="Lista" type="impl:ArrayOfItem" nillable="true"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="ArrayOfDato">
+
+
+<sequence>
+
+<element name="item" type="impl:Dato" minOccurs="0" maxOccurs="unbounded"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="WSDelTarj_Request">
+
+
+<sequence>
+
+<element name="Firma" type="xsd:string" nillable="true"/>
+
+<element name="CanalTipo" type="xsd:string" nillable="true"/>
+
+<element name="CanalID" type="xsd:string" nillable="true"/>
+
+<element name="SubcanalTipo" type="xsd:string" nillable="true"/>
+
+<element name="SubcanalID" type="xsd:string" nillable="true"/>
+
+<element name="NUP" type="xsd:string"/>
+
+<element name="TipoPersona" type="xsd:string" nillable="true"/>
+
+<element name="TipoID" type="xsd:string" nillable="true"/>
+
+<element name="IDCliente" type="xsd:string"/>
+
+<element name="FechaNac" type="xsd:string" nillable="true"/>
+
+<element name="Datos" type="impl:ArrayOfDato" nillable="true"/>
+
+</sequence>
+
+</complexType>
+
+
+<element name="consultarTrazaResponse">
+
+
+<complexType>
+
+
+<sequence>
+
+<element name="out" type="impl:WSDelTarj_Response"/>
+
+</sequence>
+
+</complexType>
+
+</element>
+
+
+<complexType name="Error">
+
+<sequence/>
+
+<attribute name="cod" type="xsd:string"/>
+
+<attribute name="desc" type="xsd:string"/>
+
+<attribute name="sistema" type="xsd:string"/>
+
+</complexType>
+
+
+<complexType name="ArrayOfError">
+
+
+<sequence>
+
+<element name="item" type="impl:Error" minOccurs="0" maxOccurs="unbounded"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="Evento">
+
+
+<sequence>
+
+<element name="Fecha" type="xsd:string" nillable="true"/>
+
+<element name="IdEstado" type="xsd:string" nillable="true"/>
+
+<element name="Estado" type="xsd:string" nillable="true"/>
+
+<element name="IdMotivo" type="xsd:string" nillable="true"/>
+
+<element name="Motivo" type="xsd:string" nillable="true"/>
+
+<element name="Sucursal" type="xsd:string" nillable="true"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="Pieza">
+
+
+<sequence>
+
+<element name="StatusPieza" type="xsd:int"/>
+
+<element name="ResStatusPieza" type="impl:ArrayOfError" nillable="true" 
+minOccurs="0" maxOccurs="1"/>
+
+<element name="NroPieza" type="xsd:int"/>
+
+<element name="CodProd" type="xsd:string" nillable="true" minOccurs="0" 
+maxOccurs="1"/>
+
+<element name="TipoCuenta" type="xsd:string" nillable="true" minOccurs="0" 
+maxOccurs="1"/>
+
+<element name="Med_Envi" type="xsd:string" nillable="true" minOccurs="0" 
+maxOccurs="1"/>
+
+<element name="NyAp" type="xsd:string" nillable="true" minOccurs="0" 
+maxOccurs="1"/>
+
+<element name="FecNac" type="xsd:string" nillable="true" minOccurs="0" 
+maxOccurs="1"/>
+
+<element name="TipoDocum" type="xsd:string" nillable="true" minOccurs="0" 
+maxOccurs="1"/>
+
+<element name="NroDocum" type="xsd:int" nillable="true" minOccurs="0" 
+maxOccurs="1"/>
+
+<element name="TipoPersona" type="xsd:string" nillable="true" minOccurs="0" 
+maxOccurs="1"/>
+
+<element name="BancaPieza" type="xsd:string" nillable="true" minOccurs="0" 
+maxOccurs="1"/>
+
+<element name="SucUbic" type="xsd:string" nillable="true" minOccurs="0" 
+maxOccurs="1"/>
+
+<element name="ConDelivery" type="xsd:string" nillable="true" minOccurs="0" 
+maxOccurs="1"/>
+
+<element name="CodEstadoActual" type="xsd:string" nillable="true" minOccurs="0" 
+maxOccurs="1"/>
+
+<element name="MotivoEstadoActual" type="xsd:int" nillable="true" minOccurs="0" 
+maxOccurs="1"/>
+
+<element name="FecCodEstadoActual" type="xsd:int" nillable="true" minOccurs="0" 
+maxOccurs="1"/>
+
+<element name="CodEstadoAnterior" type="xsd:string" nillable="true" 
+minOccurs="0" maxOccurs="1"/>
+
+<element name="UserId" type="xsd:string" nillable="true" minOccurs="0" 
+maxOccurs="1"/>
+
+<element name="PiezaAbierta" type="xsd:string" nillable="true" minOccurs="0" 
+maxOccurs="1"/>
+
+<element name="NroPiezaOrigen" type="xsd:string" nillable="true" minOccurs="0" 
+maxOccurs="1"/>
+
+<element name="Canal" type="xsd:string" nillable="true" minOccurs="0" 
+maxOccurs="1"/>
+
+<element name="CodCampania" type="xsd:string" nillable="true" minOccurs="0" 
+maxOccurs="1"/>
+
+<element name="CodMotivoEmi" type="xsd:int" nillable="true" minOccurs="0" 
+maxOccurs="1"/>
+
+<element name="CodPaq" type="xsd:string" nillable="true" minOccurs="0" 
+maxOccurs="1"/>
+
+<element name="TieneChequera" type="xsd:string" nillable="true" minOccurs="0" 
+maxOccurs="1"/>
+
+<element name="NroIdentProd" type="xsd:string" nillable="true" minOccurs="0" 
+maxOccurs="1"/>
+
+<element name="NroIdComponente" type="xsd:string" nillable="true" minOccurs="0" 
+maxOccurs="1"/>
+
+<element name="CanComp" type="xsd:string" nillable="true" minOccurs="0" 
+maxOccurs="1"/>
+
+<element name="AreaVariable" type="xsd:string" nillable="true" minOccurs="0" 
+maxOccurs="1"/>
+
+<element name="CodSucAnt" type="xsd:string" nillable="true" minOccurs="0" 
+maxOccurs="1"/>
+
+<element name="FechaCodEstAnt" type="xsd:string" nillable="true" minOccurs="0" 
+maxOccurs="1"/>
+
+<element name="CodTransp" type="xsd:string" nillable="true" minOccurs="0" 
+maxOccurs="1"/>
+
+<element name="StatusEvento" type="xsd:int" nillable="true" minOccurs="0" 
+maxOccurs="1"/>
+
+<element name="StatusEvento_sub-code" type="xsd:string" nillable="true" 
+minOccurs="0" maxOccurs="1"/>
+
+<element name="ResStatusEvento" type="impl:ArrayOfError" nillable="true" 
+minOccurs="0" maxOccurs="1"/>
+
+<element name="Evento" type="impl:Evento" nillable="true" minOccurs="0" 
+maxOccurs="1"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="ArrayOfPieza">
+
+
+<sequence>
+
+<element name="item" type="impl:Pieza" minOccurs="0" maxOccurs="unbounded"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="WSDelTarj_Response">
+
+
+<sequence>
+
+<element name="codRetorno" type="xsd:int"/>
+
+<element name="Errores" type="impl:ArrayOfError" nillable="true" minOccurs="0" 
+maxOccurs="1"/>
+
+<element name="Piezas" type="impl:ArrayOfPieza" nillable="true" minOccurs="0" 
+maxOccurs="1"/>
+
+</sequence>
+
+</complexType>
+
+<element name="fault" type="tns1:SecurityException"/>
+
+</schema>
+
+
+<schema targetNamespace="http://exceptions.WSDelTarj.santanderrio.com.ar" 
+xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+<import namespace="http://santanderrio.com.ar/WSDelTarj/"/>
+
+
+<complexType name="SecurityException">
+
+<sequence/>
+
+</complexType>
+
+</schema>
+
+</wsdl:types>
+
+
+<wsdl:message name="consultarTrazaResponse">
+
+<wsdl:part name="parameters" element="impl:consultarTrazaResponse"> </wsdl:part>
+
+</wsdl:message>
+
+
+<wsdl:message name="consultarTrazaRequest">
+
+<wsdl:part name="parameters" element="impl:consultarTraza"> </wsdl:part>
+
+</wsdl:message>
+
+
+<wsdl:message name="SecurityException">
+
+<wsdl:part name="fault" element="impl:fault"> </wsdl:part>
+
+</wsdl:message>
+
+
+<wsdl:portType name="WSDelTarj">
+
+
+<wsdl:operation name="consultarTraza">
+
+<wsdl:input name="consultarTrazaRequest" message="impl:consultarTrazaRequest"> 
+</wsdl:input>
+
+<wsdl:output name="consultarTrazaResponse" 
+message="impl:consultarTrazaResponse"> </wsdl:output>
+
+<wsdl:fault name="SecurityException" message="impl:SecurityException"> 
+</wsdl:fault>
+
+</wsdl:operation>
+
+</wsdl:portType>
+
+
+<wsdl:binding name="WSDelTarjSOAPSoapBinding" type="impl:WSDelTarj">
+
+<wsdlsoap:binding transport="http://schemas.xmlsoap.org/soap/http" 
+style="document"/>
+
+
+<wsdl:operation name="consultarTraza">
+
+<wsdlsoap:operation 
+soapAction="http://santanderrio.com.ar/WSDelTarj/consultarTraza"/>
+
+
+<wsdl:input name="consultarTrazaRequest">
+
+<wsdlsoap:body use="literal"/>
+
+</wsdl:input>
+
+
+<wsdl:output name="consultarTrazaResponse">
+
+<wsdlsoap:body use="literal"/>
+
+</wsdl:output>
+
+
+<wsdl:fault name="SecurityException">
+
+<wsdlsoap:fault name="SecurityException" use="literal"/>
+
+</wsdl:fault>
+
+</wsdl:operation>
+
+</wsdl:binding>
+
+
+<wsdl:service name="WSDelTarj">
+
+
+<wsdl:port name="WSDelTarjSOAP" binding="impl:WSDelTarjSOAPSoapBinding">
+
+<wsdlsoap:address 
+location="http://wasdesainet01.ar.bsch:9084/WSDELTARJ/services/WSDelTarjSOAP"/>
+
+</wsdl:port>
+
+</wsdl:service>
+
+</wsdl:definitions>

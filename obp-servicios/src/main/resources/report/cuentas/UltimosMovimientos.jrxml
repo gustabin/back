@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.0.0.final using JasperReports Library version 6.0.0  -->
+<!-- 2019-09-16T16:30:25 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="UltimosMovimientos" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="782" leftMargin="30" rightMargin="30" topMargin="15" bottomMargin="10" uuid="d6cb6342-1882-4f9d-80eb-5c99bf014dcc">
+	<property name="ireport.zoom" value="1.100000000000005"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="defaultFont" vAlign="Middle" isBlankWhenNull="true" fontName="Open Sans" fontSize="8">
+		<paragraph leftIndent="4"/>
+	</style>
+	<style name="boldFont" style="defaultFont" fontName="Open Sans Light" isBold="true"/>
+	<style name="redFont" style="boldFont" forecolor="#800000" hAlign="Center"/>
+	<style name="titleFont" style="defaultFont" fontSize="10" isBold="true"/>
+	<style name="numberFont" style="defaultFont" hAlign="Right">
+		<paragraph leftIndent="0" rightIndent="4"/>
+	</style>
+	<style name="footerFont" style="defaultFont" forecolor="#666666"/>
+	<subDataset name="cabecera" uuid="7301cec1-ef86-4ec3-9488-43fcd6d3ff0c">
+		<field name="label" class="java.lang.String"/>
+		<field name="value" class="java.lang.String"/>
+	</subDataset>
+	<subDataset name="movimientos" uuid="7301cec1-ef86-4ec3-9488-43fcd6d3ff0c">
+		<parameter name="MONEDA" class="java.lang.String"/>
+		<parameter name="TIPO_CTA" class="java.lang.String"/>
+		<parameter name="TIPO_CTA2" class="java.lang.String"/>
+		<parameter name="TIENE_MULTIPLE_CTA" class="java.lang.Boolean"/>
+		<queryString language="SQL">
+			<![CDATA[]]>
+		</queryString>
+		<field name="fechaHora" class="java.lang.String"/>
+		<field name="sucursalOrigen" class="java.lang.String"/>
+		<field name="descripcion" class="java.lang.String"/>
+		<field name="referencia" class="java.lang.String"/>
+		<field name="saldo" class="java.lang.Double"/>
+		<field name="importe" class="java.lang.Double"/>
+		<field name="isCajaDeAhoroEnPesos" class="java.lang.Boolean"/>
+		<field name="isCuentaCorrienteEnPesos" class="java.lang.Boolean"/>
+		<field name="isMovimientoEnDolares" class="java.lang.Boolean"/>
+		<field name="isDelDia" class="java.lang.Boolean"/>
+	</subDataset>
+	<parameter name="CABECERA" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="MOVIMIENTOS" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="LOGO" class="java.lang.String"/>
+	<parameter name="FECHA_ACTUAL" class="java.lang.String"/>
+	<parameter name="MONEDA" class="java.lang.String"/>
+	<parameter name="TIPO_CTA" class="java.lang.String"/>
+	<parameter name="TIPO_CTA2" class="java.lang.String"/>
+	<parameter name="TIENE_MULTIPLE_CTA" class="java.lang.Boolean"/>
+	<parameter name="LEGAL_PIE" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="33" splitType="Stretch">
+			<image scaleImage="RetainShape">
+				<reportElement stretchType="RelativeToBandHeight" mode="Transparent" x="0" y="1" width="227" height="31" uuid="9475d590-ae56-4c02-93ab-4962d6b4b75d"/>
+				<imageExpression><![CDATA[$P{LOGO}]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement positionType="FixRelativeToBottom" x="432" y="10" width="338" height="20" forecolor="#000000" uuid="73c3c53f-217c-4d8c-b80d-49523734ef27"/>
+				<textElement textAlignment="Right" markup="none">
+					<font fontName="Open Sans" size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{FECHA_ACTUAL}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="0" y="32" width="782" height="1" uuid="905a195b-7f5e-4744-acf1-c47260c7cec8"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+		</band>
+	</title>
+	<detail>
+		<band height="40" splitType="Stretch">
+			<componentElement>
+				<reportElement key="table" style="table" stretchType="RelativeToBandHeight" x="0" y="10" width="782" height="20" uuid="0b722cb1-5ae6-4437-90a5-09d344e92a0c"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="cabecera" uuid="8479df18-d4e3-4103-bda9-0fe39e78992f">
+						<dataSourceExpression><![CDATA[$P{CABECERA}]]></dataSourceExpression>
+					</datasetRun>
+					<jr:column width="70" uuid="68bc9d78-7f27-480e-8823-69c628c0a2f1">
+						<jr:detailCell style="table" height="20" rowSpan="1">
+							<textField isStretchWithOverflow="true">
+								<reportElement style="boldFont" stretchType="RelativeToBandHeight" x="0" y="0" width="70" height="20" uuid="f1de366a-b36f-4200-9b1e-7a0009be5373"/>
+								<textFieldExpression><![CDATA[$F{label}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="165" uuid="dbff917c-c4e5-424a-a958-089108ed2e89">
+						<jr:detailCell style="table" height="20" rowSpan="1">
+							<textField isStretchWithOverflow="true">
+								<reportElement style="defaultFont" stretchType="RelativeToBandHeight" x="0" y="0" width="165" height="20" uuid="f1de366a-b36f-4200-9b1e-7a0009be5373"/>
+								<textFieldExpression><![CDATA[$F{value}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+		<band height="65" splitType="Stretch">
+			<textField>
+				<reportElement style="titleFont" x="0" y="0" width="782" height="20" uuid="fb820d69-63ad-4116-9b19-4cd62a45d31b"/>
+				<textFieldExpression><![CDATA["Últimos movimientos"]]></textFieldExpression>
+			</textField>
+			<componentElement>
+				<reportElement key="table2" style="table" stretchType="RelativeToBandHeight" x="0" y="25" width="782" height="20" uuid="0b722cb1-5ae6-4437-90a5-09d344e92a0c"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" whenNoDataType="AllSectionsNoDetail">
+					<datasetRun subDataset="movimientos" uuid="d6024b78-d1b2-42f2-80c1-e657004f6234">
+						<datasetParameter name="MONEDA">
+							<datasetParameterExpression><![CDATA[$P{MONEDA}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="TIPO_CTA">
+							<datasetParameterExpression><![CDATA[$P{TIPO_CTA}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="TIPO_CTA2">
+							<datasetParameterExpression><![CDATA[$P{TIPO_CTA2}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="TIENE_MULTIPLE_CTA">
+							<datasetParameterExpression><![CDATA[$P{TIENE_MULTIPLE_CTA}]]></datasetParameterExpression>
+						</datasetParameter>
+						<dataSourceExpression><![CDATA[$P{MOVIMIENTOS}]]></dataSourceExpression>
+					</datasetRun>
+					<jr:column width="75" uuid="68bc9d78-7f27-480e-8823-69c628c0a2f1">
+						<jr:tableHeader style="table" height="30" rowSpan="1">
+							<textField isStretchWithOverflow="true">
+								<reportElement style="redFont" stretchType="RelativeToBandHeight" x="0" y="0" width="75" height="30" uuid="f1de366a-b36f-4200-9b1e-7a0009be5373"/>
+								<textFieldExpression><![CDATA["Fecha"]]></textFieldExpression>
+							</textField>
+						</jr:tableHeader>
+						<jr:detailCell style="table" height="20" rowSpan="1">
+							<textField isStretchWithOverflow="true">
+								<reportElement style="defaultFont" stretchType="RelativeToBandHeight" x="0" y="0" width="75" height="20" uuid="f1de366a-b36f-4200-9b1e-7a0009be5373"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{fechaHora}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="111" uuid="dbff917c-c4e5-424a-a958-089108ed2e89">
+						<jr:tableHeader style="table" height="30" rowSpan="1">
+							<textField isStretchWithOverflow="true">
+								<reportElement style="redFont" stretchType="RelativeToBandHeight" x="0" y="0" width="111" height="30" uuid="f1de366a-b36f-4200-9b1e-7a0009be5373"/>
+								<textFieldExpression><![CDATA["Sucursal origen"]]></textFieldExpression>
+							</textField>
+						</jr:tableHeader>
+						<jr:detailCell style="table" height="20" rowSpan="1">
+							<textField isStretchWithOverflow="true">
+								<reportElement style="defaultFont" stretchType="RelativeToBandHeight" x="0" y="0" width="111" height="20" uuid="f1de366a-b36f-4200-9b1e-7a0009be5373"/>
+								<textFieldExpression><![CDATA[$F{sucursalOrigen}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="345" uuid="dbff917c-c4e5-424a-a958-089108ed2e89">
+						<jr:tableHeader style="table" height="30" rowSpan="1">
+							<textField isStretchWithOverflow="true">
+								<reportElement style="redFont" stretchType="RelativeToBandHeight" x="0" y="0" width="345" height="30" uuid="f1de366a-b36f-4200-9b1e-7a0009be5373"/>
+								<textFieldExpression><![CDATA["Descripción"]]></textFieldExpression>
+							</textField>
+						</jr:tableHeader>
+						<jr:detailCell style="table" height="20" rowSpan="1">
+							<textField isStretchWithOverflow="true">
+								<reportElement style="defaultFont" stretchType="RelativeToBandHeight" x="0" y="0" width="345" height="20" uuid="f1de366a-b36f-4200-9b1e-7a0009be5373"/>
+								<textFieldExpression><![CDATA[$F{descripcion}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="50" uuid="dbff917c-c4e5-424a-a958-089108ed2e89">
+						<jr:tableHeader style="table" height="30" rowSpan="1">
+							<textField isStretchWithOverflow="true">
+								<reportElement style="redFont" stretchType="RelativeToBandHeight" x="0" y="0" width="50" height="30" uuid="f1de366a-b36f-4200-9b1e-7a0009be5373"/>
+								<textFieldExpression><![CDATA["Referencia"]]></textFieldExpression>
+							</textField>
+						</jr:tableHeader>
+						<jr:detailCell style="table" height="20" rowSpan="1">
+							<textField isStretchWithOverflow="true">
+								<reportElement style="numberFont" stretchType="RelativeToBandHeight" x="0" y="0" width="50" height="20" uuid="f1de366a-b36f-4200-9b1e-7a0009be5373"/>
+								<textFieldExpression><![CDATA[$F{referencia}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="70" uuid="dbff917c-c4e5-424a-a958-089108ed2e89">
+						<jr:tableHeader style="table" height="30" rowSpan="1">
+							<textField isStretchWithOverflow="true">
+								<reportElement style="redFont" stretchType="RelativeToBandHeight" x="0" y="0" width="70" height="30" uuid="f1de366a-b36f-4200-9b1e-7a0009be5373"/>
+								<textFieldExpression><![CDATA[$P{TIPO_CTA}]]></textFieldExpression>
+							</textField>
+						</jr:tableHeader>
+						<jr:detailCell style="table" height="20" rowSpan="1">
+							<textField isStretchWithOverflow="true" pattern="#,##0.00;-#,##0.00">
+								<reportElement style="numberFont" stretchType="RelativeToBandHeight" x="0" y="0" width="70" height="20" uuid="f1de366a-b36f-4200-9b1e-7a0009be5373"/>
+								<textFieldExpression><![CDATA[$F{isCajaDeAhoroEnPesos} || !$P{TIENE_MULTIPLE_CTA} ? $F{importe} : null]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="70" uuid="dbff917c-c4e5-424a-a958-089108ed2e89">
+						<printWhenExpression><![CDATA[$P{TIENE_MULTIPLE_CTA}]]></printWhenExpression>
+						<jr:tableHeader style="table" height="30" rowSpan="1">
+							<textField isStretchWithOverflow="true">
+								<reportElement style="redFont" stretchType="RelativeToBandHeight" x="0" y="0" width="70" height="30" uuid="f1de366a-b36f-4200-9b1e-7a0009be5373"/>
+								<textFieldExpression><![CDATA[$P{TIPO_CTA2}]]></textFieldExpression>
+							</textField>
+						</jr:tableHeader>
+						<jr:detailCell style="table" height="20" rowSpan="1">
+							<textField isStretchWithOverflow="true" pattern="#,##0.00;-#,##0.00">
+								<reportElement style="numberFont" stretchType="RelativeToBandHeight" x="0" y="0" width="70" height="20" uuid="f1de366a-b36f-4200-9b1e-7a0009be5373"/>
+								<textFieldExpression><![CDATA[$F{isCuentaCorrienteEnPesos} || !$P{TIENE_MULTIPLE_CTA} ? $F{importe} : null]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="60" uuid="dbff917c-c4e5-424a-a958-089108ed2e89">
+						<jr:tableHeader style="table" height="30" rowSpan="1">
+							<textField isStretchWithOverflow="true">
+								<reportElement style="redFont" stretchType="RelativeToBandHeight" x="0" y="0" width="60" height="30" uuid="f1de366a-b36f-4200-9b1e-7a0009be5373"/>
+								<textFieldExpression><![CDATA["Saldo " + $P{MONEDA}]]></textFieldExpression>
+							</textField>
+						</jr:tableHeader>
+						<jr:detailCell style="table" height="20" rowSpan="1">
+							<textField isStretchWithOverflow="true" pattern="#,##0.00;-#,##0.00">
+								<reportElement style="numberFont" stretchType="RelativeToBandHeight" x="0" y="0" width="60" height="20" uuid="f1de366a-b36f-4200-9b1e-7a0009be5373"/>
+								<textFieldExpression><![CDATA[$F{isDelDia} ? null : $F{saldo}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+		<band height="25" splitType="Stretch">
+			<textField>
+				<reportElement style="footerFont" stretchType="RelativeToBandHeight" x="0" y="0" width="782" height="20" uuid="1a1cb7e9-155b-4bd9-b161-e9938dd3fa3c"/>
+				<textFieldExpression><![CDATA[$P{LEGAL_PIE}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
+                                                                                    

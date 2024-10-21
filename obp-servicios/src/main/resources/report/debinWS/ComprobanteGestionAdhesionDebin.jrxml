@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ComprobanteGestionAdhesionDebin" pageWidth="595" pageHeight="862" columnWidth="535" leftMargin="30" rightMargin="30" topMargin="15" bottomMargin="15" isIgnorePagination="true" uuid="2196aed8-f594-4a19-985c-7eee6fff25e1">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="ireport.zoom" value="7.581705427489426"/>
+	<property name="ireport.x" value="2009"/>
+	<property name="ireport.y" value="1344"/>
+	<subDataset name="Cuentas" uuid="1528e216-a9fb-4f90-9fc5-3e08236f2cf2">
+		<field name="idCuenta" class="java.lang.Integer"/>
+		<field name="cuentaDescripcion" class="java.lang.String"/>
+		<field name="cuentaNumero" class="java.lang.String"/>
+	</subDataset>
+	<parameter name="LOGO_CABECERA" class="java.lang.String"/>
+	<parameter name="TITULO" class="java.lang.String"/>
+	<parameter name="COMPROBANTE" class="java.lang.String"/>
+	<parameter name="FECHA" class="java.lang.String"/>
+	<parameter name="LOGO_CIERRE" class="java.lang.String"/>
+	<parameter name="SUBTITULO" class="java.lang.String"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["C:\\TBanco\\TBancoDEBIN\\obp-servicios\\src\\main\\resources\\report\\debinWS\\"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="CUENTAS_ELIMINADAS" class="java.util.List"/>
+	<parameter name="CUENTAS_ADHERIDAS" class="java.util.List"/>
+	<parameter name="IS_ADHESION" class="java.lang.Boolean"/>
+	<parameter name="IS_BAJA" class="java.lang.Boolean"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<variable name="Lista" class="java.util.List"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="41" splitType="Immediate">
+			<rectangle>
+				<reportElement x="123" y="0" width="289" height="40" uuid="d1cf9d7d-0fe4-410a-847d-9b177877b067"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</rectangle>
+			<image>
+				<reportElement mode="Transparent" x="123" y="0" width="289" height="40" backcolor="#EB0000" uuid="703d00cd-05bb-4b9f-9b13-0a0e969324c9"/>
+				<imageExpression><![CDATA[$P{LOGO_CABECERA}]]></imageExpression>
+			</image>
+		</band>
+		<band height="116" splitType="Immediate">
+			<line>
+				<reportElement stretchType="RelativeToTallestObject" x="123" y="0" width="1" height="116" uuid="d6db5dc7-2c2f-4af3-972a-458dd5a06dae"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Solid" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToTallestObject" x="411" y="0" width="1" height="116" uuid="2eb19363-7f84-41c1-a30d-ccbfa67af2d2"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Solid" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="123" y="32" width="289" height="1" uuid="df7f8137-401e-4404-9cff-841ce8e087da"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+			<textField isStretchWithOverflow="true">
+				<reportElement isPrintRepeatedValues="false" x="132" y="44" width="270" height="44" uuid="1edb9fa6-a6e1-4321-8c1c-5275545b10d5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="html">
+					<font fontName="OpenSansLight" size="18" isBold="false" isPdfEmbedded="true"/>
+					<paragraph lineSpacing="Fixed" lineSpacingSize="18.0"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{SUBTITULO}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="123" y="104" width="289" height="1" uuid="72a5cd3a-6b9d-4678-819f-4e9d34dd178c"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="148" y="9" width="239" height="13" uuid="a995ce6c-daba-41f5-b126-f2bdcd28e8e4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Open Sans Semibold" size="9" isBold="true" isItalic="false" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{TITULO}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="69" splitType="Immediate">
+			<printWhenExpression><![CDATA[$P{IS_BAJA}.equals(true)]]></printWhenExpression>
+			<line>
+				<reportElement stretchType="RelativeToTallestObject" x="123" y="-11" width="1" height="80" uuid="391a3ecf-265d-4b0e-9124-c2a31b9cc724"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Solid" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToTallestObject" x="411" y="-11" width="1" height="80" uuid="711678de-01c8-411b-aeae-082096f01b39"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Solid" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="140" y="14" width="92" height="13" uuid="156d4fd2-3347-4433-8111-f5a9af1c28b0"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="OpenSans" size="9" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Diste de baja]]></text>
+			</staticText>
+			<subreport>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="123" y="34" width="289" height="35" uuid="a747c4f9-c25c-4142-9c19-11c306bd7284"/>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($P{CUENTAS_ELIMINADAS})]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "subReportAdhesionDebin.jasper"]]></subreportExpression>
+			</subreport>
+			<line>
+				<reportElement x="133" y="33" width="270" height="1" uuid="5524ac6b-5d18-4349-850c-1b7327ed5841"/>
+				<graphicElement>
+					<pen lineWidth="0.75" lineStyle="Dotted" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+		</band>
+		<band height="69" splitType="Immediate">
+			<printWhenExpression><![CDATA[$P{IS_ADHESION}.equals(true)]]></printWhenExpression>
+			<line>
+				<reportElement stretchType="RelativeToTallestObject" x="123" y="0" width="1" height="69" uuid="5c72efab-f1aa-48d0-9ae0-dc19aa995701"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Solid" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToTallestObject" x="411" y="0" width="1" height="69" uuid="330ee4aa-de2e-4614-91d7-311ac6a7d29f"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Solid" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="140" y="14" width="92" height="13" uuid="e4a89b6a-3efc-45c2-840b-e6bba2eebdd5"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="OpenSans" size="9" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Adheriste]]></text>
+			</staticText>
+			<subreport>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="123" y="34" width="289" height="35" uuid="5fbc8667-a74c-4870-a094-bd9b6990dc03"/>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($P{CUENTAS_ADHERIDAS})]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "subReportAdhesionDebin.jasper"]]></subreportExpression>
+			</subreport>
+			<line>
+				<reportElement x="133" y="33" width="270" height="1" uuid="5a8b9d36-b821-435a-8b24-5647eaea5931"/>
+				<graphicElement>
+					<pen lineWidth="0.75" lineStyle="Dotted" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+		</band>
+		<band height="32">
+			<line>
+				<reportElement stretchType="RelativeToTallestObject" x="123" y="0" width="1" height="32" uuid="b59b34bd-e723-4b52-9ef2-b7975f4cd975"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Solid" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToTallestObject" x="411" y="0" width="1" height="32" uuid="53d36742-ff92-47b5-89f8-c36adbfe11ed"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Solid" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="140" y="14" width="79" height="13" uuid="08c2deee-64fa-47bc-bc2b-7cd4becb3f46"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="OpenSans" size="9" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Comprobante]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="235" y="14" width="148" height="13" uuid="bff015a5-b386-481b-a986-8f5d8b03ea63"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font fontName="Open Sans Semibold" size="9" isBold="false" isItalic="false" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{COMPROBANTE}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="82">
+			<line>
+				<reportElement x="133" y="2" width="270" height="1" uuid="ac4a80d2-76aa-4c59-b5f4-631419af783c"/>
+				<graphicElement>
+					<pen lineWidth="0.75" lineStyle="Dotted" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToTallestObject" x="411" y="0" width="1" height="82" uuid="be16aa91-a1ef-449b-a49d-fb3442a5b19c"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Solid" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToTallestObject" x="123" y="0" width="1" height="82" uuid="39217ba2-6006-4bcb-964c-85fa3acc4fe5"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Solid" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="123" y="81" width="289" height="1" uuid="15a8a06b-dbd8-499d-8eb7-7a63acd65a61"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Solid" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+			<image scaleImage="RetainShape" hAlign="Center" vAlign="Middle">
+				<reportElement x="207" y="39" width="122" height="21" uuid="eb60f322-6c73-46b4-a877-bf81ebca804d"/>
+				<imageExpression><![CDATA[$P{LOGO_CIERRE}]]></imageExpression>
+			</image>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="217" y="14" width="100" height="14" uuid="b22b0293-d4c8-4c67-8180-f7fd916a1a95"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="OpenSans" size="9" isBold="false" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{FECHA}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

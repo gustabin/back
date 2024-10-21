@@ -1,0 +1,21 @@
+{
+  "id": 10,
+  "name": "PUE",
+  "funds": [
+    {
+      "id": 7,
+      "custodyCode": "FO89",
+      "depositaryCode": "011",
+      "typeOrder": "6",
+      "subTypeOrder": "1",
+      "info": [
+        {
+          "id": 7,
+          "name": "Superfondo Acciones BRASIL A",
+          "type": "PUE",
+          "text": "El objetivo del Superfondo Acciones Brasil es invertir en acciones de compañías brasileras o con exposición a dicho país, que cotizan en la Bolsa de Comercio de Buenos Aires."
+        }
+      ]
+    }
+  ]
+}

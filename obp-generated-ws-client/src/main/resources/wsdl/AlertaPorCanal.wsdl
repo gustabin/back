@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+	xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"
+	xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://model.alertas.crm.bancorio.com/"
+	xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/"
+	xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://model.alertas.crm.bancorio.com/"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+	<wsdl:types>
+		<s:schema elementFormDefault="qualified"
+			targetNamespace="http://model.alertas.crm.bancorio.com/">
+			<s:element name="ConsultaGrupal">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0" maxOccurs="1" name="requestGrupal"
+							type="tns:RequestGrupal" />
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:complexType name="RequestGrupal">
+				<s:complexContent mixed="false">
+					<s:extension base="tns:Request">
+						<s:sequence>
+							<s:element minOccurs="0" maxOccurs="1" name="estGestion"
+								type="s:string" />
+						</s:sequence>
+					</s:extension>
+				</s:complexContent>
+			</s:complexType>
+			<s:complexType name="Request" abstract="true">
+				<s:sequence>
+					<s:element minOccurs="0" maxOccurs="1" name="tipoCons"
+						type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="nup" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="canal" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="subCanal"
+						type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="usuario"
+						type="s:string" />
+				</s:sequence>
+			</s:complexType>
+			<s:element name="ConsultaGrupalResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0" maxOccurs="1"
+							name="ConsultaGrupalResult" type="tns:ResponseGrupal" />
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:complexType name="ResponseGrupal">
+				<s:complexContent mixed="false">
+					<s:extension base="tns:Response">
+						<s:sequence>
+							<s:element minOccurs="0" maxOccurs="1" name="repeticiones"
+								type="tns:ArrayOfSubResponseGrupal" />
+						</s:sequence>
+					</s:extension>
+				</s:complexContent>
+			</s:complexType>
+			<s:complexType name="Response" abstract="true">
+				<s:sequence>
+					<s:element minOccurs="0" maxOccurs="1" name="codRet"
+						type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="idSist"
+						type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="descError"
+						type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="detError"
+						type="s:string" />
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="SubResponseGrupal">
+				<s:complexContent mixed="false">
+					<s:extension base="tns:Response">
+						<s:sequence>
+							<s:element minOccurs="1" maxOccurs="1" name="codAlerta"
+								type="s:int" />
+							<s:element minOccurs="0" maxOccurs="1" name="descripcion"
+								type="s:string" />
+							<s:element minOccurs="0" maxOccurs="1" name="claveUnica"
+								type="s:string" />
+							<s:element minOccurs="1" maxOccurs="1" name="contLectura"
+								type="s:int" />
+							<s:element minOccurs="1" maxOccurs="1" name="estGestion"
+								type="s:int" />
+						</s:sequence>
+					</s:extension>
+				</s:complexContent>
+			</s:complexType>
+			<s:complexType name="ArrayOfSubResponseGrupal">
+				<s:sequence>
+					<s:element minOccurs="0" maxOccurs="unbounded" name="SubResponseGrupal"
+						nillable="true" type="tns:SubResponseGrupal" />
+				</s:sequence>
+			</s:complexType>
+			<s:element name="ConsultaAlertaDetallada">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0" maxOccurs="1" name="requestCliente"
+							type="tns:RequestCliente" />
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:complexType name="RequestCliente">
+				<s:complexContent mixed="false">
+					<s:extension base="tns:Request">
+						<s:sequence>
+							<s:element minOccurs="0" maxOccurs="1" name="repeticiones"
+								type="tns:ArrayOfSubRequestCliente" />
+						</s:sequence>
+					</s:extension>
+				</s:complexContent>
+			</s:complexType>
+			<s:complexType name="ArrayOfSubRequestCliente">
+				<s:sequence>
+					<s:element minOccurs="0" maxOccurs="unbounded" name="SubRequestCliente"
+						nillable="true" type="tns:SubRequestCliente" />
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="SubRequestCliente">
+				<s:sequence>
+					<s:element minOccurs="0" maxOccurs="1" name="codAlerta"
+						type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="claveUnica"
+						type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="usuario"
+						type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="estGestion"
+						type="s:string" />
+				</s:sequence>
+			</s:complexType>
+			<s:element name="ConsultaAlertaDetalladaResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0" maxOccurs="1"
+							name="ConsultaAlertaDetalladaResult" type="tns:ResponseCliente" />
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:complexType name="ResponseCliente">
+				<s:complexContent mixed="false">
+					<s:extension base="tns:Response">
+						<s:sequence>
+							<s:element minOccurs="0" maxOccurs="1" name="nup" type="s:string" />
+							<s:element minOccurs="0" maxOccurs="1" name="repeticiones"
+								type="tns:ArrayOfSubResponseCliente" />
+						</s:sequence>
+					</s:extension>
+				</s:complexContent>
+			</s:complexType>
+			<s:complexType name="ArrayOfSubResponseCliente">
+				<s:sequence>
+					<s:element minOccurs="0" maxOccurs="unbounded" name="SubResponseCliente"
+						nillable="true" type="tns:SubResponseCliente" />
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="SubResponseCliente">
+				<s:sequence>
+					<s:element minOccurs="1" maxOccurs="1" name="codAlerta"
+						type="s:int" />
+					<s:element minOccurs="0" maxOccurs="1" name="descripcion"
+						type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="claveUnica"
+						type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="oficina"
+						type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="contrato"
+						type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="producto"
+						type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="subProducto"
+						type="s:string" />
+					<s:element minOccurs="1" maxOccurs="1" name="importe"
+						type="s:double" />
+					<s:element minOccurs="0" maxOccurs="1" name="datosAlerta"
+						type="s:string" />
+					<s:element minOccurs="1" maxOccurs="1" name="fechaAlerta"
+						type="s:dateTime" />
+				</s:sequence>
+			</s:complexType>
+		</s:schema>
+	</wsdl:types>
+	<wsdl:message name="ConsultaGrupalSoapIn">
+		<wsdl:part name="parameters" element="tns:ConsultaGrupal" />
+	</wsdl:message>
+	<wsdl:message name="ConsultaGrupalSoapOut">
+		<wsdl:part name="parameters" element="tns:ConsultaGrupalResponse" />
+	</wsdl:message>
+	<wsdl:message name="ConsultaAlertaDetalladaSoapIn">
+		<wsdl:part name="parameters" element="tns:ConsultaAlertaDetallada" />
+	</wsdl:message>
+	<wsdl:message name="ConsultaAlertaDetalladaSoapOut">
+		<wsdl:part name="parameters" element="tns:ConsultaAlertaDetalladaResponse" />
+	</wsdl:message>
+	<wsdl:portType name="AlertasCrmSoap">
+		<wsdl:operation name="ConsultaGrupal">
+			<wsdl:input message="tns:ConsultaGrupalSoapIn" />
+			<wsdl:output message="tns:ConsultaGrupalSoapOut" />
+		</wsdl:operation>
+		<wsdl:operation name="ConsultaAlertaDetallada">
+			<wsdl:input message="tns:ConsultaAlertaDetalladaSoapIn" />
+			<wsdl:output message="tns:ConsultaAlertaDetalladaSoapOut" />
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="AlertasCrmSoap" type="tns:AlertasCrmSoap">
+		<soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="ConsultaGrupal">
+			<soap:operation
+				soapAction="http://model.alertas.crm.bancorio.com/ConsultaGrupal"
+				style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="ConsultaAlertaDetallada">
+			<soap:operation
+				soapAction="http://model.alertas.crm.bancorio.com/ConsultaAlertaDetallada"
+				style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:binding name="AlertasCrmSoap12" type="tns:AlertasCrmSoap">
+		<soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="ConsultaGrupal">
+			<soap12:operation
+				soapAction="http://model.alertas.crm.bancorio.com/ConsultaGrupal"
+				style="document" />
+			<wsdl:input>
+				<soap12:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap12:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="ConsultaAlertaDetallada">
+			<soap12:operation
+				soapAction="http://model.alertas.crm.bancorio.com/ConsultaAlertaDetallada"
+				style="document" />
+			<wsdl:input>
+				<soap12:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap12:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="AlertasCrm">
+		<wsdl:port name="AlertasCrmSoap" binding="tns:AlertasCrmSoap">
+			<soap:address location="http://webdesa5:8038/alertasporcanal.asmx" />
+		</wsdl:port>
+		<wsdl:port name="AlertasCrmSoap12" binding="tns:AlertasCrmSoap12">
+			<soap12:address location="http://webdesa5:8038/alertasporcanal.asmx" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="subReportTasas" pageWidth="518" pageHeight="802" columnWidth="518" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="c03a76f2-e35a-4a3a-bd79-27e4d2982edb">
+	<property name="ireport.zoom" value="3.0"/>
+	<property name="ireport.x" value="368"/>
+	<property name="ireport.y" value="0"/>
+	<style name="table_8">
+		<pen lineStyle="Dotted"/>
+		<box>
+			<pen lineWidth="0.5" lineStyle="Dotted" lineColor="#C9C9C9"/>
+			<topPen lineWidth="0.0" lineStyle="Dotted" lineColor="#C9C9C9"/>
+			<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#C9C9C9"/>
+			<bottomPen lineWidth="0.0" lineStyle="Dotted" lineColor="#C9C9C9"/>
+			<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#C9C9C9"/>
+		</box>
+	</style>
+	<field name="label" class="java.lang.String"/>
+	<field name="value" class="java.lang.String"/>
+	<detail>
+		<band height="28" splitType="Stretch">
+			<textField>
+				<reportElement x="165" y="3" width="94" height="19" uuid="8df90c20-b804-492f-9d3f-60eb2b141a7b"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Open Sans" size="9" isPdfEmbedded="true"/>
+					<paragraph rightIndent="27"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{value}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="1" y="3" width="165" height="19" uuid="f4fe017c-ec46-4775-9adb-5fbd20505b6e"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Open Sans" size="9" isPdfEmbedded="true"/>
+					<paragraph leftIndent="30" tabStopWidth="30"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{label}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement positionType="Float" x="23" y="27" width="212" height="1" uuid="b310cd26-eccf-4ff8-ba3d-e554c2266cf9"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineStyle="Dotted" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+			<frame>
+				<reportElement style="table_8" positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="262" height="28" backcolor="#FFFFFF" uuid="f713fa90-e621-4ee3-8ea5-6cb719d43e0e"/>
+			</frame>
+		</band>
+	</detail>
+</jasperReport>

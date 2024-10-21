@@ -1,0 +1,14 @@
+{
+    "server": [{
+            "WEBSPHERE_APP": "ws85_hbhomo3",
+            "WEBSPHERE_CLUSTER": "false",
+            "WEBSPHERE_INSTANCENAME": "wasobptbhomo-3",
+            "WEBSPHERE_SERVER": "wasobptbhomo.ar.bsch",
+            "WEBSPHERE_SOAP": "8880",
+            "WEBSPHERE_VIRTUAL_HOST": "wasobptbhomo-3-vhost",
+            "WEBSPHERE_CELL": "",
+            "WEBSPHERE_NODE": "wasobptbhomo.ar.bsch",
+            "WEBSPHERE_WAITRESTART": "120"
+        }
+    ]
+}

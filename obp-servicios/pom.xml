@@ -1,0 +1,330 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>ar.com.santanderrio.obp</groupId>
+		<artifactId>obp-pom</artifactId>
+		<version>0.0.16-PIPELINE-RELEASE</version>
+	</parent>
+	<artifactId>obp-servicios</artifactId>
+	<version>0.0.2-SNAPSHOT</version>
+	<packaging>war</packaging>
+
+	<properties>
+		<obp-generated-ws-client.version>0.0.95-RELEASE</obp-generated-ws-client.version>
+		<obp-base.version>0.0.113-RELEASE</obp-base.version>
+		<skipFailsafe>true</skipFailsafe>
+		<skipSurefire>false</skipSurefire>
+		<sonar.coverage.jacoco.xmlReportPaths>${project.basedir}/../target/site/jacoco/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
+	</properties>
+
+	<build>
+		<finalName>hbservicios</finalName>
+		<sourceDirectory>${basedir}/src/main/java</sourceDirectory>
+		<resources>
+			<resource>
+				<directory>${basedir}/src/main/resources</directory>
+				<filtering>false</filtering>
+				<excludes>
+					<exclude>**/cxf/*</exclude>
+				</excludes>
+			</resource>
+			<resource>
+				<directory>${basedir}/src/main/java</directory>
+				<excludes>
+					<exclude>**/*.java</exclude>
+				</excludes>
+			</resource>
+		</resources>
+		<plugins>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>versions-maven-plugin</artifactId>
+				<version>2.1</version>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<configuration>
+					<failOnMissingWebXml>false</failOnMissingWebXml>
+					<webResources>
+						<resource>
+							<filtering>true</filtering>
+							<targetPath>WEB-INF/classes</targetPath>
+							<directory>src/main/resources</directory>
+							<includes>
+								<include>**/log4j.properties</include>
+								<include>**/obp-iatx.properties</include>
+							</includes>
+							<excludes>
+								<exclude>**/cxf/*</exclude>
+							</excludes>
+						</resource>
+						<resource>
+							<filtering>true</filtering>
+							<targetPath>META-INF</targetPath>
+							<directory>src/main/resources</directory>
+							<includes>
+								<include>**/cxf/*</include>
+							</includes>
+						</resource>
+					</webResources>
+					<archive>
+						<manifest>
+							<addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+							<addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
+						</manifest>
+						<manifestEntries>
+							<Build-Time>${maven.build.timestamp}</Build-Time>
+							<DisableIBMJAXWSEngine>true</DisableIBMJAXWSEngine>
+						</manifestEntries>
+					</archive>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	<!--reporting>
+		<plugins>
+			<plugin>
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+				<reportSets>
+					<reportSet>
+						<reports-->
+							<!-- select non-aggregate reports -->
+							<!--report>report</report>
+						</reports>
+					</reportSet>
+				</reportSets>
+			</plugin>
+		</plugins>
+	</reporting-->
+
+	<dependencies>
+		<dependency>
+			<groupId>ar.com.isban</groupId>
+			<artifactId>cryptography</artifactId>
+			<version>1.1.0.0</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.bouncycastle</groupId>
+					<artifactId>bcprov-jdk16</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.bouncycastle</groupId>
+					<artifactId>bcmail-jdk16</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<!-- core -->
+		<dependency>
+			<groupId>ar.com.santanderrio.obp</groupId>
+			<artifactId>obp-generated-ws-client</artifactId>
+			<version>${obp-generated-ws-client.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>ar.com.santanderrio.obp</groupId>
+			<artifactId>obp-base</artifactId>
+			<version>${obp-base.version}</version>
+		</dependency>
+		<!-- core -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.sun.xml.parsers</groupId>
+			<artifactId>jaxp-ri</artifactId>
+		</dependency>
+		<!-- Jasper -->
+		<dependency>
+			<groupId>com.lowagie</groupId>
+			<artifactId>itext</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>net.sf.jasperreports</groupId>
+			<artifactId>jasperreports</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>dom4j</groupId>
+			<artifactId>dom4j</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>xml-apis</groupId>
+					<artifactId>xml-apis</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<!-- cxf -->
+		<dependency>
+			<groupId>org.apache.cxf</groupId>
+			<artifactId>cxf-core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.cxf</groupId>
+			<artifactId>cxf-rt-frontend-jaxrs</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.cxf</groupId>
+			<artifactId>cxf-rt-rs-security-cors</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.cxf</groupId>
+			<artifactId>cxf-rt-rs-extension-providers</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.cxf</groupId>
+			<artifactId>cxf-rt-rs-service-description</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.cxf</groupId>
+			<artifactId>cxf-rt-rs-client</artifactId>
+		</dependency>
+		<!-- cxf -->
+		<!-- java binding -->
+		<dependency>
+			<groupId>javax.xml.bind</groupId>
+			<artifactId>jaxb-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-jaxrs</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-xc</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+		</dependency>
+		<!-- java binding -->
+		<!-- spring -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-config</artifactId>
+		</dependency>
+		<!-- spring -->
+		<dependency>
+			<groupId>org.owasp.esapi</groupId>
+			<artifactId>esapi</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>xml-apis</groupId>
+					<artifactId>xml-apis</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>xerces</groupId>
+					<artifactId>xercesImpl</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>log4j</groupId>
+					<artifactId>log4j</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-io</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.ibm</groupId>
+			<artifactId>ctgclient</artifactId>
+		</dependency>
+		<!-- BeanIO dependency -->
+		<dependency>
+			<groupId>org.beanio</groupId>
+			<artifactId>beanio</artifactId>
+		</dependency>
+		<!-- StAX dependencies for JDK 1.5 users -->
+		<dependency>
+			<groupId>javax.xml</groupId>
+			<artifactId>jsr173</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.sun.xml.stream</groupId>
+			<artifactId>sjsxp</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>javax.xml.stream</groupId>
+					<artifactId>stax-api</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<!-- provided -->
+		<dependency>
+			<groupId>ar.com.santanderrio.obp</groupId>
+			<artifactId>ojdbc6</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<!-- provided -->
+
+		<!-- cache -->
+		<dependency>
+			<groupId>net.sf.ehcache</groupId>
+			<artifactId>ehcache</artifactId>
+		</dependency>
+		<!-- <dependency> -->
+		<!-- <groupId>javax.cache</groupId> -->
+		<!-- <artifactId>cache-api</artifactId> -->
+		<!-- <version>0.6</version> -->
+		<!-- </dependency> -->
+		<!-- Support for Ehcache and others -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context-support</artifactId>
+		</dependency>
+		<!-- cache -->
+
+		<!-- test -->
+		<dependency>
+			<groupId>org.apache.cxf</groupId>
+			<artifactId>cxf-rt-transports-http-jetty</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<!-- emular webscopes en test -->
+		<dependency>
+			<groupId>org.apache.tomcat</groupId>
+			<artifactId>catalina</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<!-- test -->
+		<!-- mail -->
+		<dependency>
+			<groupId>javax.mail</groupId>
+			<artifactId>mail</artifactId>
+			<version>1.4</version>
+		</dependency>
+		<!-- dependency -->
+		<!-- Necesito esta lib para los ws soap de cxf que estan firmados para
+			que el interceptor SAAJOutInterceptor permita tener el log plano. -->
+		<!-- groupId>com.sun.xml.messaging.saaj</groupId> <artifactId>saaj-impl</artifactId>
+			</dependency -->
+<!--		<dependency>-->
+<!--			<groupId>org.mitre.dsmiley.httpproxy</groupId>-->
+<!--			<artifactId>smiley-http-proxy-servlet</artifactId>-->
+<!--			<version>1.11</version>-->
+<!--		</dependency>-->
+	</dependencies>
+</project> 

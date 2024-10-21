@@ -1,0 +1,697 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions name="LicitacionesCanalService"
+	targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy"
+	xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/"
+	xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract"
+	xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex"
+	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata"
+	xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy"
+	xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/"
+	xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<wsdl:types>
+		<xs:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/"
+			xmlns:xs="http://www.w3.org/2001/XMLSchema">
+			<xs:element name="ObtenerCuentasTitulos">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="input" nillable="true"
+							type="xs:string" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ObtenerCuentasTitulosResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="ObtenerCuentasTitulosResult"
+							nillable="true" type="xs:string" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ConfirmarOrden">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="input" nillable="true"
+							type="xs:string" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ConfirmarOrdenResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="ConfirmarOrdenResult"
+							nillable="true" type="xs:string" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ObtenerCanalTramo">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="input" nillable="true"
+							type="xs:string" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ObtenerCanalTramoResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="ObtenerCanalTramoResult"
+							nillable="true" type="xs:string" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="SimularOrden">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="input" nillable="true"
+							type="xs:string" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="SimularOrdenResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="SimularOrdenResult"
+							nillable="true" type="xs:string" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ReversarOrden">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="input" nillable="true"
+							type="xs:string" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ReversarOrdenResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="ReversarOrdenResult"
+							nillable="true" type="xs:string" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ConsultarOrden">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="input" nillable="true"
+							type="xs:string" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ConsultarOrdenResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="ConsultarOrdenResult"
+							nillable="true" type="xs:string" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ObtenerSaldoCuentasCustodia">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="input" nillable="true"
+							type="xs:string" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ObtenerSaldoCuentasCustodiaResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0"
+							name="ObtenerSaldoCuentasCustodiaResult" nillable="true" type="xs:string" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ObtenerSaldoCuentasTitulos">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="input" nillable="true"
+							type="xs:string" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ObtenerSaldoCuentasTitulosResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0"
+							name="ObtenerSaldoCuentasTitulosResult" nillable="true" type="xs:string" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="DownloadArchivo">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="input" nillable="true"
+							type="xs:string" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="DownloadArchivoResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="DownloadArchivoResult"
+							nillable="true" type="xs:string" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ObtenerTiposPliego">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="input" nillable="true"
+							type="xs:string" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ObtenerTiposPliegoResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="ObtenerTiposPliegoResult"
+							nillable="true" type="xs:string" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ConsultarTenenciaRenovable">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="input" nillable="true"
+							type="xs:string" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ConsultarTenenciaRenovableResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0"
+							name="ConsultarTenenciaRenovableResult" nillable="true" type="xs:string" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:schema>
+		<xs:schema attributeFormDefault="qualified"
+			elementFormDefault="qualified"
+			targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/"
+			xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/">
+			<xs:element name="anyType" nillable="true" type="xs:anyType" />
+			<xs:element name="anyURI" nillable="true" type="xs:anyURI" />
+			<xs:element name="base64Binary" nillable="true" type="xs:base64Binary" />
+			<xs:element name="boolean" nillable="true" type="xs:boolean" />
+			<xs:element name="byte" nillable="true" type="xs:byte" />
+			<xs:element name="dateTime" nillable="true" type="xs:dateTime" />
+			<xs:element name="decimal" nillable="true" type="xs:decimal" />
+			<xs:element name="double" nillable="true" type="xs:double" />
+			<xs:element name="float" nillable="true" type="xs:float" />
+			<xs:element name="int" nillable="true" type="xs:int" />
+			<xs:element name="long" nillable="true" type="xs:long" />
+			<xs:element name="QName" nillable="true" type="xs:QName" />
+			<xs:element name="short" nillable="true" type="xs:short" />
+			<xs:element name="string" nillable="true" type="xs:string" />
+			<xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte" />
+			<xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt" />
+			<xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong" />
+			<xs:element name="unsignedShort" nillable="true"
+				type="xs:unsignedShort" />
+			<xs:element name="char" nillable="true" type="tns:char" />
+			<xs:simpleType name="char">
+				<xs:restriction base="xs:int" />
+			</xs:simpleType>
+			<xs:element name="duration" nillable="true" type="tns:duration" />
+			<xs:simpleType name="duration">
+				<xs:restriction base="xs:duration">
+					<xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?" />
+					<xs:minInclusive value="-P10675199DT2H48M5.4775808S" />
+					<xs:maxInclusive value="P10675199DT2H48M5.4775807S" />
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:element name="guid" nillable="true" type="tns:guid" />
+			<xs:simpleType name="guid">
+				<xs:restriction base="xs:string">
+					<xs:pattern
+						value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}" />
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:attribute name="FactoryType" type="xs:QName" />
+			<xs:attribute name="Id" type="xs:ID" />
+			<xs:attribute name="Ref" type="xs:IDREF" />
+		</xs:schema>
+		<xs:schema elementFormDefault="qualified"
+			targetNamespace="http://schemas.datacontract.org/2004/07/Isban.BEL.ServiceContracts"
+			xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			xmlns:tns="http://schemas.datacontract.org/2004/07/Isban.BEL.ServiceContracts">
+			<xs:complexType name="LicitacionesServiceFault">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="Code" type="xs:int" />
+					<xs:element minOccurs="0" name="Message" nillable="true"
+						type="xs:string" />
+					<xs:element minOccurs="0" name="Tipo" nillable="true"
+						type="xs:string" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="LicitacionesServiceFault" nillable="true"
+				type="tns:LicitacionesServiceFault" />
+		</xs:schema>
+	</wsdl:types>
+	<wsdl:message
+		name="ILicitacionesCanalService_ObtenerCuentasTitulos_InputMessage">
+		<wsdl:part name="parameters" element="tns:ObtenerCuentasTitulos" />
+	</wsdl:message>
+	<wsdl:message
+		name="ILicitacionesCanalService_ObtenerCuentasTitulos_OutputMessage">
+		<wsdl:part name="parameters" element="tns:ObtenerCuentasTitulosResponse" />
+	</wsdl:message>
+	<wsdl:message
+		name="ILicitacionesCanalService_ObtenerCuentasTitulos_LicitacionesServiceFaultFault_FaultMessage">
+		<wsdl:part name="detail" element="q1:LicitacionesServiceFault"
+			xmlns:q1="http://schemas.datacontract.org/2004/07/Isban.BEL.ServiceContracts" />
+	</wsdl:message>
+	<wsdl:message name="ILicitacionesCanalService_ConfirmarOrden_InputMessage">
+		<wsdl:part name="parameters" element="tns:ConfirmarOrden" />
+	</wsdl:message>
+	<wsdl:message name="ILicitacionesCanalService_ConfirmarOrden_OutputMessage">
+		<wsdl:part name="parameters" element="tns:ConfirmarOrdenResponse" />
+	</wsdl:message>
+	<wsdl:message
+		name="ILicitacionesCanalService_ConfirmarOrden_LicitacionesServiceFaultFault_FaultMessage">
+		<wsdl:part name="detail" element="q2:LicitacionesServiceFault"
+			xmlns:q2="http://schemas.datacontract.org/2004/07/Isban.BEL.ServiceContracts" />
+	</wsdl:message>
+	<wsdl:message
+		name="ILicitacionesCanalService_ObtenerCanalTramo_InputMessage">
+		<wsdl:part name="parameters" element="tns:ObtenerCanalTramo" />
+	</wsdl:message>
+	<wsdl:message
+		name="ILicitacionesCanalService_ObtenerCanalTramo_OutputMessage">
+		<wsdl:part name="parameters" element="tns:ObtenerCanalTramoResponse" />
+	</wsdl:message>
+	<wsdl:message
+		name="ILicitacionesCanalService_ObtenerCanalTramo_LicitacionesServiceFaultFault_FaultMessage">
+		<wsdl:part name="detail" element="q3:LicitacionesServiceFault"
+			xmlns:q3="http://schemas.datacontract.org/2004/07/Isban.BEL.ServiceContracts" />
+	</wsdl:message>
+	<wsdl:message name="ILicitacionesCanalService_SimularOrden_InputMessage">
+		<wsdl:part name="parameters" element="tns:SimularOrden" />
+	</wsdl:message>
+	<wsdl:message name="ILicitacionesCanalService_SimularOrden_OutputMessage">
+		<wsdl:part name="parameters" element="tns:SimularOrdenResponse" />
+	</wsdl:message>
+	<wsdl:message
+		name="ILicitacionesCanalService_SimularOrden_LicitacionesServiceFaultFault_FaultMessage">
+		<wsdl:part name="detail" element="q4:LicitacionesServiceFault"
+			xmlns:q4="http://schemas.datacontract.org/2004/07/Isban.BEL.ServiceContracts" />
+	</wsdl:message>
+	<wsdl:message name="ILicitacionesCanalService_ReversarOrden_InputMessage">
+		<wsdl:part name="parameters" element="tns:ReversarOrden" />
+	</wsdl:message>
+	<wsdl:message name="ILicitacionesCanalService_ReversarOrden_OutputMessage">
+		<wsdl:part name="parameters" element="tns:ReversarOrdenResponse" />
+	</wsdl:message>
+	<wsdl:message
+		name="ILicitacionesCanalService_ReversarOrden_LicitacionesServiceFaultFault_FaultMessage">
+		<wsdl:part name="detail" element="q5:LicitacionesServiceFault"
+			xmlns:q5="http://schemas.datacontract.org/2004/07/Isban.BEL.ServiceContracts" />
+	</wsdl:message>
+	<wsdl:message name="ILicitacionesCanalService_ConsultarOrden_InputMessage">
+		<wsdl:part name="parameters" element="tns:ConsultarOrden" />
+	</wsdl:message>
+	<wsdl:message name="ILicitacionesCanalService_ConsultarOrden_OutputMessage">
+		<wsdl:part name="parameters" element="tns:ConsultarOrdenResponse" />
+	</wsdl:message>
+	<wsdl:message
+		name="ILicitacionesCanalService_ConsultarOrden_LicitacionesServiceFaultFault_FaultMessage">
+		<wsdl:part name="detail" element="q6:LicitacionesServiceFault"
+			xmlns:q6="http://schemas.datacontract.org/2004/07/Isban.BEL.ServiceContracts" />
+	</wsdl:message>
+	<wsdl:message
+		name="ILicitacionesCanalService_ObtenerSaldoCuentasCustodia_InputMessage">
+		<wsdl:part name="parameters" element="tns:ObtenerSaldoCuentasCustodia" />
+	</wsdl:message>
+	<wsdl:message
+		name="ILicitacionesCanalService_ObtenerSaldoCuentasCustodia_OutputMessage">
+		<wsdl:part name="parameters" element="tns:ObtenerSaldoCuentasCustodiaResponse" />
+	</wsdl:message>
+	<wsdl:message
+		name="ILicitacionesCanalService_ObtenerSaldoCuentasCustodia_LicitacionesServiceFaultFault_FaultMessage">
+		<wsdl:part name="detail" element="q7:LicitacionesServiceFault"
+			xmlns:q7="http://schemas.datacontract.org/2004/07/Isban.BEL.ServiceContracts" />
+	</wsdl:message>
+	<wsdl:message
+		name="ILicitacionesCanalService_ObtenerSaldoCuentasTitulos_InputMessage">
+		<wsdl:part name="parameters" element="tns:ObtenerSaldoCuentasTitulos" />
+	</wsdl:message>
+	<wsdl:message
+		name="ILicitacionesCanalService_ObtenerSaldoCuentasTitulos_OutputMessage">
+		<wsdl:part name="parameters" element="tns:ObtenerSaldoCuentasTitulosResponse" />
+	</wsdl:message>
+	<wsdl:message
+		name="ILicitacionesCanalService_ObtenerSaldoCuentasTitulos_LicitacionesServiceFaultFault_FaultMessage">
+		<wsdl:part name="detail" element="q8:LicitacionesServiceFault"
+			xmlns:q8="http://schemas.datacontract.org/2004/07/Isban.BEL.ServiceContracts" />
+	</wsdl:message>
+	<wsdl:message name="ILicitacionesCanalService_DownloadArchivo_InputMessage">
+		<wsdl:part name="parameters" element="tns:DownloadArchivo" />
+	</wsdl:message>
+	<wsdl:message name="ILicitacionesCanalService_DownloadArchivo_OutputMessage">
+		<wsdl:part name="parameters" element="tns:DownloadArchivoResponse" />
+	</wsdl:message>
+	<wsdl:message
+		name="ILicitacionesCanalService_DownloadArchivo_LicitacionesServiceFaultFault_FaultMessage">
+		<wsdl:part name="detail" element="q9:LicitacionesServiceFault"
+			xmlns:q9="http://schemas.datacontract.org/2004/07/Isban.BEL.ServiceContracts" />
+	</wsdl:message>
+	<wsdl:message
+		name="ILicitacionesCanalService_ObtenerTiposPliego_InputMessage">
+		<wsdl:part name="parameters" element="tns:ObtenerTiposPliego" />
+	</wsdl:message>
+	<wsdl:message
+		name="ILicitacionesCanalService_ObtenerTiposPliego_OutputMessage">
+		<wsdl:part name="parameters" element="tns:ObtenerTiposPliegoResponse" />
+	</wsdl:message>
+	<wsdl:message
+		name="ILicitacionesCanalService_ObtenerTiposPliego_LicitacionesServiceFaultFault_FaultMessage">
+		<wsdl:part name="detail" element="q10:LicitacionesServiceFault"
+			xmlns:q10="http://schemas.datacontract.org/2004/07/Isban.BEL.ServiceContracts" />
+	</wsdl:message>
+	<wsdl:message
+		name="ILicitacionesCanalService_ConsultarTenenciaRenovable_InputMessage">
+		<wsdl:part name="parameters" element="tns:ConsultarTenenciaRenovable" />
+	</wsdl:message>
+	<wsdl:message
+		name="ILicitacionesCanalService_ConsultarTenenciaRenovable_OutputMessage">
+		<wsdl:part name="parameters" element="tns:ConsultarTenenciaRenovableResponse" />
+	</wsdl:message>
+	<wsdl:message
+		name="ILicitacionesCanalService_ConsultarTenenciaRenovable_LicitacionesServiceFaultFault_FaultMessage">
+		<wsdl:part name="detail" element="q11:LicitacionesServiceFault"
+			xmlns:q11="http://schemas.datacontract.org/2004/07/Isban.BEL.ServiceContracts" />
+	</wsdl:message>
+	<wsdl:portType name="ILicitacionesCanalService">
+		<wsdl:operation name="ObtenerCuentasTitulos">
+			<wsdl:input
+				wsaw:Action="http://tempuri.org/ILicitacionesCanalService/ObtenerCuentasTitulos"
+				message="tns:ILicitacionesCanalService_ObtenerCuentasTitulos_InputMessage" />
+			<wsdl:output
+				wsaw:Action="http://tempuri.org/ILicitacionesCanalService/ObtenerCuentasTitulosResponse"
+				message="tns:ILicitacionesCanalService_ObtenerCuentasTitulos_OutputMessage" />
+			<wsdl:fault
+				wsaw:Action="http://tempuri.org/ILicitacionesCanalService/ObtenerCuentasTitulosLicitacionesServiceFaultFault"
+				name="LicitacionesServiceFaultFault"
+				message="tns:ILicitacionesCanalService_ObtenerCuentasTitulos_LicitacionesServiceFaultFault_FaultMessage" />
+		</wsdl:operation>
+		<wsdl:operation name="ConfirmarOrden">
+			<wsdl:input
+				wsaw:Action="http://tempuri.org/ILicitacionesCanalService/ConfirmarOrden"
+				message="tns:ILicitacionesCanalService_ConfirmarOrden_InputMessage" />
+			<wsdl:output
+				wsaw:Action="http://tempuri.org/ILicitacionesCanalService/ConfirmarOrdenResponse"
+				message="tns:ILicitacionesCanalService_ConfirmarOrden_OutputMessage" />
+			<wsdl:fault
+				wsaw:Action="http://tempuri.org/ILicitacionesCanalService/ConfirmarOrdenLicitacionesServiceFaultFault"
+				name="LicitacionesServiceFaultFault"
+				message="tns:ILicitacionesCanalService_ConfirmarOrden_LicitacionesServiceFaultFault_FaultMessage" />
+		</wsdl:operation>
+		<wsdl:operation name="ObtenerCanalTramo">
+			<wsdl:input
+				wsaw:Action="http://tempuri.org/ILicitacionesCanalService/ObtenerCanalTramo"
+				message="tns:ILicitacionesCanalService_ObtenerCanalTramo_InputMessage" />
+			<wsdl:output
+				wsaw:Action="http://tempuri.org/ILicitacionesCanalService/ObtenerCanalTramoResponse"
+				message="tns:ILicitacionesCanalService_ObtenerCanalTramo_OutputMessage" />
+			<wsdl:fault
+				wsaw:Action="http://tempuri.org/ILicitacionesCanalService/ObtenerCanalTramoLicitacionesServiceFaultFault"
+				name="LicitacionesServiceFaultFault"
+				message="tns:ILicitacionesCanalService_ObtenerCanalTramo_LicitacionesServiceFaultFault_FaultMessage" />
+		</wsdl:operation>
+		<wsdl:operation name="SimularOrden">
+			<wsdl:input
+				wsaw:Action="http://tempuri.org/ILicitacionesCanalService/SimularOrden"
+				message="tns:ILicitacionesCanalService_SimularOrden_InputMessage" />
+			<wsdl:output
+				wsaw:Action="http://tempuri.org/ILicitacionesCanalService/SimularOrdenResponse"
+				message="tns:ILicitacionesCanalService_SimularOrden_OutputMessage" />
+			<wsdl:fault
+				wsaw:Action="http://tempuri.org/ILicitacionesCanalService/SimularOrdenLicitacionesServiceFaultFault"
+				name="LicitacionesServiceFaultFault"
+				message="tns:ILicitacionesCanalService_SimularOrden_LicitacionesServiceFaultFault_FaultMessage" />
+		</wsdl:operation>
+		<wsdl:operation name="ReversarOrden">
+			<wsdl:input
+				wsaw:Action="http://tempuri.org/ILicitacionesCanalService/ReversarOrden"
+				message="tns:ILicitacionesCanalService_ReversarOrden_InputMessage" />
+			<wsdl:output
+				wsaw:Action="http://tempuri.org/ILicitacionesCanalService/ReversarOrdenResponse"
+				message="tns:ILicitacionesCanalService_ReversarOrden_OutputMessage" />
+			<wsdl:fault
+				wsaw:Action="http://tempuri.org/ILicitacionesCanalService/ReversarOrdenLicitacionesServiceFaultFault"
+				name="LicitacionesServiceFaultFault"
+				message="tns:ILicitacionesCanalService_ReversarOrden_LicitacionesServiceFaultFault_FaultMessage" />
+		</wsdl:operation>
+		<wsdl:operation name="ConsultarOrden">
+			<wsdl:input
+				wsaw:Action="http://tempuri.org/ILicitacionesCanalService/ConsultarOrden"
+				message="tns:ILicitacionesCanalService_ConsultarOrden_InputMessage" />
+			<wsdl:output
+				wsaw:Action="http://tempuri.org/ILicitacionesCanalService/ConsultarOrdenResponse"
+				message="tns:ILicitacionesCanalService_ConsultarOrden_OutputMessage" />
+			<wsdl:fault
+				wsaw:Action="http://tempuri.org/ILicitacionesCanalService/ConsultarOrdenLicitacionesServiceFaultFault"
+				name="LicitacionesServiceFaultFault"
+				message="tns:ILicitacionesCanalService_ConsultarOrden_LicitacionesServiceFaultFault_FaultMessage" />
+		</wsdl:operation>
+		<wsdl:operation name="ObtenerSaldoCuentasCustodia">
+			<wsdl:input
+				wsaw:Action="http://tempuri.org/ILicitacionesCanalService/ObtenerSaldoCuentasCustodia"
+				message="tns:ILicitacionesCanalService_ObtenerSaldoCuentasCustodia_InputMessage" />
+			<wsdl:output
+				wsaw:Action="http://tempuri.org/ILicitacionesCanalService/ObtenerSaldoCuentasCustodiaResponse"
+				message="tns:ILicitacionesCanalService_ObtenerSaldoCuentasCustodia_OutputMessage" />
+			<wsdl:fault
+				wsaw:Action="http://tempuri.org/ILicitacionesCanalService/ObtenerSaldoCuentasCustodiaLicitacionesServiceFaultFault"
+				name="LicitacionesServiceFaultFault"
+				message="tns:ILicitacionesCanalService_ObtenerSaldoCuentasCustodia_LicitacionesServiceFaultFault_FaultMessage" />
+		</wsdl:operation>
+		<wsdl:operation name="ObtenerSaldoCuentasTitulos">
+			<wsdl:input
+				wsaw:Action="http://tempuri.org/ILicitacionesCanalService/ObtenerSaldoCuentasTitulos"
+				message="tns:ILicitacionesCanalService_ObtenerSaldoCuentasTitulos_InputMessage" />
+			<wsdl:output
+				wsaw:Action="http://tempuri.org/ILicitacionesCanalService/ObtenerSaldoCuentasTitulosResponse"
+				message="tns:ILicitacionesCanalService_ObtenerSaldoCuentasTitulos_OutputMessage" />
+			<wsdl:fault
+				wsaw:Action="http://tempuri.org/ILicitacionesCanalService/ObtenerSaldoCuentasTitulosLicitacionesServiceFaultFault"
+				name="LicitacionesServiceFaultFault"
+				message="tns:ILicitacionesCanalService_ObtenerSaldoCuentasTitulos_LicitacionesServiceFaultFault_FaultMessage" />
+		</wsdl:operation>
+		<wsdl:operation name="DownloadArchivo">
+			<wsdl:input
+				wsaw:Action="http://tempuri.org/ILicitacionesCanalService/DownloadArchivo"
+				message="tns:ILicitacionesCanalService_DownloadArchivo_InputMessage" />
+			<wsdl:output
+				wsaw:Action="http://tempuri.org/ILicitacionesCanalService/DownloadArchivoResponse"
+				message="tns:ILicitacionesCanalService_DownloadArchivo_OutputMessage" />
+			<wsdl:fault
+				wsaw:Action="http://tempuri.org/ILicitacionesCanalService/DownloadArchivoLicitacionesServiceFaultFault"
+				name="LicitacionesServiceFaultFault"
+				message="tns:ILicitacionesCanalService_DownloadArchivo_LicitacionesServiceFaultFault_FaultMessage" />
+		</wsdl:operation>
+		<wsdl:operation name="ObtenerTiposPliego">
+			<wsdl:input
+				wsaw:Action="http://tempuri.org/ILicitacionesCanalService/ObtenerTiposPliego"
+				message="tns:ILicitacionesCanalService_ObtenerTiposPliego_InputMessage" />
+			<wsdl:output
+				wsaw:Action="http://tempuri.org/ILicitacionesCanalService/ObtenerTiposPliegoResponse"
+				message="tns:ILicitacionesCanalService_ObtenerTiposPliego_OutputMessage" />
+			<wsdl:fault
+				wsaw:Action="http://tempuri.org/ILicitacionesCanalService/ObtenerTiposPliegoLicitacionesServiceFaultFault"
+				name="LicitacionesServiceFaultFault"
+				message="tns:ILicitacionesCanalService_ObtenerTiposPliego_LicitacionesServiceFaultFault_FaultMessage" />
+		</wsdl:operation>
+		<wsdl:operation name="ConsultarTenenciaRenovable">
+			<wsdl:input
+				wsaw:Action="http://tempuri.org/ILicitacionesCanalService/ConsultarTenenciaRenovable"
+				message="tns:ILicitacionesCanalService_ConsultarTenenciaRenovable_InputMessage" />
+			<wsdl:output
+				wsaw:Action="http://tempuri.org/ILicitacionesCanalService/ConsultarTenenciaRenovableResponse"
+				message="tns:ILicitacionesCanalService_ConsultarTenenciaRenovable_OutputMessage" />
+			<wsdl:fault
+				wsaw:Action="http://tempuri.org/ILicitacionesCanalService/ConsultarTenenciaRenovableLicitacionesServiceFaultFault"
+				name="LicitacionesServiceFaultFault"
+				message="tns:ILicitacionesCanalService_ConsultarTenenciaRenovable_LicitacionesServiceFaultFault_FaultMessage" />
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="LicitacionesCanalService" type="tns:ILicitacionesCanalService">
+		<soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="ObtenerCuentasTitulos">
+			<soap:operation
+				soapAction="http://tempuri.org/ILicitacionesCanalService/ObtenerCuentasTitulos"
+				style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="LicitacionesServiceFaultFault">
+				<soap:fault use="literal" name="LicitacionesServiceFaultFault"
+					namespace="" />
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="ConfirmarOrden">
+			<soap:operation
+				soapAction="http://tempuri.org/ILicitacionesCanalService/ConfirmarOrden"
+				style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="LicitacionesServiceFaultFault">
+				<soap:fault use="literal" name="LicitacionesServiceFaultFault"
+					namespace="" />
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="ObtenerCanalTramo">
+			<soap:operation
+				soapAction="http://tempuri.org/ILicitacionesCanalService/ObtenerCanalTramo"
+				style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="LicitacionesServiceFaultFault">
+				<soap:fault use="literal" name="LicitacionesServiceFaultFault"
+					namespace="" />
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="SimularOrden">
+			<soap:operation
+				soapAction="http://tempuri.org/ILicitacionesCanalService/SimularOrden"
+				style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="LicitacionesServiceFaultFault">
+				<soap:fault use="literal" name="LicitacionesServiceFaultFault"
+					namespace="" />
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="ReversarOrden">
+			<soap:operation
+				soapAction="http://tempuri.org/ILicitacionesCanalService/ReversarOrden"
+				style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="LicitacionesServiceFaultFault">
+				<soap:fault use="literal" name="LicitacionesServiceFaultFault"
+					namespace="" />
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="ConsultarOrden">
+			<soap:operation
+				soapAction="http://tempuri.org/ILicitacionesCanalService/ConsultarOrden"
+				style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="LicitacionesServiceFaultFault">
+				<soap:fault use="literal" name="LicitacionesServiceFaultFault"
+					namespace="" />
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="ObtenerSaldoCuentasCustodia">
+			<soap:operation
+				soapAction="http://tempuri.org/ILicitacionesCanalService/ObtenerSaldoCuentasCustodia"
+				style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="LicitacionesServiceFaultFault">
+				<soap:fault use="literal" name="LicitacionesServiceFaultFault"
+					namespace="" />
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="ObtenerSaldoCuentasTitulos">
+			<soap:operation
+				soapAction="http://tempuri.org/ILicitacionesCanalService/ObtenerSaldoCuentasTitulos"
+				style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="LicitacionesServiceFaultFault">
+				<soap:fault use="literal" name="LicitacionesServiceFaultFault"
+					namespace="" />
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="DownloadArchivo">
+			<soap:operation
+				soapAction="http://tempuri.org/ILicitacionesCanalService/DownloadArchivo"
+				style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="LicitacionesServiceFaultFault">
+				<soap:fault use="literal" name="LicitacionesServiceFaultFault"
+					namespace="" />
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="ObtenerTiposPliego">
+			<soap:operation
+				soapAction="http://tempuri.org/ILicitacionesCanalService/ObtenerTiposPliego"
+				style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="LicitacionesServiceFaultFault">
+				<soap:fault use="literal" name="LicitacionesServiceFaultFault"
+					namespace="" />
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="ConsultarTenenciaRenovable">
+			<soap:operation
+				soapAction="http://tempuri.org/ILicitacionesCanalService/ConsultarTenenciaRenovable"
+				style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="LicitacionesServiceFaultFault">
+				<soap:fault use="literal" name="LicitacionesServiceFaultFault"
+					namespace="" />
+			</wsdl:fault>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="LicitacionesCanalService">
+		<wsdl:port name="LicitacionesCanalService" binding="tns:LicitacionesCanalService">
+			<soap:address
+				location="http://webbmgdesa01.rio.ar.bsch:9084/LicitacionesCanalService.svc" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

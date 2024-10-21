@@ -1,0 +1,26 @@
+{
+  "customerEconomicData": [
+    {
+      "type": "human_person",
+      "humanPerson": {
+        "economicData": [
+          {
+            "financialIncomeType": "personal",
+            "currencyCode": "ARS",
+            "income": 0.00
+          },
+          {
+            "financialIncomeType": "family",
+            "currencyCode": "ARS",
+            "income": 0.00
+          },
+          {
+            "financialIncomeType": "total",
+            "currencyCode": "ARS",
+            "income": 5000.00
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,1272 @@
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://webservices.api.debin.prismamp.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="v3/DebinClient" targetNamespace="http://webservices.api.debin.prismamp.com/">
+	<wsdl:types>
+		<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://webservices.api.debin.prismamp.com/" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://webservices.api.debin.prismamp.com/">
+			<xs:element name="cbuDTO" type="tns:cbuDTO"/>
+			<xs:element name="compradorDebinDTO" type="tns:compradorDebinDTO"/>
+			<xs:element name="creditoDTO" type="tns:creditoDTO"/>
+			<xs:element name="cuentaDebinDTO" type="tns:cuentaDebinDTO"/>
+			<xs:element name="cuentaEspecialDTO" type="tns:cuentaEspecialDTO"/>
+			<xs:element name="cuitCbuUsuarioDTO" type="tns:cuitCbuUsuarioDTO"/>
+			<xs:element name="datosUsuarioBreveDTO" type="tns:datosUsuarioBreveDTO"/>
+			<xs:element name="debitoDTO" type="tns:debitoDTO"/>
+			<xs:element name="detalleDebinAuxDTO" type="tns:detalleDebinAuxDTO"/>
+			<xs:element name="detalleDebinBreveDTO" type="tns:detalleDebinBreveDTO"/>
+			<xs:element name="detalleDebinDTO" type="tns:detalleDebinDTO"/>
+			<xs:element name="estadoDebinDTO" type="tns:estadoDebinDTO"/>
+			<xs:element name="estadoUsuarioDTO" type="tns:estadoUsuarioDTO"/>
+			<xs:element name="evaluacionDTO" type="tns:evaluacionDTO"/>
+			<xs:element name="importeDTO" type="tns:importeDTO"/>
+			<xs:element name="objetoResponseDTO" type="tns:objetoResponseDTO"/>
+			<xs:element name="respuestaDTO" type="tns:respuestaDTO"/>
+			<xs:element name="resumenDebinDTO" type="tns:resumenDebinDTO"/>
+			<xs:element name="resumenDebinDTOAux" type="tns:resumenDebinDTOAux"/>
+			<xs:element name="vendedorDebinDTO" type="tns:vendedorDebinDTO"/>
+			<xs:complexType name="requestConsulta">
+				<xs:complexContent>
+					<xs:extension base="tns:request">
+						<xs:sequence/>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:complexType abstract="true" name="request">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="canal" type="xs:string"/>
+					<xs:element minOccurs="0" name="cuit" type="xs:string"/>
+					<xs:element minOccurs="0" name="datosTerminal" type="xs:string"/>
+					<xs:element minOccurs="0" name="endpoint" type="xs:string"/>
+					<xs:element minOccurs="0" name="ip" type="xs:string"/>
+					<xs:element minOccurs="0" name="nroDocumento" type="xs:string"/>
+					<xs:element minOccurs="0" name="terminal" type="xs:string"/>
+					<xs:element minOccurs="0" name="tipoDocumento" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="responseComprador">
+				<xs:complexContent>
+					<xs:extension base="tns:response">
+						<xs:sequence>
+							<xs:element maxOccurs="unbounded" minOccurs="0" name="cuentas" nillable="true" type="tns:cuentaDebinDTO"/>
+							<xs:element minOccurs="0" name="cuit" type="xs:string"/>
+							<xs:element minOccurs="0" name="nombreTitular" type="xs:string"/>
+						</xs:sequence>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:complexType name="response">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="error" type="tns:error"/>
+					<xs:element minOccurs="0" name="estado" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="cuentaDebinDTO">
+				<xs:complexContent>
+					<xs:extension base="tns:baseDTO">
+						<xs:sequence>
+							<xs:element minOccurs="0" name="cbu" type="xs:string"/>
+							<xs:element minOccurs="0" name="alias" type="xs:string"/>
+							<xs:element minOccurs="0" name="banco" type="xs:string"/>
+							<xs:element minOccurs="0" name="sucursal" type="xs:string"/>
+							<xs:element minOccurs="0" name="moneda" type="xs:string"/>
+							<xs:element minOccurs="0" name="tipo" type="xs:string"/>
+							<xs:element minOccurs="0" name="numero" type="xs:string"/>
+							<xs:element minOccurs="0" name="alta" type="xs:dateTime"/>
+							<xs:element minOccurs="0" name="endpointId" type="xs:string"/>
+							<xs:element minOccurs="0" name="esTitular" type="xs:boolean"/>
+							<xs:element minOccurs="0" name="terminal" type="xs:string"/>
+						</xs:sequence>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:complexType abstract="true" name="baseDTO">
+				<xs:sequence/>
+			</xs:complexType>
+			<xs:complexType name="error">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="codigo" type="xs:string"/>
+					<xs:element minOccurs="0" name="mensaje" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="requestOrdenCreditoV3">
+				<xs:complexContent>
+					<xs:extension base="tns:request">
+						<xs:sequence>
+							<xs:element minOccurs="0" name="concepto" type="xs:string"/>
+							<xs:element minOccurs="0" name="controlLimite" type="xs:boolean"/>
+							<xs:element minOccurs="0" name="credito" type="tns:creditoDTO"/>
+							<xs:element minOccurs="0" name="debito" type="tns:debitoDTO"/>
+							<xs:element minOccurs="0" name="importe" type="tns:importeDTO"/>
+							<xs:element minOccurs="0" name="mismoTitular" type="xs:int"/>
+							<xs:element minOccurs="0" name="referencia" type="xs:string"/>
+						</xs:sequence>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:complexType name="creditoDTO">
+				<xs:complexContent>
+					<xs:extension base="tns:baseDTO">
+						<xs:sequence>
+							<xs:element minOccurs="0" name="titular" type="xs:string"/>
+							<xs:element minOccurs="0" name="tipoCuenta" type="xs:string"/>
+							<xs:element minOccurs="0" name="cuit" type="xs:string"/>
+							<xs:element minOccurs="0" name="cuenta" type="tns:cbuDTO"/>
+						</xs:sequence>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:complexType name="cbuDTO">
+				<xs:complexContent>
+					<xs:extension base="tns:baseDTO">
+						<xs:sequence>
+							<xs:element minOccurs="0" name="cbu" type="xs:string"/>
+							<xs:element minOccurs="0" name="cvu" type="xs:string"/>
+						</xs:sequence>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:complexType name="debitoDTO">
+				<xs:complexContent>
+					<xs:extension base="tns:baseDTO">
+						<xs:sequence>
+							<xs:element minOccurs="0" name="titular" type="xs:string"/>
+							<xs:element minOccurs="0" name="tipoCuenta" type="xs:string"/>
+							<xs:element minOccurs="0" name="cuit" type="xs:string"/>
+							<xs:element minOccurs="0" name="cuenta" type="tns:cbuDTO"/>
+						</xs:sequence>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:complexType name="importeDTO">
+				<xs:complexContent>
+					<xs:extension base="tns:baseDTO">
+						<xs:sequence>
+							<xs:element minOccurs="0" name="moneda" type="xs:string"/>
+							<xs:element minOccurs="0" name="importe" type="xs:string"/>
+						</xs:sequence>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:complexType name="responseOrdenCredito">
+				<xs:complexContent>
+					<xs:extension base="tns:response">
+						<xs:sequence>
+							<xs:element minOccurs="0" name="credito" type="tns:creditoDTO"/>
+							<xs:element minOccurs="0" name="fechaNegocio" type="xs:string"/>
+							<xs:element minOccurs="0" name="importe" type="tns:importeDTO"/>
+							<xs:element minOccurs="0" name="objeto" type="tns:objetoResponseDTO"/>
+							<xs:element minOccurs="0" name="respuesta" type="tns:respuestaDTO"/>
+						</xs:sequence>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:complexType name="objetoResponseDTO">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="tipo" type="xs:string"/>
+					<xs:element minOccurs="0" name="id" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="respuestaDTO">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="codigo" type="xs:string"/>
+					<xs:element minOccurs="0" name="descripcion" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="requestDebin">
+				<xs:complexContent>
+					<xs:extension base="tns:request">
+						<xs:sequence>
+							<xs:element minOccurs="0" name="idDebin" type="xs:string"/>
+						</xs:sequence>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:complexType name="responseDebinAux">
+				<xs:complexContent>
+					<xs:extension base="tns:response">
+						<xs:sequence>
+							<xs:element minOccurs="0" name="comprador" type="tns:compradorDebinDTO"/>
+							<xs:element minOccurs="0" name="detalleDebin" type="tns:detalleDebinAuxDTO"/>
+							<xs:element minOccurs="0" name="vendedor" type="tns:vendedorDebinDTO"/>
+						</xs:sequence>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:complexType name="compradorDebinDTO">
+				<xs:complexContent>
+					<xs:extension base="tns:baseDTO">
+						<xs:sequence>
+							<xs:element minOccurs="0" name="codigo" type="xs:string"/>
+							<xs:element minOccurs="0" name="titular" type="xs:string"/>
+							<xs:element minOccurs="0" name="cuit" type="xs:string"/>
+							<xs:element minOccurs="0" name="descripcion" type="xs:string"/>
+							<xs:element minOccurs="0" name="estadoComprador" type="tns:estadoUsuarioDTO"/>
+							<xs:element minOccurs="0" name="cuenta" type="tns:cuentaDebinDTO"/>
+						</xs:sequence>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:complexType name="estadoUsuarioDTO">
+				<xs:complexContent>
+					<xs:extension base="tns:baseDTO">
+						<xs:sequence>
+							<xs:element minOccurs="0" name="codigo" type="xs:string"/>
+							<xs:element minOccurs="0" name="descripcion" type="xs:string"/>
+						</xs:sequence>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:complexType name="detalleDebinAuxDTO">
+				<xs:complexContent>
+					<xs:extension base="tns:baseDTO">
+						<xs:sequence>
+							<xs:element minOccurs="0" name="idDebin" type="xs:string"/>
+							<xs:element minOccurs="0" name="fechaCreacion" type="xs:dateTime"/>
+							<xs:element minOccurs="0" name="fechaExpiracion" type="xs:dateTime"/>
+							<xs:element minOccurs="0" name="estadoDebin" type="tns:estadoDebinDTO"/>
+							<xs:element minOccurs="0" name="concepto" type="xs:string"/>
+							<xs:element minOccurs="0" name="idUsuario" type="xs:string"/>
+							<xs:element minOccurs="0" name="idComprobante" type="xs:string"/>
+							<xs:element minOccurs="0" name="moneda" type="xs:string"/>
+							<xs:element minOccurs="0" name="importe" type="xs:string"/>
+							<xs:element minOccurs="0" name="descripcion" type="xs:string"/>
+						</xs:sequence>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:complexType name="estadoDebinDTO">
+				<xs:complexContent>
+					<xs:extension base="tns:baseDTO">
+						<xs:sequence>
+							<xs:element minOccurs="0" name="codigo" type="xs:string"/>
+							<xs:element minOccurs="0" name="descripcion" type="xs:string"/>
+						</xs:sequence>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:complexType name="vendedorDebinDTO">
+				<xs:complexContent>
+					<xs:extension base="tns:baseDTO">
+						<xs:sequence>
+							<xs:element minOccurs="0" name="codigo" type="xs:string"/>
+							<xs:element minOccurs="0" name="titular" type="xs:string"/>
+							<xs:element minOccurs="0" name="cuit" type="xs:string"/>
+							<xs:element minOccurs="0" name="terminal" type="xs:string"/>
+							<xs:element maxOccurs="unbounded" minOccurs="0" name="titulares" type="xs:string"/>
+							<xs:element minOccurs="0" name="cuenta" type="tns:cuentaDebinDTO"/>
+						</xs:sequence>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:complexType name="baseRequest">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="canal" type="xs:string"/>
+					<xs:element minOccurs="0" name="cuit" type="xs:string"/>
+					<xs:element minOccurs="0" name="datosTerminal" type="xs:string"/>
+					<xs:element minOccurs="0" name="endpoint" type="xs:string"/>
+					<xs:element minOccurs="0" name="ip" type="xs:string"/>
+					<xs:element minOccurs="0" name="nroDocumento" type="xs:string"/>
+					<xs:element minOccurs="0" name="terminal" type="xs:string"/>
+					<xs:element minOccurs="0" name="tipoDocumento" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="responseConsultaCuentaEspecial">
+				<xs:complexContent>
+					<xs:extension base="tns:response">
+						<xs:sequence>
+							<xs:element maxOccurs="unbounded" minOccurs="0" name="cuentas" nillable="true" type="tns:cuentaEspecialDTO"/>
+						</xs:sequence>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:complexType name="cuentaEspecialDTO">
+				<xs:complexContent>
+					<xs:extension base="tns:baseDTO">
+						<xs:sequence>
+							<xs:element minOccurs="0" name="cuenta" type="tns:cuitCbuUsuarioDTO"/>
+							<xs:element minOccurs="0" name="activo" type="xs:boolean"/>
+						</xs:sequence>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:complexType name="cuitCbuUsuarioDTO">
+				<xs:complexContent>
+					<xs:extension base="tns:baseDTO">
+						<xs:sequence>
+							<xs:element minOccurs="0" name="cbu" type="xs:string"/>
+							<xs:element minOccurs="0" name="cuit" type="xs:string"/>
+						</xs:sequence>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:complexType name="requestNuevoDebin">
+				<xs:complexContent>
+					<xs:extension base="tns:request">
+						<xs:sequence>
+							<xs:element minOccurs="0" name="categoriaLimite" type="xs:int"/>
+							<xs:element minOccurs="0" name="comprador" type="tns:compradorDebinDTO"/>
+							<xs:element minOccurs="0" name="detalle" type="tns:detalleDebinDTO"/>
+							<xs:element minOccurs="0" name="mismoTitular" type="xs:int"/>
+							<xs:element minOccurs="0" name="recurrencia" type="xs:boolean"/>
+							<xs:element minOccurs="0" name="vendedor" type="tns:vendedorDebinDTO"/>
+						</xs:sequence>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:complexType name="detalleDebinDTO">
+				<xs:complexContent>
+					<xs:extension base="tns:baseDTO">
+						<xs:sequence>
+							<xs:element minOccurs="0" name="idDebin" type="xs:string"/>
+							<xs:element minOccurs="0" name="fechaCreacion" type="xs:dateTime"/>
+							<xs:element minOccurs="0" name="fechaExpiracion" type="xs:dateTime"/>
+							<xs:element minOccurs="0" name="estadoDebin" type="tns:estadoDebinDTO"/>
+							<xs:element minOccurs="0" name="concepto" type="xs:string"/>
+							<xs:element minOccurs="0" name="idUsuario" type="xs:string"/>
+							<xs:element minOccurs="0" name="idComprobante" type="xs:string"/>
+							<xs:element minOccurs="0" name="moneda" type="xs:string"/>
+							<xs:element minOccurs="0" name="evaluacion" type="tns:evaluacionDTO"/>
+							<xs:element minOccurs="0" name="importe" type="xs:string"/>
+							<xs:element minOccurs="0" name="descripcion" type="xs:string"/>
+							<xs:element minOccurs="0" name="devolucion" type="xs:boolean"/>
+							<xs:element minOccurs="0" name="idOperacionOriginal" type="xs:string"/>
+						</xs:sequence>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:complexType name="evaluacionDTO">
+				<xs:complexContent>
+					<xs:extension base="tns:baseDTO">
+						<xs:sequence>
+							<xs:element minOccurs="0" name="puntaje" type="xs:int"/>
+							<xs:element minOccurs="0" name="reglas" type="xs:string"/>
+						</xs:sequence>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:complexType name="responseNuevoDebin">
+				<xs:complexContent>
+					<xs:extension base="tns:response">
+						<xs:sequence>
+							<xs:element minOccurs="0" name="detalleDebin" type="tns:detalleDebinDTO"/>
+						</xs:sequence>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:complexType name="requestOrdenCredito">
+				<xs:complexContent>
+					<xs:extension base="tns:request">
+						<xs:sequence>
+							<xs:element minOccurs="0" name="concepto" type="xs:string"/>
+							<xs:element minOccurs="0" name="credito" type="tns:creditoDTO"/>
+							<xs:element minOccurs="0" name="debito" type="tns:debitoDTO"/>
+							<xs:element minOccurs="0" name="importe" type="tns:importeDTO"/>
+							<xs:element minOccurs="0" name="mismoTitular" type="xs:int"/>
+							<xs:element minOccurs="0" name="referencia" type="xs:string"/>
+						</xs:sequence>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:complexType name="requestListaDebinAux">
+				<xs:complexContent>
+					<xs:extension base="tns:request">
+						<xs:sequence>
+							<xs:element minOccurs="0" name="comprador" type="tns:compradorDebinDTO"/>
+							<xs:element minOccurs="0" name="estado" type="xs:string"/>
+							<xs:element minOccurs="0" name="fechaDesde" type="xs:dateTime"/>
+							<xs:element minOccurs="0" name="fechaHasta" type="xs:dateTime"/>
+							<xs:element minOccurs="0" name="nroPagina" type="xs:int"/>
+							<xs:element minOccurs="0" name="vendedor" type="tns:vendedorDebinDTO"/>
+						</xs:sequence>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:complexType name="responseListaDebinAux">
+				<xs:complexContent>
+					<xs:extension base="tns:response">
+						<xs:sequence>
+							<xs:element maxOccurs="unbounded" minOccurs="0" name="debines" nillable="true" type="tns:resumenDebinDTOAux"/>
+							<xs:element minOccurs="0" name="siguientePagina" type="xs:int"/>
+						</xs:sequence>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:complexType name="resumenDebinDTOAux">
+				<xs:complexContent>
+					<xs:extension base="tns:baseDTO">
+						<xs:sequence>
+							<xs:element minOccurs="0" name="id" type="xs:string"/>
+							<xs:element minOccurs="0" name="vendedor" type="tns:vendedorDebinDTO"/>
+							<xs:element minOccurs="0" name="comprador" type="tns:compradorDebinDTO"/>
+							<xs:element minOccurs="0" name="importe" type="xs:string"/>
+							<xs:element minOccurs="0" name="concepto" type="xs:string"/>
+							<xs:element minOccurs="0" name="estadoDebin" type="tns:estadoDebinDTO"/>
+							<xs:element minOccurs="0" name="fechaExpiracion" type="xs:dateTime"/>
+						</xs:sequence>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:complexType name="requestCuentaEspecial">
+				<xs:complexContent>
+					<xs:extension base="tns:request">
+						<xs:sequence>
+							<xs:element minOccurs="0" name="activo" type="xs:boolean"/>
+							<xs:element minOccurs="0" name="cuenta" type="tns:cuitCbuUsuarioDTO"/>
+						</xs:sequence>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:complexType name="requestAdhesion">
+				<xs:complexContent>
+					<xs:extension base="tns:request">
+						<xs:sequence>
+							<xs:element minOccurs="0" name="cuenta" type="tns:cuentaDebinDTO"/>
+						</xs:sequence>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:complexType name="requestConfirmacionDebito">
+				<xs:complexContent>
+					<xs:extension base="tns:request">
+						<xs:sequence>
+							<xs:element minOccurs="0" name="codigo" type="xs:string"/>
+							<xs:element minOccurs="0" name="comprador" type="tns:compradorDebinDTO"/>
+							<xs:element minOccurs="0" name="descripcion" type="xs:string"/>
+							<xs:element minOccurs="0" name="idDebin" type="xs:string"/>
+							<xs:element minOccurs="0" name="importe" type="xs:double"/>
+							<xs:element minOccurs="0" name="moneda" type="xs:string"/>
+							<xs:element minOccurs="0" name="nroTarjeta" type="xs:string"/>
+							<xs:element minOccurs="0" name="puntaje" type="xs:int"/>
+							<xs:element minOccurs="0" name="vendedor" type="tns:vendedorDebinDTO"/>
+						</xs:sequence>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:complexType name="responseConfirmacionDebitoDebin">
+				<xs:complexContent>
+					<xs:extension base="tns:response">
+						<xs:sequence>
+							<xs:element minOccurs="0" name="codigo" type="xs:string"/>
+							<xs:element minOccurs="0" name="descripcion" type="xs:string"/>
+							<xs:element minOccurs="0" name="fechaNegocio" type="xs:dateTime"/>
+						</xs:sequence>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:complexType name="responseDebin">
+				<xs:complexContent>
+					<xs:extension base="tns:response">
+						<xs:sequence>
+							<xs:element minOccurs="0" name="comprador" type="tns:compradorDebinDTO"/>
+							<xs:element minOccurs="0" name="detalleDebin" type="tns:detalleDebinDTO"/>
+							<xs:element minOccurs="0" name="fechaNegocio" type="xs:string"/>
+							<xs:element name="garantiaOK" type="xs:boolean"/>
+							<xs:element name="preautorizado" type="xs:boolean"/>
+							<xs:element minOccurs="0" name="tipo" type="xs:string"/>
+							<xs:element minOccurs="0" name="vendedor" type="tns:vendedorDebinDTO"/>
+						</xs:sequence>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:complexType name="requestContracargo">
+				<xs:complexContent>
+					<xs:extension base="tns:request">
+						<xs:sequence>
+							<xs:element minOccurs="0" name="comprador" type="tns:datosUsuarioBreveDTO"/>
+							<xs:element minOccurs="0" name="detalle" type="tns:detalleDebinBreveDTO"/>
+							<xs:element minOccurs="0" name="id" type="xs:string"/>
+							<xs:element minOccurs="0" name="tipo" type="xs:string"/>
+							<xs:element minOccurs="0" name="vendedor" type="tns:datosUsuarioBreveDTO"/>
+						</xs:sequence>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:complexType name="datosUsuarioBreveDTO">
+				<xs:complexContent>
+					<xs:extension base="tns:baseDTO">
+						<xs:sequence>
+							<xs:element minOccurs="0" name="cuit" type="xs:string"/>
+							<xs:element minOccurs="0" name="cuenta" type="tns:cuentaDebinDTO"/>
+						</xs:sequence>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:complexType name="detalleDebinBreveDTO">
+				<xs:complexContent>
+					<xs:extension base="tns:baseDTO">
+						<xs:sequence>
+							<xs:element minOccurs="0" name="moneda" type="xs:string"/>
+							<xs:element minOccurs="0" name="importe" type="xs:string"/>
+							<xs:element minOccurs="0" name="motivo" type="xs:string"/>
+						</xs:sequence>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:complexType name="responseContracargo">
+				<xs:complexContent>
+					<xs:extension base="tns:response">
+						<xs:sequence>
+							<xs:element minOccurs="0" name="fechaNegocio" type="xs:dateTime"/>
+							<xs:element minOccurs="0" name="id" type="xs:string"/>
+							<xs:element minOccurs="0" name="tipo" type="xs:string"/>
+						</xs:sequence>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:complexType name="requestNuevoDebinV3">
+				<xs:complexContent>
+					<xs:extension base="tns:request">
+						<xs:sequence>
+							<xs:element minOccurs="0" name="categoriaLimite" type="xs:int"/>
+							<xs:element minOccurs="0" name="comprador" type="tns:compradorDebinDTO"/>
+							<xs:element minOccurs="0" name="controlLimite" type="xs:boolean"/>
+							<xs:element minOccurs="0" name="detalle" type="tns:detalleDebinDTO"/>
+							<xs:element minOccurs="0" name="mismoTitular" type="xs:int"/>
+							<xs:element minOccurs="0" name="recurrencia" type="xs:boolean"/>
+							<xs:element minOccurs="0" name="vendedor" type="tns:vendedorDebinDTO"/>
+						</xs:sequence>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:complexType name="requestConfirmacionDebitoV3">
+				<xs:complexContent>
+					<xs:extension base="tns:request">
+						<xs:sequence>
+							<xs:element minOccurs="0" name="codigo" type="xs:string"/>
+							<xs:element minOccurs="0" name="comprador" type="tns:compradorDebinDTO"/>
+							<xs:element minOccurs="0" name="concepto" type="xs:string"/>
+							<xs:element minOccurs="0" name="descripcion" type="xs:string"/>
+							<xs:element minOccurs="0" name="idDebin" type="xs:string"/>
+							<xs:element minOccurs="0" name="importe" type="xs:double"/>
+							<xs:element minOccurs="0" name="moneda" type="xs:string"/>
+							<xs:element minOccurs="0" name="nroTarjeta" type="xs:string"/>
+							<xs:element minOccurs="0" name="puntaje" type="xs:int"/>
+							<xs:element minOccurs="0" name="vendedor" type="tns:vendedorDebinDTO"/>
+						</xs:sequence>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:complexType name="responseVendedor">
+				<xs:complexContent>
+					<xs:extension base="tns:response">
+						<xs:sequence>
+							<xs:element maxOccurs="unbounded" minOccurs="0" name="cuentas" nillable="true" type="tns:cuentaDebinDTO"/>
+							<xs:element minOccurs="0" name="cuit" type="xs:string"/>
+							<xs:element minOccurs="0" name="nombreTitular" type="xs:string"/>
+						</xs:sequence>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:complexType name="responseNuevoDebinAux">
+				<xs:complexContent>
+					<xs:extension base="tns:response">
+						<xs:sequence>
+							<xs:element minOccurs="0" name="detalleDebin" type="tns:detalleDebinAuxDTO"/>
+						</xs:sequence>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:complexType name="requestListaDebin">
+				<xs:complexContent>
+					<xs:extension base="tns:request">
+						<xs:sequence>
+							<xs:element minOccurs="0" name="comprador" type="tns:compradorDebinDTO"/>
+							<xs:element minOccurs="0" name="estado" type="xs:string"/>
+							<xs:element minOccurs="0" name="fechaCreacionDesde" type="xs:dateTime"/>
+							<xs:element minOccurs="0" name="fechaCreacionHasta" type="xs:dateTime"/>
+							<xs:element minOccurs="0" name="nroPagina" type="xs:int"/>
+							<xs:element minOccurs="0" name="tipo" type="xs:string"/>
+							<xs:element minOccurs="0" name="vendedor" type="tns:vendedorDebinDTO"/>
+						</xs:sequence>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:complexType name="responseListaDebin">
+				<xs:complexContent>
+					<xs:extension base="tns:response">
+						<xs:sequence>
+							<xs:element maxOccurs="unbounded" minOccurs="0" name="debines" nillable="true" type="tns:resumenDebinDTO"/>
+							<xs:element minOccurs="0" name="siguientePagina" type="xs:int"/>
+						</xs:sequence>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:complexType name="resumenDebinDTO">
+				<xs:complexContent>
+					<xs:extension base="tns:baseDTO">
+						<xs:sequence>
+							<xs:element minOccurs="0" name="id" type="xs:string"/>
+							<xs:element minOccurs="0" name="tipo" type="xs:string"/>
+							<xs:element minOccurs="0" name="vendedor" type="tns:vendedorDebinDTO"/>
+							<xs:element minOccurs="0" name="comprador" type="tns:compradorDebinDTO"/>
+							<xs:element minOccurs="0" name="moneda" type="xs:string"/>
+							<xs:element minOccurs="0" name="importe" type="xs:string"/>
+							<xs:element minOccurs="0" name="concepto" type="xs:string"/>
+							<xs:element minOccurs="0" name="estadoDebin" type="tns:estadoDebinDTO"/>
+							<xs:element minOccurs="0" name="vencimiento" type="xs:dateTime"/>
+							<xs:element name="devolucion" type="xs:boolean"/>
+							<xs:element minOccurs="0" name="idOperacionOriginal" type="xs:string"/>
+						</xs:sequence>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:element name="DebinApiException" type="tns:DebinApiException"/>
+			<xs:complexType name="DebinApiException">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="codigo" type="xs:string"/>
+					<xs:element minOccurs="0" name="mensaje" type="xs:string"/>
+					<xs:element minOccurs="0" name="message" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="consultaComprador" nillable="true" type="tns:requestConsulta"/>
+			<xs:element name="consultaCompradorResponse" nillable="true" type="tns:responseComprador"/>
+			<xs:element name="ordenCreditoV3" nillable="true" type="tns:requestOrdenCreditoV3"/>
+			<xs:element name="ordenCreditoV3Response" nillable="true" type="tns:responseOrdenCredito"/>
+			<xs:element name="consultaDebin" nillable="true" type="tns:requestDebin"/>
+			<xs:element name="consultaDebinResponse" nillable="true" type="tns:responseDebinAux"/>
+			<xs:element name="consultaCuentaEspecial" nillable="true" type="tns:baseRequest"/>
+			<xs:element name="consultaCuentaEspecialResponse" nillable="true" type="tns:responseConsultaCuentaEspecial"/>
+			<xs:element name="creacionDebinNew" nillable="true" type="tns:requestNuevoDebin"/>
+			<xs:element name="creacionDebinNewResponse" nillable="true" type="tns:responseNuevoDebin"/>
+			<xs:element name="ordenCredito" nillable="true" type="tns:requestOrdenCredito"/>
+			<xs:element name="ordenCreditoResponse" nillable="true" type="tns:responseOrdenCredito"/>
+			<xs:element name="listaDebin" nillable="true" type="tns:requestListaDebinAux"/>
+			<xs:element name="listaDebinResponse" nillable="true" type="tns:responseListaDebinAux"/>
+			<xs:element name="altaBajaCuentaEspecial" nillable="true" type="tns:requestCuentaEspecial"/>
+			<xs:element name="altaBajaCuentaEspecialResponse" nillable="true" type="tns:response"/>
+			<xs:element name="bajaCuentaVendedor" nillable="true" type="tns:requestAdhesion"/>
+			<xs:element name="bajaCuentaVendedorResponse" nillable="true" type="tns:response"/>
+			<xs:element name="confirmacionDebito" nillable="true" type="tns:requestConfirmacionDebito"/>
+			<xs:element name="confirmacionDebitoResponse" nillable="true" type="tns:responseConfirmacionDebitoDebin"/>
+			<xs:element name="consultaDebinNew" nillable="true" type="tns:requestDebin"/>
+			<xs:element name="consultaDebinNewResponse" nillable="true" type="tns:responseDebin"/>
+			<xs:element name="solicitudContracargo" nillable="true" type="tns:requestContracargo"/>
+			<xs:element name="solicitudContracargoResponse" nillable="true" type="tns:responseContracargo"/>
+			<xs:element name="adhesionVendedor" nillable="true" type="tns:requestAdhesion"/>
+			<xs:element name="adhesionVendedorResponse" nillable="true" type="tns:response"/>
+			<xs:element name="creacionDebinV3" nillable="true" type="tns:requestNuevoDebinV3"/>
+			<xs:element name="creacionDebinV3Response" nillable="true" type="tns:responseNuevoDebin"/>
+			<xs:element name="adhesionComprador" nillable="true" type="tns:requestAdhesion"/>
+			<xs:element name="adhesionCompradorResponse" nillable="true" type="tns:response"/>
+			<xs:element name="echo" nillable="true" type="xs:string"/>
+			<xs:element name="echoResponse" nillable="true" type="xs:string"/>
+			<xs:element name="confirmacionDebitoV3" nillable="true" type="tns:requestConfirmacionDebitoV3"/>
+			<xs:element name="confirmacionDebitoV3Response" nillable="true" type="tns:responseConfirmacionDebitoDebin"/>
+			<xs:element name="consultaVendedor" nillable="true" type="tns:requestConsulta"/>
+			<xs:element name="consultaVendedorResponse" nillable="true" type="tns:responseVendedor"/>
+			<xs:element name="creacionDebin" nillable="true" type="tns:requestNuevoDebin"/>
+			<xs:element name="creacionDebinResponse" nillable="true" type="tns:responseNuevoDebinAux"/>
+			<xs:element name="bajaCuentaComprador" nillable="true" type="tns:requestAdhesion"/>
+			<xs:element name="bajaCuentaCompradorResponse" nillable="true" type="tns:response"/>
+			<xs:element name="eliminacionDebin" nillable="true" type="tns:requestDebin"/>
+			<xs:element name="eliminacionDebinResponse" nillable="true" type="tns:response"/>
+			<xs:element name="listaDebinNew" nillable="true" type="tns:requestListaDebin"/>
+			<xs:element name="listaDebinNewResponse" nillable="true" type="tns:responseListaDebin"/>
+		</xs:schema>
+	</wsdl:types>
+	<wsdl:message name="ordenCreditoV3Response">
+		<wsdl:part element="tns:ordenCreditoV3Response" name="ordenCreditoV3Response"> </wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="consultaDebin">
+		<wsdl:part element="tns:consultaDebin" name="consultaDebin"> </wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="ordenCredito">
+		<wsdl:part element="tns:ordenCredito" name="ordenCredito"> </wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="consultaCuentaEspecialResponse">
+		<wsdl:part element="tns:consultaCuentaEspecialResponse" name="consultaCuentaEspecialResponse"> </wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="consultaDebinNewResponse">
+		<wsdl:part element="tns:consultaDebinNewResponse" name="consultaDebinNewResponse"> </wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="listaDebinResponse">
+		<wsdl:part element="tns:listaDebinResponse" name="listaDebinResponse"> </wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="altaBajaCuentaEspecial">
+		<wsdl:part element="tns:altaBajaCuentaEspecial" name="altaBajaCuentaEspecial"> </wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="bajaCuentaVendedor">
+		<wsdl:part element="tns:bajaCuentaVendedor" name="bajaCuentaVendedor"> </wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="solicitudContracargo">
+		<wsdl:part element="tns:solicitudContracargo" name="solicitudContracargo"> </wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="bajaCuentaVendedorResponse">
+		<wsdl:part element="tns:bajaCuentaVendedorResponse" name="bajaCuentaVendedorResponse"> </wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="creacionDebinResponse">
+		<wsdl:part element="tns:creacionDebinResponse" name="creacionDebinResponse"> </wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="listaDebinNewResponse">
+		<wsdl:part element="tns:listaDebinNewResponse" name="listaDebinNewResponse"> </wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="solicitudContracargoResponse">
+		<wsdl:part element="tns:solicitudContracargoResponse" name="solicitudContracargoResponse"> </wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="creacionDebinV3">
+		<wsdl:part element="tns:creacionDebinV3" name="creacionDebinV3"> </wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="adhesionComprador">
+		<wsdl:part element="tns:adhesionComprador" name="adhesionComprador"> </wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="confirmacionDebitoV3">
+		<wsdl:part element="tns:confirmacionDebitoV3" name="confirmacionDebitoV3"> </wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="altaBajaCuentaEspecialResponse">
+		<wsdl:part element="tns:altaBajaCuentaEspecialResponse" name="altaBajaCuentaEspecialResponse"> </wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="confirmacionDebitoV3Response">
+		<wsdl:part element="tns:confirmacionDebitoV3Response" name="confirmacionDebitoV3Response"> </wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="creacionDebin">
+		<wsdl:part element="tns:creacionDebin" name="creacionDebin"> </wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="consultaDebinResponse">
+		<wsdl:part element="tns:consultaDebinResponse" name="consultaDebinResponse"> </wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="adhesionVendedorResponse">
+		<wsdl:part element="tns:adhesionVendedorResponse" name="adhesionVendedorResponse"> </wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="consultaVendedorResponse">
+		<wsdl:part element="tns:consultaVendedorResponse" name="consultaVendedorResponse"> </wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="eliminacionDebinResponse">
+		<wsdl:part element="tns:eliminacionDebinResponse" name="eliminacionDebinResponse"> </wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="consultaComprador">
+		<wsdl:part element="tns:consultaComprador" name="consultaComprador"> </wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="creacionDebinV3Response">
+		<wsdl:part element="tns:creacionDebinV3Response" name="creacionDebinV3Response"> </wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="ordenCreditoV3">
+		<wsdl:part element="tns:ordenCreditoV3" name="ordenCreditoV3"> </wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="adhesionCompradorResponse">
+		<wsdl:part element="tns:adhesionCompradorResponse" name="adhesionCompradorResponse"> </wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="consultaCuentaEspecial">
+		<wsdl:part element="tns:consultaCuentaEspecial" name="consultaCuentaEspecial"> </wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="creacionDebinNew">
+		<wsdl:part element="tns:creacionDebinNew" name="creacionDebinNew"> </wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="bajaCuentaCompradorResponse">
+		<wsdl:part element="tns:bajaCuentaCompradorResponse" name="bajaCuentaCompradorResponse"> </wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="creacionDebinNewResponse">
+		<wsdl:part element="tns:creacionDebinNewResponse" name="creacionDebinNewResponse"> </wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="listaDebin">
+		<wsdl:part element="tns:listaDebin" name="listaDebin"> </wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="ordenCreditoResponse">
+		<wsdl:part element="tns:ordenCreditoResponse" name="ordenCreditoResponse"> </wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="confirmacionDebito">
+		<wsdl:part element="tns:confirmacionDebito" name="confirmacionDebito"> </wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="consultaDebinNew">
+		<wsdl:part element="tns:consultaDebinNew" name="consultaDebinNew"> </wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="adhesionVendedor">
+		<wsdl:part element="tns:adhesionVendedor" name="adhesionVendedor"> </wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="echoResponse">
+		<wsdl:part element="tns:echoResponse" name="echoResponse"> </wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="DebinApiException">
+		<wsdl:part element="tns:DebinApiException" name="DebinApiException"> </wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="consultaCompradorResponse">
+		<wsdl:part element="tns:consultaCompradorResponse" name="consultaCompradorResponse"> </wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="echo">
+		<wsdl:part element="tns:echo" name="echo"> </wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="consultaVendedor">
+		<wsdl:part element="tns:consultaVendedor" name="consultaVendedor"> </wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="confirmacionDebitoResponse">
+		<wsdl:part element="tns:confirmacionDebitoResponse" name="confirmacionDebitoResponse"> </wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="bajaCuentaComprador">
+		<wsdl:part element="tns:bajaCuentaComprador" name="bajaCuentaComprador"> </wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="eliminacionDebin">
+		<wsdl:part element="tns:eliminacionDebin" name="eliminacionDebin"> </wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="listaDebinNew">
+		<wsdl:part element="tns:listaDebinNew" name="listaDebinNew"> </wsdl:part>
+	</wsdl:message>
+	<wsdl:portType name="v3/DebinClient">
+		<wsdl:documentation>Endpoint WS-Debin. SOAP con WS-Security</wsdl:documentation>
+		<wsdl:operation name="consultaComprador">
+			<wsdl:input message="tns:consultaComprador" name="consultaComprador"> </wsdl:input>
+			<wsdl:output message="tns:consultaCompradorResponse" name="consultaCompradorResponse"> </wsdl:output>
+			<wsdl:fault message="tns:DebinApiException" name="DebinApiException"> </wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="ordenCreditoV3">
+			<wsdl:input message="tns:ordenCreditoV3" name="ordenCreditoV3"> </wsdl:input>
+			<wsdl:output message="tns:ordenCreditoV3Response" name="ordenCreditoV3Response"> </wsdl:output>
+			<wsdl:fault message="tns:DebinApiException" name="DebinApiException"> </wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="consultaDebin">
+			<wsdl:input message="tns:consultaDebin" name="consultaDebin"> </wsdl:input>
+			<wsdl:output message="tns:consultaDebinResponse" name="consultaDebinResponse"> </wsdl:output>
+			<wsdl:fault message="tns:DebinApiException" name="DebinApiException"> </wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="consultaCuentaEspecial">
+			<wsdl:input message="tns:consultaCuentaEspecial" name="consultaCuentaEspecial"> </wsdl:input>
+			<wsdl:output message="tns:consultaCuentaEspecialResponse" name="consultaCuentaEspecialResponse"> </wsdl:output>
+			<wsdl:fault message="tns:DebinApiException" name="DebinApiException"> </wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="creacionDebinNew">
+			<wsdl:input message="tns:creacionDebinNew" name="creacionDebinNew"> </wsdl:input>
+			<wsdl:output message="tns:creacionDebinNewResponse" name="creacionDebinNewResponse"> </wsdl:output>
+			<wsdl:fault message="tns:DebinApiException" name="DebinApiException"> </wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="ordenCredito">
+			<wsdl:input message="tns:ordenCredito" name="ordenCredito"> </wsdl:input>
+			<wsdl:output message="tns:ordenCreditoResponse" name="ordenCreditoResponse"> </wsdl:output>
+			<wsdl:fault message="tns:DebinApiException" name="DebinApiException"> </wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="listaDebin">
+			<wsdl:input message="tns:listaDebin" name="listaDebin"> </wsdl:input>
+			<wsdl:output message="tns:listaDebinResponse" name="listaDebinResponse"> </wsdl:output>
+			<wsdl:fault message="tns:DebinApiException" name="DebinApiException"> </wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="altaBajaCuentaEspecial">
+			<wsdl:input message="tns:altaBajaCuentaEspecial" name="altaBajaCuentaEspecial"> </wsdl:input>
+			<wsdl:output message="tns:altaBajaCuentaEspecialResponse" name="altaBajaCuentaEspecialResponse"> </wsdl:output>
+			<wsdl:fault message="tns:DebinApiException" name="DebinApiException"> </wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="bajaCuentaVendedor">
+			<wsdl:input message="tns:bajaCuentaVendedor" name="bajaCuentaVendedor"> </wsdl:input>
+			<wsdl:output message="tns:bajaCuentaVendedorResponse" name="bajaCuentaVendedorResponse"> </wsdl:output>
+			<wsdl:fault message="tns:DebinApiException" name="DebinApiException"> </wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="confirmacionDebito">
+			<wsdl:input message="tns:confirmacionDebito" name="confirmacionDebito"> </wsdl:input>
+			<wsdl:output message="tns:confirmacionDebitoResponse" name="confirmacionDebitoResponse"> </wsdl:output>
+			<wsdl:fault message="tns:DebinApiException" name="DebinApiException"> </wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="consultaDebinNew">
+			<wsdl:input message="tns:consultaDebinNew" name="consultaDebinNew"> </wsdl:input>
+			<wsdl:output message="tns:consultaDebinNewResponse" name="consultaDebinNewResponse"> </wsdl:output>
+			<wsdl:fault message="tns:DebinApiException" name="DebinApiException"> </wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="solicitudContracargo">
+			<wsdl:input message="tns:solicitudContracargo" name="solicitudContracargo"> </wsdl:input>
+			<wsdl:output message="tns:solicitudContracargoResponse" name="solicitudContracargoResponse"> </wsdl:output>
+			<wsdl:fault message="tns:DebinApiException" name="DebinApiException"> </wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="adhesionVendedor">
+			<wsdl:input message="tns:adhesionVendedor" name="adhesionVendedor"> </wsdl:input>
+			<wsdl:output message="tns:adhesionVendedorResponse" name="adhesionVendedorResponse"> </wsdl:output>
+			<wsdl:fault message="tns:DebinApiException" name="DebinApiException"> </wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="creacionDebinV3">
+			<wsdl:input message="tns:creacionDebinV3" name="creacionDebinV3"> </wsdl:input>
+			<wsdl:output message="tns:creacionDebinV3Response" name="creacionDebinV3Response"> </wsdl:output>
+			<wsdl:fault message="tns:DebinApiException" name="DebinApiException"> </wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="adhesionComprador">
+			<wsdl:input message="tns:adhesionComprador" name="adhesionComprador"> </wsdl:input>
+			<wsdl:output message="tns:adhesionCompradorResponse" name="adhesionCompradorResponse"> </wsdl:output>
+			<wsdl:fault message="tns:DebinApiException" name="DebinApiException"> </wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="echo">
+			<wsdl:input message="tns:echo" name="echo"> </wsdl:input>
+			<wsdl:output message="tns:echoResponse" name="echoResponse"> </wsdl:output>
+			<wsdl:fault message="tns:DebinApiException" name="DebinApiException"> </wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="confirmacionDebitoV3">
+			<wsdl:input message="tns:confirmacionDebitoV3" name="confirmacionDebitoV3"> </wsdl:input>
+			<wsdl:output message="tns:confirmacionDebitoV3Response" name="confirmacionDebitoV3Response"> </wsdl:output>
+			<wsdl:fault message="tns:DebinApiException" name="DebinApiException"> </wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="consultaVendedor">
+			<wsdl:input message="tns:consultaVendedor" name="consultaVendedor"> </wsdl:input>
+			<wsdl:output message="tns:consultaVendedorResponse" name="consultaVendedorResponse"> </wsdl:output>
+			<wsdl:fault message="tns:DebinApiException" name="DebinApiException"> </wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="creacionDebin">
+			<wsdl:input message="tns:creacionDebin" name="creacionDebin"> </wsdl:input>
+			<wsdl:output message="tns:creacionDebinResponse" name="creacionDebinResponse"> </wsdl:output>
+			<wsdl:fault message="tns:DebinApiException" name="DebinApiException"> </wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="bajaCuentaComprador">
+			<wsdl:input message="tns:bajaCuentaComprador" name="bajaCuentaComprador"> </wsdl:input>
+			<wsdl:output message="tns:bajaCuentaCompradorResponse" name="bajaCuentaCompradorResponse"> </wsdl:output>
+			<wsdl:fault message="tns:DebinApiException" name="DebinApiException"> </wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="eliminacionDebin">
+			<wsdl:input message="tns:eliminacionDebin" name="eliminacionDebin"> </wsdl:input>
+			<wsdl:output message="tns:eliminacionDebinResponse" name="eliminacionDebinResponse"> </wsdl:output>
+			<wsdl:fault message="tns:DebinApiException" name="DebinApiException"> </wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="listaDebinNew">
+			<wsdl:input message="tns:listaDebinNew" name="listaDebinNew"> </wsdl:input>
+			<wsdl:output message="tns:listaDebinNewResponse" name="listaDebinNewResponse"> </wsdl:output>
+			<wsdl:fault message="tns:DebinApiException" name="DebinApiException"> </wsdl:fault>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="v3/DebinClientSoapBinding" type="tns:v3/DebinClient">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<wsp:PolicyReference URI="#SecurityServiceSignThenEncryptPolicy"/>
+		<wsdl:operation name="consultaComprador">
+			<soap:operation soapAction="" style="document"/>
+			<wsdl:input name="consultaComprador">
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output name="consultaCompradorResponse">
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="DebinApiException">
+				<soap:fault name="DebinApiException" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="ordenCreditoV3">
+			<soap:operation soapAction="" style="document"/>
+			<wsdl:input name="ordenCreditoV3">
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output name="ordenCreditoV3Response">
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="DebinApiException">
+				<soap:fault name="DebinApiException" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="consultaDebin">
+			<soap:operation soapAction="" style="document"/>
+			<wsdl:input name="consultaDebin">
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output name="consultaDebinResponse">
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="DebinApiException">
+				<soap:fault name="DebinApiException" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="consultaCuentaEspecial">
+			<soap:operation soapAction="" style="document"/>
+			<wsdl:input name="consultaCuentaEspecial">
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output name="consultaCuentaEspecialResponse">
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="DebinApiException">
+				<soap:fault name="DebinApiException" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="creacionDebinNew">
+			<soap:operation soapAction="" style="document"/>
+			<wsdl:input name="creacionDebinNew">
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output name="creacionDebinNewResponse">
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="DebinApiException">
+				<soap:fault name="DebinApiException" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="ordenCredito">
+			<soap:operation soapAction="" style="document"/>
+			<wsdl:input name="ordenCredito">
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output name="ordenCreditoResponse">
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="DebinApiException">
+				<soap:fault name="DebinApiException" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="listaDebin">
+			<soap:operation soapAction="" style="document"/>
+			<wsdl:input name="listaDebin">
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output name="listaDebinResponse">
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="DebinApiException">
+				<soap:fault name="DebinApiException" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="altaBajaCuentaEspecial">
+			<soap:operation soapAction="" style="document"/>
+			<wsdl:input name="altaBajaCuentaEspecial">
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output name="altaBajaCuentaEspecialResponse">
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="DebinApiException">
+				<soap:fault name="DebinApiException" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="bajaCuentaVendedor">
+			<soap:operation soapAction="" style="document"/>
+			<wsdl:input name="bajaCuentaVendedor">
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output name="bajaCuentaVendedorResponse">
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="DebinApiException">
+				<soap:fault name="DebinApiException" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="confirmacionDebito">
+			<soap:operation soapAction="" style="document"/>
+			<wsdl:input name="confirmacionDebito">
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output name="confirmacionDebitoResponse">
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="DebinApiException">
+				<soap:fault name="DebinApiException" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="consultaDebinNew">
+			<soap:operation soapAction="" style="document"/>
+			<wsdl:input name="consultaDebinNew">
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output name="consultaDebinNewResponse">
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="DebinApiException">
+				<soap:fault name="DebinApiException" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="solicitudContracargo">
+			<soap:operation soapAction="" style="document"/>
+			<wsdl:input name="solicitudContracargo">
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output name="solicitudContracargoResponse">
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="DebinApiException">
+				<soap:fault name="DebinApiException" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="adhesionVendedor">
+			<soap:operation soapAction="" style="document"/>
+			<wsdl:input name="adhesionVendedor">
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output name="adhesionVendedorResponse">
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="DebinApiException">
+				<soap:fault name="DebinApiException" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="creacionDebinV3">
+			<soap:operation soapAction="" style="document"/>
+			<wsdl:input name="creacionDebinV3">
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output name="creacionDebinV3Response">
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="DebinApiException">
+				<soap:fault name="DebinApiException" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="adhesionComprador">
+			<soap:operation soapAction="" style="document"/>
+			<wsdl:input name="adhesionComprador">
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output name="adhesionCompradorResponse">
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="DebinApiException">
+				<soap:fault name="DebinApiException" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="echo">
+			<soap:operation soapAction="" style="document"/>
+			<wsdl:input name="echo">
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output name="echoResponse">
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="DebinApiException">
+				<soap:fault name="DebinApiException" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="confirmacionDebitoV3">
+			<soap:operation soapAction="" style="document"/>
+			<wsdl:input name="confirmacionDebitoV3">
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output name="confirmacionDebitoV3Response">
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="DebinApiException">
+				<soap:fault name="DebinApiException" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="consultaVendedor">
+			<soap:operation soapAction="" style="document"/>
+			<wsdl:input name="consultaVendedor">
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output name="consultaVendedorResponse">
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="DebinApiException">
+				<soap:fault name="DebinApiException" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="creacionDebin">
+			<soap:operation soapAction="" style="document"/>
+			<wsdl:input name="creacionDebin">
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output name="creacionDebinResponse">
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="DebinApiException">
+				<soap:fault name="DebinApiException" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="bajaCuentaComprador">
+			<soap:operation soapAction="" style="document"/>
+			<wsdl:input name="bajaCuentaComprador">
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output name="bajaCuentaCompradorResponse">
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="DebinApiException">
+				<soap:fault name="DebinApiException" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="eliminacionDebin">
+			<soap:operation soapAction="" style="document"/>
+			<wsdl:input name="eliminacionDebin">
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output name="eliminacionDebinResponse">
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="DebinApiException">
+				<soap:fault name="DebinApiException" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="listaDebinNew">
+			<soap:operation soapAction="" style="document"/>
+			<wsdl:input name="listaDebinNew">
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output name="listaDebinNewResponse">
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="DebinApiException">
+				<soap:fault name="DebinApiException" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="v3/DebinClient">
+		<wsdl:port binding="tns:v3/DebinClientSoapBinding" name="DebinClientImplV3Port">
+			<soap:address location="https://200.59.131.137/debin-api/external/v3/DebinClient"/>
+		</wsdl:port>
+	</wsdl:service>
+	<wsp:Policy xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702" wsu:Id="SecurityServiceSignThenEncryptPolicy">
+		<wsp:ExactlyOne>
+			<wsp:All>
+				<sp:AsymmetricBinding>
+					<wsp:Policy>
+						<sp:InitiatorToken>
+							<wsp:Policy>
+								<sp:X509Token sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient">
+									<wsp:Policy>
+										<sp:WssX509V3Token10/>
+										<sp:WssX509V3Token11/>
+									</wsp:Policy>
+								</sp:X509Token>
+							</wsp:Policy>
+						</sp:InitiatorToken>
+						<sp:RecipientToken>
+							<wsp:Policy>
+								<sp:X509Token sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/Always">
+									<wsp:Policy>
+										<sp:WssX509V3Token10/>
+										<sp:WssX509V3Token11/>
+									</wsp:Policy>
+								</sp:X509Token>
+							</wsp:Policy>
+						</sp:RecipientToken>
+						<sp:AlgorithmSuite>
+							<wsp:Policy>
+								<sp:Basic128Rsa15/>
+								<sp:Basic256Rsa15/>
+								<sp:Basic128Sha256Rsa15/>
+								<sp:Basic256Sha256Rsa15/>
+							</wsp:Policy>
+						</sp:AlgorithmSuite>
+						<sp:Layout>
+							<wsp:Policy>
+								<sp:Lax/>
+							</wsp:Policy>
+						</sp:Layout>
+						<sp:IncludeTimestamp/>
+						<sp:ProtectTokens/>
+						<sp:OnlySignEntireHeadersAndBody/>
+					</wsp:Policy>
+				</sp:AsymmetricBinding>
+				<sp:Wss10>
+					<wsp:Policy>
+						<sp:MustSupportRefKeyIdentifier/>
+						<sp:MustSupportRefIssuerSerial/>
+						<sp:MustSupportRefThumbprint/>
+						<sp:MustSupportRefEncryptedKey/>
+					</wsp:Policy>
+				</sp:Wss10>
+				<sp:Wss11>
+					<wsp:Policy>
+						<sp:MustSupportRefKeyIdentifier/>
+						<sp:MustSupportRefIssuerSerial/>
+						<sp:MustSupportRefThumbprint/>
+						<sp:MustSupportRefEncryptedKey/>
+						<sp:RequireSignatureConfirmation/>
+					</wsp:Policy>
+				</sp:Wss11>
+			</wsp:All>
+		</wsp:ExactlyOne>
+		<wsp:Policy wsu:Id="InputBindingPolicy">
+			<wsp:ExactlyOne>
+				<wsp:All>
+					<sp:EncryptedParts>
+						<sp:Body/>
+					</sp:EncryptedParts>
+					<sp:SignedParts>
+						<sp:Body/>
+					</sp:SignedParts>
+				</wsp:All>
+			</wsp:ExactlyOne>
+		</wsp:Policy>
+		<wsp:Policy wsu:Id="OutputBindingPolicy">
+			<wsp:ExactlyOne>
+				<wsp:All>
+					<sp:EncryptedParts>
+						<sp:Body/>
+					</sp:EncryptedParts>
+					<sp:SignedParts>
+						<sp:Body/>
+					</sp:SignedParts>
+				</wsp:All>
+			</wsp:ExactlyOne>
+		</wsp:Policy>
+	</wsp:Policy>
+</wsdl:definitions>

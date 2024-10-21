@@ -1,0 +1,1211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Comprobante Modelo 1" pageWidth="595" pageHeight="862" columnWidth="535" leftMargin="30" rightMargin="30" topMargin="30" bottomMargin="20" uuid="2196aed8-f594-4a19-985c-7eee6fff25e1">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="10"/>
+	<property name="ireport.y" value="1668"/>
+	<subDataset name="aceptados" uuid="76fb2c2d-99bb-4f5b-a2ce-f75574cee6f9">
+		<field name="numeroCheque" class="java.lang.String"/>
+		<field name="banco" class="java.lang.String"/>
+		<field name="diasAAdelantar" class="java.lang.String"/>
+		<field name="importeTotal" class="java.lang.String"/>
+		<field name="importeImpuestos" class="java.lang.String"/>
+		<field name="importeIntereses" class="java.lang.String"/>
+		<field name="importeAAcreditar" class="java.lang.String"/>
+	</subDataset>
+	<subDataset name="rechazados" uuid="20569e4f-1171-417d-893d-e34c4ea6af34">
+		<field name="numeroCheque" class="java.lang.String"/>
+		<field name="firmante" class="java.lang.String"/>
+		<field name="fechaDePago" class="java.lang.String"/>
+		<field name="importe" class="java.lang.String"/>
+	</subDataset>
+	<subDataset name="dataset1" uuid="8023a9ff-0df1-4342-aaa9-6af1f0305ec8"/>
+	<parameter name="LOGO_TOP" class="java.lang.String"/>
+	<parameter name="LOGO_CABECERA" class="java.lang.String"/>
+	<parameter name="TITULO_COMPROBANTE" class="java.lang.String"/>
+	<parameter name="NUMERO_TRAMITE" class="java.lang.String"/>
+	<parameter name="IMPORTE_ACREDITAR" class="java.lang.String"/>
+	<parameter name="CUENTA" class="java.lang.String"/>
+	<parameter name="NUMERO_OPERACION" class="java.lang.String"/>
+	<parameter name="MENSAJE_INFORMATIVO" class="java.lang.String"/>
+	<parameter name="TOTAL_DESCONTADOS" class="java.lang.String"/>
+	<parameter name="TOTAL" class="java.lang.String"/>
+	<parameter name="IMPUESTO" class="java.lang.String"/>
+	<parameter name="INTERESES" class="java.lang.String"/>
+	<parameter name="A_ACREDITAR" class="java.lang.String"/>
+	<parameter name="CHEQUES_ACEPTADOS" class="java.util.List"/>
+	<parameter name="TOTAL_CHEQUES_RECHAZADOS" class="java.lang.String"/>
+	<parameter name="IMPORTE" class="java.lang.String"/>
+	<parameter name="CHEQUES_RECHAZADOS" class="java.util.List"/>
+	<parameter name="COM_ADMIN_CHEQUES" class="java.lang.String"/>
+	<parameter name="TASA_NOMINAL_ANUAL" class="java.lang.String"/>
+	<parameter name="TASA_EFECTIVA_ANUAL" class="java.lang.String"/>
+	<parameter name="COSTO_FINANCIERO_TOTAL" class="java.lang.String"/>
+	<parameter name="VENCIMIENTO" class="java.lang.String"/>
+	<parameter name="NUMERO_COMPROBANTE" class="java.lang.String"/>
+	<parameter name="FECHA_ACTUAL" class="java.lang.String"/>
+	<parameter name="LOGO_PIE" class="java.lang.String"/>
+	<parameter name="LEGAL_PIE_1" class="java.lang.String"/>
+	<parameter name="LEGAL_PIE_2" class="java.lang.String"/>
+	<parameter name="LEGAL_PIE_3" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="44">
+			<image>
+				<reportElement x="0" y="0" width="102" height="14" uuid="2363bfee-73ec-4f07-8d7e-987df77310e4"/>
+				<imageExpression><![CDATA[$P{LOGO_TOP}]]></imageExpression>
+			</image>
+			<line>
+				<reportElement x="122" y="43" width="290" height="1" uuid="b3332502-5efd-49b5-b210-bed72b070a5c"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="40">
+			<image>
+				<reportElement mode="Transparent" x="123" y="0" width="288" height="40" backcolor="#EB0000" uuid="2fb3de8c-2051-45a2-b254-384ae62fadfb"/>
+				<imageExpression><![CDATA[$P{LOGO_CABECERA}]]></imageExpression>
+			</image>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="40" uuid="047462eb-d930-4660-88ed-cf172770b759"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="40" uuid="d2b33bbd-4178-48d6-829e-7eb3bdbef632"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+		</band>
+		<band height="15" splitType="Immediate">
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="15" uuid="df8d3065-0e95-473c-b6c0-319cd401b218"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="15" uuid="b1472843-844a-46f2-807e-201dc044fb2f"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="122" y="0" width="290" height="1" uuid="6c362069-e070-4e4d-8974-32d44343a4e4"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+		</band>
+		<band height="15" splitType="Immediate">
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="15" uuid="fd3f0b20-7918-446b-a26e-b7545acffcdd"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="15" uuid="4a2085d8-c4f9-441a-8746-196eda14a803"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="142" y="0" width="250" height="15" uuid="ed7ce381-9c0d-4f3d-976e-cce61fa1b36d"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Open Sans Light" size="10" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{TITULO_COMPROBANTE}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="15" splitType="Immediate">
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="15" uuid="23831bc6-f5f7-460b-8351-e007bfc8c6b7"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="15" uuid="22d27363-ff4b-4e71-922b-3cb107f91639"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+		</band>
+		<band height="30" splitType="Immediate">
+			<line>
+				<reportElement x="122" y="0" width="290" height="1" uuid="c25f128b-be2a-4c61-9888-a5f85c8cf797"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="30" uuid="97721db7-26f0-4151-ba06-d74f8edf1a74"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="30" uuid="bce8045d-f218-4fff-abbc-8158cc245b88"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+		</band>
+		<band height="22" splitType="Stretch">
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="22" uuid="7e3ff0af-b777-4057-a032-e9e54951cf92"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="22" uuid="0f125d14-6a85-42f1-bf1e-edd232131613"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="132" y="0" width="270" height="14" uuid="f5de6b15-fd2b-4c55-b413-4abbab0bb0f4"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="Open Sans Light" size="10" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Importe a acreditar]]></text>
+			</staticText>
+		</band>
+		<band height="35" splitType="Immediate">
+			<printWhenExpression><![CDATA[$P{IMPORTE_ACREDITAR}.length() > 0]]></printWhenExpression>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="35" uuid="9d6d9a6a-f4fa-4f46-bfa0-b40483755a66"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="35" uuid="bd8ac6e4-1e72-458e-a18a-438142a512d8"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<textField isStretchWithOverflow="true">
+				<reportElement isPrintRepeatedValues="false" x="132" y="0" width="270" height="34" uuid="1edb9fa6-a6e1-4321-8c1c-5275545b10d5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="html">
+					<font fontName="Open Sans Light" size="24" isPdfEmbedded="true"/>
+					<paragraph lineSpacing="Fixed" lineSpacingSize="18.0"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{IMPORTE_ACREDITAR}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="22" splitType="Immediate">
+			<printWhenExpression><![CDATA[$P{CUENTA}.length() > 0]]></printWhenExpression>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="22" uuid="7e3ff0af-b777-4057-a032-e9e54951cf92"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="22" uuid="0f125d14-6a85-42f1-bf1e-edd232131613"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<textField isStretchWithOverflow="true">
+				<reportElement isPrintRepeatedValues="false" x="132" y="0" width="270" height="22" uuid="15a172eb-2095-47b1-857b-566ae94983e3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="html">
+					<font fontName="Open Sans Light" size="12" isBold="true" isPdfEmbedded="true"/>
+					<paragraph lineSpacing="Fixed" lineSpacingSize="18.0"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{CUENTA}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="30" splitType="Immediate">
+			<line>
+				<reportElement x="122" y="29" width="290" height="1" uuid="d928f37b-1b03-4c83-8c0b-72e3921f65ea"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="30" uuid="7566399c-2bfd-4e1d-a424-3fb600b982a7"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="30" uuid="d565f407-875e-4ed1-b051-9aac7e59cc6f"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+		</band>
+		<band height="20" splitType="Immediate">
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="20" uuid="0fc65877-7f4c-4e18-b5d3-e5d53b4a641c"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="20" uuid="a46a1d33-7188-407c-a5f6-a3b76d0101a9"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+		</band>
+		<band height="15" splitType="Immediate">
+			<printWhenExpression><![CDATA[$P{MENSAJE_INFORMATIVO}.length() > 0]]></printWhenExpression>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="15" uuid="39408230-e53a-4a37-b44c-6f5fc257082b"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="15" uuid="4f323548-ec7f-4c7e-be0b-bb35e2cdb747"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="153" y="1" width="228" height="14" uuid="7539948d-97e4-40c4-a57c-4a9545f06662"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Open Sans" size="9" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{MENSAJE_INFORMATIVO}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="20" splitType="Immediate">
+			<printWhenExpression><![CDATA[$P{MENSAJE_INFORMATIVO}.length() > 0]]></printWhenExpression>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="20" uuid="205f3e9d-6227-4ee6-8ac3-b738fc7c0d3c"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="20" uuid="c9b40f68-fd38-4b89-aa8f-440a3f6b40da"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="142" y="10" width="250" height="1" uuid="00ee93cb-13f4-4ecb-9c5a-e8bb776e8131"/>
+				<graphicElement>
+					<pen lineWidth="0.25" lineStyle="Dotted" lineColor="#000000"/>
+				</graphicElement>
+			</line>
+		</band>
+		<band height="15" splitType="Immediate">
+			<printWhenExpression><![CDATA[$P{TOTAL_DESCONTADOS}.length() > 0]]></printWhenExpression>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="15" uuid="cd792fab-4c0e-4a5d-9890-90cf62693802"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="15" uuid="814c41ab-d973-4abe-9085-dae64cf256fe"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="153" y="1" width="163" height="14" uuid="0a9b196c-4d65-4636-ac6c-583c5fed722e"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Open Sans Light" size="10" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Cheques aceptados operación]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="316" y="1" width="76" height="14" uuid="c4a92566-f2d4-4817-9388-901fe7198968"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Open Sans Light" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{NUMERO_OPERACION}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="20" splitType="Immediate">
+			<printWhenExpression><![CDATA[$P{TOTAL_DESCONTADOS}.length() > 0]]></printWhenExpression>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="20" uuid="cd792fab-4c0e-4a5d-9890-90cf62693802"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="20" uuid="814c41ab-d973-4abe-9085-dae64cf256fe"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="153" y="6" width="148" height="14" uuid="0a9b196c-4d65-4636-ac6c-583c5fed722e"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Open Sans Light" size="9" isBold="false" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Cantidad de cheques descontados:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="301" y="6" width="15" height="14" uuid="c4a92566-f2d4-4817-9388-901fe7198968"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Open Sans Light" isBold="false" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{TOTAL_DESCONTADOS}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="20" splitType="Immediate">
+			<printWhenExpression><![CDATA[$P{TOTAL_DESCONTADOS}.length() > 0]]></printWhenExpression>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="20" uuid="205f3e9d-6227-4ee6-8ac3-b738fc7c0d3c"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="20" uuid="c9b40f68-fd38-4b89-aa8f-440a3f6b40da"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="142" y="10" width="250" height="1" uuid="00ee93cb-13f4-4ecb-9c5a-e8bb776e8131"/>
+				<graphicElement>
+					<pen lineWidth="0.25" lineStyle="Dotted" lineColor="#000000"/>
+				</graphicElement>
+			</line>
+		</band>
+		<band height="60" splitType="Immediate">
+			<printWhenExpression><![CDATA[$P{TOTAL_DESCONTADOS}.length() > 0]]></printWhenExpression>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="59" uuid="cd792fab-4c0e-4a5d-9890-90cf62693802"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="59" uuid="814c41ab-d973-4abe-9085-dae64cf256fe"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="153" y="1" width="64" height="14" uuid="0a9b196c-4d65-4636-ac6c-583c5fed722e"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Open Sans" size="9" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Importe (1)]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="217" y="0" width="164" height="14" uuid="c4a92566-f2d4-4817-9388-901fe7198968"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font fontName="Open Sans Light" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{TOTAL}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="217" y="15" width="164" height="14" uuid="c4a92566-f2d4-4817-9388-901fe7198968"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font fontName="Open Sans" isBold="false" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{IMPUESTO}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="217" y="30" width="164" height="14" uuid="c4a92566-f2d4-4817-9388-901fe7198968"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font fontName="Open Sans" isBold="false" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{INTERESES}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="217" y="45" width="164" height="14" uuid="c4a92566-f2d4-4817-9388-901fe7198968"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font fontName="Open Sans" isBold="false" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{A_ACREDITAR}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="20" splitType="Immediate">
+			<printWhenExpression><![CDATA[$P{TOTAL_DESCONTADOS}.length() > 0]]></printWhenExpression>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="20" uuid="205f3e9d-6227-4ee6-8ac3-b738fc7c0d3c"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="20" uuid="c9b40f68-fd38-4b89-aa8f-440a3f6b40da"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="142" y="10" width="250" height="1" uuid="00ee93cb-13f4-4ecb-9c5a-e8bb776e8131"/>
+				<graphicElement>
+					<pen lineWidth="0.25" lineStyle="Dotted" lineColor="#000000"/>
+				</graphicElement>
+			</line>
+		</band>
+		<band height="210" splitType="Immediate">
+			<printWhenExpression><![CDATA[$P{TOTAL_DESCONTADOS}.length() > 0]]></printWhenExpression>
+			<componentElement>
+				<reportElement x="122" y="0" width="290" height="210" uuid="62bab4b5-9f88-4e1e-9df2-b94e1c68423b"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+					<datasetRun subDataset="aceptados" uuid="92b60a78-1bf7-4a17-8423-98a2952d6dac">
+						<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($P{CHEQUES_ACEPTADOS})]]></dataSourceExpression>
+					</datasetRun>
+					<jr:listContents height="210" width="290">
+						<line>
+							<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="1" height="210" uuid="fd3f0b20-7918-446b-a26e-b7545acffcdd"/>
+							<graphicElement>
+								<pen lineWidth="0.25"/>
+							</graphicElement>
+						</line>
+						<line>
+							<reportElement stretchType="RelativeToBandHeight" x="289" y="0" width="1" height="210" uuid="4a2085d8-c4f9-441a-8746-196eda14a803"/>
+							<graphicElement>
+								<pen lineWidth="0.25"/>
+							</graphicElement>
+						</line>
+						<staticText>
+							<reportElement x="30" y="10" width="40" height="14" uuid="0a9b196c-4d65-4636-ac6c-583c5fed722e"/>
+							<textElement verticalAlignment="Top">
+								<font fontName="Open Sans Light" size="10" isBold="true" isPdfEmbedded="true"/>
+							</textElement>
+							<text><![CDATA[Cheque]]></text>
+						</staticText>
+						<textField>
+							<reportElement x="71" y="10" width="187" height="14" uuid="c4a92566-f2d4-4817-9388-901fe7198968"/>
+							<textElement textAlignment="Left" verticalAlignment="Bottom">
+								<font fontName="Open Sans Light" isBold="true" isPdfEmbedded="true"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{numeroCheque}]]></textFieldExpression>
+						</textField>
+						<line>
+							<reportElement x="19" y="34" width="250" height="1" uuid="00ee93cb-13f4-4ecb-9c5a-e8bb776e8131"/>
+							<graphicElement>
+								<pen lineWidth="0.25" lineStyle="Dotted" lineColor="#000000"/>
+							</graphicElement>
+						</line>
+						<staticText>
+							<reportElement x="30" y="46" width="40" height="14" uuid="0a9b196c-4d65-4636-ac6c-583c5fed722e"/>
+							<textElement verticalAlignment="Bottom">
+								<font fontName="Open Sans" size="9" isBold="false" isPdfEmbedded="true"/>
+							</textElement>
+							<text><![CDATA[Banco]]></text>
+						</staticText>
+						<textField>
+							<reportElement x="71" y="46" width="187" height="14" uuid="c4a92566-f2d4-4817-9388-901fe7198968"/>
+							<textElement textAlignment="Right" verticalAlignment="Bottom">
+								<font fontName="Open Sans Light" isBold="true" isStrikeThrough="false" isPdfEmbedded="true"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{banco}]]></textFieldExpression>
+						</textField>
+						<line>
+							<reportElement x="19" y="70" width="250" height="1" uuid="00ee93cb-13f4-4ecb-9c5a-e8bb776e8131"/>
+							<graphicElement>
+								<pen lineWidth="0.25" lineStyle="Dotted" lineColor="#000000"/>
+							</graphicElement>
+						</line>
+						<staticText>
+							<reportElement x="30" y="82" width="118" height="14" uuid="0a9b196c-4d65-4636-ac6c-583c5fed722e"/>
+							<textElement verticalAlignment="Bottom">
+								<font fontName="Open Sans" size="9" isBold="false" isPdfEmbedded="true"/>
+							</textElement>
+							<text><![CDATA[Días a adelantar]]></text>
+						</staticText>
+						<textField>
+							<reportElement x="148" y="82" width="110" height="14" uuid="c4a92566-f2d4-4817-9388-901fe7198968"/>
+							<textElement textAlignment="Right" verticalAlignment="Bottom">
+								<font fontName="Open Sans Light" isBold="true" isStrikeThrough="false" isPdfEmbedded="true"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{diasAAdelantar}]]></textFieldExpression>
+						</textField>
+						<line>
+							<reportElement x="19" y="106" width="250" height="1" uuid="00ee93cb-13f4-4ecb-9c5a-e8bb776e8131"/>
+							<graphicElement>
+								<pen lineWidth="0.25" lineStyle="Dotted" lineColor="#000000"/>
+							</graphicElement>
+						</line>
+						<staticText>
+							<reportElement x="30" y="118" width="64" height="14" uuid="0a9b196c-4d65-4636-ac6c-583c5fed722e"/>
+							<textElement verticalAlignment="Bottom">
+								<font fontName="Open Sans" size="9" isPdfEmbedded="true"/>
+							</textElement>
+							<text><![CDATA[Importe (1)]]></text>
+						</staticText>
+						<textField isStretchWithOverflow="true">
+							<reportElement x="94" y="118" width="164" height="14" uuid="c4a92566-f2d4-4817-9388-901fe7198968"/>
+							<textElement textAlignment="Right" verticalAlignment="Bottom">
+								<font fontName="Open Sans Light" isBold="true" isPdfEmbedded="true"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{importeTotal}]]></textFieldExpression>
+						</textField>
+						<textField isStretchWithOverflow="true">
+							<reportElement x="30" y="133" width="228" height="14" uuid="c4a92566-f2d4-4817-9388-901fe7198968"/>
+							<textElement textAlignment="Right" verticalAlignment="Bottom">
+								<font fontName="Open Sans" isBold="false" isPdfEmbedded="true"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{importeImpuestos}]]></textFieldExpression>
+						</textField>
+						<textField isStretchWithOverflow="true">
+							<reportElement x="30" y="148" width="228" height="14" uuid="c4a92566-f2d4-4817-9388-901fe7198968"/>
+							<textElement textAlignment="Right" verticalAlignment="Bottom">
+								<font fontName="Open Sans" isBold="false" isPdfEmbedded="true"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{importeIntereses}]]></textFieldExpression>
+						</textField>
+						<textField isStretchWithOverflow="true">
+							<reportElement x="30" y="163" width="228" height="14" uuid="c4a92566-f2d4-4817-9388-901fe7198968"/>
+							<textElement textAlignment="Right" verticalAlignment="Bottom">
+								<font fontName="Open Sans" isBold="false" isPdfEmbedded="true"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{importeAAcreditar}]]></textFieldExpression>
+						</textField>
+						<line>
+							<reportElement x="19" y="186" width="250" height="1" uuid="00185f3d-dba5-419d-8200-17c7c13cab04"/>
+							<graphicElement>
+								<pen lineWidth="0.25" lineStyle="Dotted" lineColor="#000000"/>
+							</graphicElement>
+						</line>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+		</band>
+		<band height="15" splitType="Immediate">
+			<printWhenExpression><![CDATA[$P{TOTAL_CHEQUES_RECHAZADOS}.length() > 0]]></printWhenExpression>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="15" uuid="cd792fab-4c0e-4a5d-9890-90cf62693802"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="15" uuid="814c41ab-d973-4abe-9085-dae64cf256fe"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="153" y="1" width="227" height="14" uuid="0a9b196c-4d65-4636-ac6c-583c5fed722e"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Open Sans Light" size="10" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Cheques no descontados]]></text>
+			</staticText>
+		</band>
+		<band height="20" splitType="Immediate">
+			<printWhenExpression><![CDATA[$P{TOTAL_CHEQUES_RECHAZADOS}.length() > 0]]></printWhenExpression>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="20" uuid="cd792fab-4c0e-4a5d-9890-90cf62693802"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="20" uuid="814c41ab-d973-4abe-9085-dae64cf256fe"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="153" y="6" width="91" height="14" uuid="0a9b196c-4d65-4636-ac6c-583c5fed722e"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Open Sans Light" size="9" isBold="false" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Cheques rechazados:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="244" y="6" width="15" height="14" uuid="c4a92566-f2d4-4817-9388-901fe7198968"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Open Sans Light" isBold="false" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{TOTAL_CHEQUES_RECHAZADOS}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="20" splitType="Immediate">
+			<printWhenExpression><![CDATA[$P{TOTAL_CHEQUES_RECHAZADOS}.length() > 0]]></printWhenExpression>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="20" uuid="205f3e9d-6227-4ee6-8ac3-b738fc7c0d3c"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="20" uuid="c9b40f68-fd38-4b89-aa8f-440a3f6b40da"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="142" y="10" width="250" height="1" uuid="00ee93cb-13f4-4ecb-9c5a-e8bb776e8131"/>
+				<graphicElement>
+					<pen lineWidth="0.25" lineStyle="Dotted" lineColor="#000000"/>
+				</graphicElement>
+			</line>
+		</band>
+		<band height="15" splitType="Immediate">
+			<printWhenExpression><![CDATA[$P{TOTAL_CHEQUES_RECHAZADOS}.length() > 0]]></printWhenExpression>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="15" uuid="cd792fab-4c0e-4a5d-9890-90cf62693802"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="15" uuid="814c41ab-d973-4abe-9085-dae64cf256fe"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="153" y="1" width="64" height="14" uuid="0a9b196c-4d65-4636-ac6c-583c5fed722e"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Open Sans" size="9" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Importe]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="217" y="0" width="164" height="14" uuid="c4a92566-f2d4-4817-9388-901fe7198968"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font fontName="Open Sans Light" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{IMPORTE}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="20" splitType="Immediate">
+			<printWhenExpression><![CDATA[$P{TOTAL_CHEQUES_RECHAZADOS}.length() > 0]]></printWhenExpression>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="20" uuid="205f3e9d-6227-4ee6-8ac3-b738fc7c0d3c"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="20" uuid="c9b40f68-fd38-4b89-aa8f-440a3f6b40da"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="142" y="10" width="250" height="1" uuid="00ee93cb-13f4-4ecb-9c5a-e8bb776e8131"/>
+				<graphicElement>
+					<pen lineWidth="0.25" lineStyle="Dotted" lineColor="#000000"/>
+				</graphicElement>
+			</line>
+		</band>
+		<band height="165" splitType="Immediate">
+			<printWhenExpression><![CDATA[$P{TOTAL_CHEQUES_RECHAZADOS}.length() > 0]]></printWhenExpression>
+			<componentElement>
+				<reportElement x="122" y="0" width="290" height="165" uuid="62bab4b5-9f88-4e1e-9df2-b94e1c68423b"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+					<datasetRun subDataset="rechazados" uuid="92b60a78-1bf7-4a17-8423-98a2952d6dac">
+						<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($P{CHEQUES_RECHAZADOS})]]></dataSourceExpression>
+					</datasetRun>
+					<jr:listContents height="165" width="290">
+						<line>
+							<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="1" height="165" uuid="fd3f0b20-7918-446b-a26e-b7545acffcdd"/>
+							<graphicElement>
+								<pen lineWidth="0.25"/>
+							</graphicElement>
+						</line>
+						<line>
+							<reportElement stretchType="RelativeToBandHeight" x="289" y="0" width="1" height="165" uuid="4a2085d8-c4f9-441a-8746-196eda14a803"/>
+							<graphicElement>
+								<pen lineWidth="0.25"/>
+							</graphicElement>
+						</line>
+						<staticText>
+							<reportElement x="30" y="10" width="40" height="14" uuid="0a9b196c-4d65-4636-ac6c-583c5fed722e"/>
+							<textElement verticalAlignment="Top">
+								<font fontName="Open Sans Light" size="10" isBold="true" isPdfEmbedded="true"/>
+							</textElement>
+							<text><![CDATA[Cheque]]></text>
+						</staticText>
+						<textField>
+							<reportElement x="71" y="10" width="187" height="14" uuid="c4a92566-f2d4-4817-9388-901fe7198968"/>
+							<textElement textAlignment="Left" verticalAlignment="Bottom">
+								<font fontName="Open Sans Light" isBold="true" isPdfEmbedded="true"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{numeroCheque}]]></textFieldExpression>
+						</textField>
+						<line>
+							<reportElement x="19" y="34" width="250" height="1" uuid="00ee93cb-13f4-4ecb-9c5a-e8bb776e8131"/>
+							<graphicElement>
+								<pen lineWidth="0.25" lineStyle="Dotted" lineColor="#000000"/>
+							</graphicElement>
+						</line>
+						<staticText>
+							<reportElement x="30" y="46" width="91" height="14" uuid="0a9b196c-4d65-4636-ac6c-583c5fed722e"/>
+							<textElement verticalAlignment="Bottom">
+								<font fontName="Open Sans" size="9" isBold="false" isPdfEmbedded="true"/>
+							</textElement>
+							<text><![CDATA[Firmante]]></text>
+						</staticText>
+						<textField>
+							<reportElement x="121" y="46" width="137" height="14" uuid="c4a92566-f2d4-4817-9388-901fe7198968"/>
+							<textElement textAlignment="Right" verticalAlignment="Bottom">
+								<font fontName="Open Sans Light" isBold="true" isStrikeThrough="false" isPdfEmbedded="true"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{firmante}]]></textFieldExpression>
+						</textField>
+						<line>
+							<reportElement x="19" y="70" width="250" height="1" uuid="00ee93cb-13f4-4ecb-9c5a-e8bb776e8131"/>
+							<graphicElement>
+								<pen lineWidth="0.25" lineStyle="Dotted" lineColor="#000000"/>
+							</graphicElement>
+						</line>
+						<staticText>
+							<reportElement x="30" y="82" width="91" height="14" uuid="0a9b196c-4d65-4636-ac6c-583c5fed722e"/>
+							<textElement verticalAlignment="Bottom">
+								<font fontName="Open Sans" size="9" isBold="false" isPdfEmbedded="true"/>
+							</textElement>
+							<text><![CDATA[Fecha de pago]]></text>
+						</staticText>
+						<textField>
+							<reportElement x="121" y="82" width="137" height="14" uuid="c4a92566-f2d4-4817-9388-901fe7198968"/>
+							<textElement textAlignment="Right" verticalAlignment="Bottom">
+								<font fontName="Open Sans Light" isBold="true" isStrikeThrough="false" isPdfEmbedded="true"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{fechaDePago}]]></textFieldExpression>
+						</textField>
+						<line>
+							<reportElement x="19" y="106" width="250" height="1" uuid="00ee93cb-13f4-4ecb-9c5a-e8bb776e8131"/>
+							<graphicElement>
+								<pen lineWidth="0.25" lineStyle="Dotted" lineColor="#000000"/>
+							</graphicElement>
+						</line>
+						<staticText>
+							<reportElement x="30" y="118" width="64" height="14" uuid="0a9b196c-4d65-4636-ac6c-583c5fed722e"/>
+							<textElement verticalAlignment="Bottom">
+								<font fontName="Open Sans" size="9" isPdfEmbedded="true"/>
+							</textElement>
+							<text><![CDATA[Importe]]></text>
+						</staticText>
+						<textField isStretchWithOverflow="true">
+							<reportElement x="94" y="118" width="164" height="14" uuid="c4a92566-f2d4-4817-9388-901fe7198968"/>
+							<textElement textAlignment="Right" verticalAlignment="Bottom">
+								<font fontName="Open Sans Light" isBold="true" isPdfEmbedded="true"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{importe}]]></textFieldExpression>
+						</textField>
+						<line>
+							<reportElement x="19" y="143" width="250" height="1" uuid="00185f3d-dba5-419d-8200-17c7c13cab04"/>
+							<graphicElement>
+								<pen lineWidth="0.25" lineStyle="Dotted" lineColor="#000000"/>
+							</graphicElement>
+						</line>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+		</band>
+		<band height="15" splitType="Immediate">
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="15" uuid="cd792fab-4c0e-4a5d-9890-90cf62693802"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="15" uuid="814c41ab-d973-4abe-9085-dae64cf256fe"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="153" y="1" width="227" height="14" uuid="0a9b196c-4d65-4636-ac6c-583c5fed722e"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Open Sans Light" size="10" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Tasas y comisiones]]></text>
+			</staticText>
+		</band>
+		<band height="20" splitType="Immediate">
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="20" uuid="205f3e9d-6227-4ee6-8ac3-b738fc7c0d3c"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="20" uuid="c9b40f68-fd38-4b89-aa8f-440a3f6b40da"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="142" y="10" width="250" height="1" uuid="00ee93cb-13f4-4ecb-9c5a-e8bb776e8131"/>
+				<graphicElement>
+					<pen lineWidth="0.25" lineStyle="Dotted" lineColor="#000000"/>
+				</graphicElement>
+			</line>
+		</band>
+		<band height="30" splitType="Immediate">
+			<printWhenExpression><![CDATA[$P{COM_ADMIN_CHEQUES}.length() > 0]]></printWhenExpression>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="30" uuid="cd792fab-4c0e-4a5d-9890-90cf62693802"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="30" uuid="814c41ab-d973-4abe-9085-dae64cf256fe"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="153" y="1" width="137" height="29" uuid="0a9b196c-4d65-4636-ac6c-583c5fed722e"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Open Sans" size="9" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Comisión por administración de cheques cedidos (2)]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="290" y="12" width="91" height="14" uuid="c4a92566-f2d4-4817-9388-901fe7198968"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font fontName="Open Sans Light" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{COM_ADMIN_CHEQUES}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="20" splitType="Immediate">
+			<printWhenExpression><![CDATA[$P{COM_ADMIN_CHEQUES}.length() > 0]]></printWhenExpression>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="20" uuid="205f3e9d-6227-4ee6-8ac3-b738fc7c0d3c"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="20" uuid="c9b40f68-fd38-4b89-aa8f-440a3f6b40da"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="142" y="10" width="250" height="1" uuid="00ee93cb-13f4-4ecb-9c5a-e8bb776e8131"/>
+				<graphicElement>
+					<pen lineWidth="0.25" lineStyle="Dotted" lineColor="#000000"/>
+				</graphicElement>
+			</line>
+		</band>
+		<band height="26" splitType="Immediate">
+			<printWhenExpression><![CDATA[$P{TASA_NOMINAL_ANUAL}.length() > 0]]></printWhenExpression>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="26" uuid="cd792fab-4c0e-4a5d-9890-90cf62693802"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="26" uuid="814c41ab-d973-4abe-9085-dae64cf256fe"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="153" y="1" width="148" height="25" uuid="0a9b196c-4d65-4636-ac6c-583c5fed722e"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Open Sans" size="9" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Tasa Nominal Anual Adelantada (TNAA) (3)]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="258" y="1" width="123" height="14" uuid="c4a92566-f2d4-4817-9388-901fe7198968"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font fontName="Open Sans Light" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{TASA_NOMINAL_ANUAL}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="20" splitType="Immediate">
+			<printWhenExpression><![CDATA[$P{TASA_NOMINAL_ANUAL}.length() > 0]]></printWhenExpression>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="20" uuid="205f3e9d-6227-4ee6-8ac3-b738fc7c0d3c"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="20" uuid="c9b40f68-fd38-4b89-aa8f-440a3f6b40da"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="142" y="10" width="250" height="1" uuid="00ee93cb-13f4-4ecb-9c5a-e8bb776e8131"/>
+				<graphicElement>
+					<pen lineWidth="0.25" lineStyle="Dotted" lineColor="#000000"/>
+				</graphicElement>
+			</line>
+		</band>
+		<band height="15" splitType="Immediate">
+			<printWhenExpression><![CDATA[$P{TASA_EFECTIVA_ANUAL}.length() > 0]]></printWhenExpression>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="15" uuid="cd792fab-4c0e-4a5d-9890-90cf62693802"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="15" uuid="814c41ab-d973-4abe-9085-dae64cf256fe"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="153" y="1" width="137" height="14" uuid="0a9b196c-4d65-4636-ac6c-583c5fed722e"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Open Sans" size="9" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Tasa Efectiva Anual (TEA)]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="258" y="1" width="123" height="14" uuid="c4a92566-f2d4-4817-9388-901fe7198968"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font fontName="Open Sans Light" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{TASA_EFECTIVA_ANUAL}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="20" splitType="Immediate">
+			<printWhenExpression><![CDATA[$P{TASA_EFECTIVA_ANUAL}.length() > 0]]></printWhenExpression>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="20" uuid="205f3e9d-6227-4ee6-8ac3-b738fc7c0d3c"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="20" uuid="c9b40f68-fd38-4b89-aa8f-440a3f6b40da"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="142" y="10" width="250" height="1" uuid="00ee93cb-13f4-4ecb-9c5a-e8bb776e8131"/>
+				<graphicElement>
+					<pen lineWidth="0.25" lineStyle="Dotted" lineColor="#000000"/>
+				</graphicElement>
+			</line>
+		</band>
+		<band height="15" splitType="Immediate">
+			<printWhenExpression><![CDATA[$P{COSTO_FINANCIERO_TOTAL}.length() > 0]]></printWhenExpression>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="15" uuid="cd792fab-4c0e-4a5d-9890-90cf62693802"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="15" uuid="814c41ab-d973-4abe-9085-dae64cf256fe"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="153" y="1" width="213" height="14" uuid="0a9b196c-4d65-4636-ac6c-583c5fed722e"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Open Sans" size="9" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Costo Financiero Total Efectivo Anual (CFTEA)]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="258" y="1" width="123" height="14" uuid="c4a92566-f2d4-4817-9388-901fe7198968"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font fontName="Open Sans Light" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{COSTO_FINANCIERO_TOTAL}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="20" splitType="Immediate">
+			<printWhenExpression><![CDATA[$P{COSTO_FINANCIERO_TOTAL}.length() > 0]]></printWhenExpression>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="20" uuid="205f3e9d-6227-4ee6-8ac3-b738fc7c0d3c"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="20" uuid="c9b40f68-fd38-4b89-aa8f-440a3f6b40da"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="142" y="10" width="250" height="1" uuid="00ee93cb-13f4-4ecb-9c5a-e8bb776e8131"/>
+				<graphicElement>
+					<pen lineWidth="0.25" lineStyle="Dotted" lineColor="#000000"/>
+				</graphicElement>
+			</line>
+		</band>
+		<band height="10" splitType="Immediate">
+			<printWhenExpression><![CDATA[$P{FECHA_ACTUAL}.length() > 0]]></printWhenExpression>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="10" uuid="cd792fab-4c0e-4a5d-9890-90cf62693802"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="10" uuid="814c41ab-d973-4abe-9085-dae64cf256fe"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="153" y="0" width="228" height="10" forecolor="#666666" uuid="c4a92566-f2d4-4817-9388-901fe7198968"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="Open Sans" size="7" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{FECHA_ACTUAL}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="40" splitType="Immediate">
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="40" uuid="d902eb2e-9143-43c6-b717-a3280f2ed07d"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="40" uuid="bc9b27ae-b064-46df-b3b0-8fdba6ae549f"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<image scaleImage="RetainShape" hAlign="Center" vAlign="Middle">
+				<reportElement x="217" y="10" width="100" height="20" uuid="79d5cfb9-7d64-4615-9853-2f313eb93a35"/>
+				<imageExpression><![CDATA[$P{LOGO_PIE}]]></imageExpression>
+			</image>
+		</band>
+		<band height="10" splitType="Immediate">
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="10" uuid="cd792fab-4c0e-4a5d-9890-90cf62693802"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="10" uuid="814c41ab-d973-4abe-9085-dae64cf256fe"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="153" y="0" width="228" height="10" forecolor="#666666" uuid="c4a92566-f2d4-4817-9388-901fe7198968"/>
+				<textElement textAlignment="Left" verticalAlignment="Bottom" markup="html">
+					<font fontName="Open Sans" size="7" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{LEGAL_PIE_1}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="10" splitType="Immediate">
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="10" uuid="cd792fab-4c0e-4a5d-9890-90cf62693802"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="10" uuid="814c41ab-d973-4abe-9085-dae64cf256fe"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="153" y="0" width="228" height="10" forecolor="#666666" uuid="c4a92566-f2d4-4817-9388-901fe7198968"/>
+				<textElement textAlignment="Left" verticalAlignment="Bottom" markup="html">
+					<font fontName="Open Sans" size="7" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{LEGAL_PIE_2}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="10" splitType="Immediate">
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="10" uuid="cd792fab-4c0e-4a5d-9890-90cf62693802"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="10" uuid="814c41ab-d973-4abe-9085-dae64cf256fe"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="153" y="0" width="228" height="10" forecolor="#666666" uuid="c4a92566-f2d4-4817-9388-901fe7198968"/>
+				<textElement textAlignment="Left" verticalAlignment="Bottom" markup="html">
+					<font fontName="Open Sans" size="7" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{LEGAL_PIE_3}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="50" splitType="Immediate">
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="50" uuid="cd792fab-4c0e-4a5d-9890-90cf62693802"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="50" uuid="814c41ab-d973-4abe-9085-dae64cf256fe"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+		</band>
+		<band height="1">
+			<line>
+				<reportElement x="122" y="0" width="290" height="1" uuid="6b24e995-c031-4c8f-b77f-cbf97c4d649d"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="30">
+			<textField>
+				<reportElement x="496" y="9" width="11" height="20" uuid="49f1c30c-6ad1-4dee-bdfb-12fd7ab12f4c"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="Open Sans Light" size="9" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="524" y="9" width="11" height="20" uuid="56ab1ce2-c9f6-425e-a69c-608696c826f6"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="Open Sans Light" size="9" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="509" y="9" width="13" height="20" uuid="483c29de-6e6b-4636-9361-a2005020e383"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="Open Sans Light" size="9" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[de]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="366" y="9" width="128" height="20" uuid="99610df4-338a-4999-b749-2cf93f1c0965"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font fontName="Open Sans Light" size="9" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Página]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

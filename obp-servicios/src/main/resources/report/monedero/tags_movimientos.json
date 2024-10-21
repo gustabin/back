@@ -1,0 +1,421 @@
+{
+  "estadoRespuesta": "OK",
+  "respuesta": {
+    "tag": {
+      "numero": "xxxx 1234",
+      "marca": "VISA",
+      "tipoTarjeta": "debito",
+      "importeRecarga": "50,00",
+      "limiteMensual": "500,00",
+      "saldo": "53,20",
+      "isTitular": true,
+      "activo": false
+    },
+    "saldosYMovimientos": [
+      {
+        "numero": "XXXX-1234",
+        "isTitular": true,
+        "activo": true,
+        "saldo": "53,20",
+        "hasError": false,
+        "lineas": [
+          {
+            "fecha": "05/05/2016 13:24:45",
+            "movimiento": "Consumo 1",
+            "descripcion": "santander R?VISA d?to 1234",
+            "importe": "145,00"
+          },
+          {
+            "fecha": "06/08/2016  13:11:37",
+            "movimiento": "Consumo 2",
+            "descripcion": "santander R?VISA d?to 1234",
+            "importe": "45,00"
+          },
+          {
+            "fecha": "07/08/2016  13:11:37",
+            "movimiento": "Consumo 3",
+            "descripcion": "Concesiones gastron??as del Plata SRL",
+            "importe": "75,00"
+          },
+          {
+            "fecha": "02/08/2016  13:11:37",
+            "movimiento": "Consumo 4",
+            "descripcion": "Concesiones gastron??as del Plata SRL",
+            "importe": "75,00"
+          },
+          {
+            "fecha": "02/07/2016  13:11:37",
+            "movimiento": "Consumo 5",
+            "descripcion": "Concesiones gastron??as del Plata SRL",
+            "importe": "75,00"
+          },
+          {
+            "fecha": "04/05/2016 13:24:45",
+            "movimiento": "Consumo 6",
+            "descripcion": "santander R?VISA d?to 1234",
+            "importe": "145,00"
+          },
+          {
+            "fecha": "09/08/2016  13:11:37",
+            "movimiento": "Consumo 7",
+            "descripcion": "santander R?VISA d?to 1234",
+            "importe": "45,00"
+          },
+          {
+            "fecha": "02/02/2016  13:11:37",
+            "movimiento": "Consumo 8",
+            "descripcion": "Concesiones gastron??as del Plata SRL",
+            "importe": "75,00"
+          },
+          {
+            "fecha": "02/04/2016  13:11:37",
+            "movimiento": "Consumo 9",
+            "descripcion": "Concesiones gastron??as del Plata SRL",
+            "importe": "75,00"
+          },
+          {
+            "fecha": "02/11/2016  13:11:37",
+            "movimiento": "Consumo 10",
+            "descripcion": "Concesiones gastron??as del Plata SRL",
+            "importe": "75,00"
+          },
+          {
+            "fecha": "03/08/2016  13:11:37",
+            "movimiento": "Consumo 11",
+            "descripcion": "Concesiones gastron??as del Plata SRL",
+            "importe": "75,00"
+          },
+          {
+            "fecha": "02/08/2016  13:11:37",
+            "movimiento": "Consumo 12",
+            "descripcion": "Concesiones gastron??as del Plata SRL",
+            "importe": "75,00"
+          },
+          {
+            "fecha": "05/05/2015 13:24:45",
+            "movimiento": "Consumo 13",
+            "descripcion": "santander R?VISA d?to 1234",
+            "importe": "145,00"
+          },
+          {
+            "fecha": "05/08/2014  13:11:37",
+            "movimiento": "Consumo 14",
+            "descripcion": "santander R?VISA d?to 1234",
+            "importe": "45,00"
+          },
+          {
+            "fecha": "02/07/2016  13:11:37",
+            "movimiento": "Consumo 15",
+            "descripcion": "Concesiones gastron??as del Plata SRL",
+            "importe": "75,00"
+          },
+          {
+            "fecha": "02/06/2016  13:11:37",
+            "movimiento": "Consumo 16",
+            "descripcion": "Concesiones gastron??as del Plata SRL",
+            "importe": "75,00"
+          },
+          {
+            "fecha": "02/09/2016  13:11:37",
+            "movimiento": "Consumo 17",
+            "descripcion": "Concesiones gastron??as del Plata SRL",
+            "importe": "75,00"
+          },
+          {
+            "fecha": "02/08/2016  14:11:37",
+            "movimiento": "Consumo 18",
+            "descripcion": "Concesiones gastron??as del Plata SRL",
+            "importe": "75,00"
+          },
+          {
+            "fecha": "02/08/2016  15:11:37",
+            "movimiento": "Consumo 19",
+            "descripcion": "Concesiones gastron??as del Plata SRL",
+            "importe": "75,00"
+          },
+          {
+            "fecha": "05/05/2016 16:24:45",
+            "movimiento": "Consumo 20",
+            "descripcion": "santander R?VISA d?to 1234",
+            "importe": "145,00"
+          },
+          {
+            "fecha": "05/08/2016  17:11:37",
+            "movimiento": "Consumo 21",
+            "descripcion": "santander R?VISA d?to 1234",
+            "importe": "45,00"
+          },
+          {
+            "fecha": "02/08/2016  18:11:37",
+            "movimiento": "Consumo 22",
+            "descripcion": "Concesiones gastron??as del Plata SRL",
+            "importe": "75,00"
+          },
+          {
+            "fecha": "02/08/2016  19:11:37",
+            "movimiento": "Consumo 23",
+            "descripcion": "Concesiones gastron??as del Plata SRL",
+            "importe": "75,00"
+          },
+          {
+            "fecha": "02/08/2016  20:11:37",
+            "movimiento": "Consumo 24",
+            "descripcion": "Concesiones gastron??as del Plata SRL",
+            "importe": "75,00"
+          },
+          {
+            "fecha": "02/08/2016  21:11:37",
+            "movimiento": "Consumo 25",
+            "descripcion": "Concesiones gastron??as del Plata SRL",
+            "importe": "75,00"
+          },
+          {
+            "fecha": "02/08/2016  22:11:37",
+            "movimiento": "Consumo 26",
+            "descripcion": "Concesiones gastron??as del Plata SRL",
+            "importe": "75,00"
+          },
+          {
+            "fecha": "05/05/2016 23:24:45",
+            "movimiento": "Consumo 27",
+            "descripcion": "santander R?VISA d?to 1234",
+            "importe": "145,00"
+          },
+          {
+            "fecha": "05/08/2016  24:11:37",
+            "movimiento": "Consumo 28",
+            "descripcion": "santander R?VISA d?to 1234",
+            "importe": "45,00"
+          },
+          {
+            "fecha": "02/08/2016  10:11:37",
+            "movimiento": "Consumo 29",
+            "descripcion": "Concesiones gastron??as del Plata SRL",
+            "importe": "75,00"
+          },
+          {
+            "fecha": "02/08/2016  13:11:37",
+            "movimiento": "Consumo 30",
+            "descripcion": "Concesiones gastron??as del Plata SRL",
+            "importe": "75,00"
+          },
+          {
+            "fecha": "02/08/2016  13:11:37",
+            "movimiento": "Consumo 31",
+            "descripcion": "Concesiones gastron??as del Plata SRL",
+            "importe": "75,00"
+          },
+          {
+            "fecha": "02/08/2016  13:11:37",
+            "movimiento": "Consumo 32",
+            "descripcion": "Concesiones gastron??as del Plata SRL",
+            "importe": "75,00"
+          },
+          {
+            "fecha": "02/08/2016  01:11:37",
+            "movimiento": "Consumo 33",
+            "descripcion": "Concesiones gastron??as del Plata SRL",
+            "importe": "75,00"
+          },
+          {
+            "fecha": "05/05/2016 02:24:45",
+            "movimiento": "Consumo 34",
+            "descripcion": "santander R?VISA d?to 1234",
+            "importe": "145,00"
+          },
+          {
+            "fecha": "05/08/2016  03:11:37",
+            "movimiento": "Consumo 35",
+            "descripcion": "santander R?VISA d?to 1234",
+            "importe": "45,00"
+          },
+          {
+            "fecha": "02/08/2016  04:11:37",
+            "movimiento": "Consumo 36",
+            "descripcion": "Concesiones gastron??as del Plata SRL",
+            "importe": "75,00"
+          },
+          {
+            "fecha": "02/08/2016  05:11:37",
+            "movimiento": "Consumo 37",
+            "descripcion": "Concesiones gastron??as del Plata SRL",
+            "importe": "75,00"
+          },
+          {
+            "fecha": "02/08/2016  06:11:37",
+            "movimiento": "Consumo 38",
+            "descripcion": "Concesiones gastron??as del Plata SRL",
+            "importe": "75,00"
+          },
+          {
+            "fecha": "02/08/2016  07:11:37",
+            "movimiento": "Consumo 39",
+            "descripcion": "Concesiones gastron??as del Plata SRL",
+            "importe": "75,00"
+          },
+          {
+            "fecha": "02/08/2016  08:11:37",
+            "movimiento": "Consumo 40",
+            "descripcion": "Concesiones gastron??as del Plata SRL",
+            "importe": "75,00"
+          },
+          {
+            "fecha": "05/05/2016 09:24:45",
+            "movimiento": "Consumo 41",
+            "descripcion": "santander R?VISA d?to 1234",
+            "importe": "145,00"
+          },
+          {
+            "fecha": "05/08/2016  10:11:37",
+            "movimiento": "Consumo 42",
+            "descripcion": "santander R?VISA d?to 1234",
+            "importe": "45,00"
+          },
+          {
+            "fecha": "02/08/2016  13:01:37",
+            "movimiento": "Consumo 43",
+            "descripcion": "Concesiones gastron??as del Plata SRL",
+            "importe": "75,00"
+          },
+          {
+            "fecha": "02/08/2016  13:02:37",
+            "movimiento": "Consumo 44",
+            "descripcion": "Concesiones gastron??as del Plata SRL",
+            "importe": "75,00"
+          },
+          {
+            "fecha": "02/08/2016  13:03:37",
+            "movimiento": "Consumo 46",
+            "descripcion": "Concesiones gastron??as del Plata SRL",
+            "importe": "75,00"
+          },
+          {
+            "fecha": "02/08/2016  13:05:37",
+            "movimiento": "Consumo 47",
+            "descripcion": "Concesiones gastron??as del Plata SRL",
+            "importe": "75,00"
+          },
+          {
+            "fecha": "02/08/2016  13:04:37",
+            "movimiento": "Consumo 48",
+            "descripcion": "Concesiones gastron??as del Plata SRL",
+            "importe": "75,00"
+          },
+          {
+            "fecha": "05/05/2016 13:23:45",
+            "movimiento": "Consumo 49",
+            "descripcion": "santander R?VISA d?to 1234",
+            "importe": "145,00"
+          },
+          {
+            "fecha": "05/08/2016  13:14:37",
+            "movimiento": "Consumo 50",
+            "descripcion": "santander R?VISA d?to 1234",
+            "importe": "45,00"
+          },
+          {
+            "fecha": "02/08/2016  13:11:36",
+            "movimiento": "Consumo 51",
+            "descripcion": "Concesiones gastron??as del Plata SRL",
+            "importe": "75,00"
+          },
+          {
+            "fecha": "02/08/2016  13:11:35",
+            "movimiento": "Consumo 52",
+            "descripcion": "Concesiones gastron??as del Plata SRL",
+            "importe": "75,00"
+          },
+          {
+            "fecha": "02/08/2016  13:11:34",
+            "movimiento": "Consumo 53",
+            "descripcion": "Concesiones gastron??as del Plata SRL",
+            "importe": "75,00"
+          },
+          {
+            "fecha": "02/08/2016  13:11:33",
+            "movimiento": "Consumo 54",
+            "descripcion": "Concesiones gastron??as del Plata SRL",
+            "importe": "75,00"
+          },
+          {
+            "fecha": "02/08/2016  13:11:32",
+            "movimiento": "Consumo 55",
+            "descripcion": "Concesiones gastron??as del Plata SRL",
+            "importe": "75,00"
+          },
+          {
+            "fecha": "05/05/2016 13:24:41",
+            "movimiento": "Consumo 56",
+            "descripcion": "santander R?VISA d?to 1234",
+            "importe": "145,00"
+          },
+          {
+            "fecha": "05/08/2016  13:11:31",
+            "movimiento": "Consumo 57",
+            "descripcion": "santander R?VISA d?to 1234",
+            "importe": "45,00"
+          },
+          {
+            "fecha": "02/08/2016  13:11:29",
+            "movimiento": "Consumo 58",
+            "descripcion": "Concesiones gastron??as del Plata SRL",
+            "importe": "75,00"
+          },
+          {
+            "fecha": "02/08/2016  13:11:28",
+            "movimiento": "Consumo 59",
+            "descripcion": "Concesiones gastron??as del Plata SRL",
+            "importe": "75,00"
+          },
+          {
+            "fecha": "02/08/2016  13:11:27",
+            "movimiento": "Consumo 60",
+            "descripcion": "Concesiones gastron??as del Plata SRL",
+            "importe": "75,00"
+          },
+          {
+            "fecha": "02/08/2016  13:11:26",
+            "movimiento": "Consumo 61",
+            "descripcion": "Concesiones gastron??as del Plata SRL",
+            "importe": "75,00"
+          },
+          {
+            "fecha": "02/08/2016  13:11:25",
+            "movimiento": "Consumo 62",
+            "descripcion": "Concesiones gastron??as del Plata SRL",
+            "importe": "75,00"
+          }
+        ]
+      },
+      {
+        "numero": "XXXX-1235",
+        "isTitular": false,
+        "nombreAdicional": "Jennifer Aniston",
+        "activo": true,
+        "saldo": "77,20",
+        "hasError": false,
+        "lineas": [
+          {
+            "fecha": "07/07/2014 13:24:45",
+            "movimiento": "Consumo 1 Adicional",
+            "descripcion": "Santander R?VISA d?to 1235",
+            "importe": "345,00"
+          },
+          {
+            "fecha": "06/08/2016  13:11:37",
+            "movimiento": "Consumo 2 Adicional",
+            "descripcion": "Santander R?VISA d?to 1235",
+            "importe": "445,00"
+          },
+          {
+            "fecha": "07/08/2016  13:11:37",
+            "movimiento": "Consumo 3 Adicional",
+            "descripcion": "Concesiones gastron??as del Plata SRL",
+            "importe": "75,00"
+          }
+        ]
+      }
+    ]
+  },
+  "itemsMensajeRespuesta": null
+}

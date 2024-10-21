@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report1" pageWidth="521" pageHeight="600" columnWidth="521" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="5bbbdcbd-b8f9-4c85-aca4-5c7902889f11">
+	<property name="ireport.zoom" value="1.3310000000000237"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="158"/>
+	<parameter name="NUMERO" class="java.lang.String"/>
+	<parameter name="CBU" class="java.lang.String"/>
+	<parameter name="TIPO_CUENTA" class="java.lang.String"/>
+	<parameter name="SUCURSAL" class="java.lang.String"/>
+	<parameter name="CUIL" class="java.lang.String"/>
+	<parameter name="NOMBRE_APELLIDO" class="java.lang.String"/>
+	<parameter name="LOGO_RIO" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="500" splitType="Stretch">
+			<textField>
+				<reportElement x="191" y="332" width="285" height="40" forecolor="#585855" uuid="943b6d75-2d56-44f1-92c3-8c7d4b1c0d1b"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{TIPO_CUENTA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="191" y="410" width="285" height="40" forecolor="#585855" uuid="c1d86e2a-2ba1-4c28-9f59-8f65b5e1b863"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{NUMERO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="191" y="371" width="285" height="40" forecolor="#585855" uuid="089866c6-ec1f-4f3f-92be-83bb97e2ad5c"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{SUCURSAL}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="191" y="449" width="285" height="40" forecolor="#585855" uuid="2cdb818c-1c1e-41d6-9bb8-8e39ca5cc694"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{CBU}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="30" y="225" width="446" height="49" forecolor="#333333" uuid="8610bb18-dc7e-4974-8b59-3ae8d9589c9e"/>
+				<textElement textAlignment="Center">
+					<font size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{CUIL}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="30" y="141" width="460" height="84" forecolor="#333333" uuid="39e41ae9-6ee1-41b9-b36d-85498b95c6a4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="28"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{NOMBRE_APELLIDO}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement mode="Opaque" x="0" y="141" width="520" height="1" forecolor="#CDCDCD" uuid="2adc0377-7d0e-45c6-886d-1c2127a2395e"/>
+				<graphicElement>
+					<pen lineWidth="3.0"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="30" y="332" width="465" height="1" forecolor="#CDCDCD" uuid="4bf34a32-525d-4279-ab7b-abe35caf3c90"/>
+				<graphicElement>
+					<pen lineWidth="1.75" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="30" y="410" width="465" height="1" forecolor="#CDCDCD" uuid="117e4d12-ad83-4da1-a6c0-024120e01c4d"/>
+				<graphicElement>
+					<pen lineWidth="1.75" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="30" y="371" width="465" height="1" forecolor="#CDCDCD" uuid="d1366714-feed-48aa-9fad-f240b0a857ed"/>
+				<graphicElement>
+					<pen lineWidth="1.75" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="30" y="449" width="465" height="1" forecolor="#CDCDCD" uuid="8e3931bf-e17e-438d-8688-2c2a50743c61"/>
+				<graphicElement>
+					<pen lineWidth="1.75" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="30" y="71" width="445" height="70" forecolor="#585855" uuid="93c16f56-0d5c-4c8b-b006-3b2813f4e7d6"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="18" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Comprobante CBU y Cuenta]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="45" y="293" width="146" height="40" forecolor="#585855" uuid="b1ab81e0-3a16-4ec8-9574-4eb1330f5032"/>
+				<textElement verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Banco]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="45" y="332" width="146" height="40" forecolor="#585855" uuid="ddcc6e39-6a35-46bf-85c3-c2b2b1b6023c"/>
+				<textElement verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Tipo de cuenta]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="45" y="371" width="146" height="40" forecolor="#585855" uuid="707ec548-0688-4347-a77c-9fa15df65b7a"/>
+				<textElement verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Sucursal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="45" y="410" width="146" height="40" forecolor="#585855" uuid="4698ae45-68bb-41b7-a3ca-bf4a11141271"/>
+				<textElement verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Número de cuenta]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="45" y="449" width="146" height="40" forecolor="#585855" uuid="da07ac21-03d0-456e-afae-fd54e1324751"/>
+				<textElement verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[CBU]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="191" y="293" width="285" height="40" forecolor="#585855" uuid="2f47d3ba-2b4c-4827-bf92-ee93a19de43f"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Santander]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="274" width="521" height="1" forecolor="#CDCDCD" backcolor="#FFFFFF" uuid="0c9d5983-0d7e-4336-89a8-2e754bdf69e5"/>
+				<graphicElement>
+					<pen lineWidth="3.0"/>
+				</graphicElement>
+			</line>
+			<image>
+				<reportElement x="0" y="0" width="520" height="71" uuid="a0119515-74d9-4390-83bd-1ef9e0eaaae6"/>
+				<imageExpression><![CDATA[$P{LOGO_RIO}]]></imageExpression>
+			</image>
+		</band>
+	</detail>
+</jasperReport>

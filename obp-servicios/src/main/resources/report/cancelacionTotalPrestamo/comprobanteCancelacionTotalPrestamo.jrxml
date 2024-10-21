@@ -1,0 +1,810 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="comprobanteExtraccionEfectivo2" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="dcd305c1-33ba-4dfd-bca5-ff8eefa098b0">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="ireport.zoom" value="2.4624331689519354"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="1481"/>
+	<parameter name="LOGO_CABECERA" class="java.lang.String"/>
+	<parameter name="MONTO" class="java.lang.String"/>
+	<parameter name="NUMERO_PRESTAMO" class="java.lang.String"/>
+	<parameter name="NRO_CUENTA_DEBITO" class="java.lang.String"/>
+	<parameter name="TIPO_CUENTA_DEBITO" class="java.lang.String"/>
+	<parameter name="COTIZACION_COEFICIENTE" class="java.lang.String"/>
+	<parameter name="FECHA_COTIZACION_COEFICIENTE" class="java.lang.String"/>
+	<parameter name="CAPITAL" class="java.lang.String"/>
+	<parameter name="CAPITAL_UVA" class="java.lang.String"/>
+	<parameter name="INTERESES" class="java.lang.String"/>
+	<parameter name="INTERES_UVA" class="java.lang.String"/>
+	<parameter name="IVA" class="java.lang.String"/>
+	<parameter name="INGRESOS_BRUTOS" class="java.lang.String"/>
+	<parameter name="OTROS_IMPUESTOS" class="java.lang.String"/>
+	<parameter name="COMISIONES" class="java.lang.String"/>
+	<parameter name="GASTOS" class="java.lang.String"/>
+	<parameter name="SEGURO" class="java.lang.String"/>
+	<parameter name="NRO_COMPROBANTE" class="java.lang.String"/>
+	<parameter name="MENSAJE_REFINANCIACION" class="java.lang.String"/>
+	<parameter name="CODIGO_EXTRACCION" class="java.lang.String"/>
+	<parameter name="FECHA_HORA_COMPROBANTE" class="java.lang.String"/>
+	<parameter name="LOGO_PIE" class="java.lang.String"/>
+	<parameter name="LEGALES" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<detail>
+		<band height="205">
+			<frame>
+				<reportElement x="0" y="0" width="290" height="205" uuid="d49b2f0f-ba1e-4381-8f00-1d5ae103c8b7"/>
+				<box>
+					<topPen lineWidth="1.5"/>
+					<leftPen lineWidth="1.5"/>
+					<rightPen lineWidth="1.5"/>
+				</box>
+				<image scaleImage="RealHeight" hAlign="Center">
+					<reportElement positionType="Float" mode="Opaque" x="5" y="10" width="280" height="25" uuid="49c92c75-9e36-400a-8ad5-154573b5f750">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<imageExpression><![CDATA[$P{LOGO_CABECERA}]]></imageExpression>
+				</image>
+			</frame>
+			<staticText>
+				<reportElement positionType="FixRelativeToBottom" x="10" y="40" width="275" height="15" forecolor="#585858" uuid="baa8e6fe-5f07-4942-be15-54ddd9350a6b">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="Open Sans Light" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Comprobante de Cancelación Anticipada de Préstamo Personal]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="70" width="290" height="1" uuid="da441001-ad83-4d18-a440-7a2251c3f047">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="15" y="85" width="100" height="15" forecolor="#585858" uuid="46ef48d8-964a-4575-a4e7-e46974e32643">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Open Sans" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Monto pagado]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="140" y="85" width="135" height="15" forecolor="#585858" uuid="add25191-1ab3-4b7b-9b2d-e543efc153be">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font fontName="Open Sans Light" size="9" isBold="true" isStrikeThrough="false" isPdfEmbedded="true"/>
+					<paragraph lineSpacing="1_1_2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{MONTO}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="15" y="110" width="260" height="1" uuid="533f20d7-d71e-4e77-8d45-67befa7d4f83">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="0.25" lineStyle="Dotted" lineColor="#000000"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="15" y="120" width="100" height="15" forecolor="#585858" uuid="c703903b-4609-42e4-95d6-c5f5fe41a5fa">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Open Sans" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[N° de préstamo]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="140" y="120" width="135" height="15" forecolor="#585858" uuid="a6cf8776-fcf4-4e67-8d31-b7f3014d676b">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font fontName="Open Sans Light" size="9" isBold="true" isStrikeThrough="false" isPdfEmbedded="true"/>
+					<paragraph lineSpacing="1_1_2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{NUMERO_PRESTAMO}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="15" y="145" width="260" height="1" uuid="aafdc81a-d126-4aee-a57d-172c9e102e78">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="0.25" lineStyle="Dotted" lineColor="#000000"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="15" y="155" width="100" height="15" forecolor="#585858" uuid="3e02de6a-e88d-41f6-95c0-530824185d5d">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Open Sans" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Medio de Pago]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="140" y="155" width="135" height="15" forecolor="#585858" uuid="6300cb29-bf38-4ac3-80e7-00a02c64dbbe">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font fontName="Open Sans Light" size="9" isBold="true" isUnderline="false" isStrikeThrough="false" isPdfEmbedded="true"/>
+					<paragraph lineSpacing="1_1_2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{NRO_CUENTA_DEBITO}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="140" y="175" width="135" height="15" forecolor="#585858" uuid="8bfc6b2f-b0c5-4137-b4b1-9dd4db0c86bd">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font fontName="Open Sans Light" size="9" isBold="true" isUnderline="false" isStrikeThrough="false" isPdfEmbedded="true"/>
+					<paragraph lineSpacing="1_1_2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{TIPO_CUENTA_DEBITO}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="15" y="199" width="260" height="1" uuid="31d9f12e-52a7-4441-80f2-c3e97a3dca8a">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="0.25" lineStyle="Dotted" lineColor="#000000"/>
+				</graphicElement>
+			</line>
+		</band>
+		<band height="35">
+			<printWhenExpression><![CDATA[$P{COTIZACION_COEFICIENTE} != null && $P{COTIZACION_COEFICIENTE}.length() > 0 && !$P{COTIZACION_COEFICIENTE}.equals("$ 0,00")]]></printWhenExpression>
+			<frame>
+				<reportElement x="0" y="0" width="290" height="35" uuid="6e8a52e9-8b81-4ce7-ac29-b1a0bb35330c"/>
+				<box>
+					<leftPen lineWidth="1.5"/>
+					<rightPen lineWidth="1.5"/>
+				</box>
+				<line>
+					<reportElement x="15" y="25" width="260" height="1" uuid="46ce1c9d-b7c8-40f6-ad75-405747f4c330">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					</reportElement>
+					<graphicElement>
+						<pen lineWidth="0.25" lineStyle="Dotted" lineColor="#000000"/>
+					</graphicElement>
+				</line>
+				<staticText>
+					<reportElement x="15" y="5" width="120" height="15" forecolor="#585858" uuid="614a6468-4ba1-45bd-9e32-7751f4d1ca5e">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					</reportElement>
+					<textElement>
+						<font fontName="Open Sans" size="10" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Cotización coeficiente]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true">
+					<reportElement x="140" y="5" width="135" height="15" forecolor="#585858" uuid="6fad215a-a367-4237-a009-4a2b1ce370c5">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Right" verticalAlignment="Top">
+						<font fontName="Open Sans Light" size="9" isBold="true" isStrikeThrough="false" isPdfEmbedded="true"/>
+						<paragraph lineSpacing="1_1_2"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{COTIZACION_COEFICIENTE}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+		<band height="45">
+			<printWhenExpression><![CDATA[$P{COTIZACION_COEFICIENTE} != null && $P{FECHA_COTIZACION_COEFICIENTE} != null]]></printWhenExpression>
+			<frame>
+				<reportElement x="0" y="0" width="290" height="45" uuid="ae147861-d759-41bf-96eb-47b4ce26597d"/>
+				<box>
+					<leftPen lineWidth="1.5"/>
+					<rightPen lineWidth="1.5"/>
+				</box>
+				<line>
+					<reportElement x="15" y="40" width="260" height="1" uuid="54f734d9-2570-4188-94e2-00e0e3f2653a">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					</reportElement>
+					<graphicElement>
+						<pen lineWidth="0.25" lineStyle="Dotted" lineColor="#000000"/>
+					</graphicElement>
+				</line>
+				<staticText>
+					<reportElement stretchType="RelativeToBandHeight" x="15" y="5" width="120" height="30" forecolor="#585858" uuid="33e6ed5f-3f39-4c8e-ba74-bee025b22630">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					</reportElement>
+					<textElement>
+						<font fontName="Open Sans" size="10" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Fecha de cotización del coeficiente]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true">
+					<reportElement x="140" y="5" width="135" height="15" forecolor="#585858" uuid="66c8438e-aa89-4669-b36a-233dd8ce954c">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Right" verticalAlignment="Top">
+						<font fontName="Open Sans Light" size="9" isBold="true" isStrikeThrough="false" isPdfEmbedded="true"/>
+						<paragraph lineSpacing="1_1_2"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{FECHA_COTIZACION_COEFICIENTE}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+		<band height="35">
+			<frame>
+				<reportElement x="0" y="0" width="290" height="35" uuid="6e8a52e9-8b81-4ce7-ac29-b1a0bb35330c"/>
+				<box>
+					<leftPen lineWidth="1.5"/>
+					<rightPen lineWidth="1.5"/>
+				</box>
+				<line>
+					<reportElement x="15" y="25" width="260" height="1" uuid="46ce1c9d-b7c8-40f6-ad75-405747f4c330">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					</reportElement>
+					<graphicElement>
+						<pen lineWidth="0.25" lineStyle="Dotted" lineColor="#000000"/>
+					</graphicElement>
+				</line>
+				<staticText>
+					<reportElement x="15" y="5" width="100" height="15" forecolor="#585858" uuid="367e796d-d0fd-4376-abf5-28522849bf64">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement>
+						<font fontName="Open Sans" size="10" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Capital]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true">
+					<reportElement x="140" y="5" width="135" height="15" forecolor="#585858" uuid="8d43de93-1bb3-43e7-ba5b-cdd27f94393a">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Right" verticalAlignment="Top">
+						<font fontName="Open Sans Light" size="9" isBold="true" isStrikeThrough="false" isPdfEmbedded="true"/>
+						<paragraph lineSpacing="1_1_2"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{CAPITAL}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+		<band height="35">
+			<printWhenExpression><![CDATA[$P{CAPITAL_UVA} != null && !$P{CAPITAL_UVA}.equals("0,00")]]></printWhenExpression>
+			<frame>
+				<reportElement x="0" y="0" width="290" height="35" uuid="a920c27c-f689-430c-8e06-32611d67304e"/>
+				<box>
+					<leftPen lineWidth="1.5"/>
+					<rightPen lineWidth="1.5"/>
+				</box>
+				<textField isStretchWithOverflow="true">
+					<reportElement x="140" y="5" width="135" height="15" forecolor="#585858" uuid="ca9dabca-ca22-46e0-bd03-a691cef4c826">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Right" verticalAlignment="Top">
+						<font fontName="Open Sans Light" size="9" isBold="true" isStrikeThrough="false" isPdfEmbedded="true"/>
+						<paragraph lineSpacing="1_1_2"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{CAPITAL_UVA}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="15" y="5" width="115" height="15" forecolor="#585858" uuid="2870394d-4f90-4a9b-8b11-675098441e2e">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					</reportElement>
+					<textElement>
+						<font fontName="Open Sans" size="10" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Capital en UVA]]></text>
+				</staticText>
+				<line>
+					<reportElement x="15" y="25" width="260" height="1" uuid="0715239e-9641-4c3a-aaf0-1cfad6613b68">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					</reportElement>
+					<graphicElement>
+						<pen lineWidth="0.25" lineStyle="Dotted" lineColor="#000000"/>
+					</graphicElement>
+				</line>
+			</frame>
+		</band>
+		<band height="35">
+			<printWhenExpression><![CDATA[$P{INTERESES} != null && !$P{INTERESES}.equals("$ 0,00")]]></printWhenExpression>
+			<frame>
+				<reportElement x="0" y="0" width="290" height="35" uuid="c1d06f98-fdd3-441b-8bba-767aea7de39e"/>
+				<box>
+					<leftPen lineWidth="1.5"/>
+					<rightPen lineWidth="1.5"/>
+				</box>
+				<staticText>
+					<reportElement x="15" y="5" width="100" height="15" forecolor="#585858" uuid="6a248771-e394-4404-9883-7be3c52f7144">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					</reportElement>
+					<textElement>
+						<font fontName="Open Sans" size="10" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Interés]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true">
+					<reportElement x="140" y="5" width="135" height="15" forecolor="#585858" uuid="fee9e978-d4e9-4dcd-9fbd-8430f820f9fd">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Right" verticalAlignment="Top">
+						<font fontName="Open Sans Light" size="9" isBold="true" isStrikeThrough="false" isPdfEmbedded="true"/>
+						<paragraph lineSpacing="1_1_2"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{INTERESES}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="15" y="30" width="260" height="1" uuid="5b29360e-93b8-4155-8479-9247e7552342">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					</reportElement>
+					<graphicElement>
+						<pen lineWidth="0.25" lineStyle="Dotted" lineColor="#000000"/>
+					</graphicElement>
+				</line>
+			</frame>
+		</band>
+		<band height="35">
+			<printWhenExpression><![CDATA[$P{INTERES_UVA} != null && !$P{INTERES_UVA}.equals("0,00")]]></printWhenExpression>
+			<frame>
+				<reportElement x="0" y="0" width="290" height="35" uuid="566e0fad-b614-4500-8ed7-cbad3cc2fcff"/>
+				<box>
+					<leftPen lineWidth="1.5"/>
+					<rightPen lineWidth="1.5"/>
+				</box>
+				<staticText>
+					<reportElement x="15" y="5" width="115" height="15" forecolor="#585858" uuid="685022b0-bac3-478f-9861-58db06a8a179">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					</reportElement>
+					<textElement>
+						<font fontName="Open Sans" size="10" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Interés en UVA]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true">
+					<reportElement x="140" y="5" width="135" height="15" forecolor="#585858" uuid="d63dd70d-2386-4e97-a1b8-e01616a8cf30">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Right" verticalAlignment="Top">
+						<font fontName="Open Sans Light" size="9" isBold="true" isStrikeThrough="false" isPdfEmbedded="true"/>
+						<paragraph lineSpacing="1_1_2"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{INTERES_UVA}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="15" y="30" width="260" height="1" uuid="31d9f12e-52a7-4441-80f2-c3e97a3dca8a">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					</reportElement>
+					<graphicElement>
+						<pen lineWidth="0.25" lineStyle="Dotted" lineColor="#000000"/>
+					</graphicElement>
+				</line>
+			</frame>
+		</band>
+		<band height="35">
+			<printWhenExpression><![CDATA[$P{IVA} != null && !$P{IVA}.equals("$ 0,00")]]></printWhenExpression>
+			<frame>
+				<reportElement x="0" y="0" width="290" height="35" uuid="b2e9da0d-790a-48dc-a391-9c3192774b24"/>
+				<box>
+					<leftPen lineWidth="1.5"/>
+					<rightPen lineWidth="1.5"/>
+				</box>
+				<staticText>
+					<reportElement x="15" y="5" width="100" height="15" forecolor="#585858" uuid="e27d81cf-1276-4a0c-81d5-dc1b913d0c0f">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					</reportElement>
+					<textElement>
+						<font fontName="Open Sans" size="10" isBold="false"/>
+					</textElement>
+					<text><![CDATA[IVA]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true">
+					<reportElement x="140" y="5" width="135" height="15" forecolor="#585858" uuid="7fc4b86d-8b1b-432e-bfc1-0af2ccee8524">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Right" verticalAlignment="Top">
+						<font fontName="Open Sans Light" size="9" isBold="true" isStrikeThrough="false" isPdfEmbedded="true"/>
+						<paragraph lineSpacing="1_1_2"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{IVA}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="15" y="30" width="260" height="1" uuid="0f025d15-b4d9-43e4-a568-c718d0026cde">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					</reportElement>
+					<graphicElement>
+						<pen lineWidth="0.25" lineStyle="Dotted" lineColor="#000000"/>
+					</graphicElement>
+				</line>
+			</frame>
+		</band>
+		<band height="35">
+			<printWhenExpression><![CDATA[$P{INGRESOS_BRUTOS} != null && !$P{INGRESOS_BRUTOS}.equals("$ 0,00")]]></printWhenExpression>
+			<frame>
+				<reportElement x="0" y="0" width="290" height="35" uuid="855e5e2d-0c6d-434b-b11a-a1e5ec779bc0"/>
+				<box>
+					<leftPen lineWidth="1.5"/>
+					<rightPen lineWidth="1.5"/>
+				</box>
+				<staticText>
+					<reportElement x="15" y="5" width="100" height="15" forecolor="#585858" uuid="077c0890-97ff-49da-b99a-75f490c87cc1">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					</reportElement>
+					<textElement>
+						<font fontName="Open Sans" size="10" isBold="false"/>
+					</textElement>
+					<text><![CDATA[IIBB]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true">
+					<reportElement x="140" y="5" width="135" height="15" forecolor="#585858" uuid="aab0e498-fb13-4c0d-8263-be087f0d1e74">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Right" verticalAlignment="Top">
+						<font fontName="Open Sans Light" size="9" isBold="true" isStrikeThrough="false" isPdfEmbedded="true"/>
+						<paragraph lineSpacing="1_1_2"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{INGRESOS_BRUTOS}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="15" y="30" width="260" height="1" uuid="e6eb4a60-dabd-43c6-a861-c7f870299285">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					</reportElement>
+					<graphicElement>
+						<pen lineWidth="0.25" lineStyle="Dotted" lineColor="#000000"/>
+					</graphicElement>
+				</line>
+			</frame>
+		</band>
+		<band height="35">
+			<printWhenExpression><![CDATA[$P{OTROS_IMPUESTOS} != null && !$P{OTROS_IMPUESTOS}.equals("$ 0,00")]]></printWhenExpression>
+			<frame>
+				<reportElement x="0" y="0" width="290" height="35" uuid="1441e0ad-76a3-4732-acce-139dc5953d2c"/>
+				<box>
+					<leftPen lineWidth="1.5"/>
+					<rightPen lineWidth="1.5"/>
+				</box>
+				<staticText>
+					<reportElement x="15" y="5" width="100" height="15" forecolor="#585858" uuid="23d70e52-5515-4b4c-80ed-cb2e70f7a11f">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					</reportElement>
+					<textElement>
+						<font fontName="Open Sans" size="10" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Otros impuestos]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true">
+					<reportElement x="140" y="5" width="135" height="15" forecolor="#585858" uuid="5341ffa0-9fa7-4a86-8356-6bb5e9640391">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Right" verticalAlignment="Top">
+						<font fontName="Open Sans Light" size="9" isBold="true" isStrikeThrough="false" isPdfEmbedded="true"/>
+						<paragraph lineSpacing="1_1_2"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{OTROS_IMPUESTOS}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="15" y="30" width="260" height="1" uuid="46d7c461-5a1d-4339-b078-ee58b82a00df">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					</reportElement>
+					<graphicElement>
+						<pen lineWidth="0.25" lineStyle="Dotted" lineColor="#000000"/>
+					</graphicElement>
+				</line>
+			</frame>
+		</band>
+		<band height="35">
+			<printWhenExpression><![CDATA[$P{COMISIONES} != null && !$P{COMISIONES}.equals("$ 0,00")]]></printWhenExpression>
+			<frame>
+				<reportElement x="0" y="0" width="290" height="35" uuid="99d3ff3c-07f9-43dd-b37f-696bd0fe4bdf"/>
+				<box>
+					<leftPen lineWidth="1.5"/>
+					<rightPen lineWidth="1.5"/>
+				</box>
+				<staticText>
+					<reportElement x="15" y="5" width="100" height="15" forecolor="#585858" uuid="b7c1e0cf-0c9f-469c-bd5f-baf3d87bffca">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					</reportElement>
+					<textElement>
+						<font fontName="Open Sans" size="10" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Comisiones]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true">
+					<reportElement x="140" y="5" width="135" height="15" forecolor="#585858" uuid="245dd4d9-56cf-4210-a0f3-25eb2d4af7a7">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Right" verticalAlignment="Top">
+						<font fontName="Open Sans Light" size="9" isBold="true" isStrikeThrough="false" isPdfEmbedded="true"/>
+						<paragraph lineSpacing="1_1_2"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{COMISIONES}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="15" y="30" width="260" height="1" uuid="a7b64a8a-43db-40cf-9329-1ad780144c24">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					</reportElement>
+					<graphicElement>
+						<pen lineWidth="0.25" lineStyle="Dotted" lineColor="#000000"/>
+					</graphicElement>
+				</line>
+			</frame>
+		</band>
+		<band height="35">
+			<printWhenExpression><![CDATA[$P{GASTOS} != null && !$P{GASTOS}.equals("$ 0,00")]]></printWhenExpression>
+			<frame>
+				<reportElement x="0" y="0" width="290" height="35" uuid="797b321c-00d4-4d5b-bccf-0597e74e06ee"/>
+				<box>
+					<leftPen lineWidth="1.5"/>
+					<rightPen lineWidth="1.5"/>
+				</box>
+				<staticText>
+					<reportElement x="15" y="5" width="100" height="15" forecolor="#585858" uuid="73aeae98-26f4-4420-869a-a2bb49b08c28">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					</reportElement>
+					<textElement>
+						<font fontName="Open Sans" size="10" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Gastos]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true">
+					<reportElement x="140" y="5" width="135" height="15" forecolor="#585858" uuid="21a9445d-a0aa-4053-abac-acd3bbaacdd6">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Right" verticalAlignment="Top">
+						<font fontName="Open Sans Light" size="9" isBold="true" isStrikeThrough="false" isPdfEmbedded="true"/>
+						<paragraph lineSpacing="1_1_2"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{GASTOS}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="15" y="30" width="260" height="1" uuid="76a4cc9a-4d65-42f6-a095-a5f0b11bbe63">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					</reportElement>
+					<graphicElement>
+						<pen lineWidth="0.25" lineStyle="Dotted" lineColor="#000000"/>
+					</graphicElement>
+				</line>
+			</frame>
+		</band>
+		<band height="35">
+			<printWhenExpression><![CDATA[$P{SEGURO} != null && !$P{SEGURO}.equals("$ 0,00")]]></printWhenExpression>
+			<frame>
+				<reportElement x="0" y="0" width="290" height="35" uuid="ead4af7a-e08b-4953-be44-b0959a5000cd"/>
+				<box>
+					<leftPen lineWidth="1.5"/>
+					<rightPen lineWidth="1.5"/>
+				</box>
+				<staticText>
+					<reportElement x="15" y="5" width="100" height="15" forecolor="#585858" uuid="9efcd8b9-1e31-48e4-86ff-3ef8f59ad8ca">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					</reportElement>
+					<textElement>
+						<font fontName="Open Sans" size="10" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Seguro]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true">
+					<reportElement x="140" y="5" width="135" height="15" forecolor="#585858" uuid="fbeb2dcd-1255-48e5-a2ff-70ab844d66eb">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Right" verticalAlignment="Top">
+						<font fontName="Open Sans Light" size="9" isBold="true" isStrikeThrough="false" isPdfEmbedded="true"/>
+						<paragraph lineSpacing="1_1_2"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{SEGURO}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="15" y="30" width="260" height="1" uuid="5e0a02c2-8372-4b50-9e92-f5f0574d27d3">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					</reportElement>
+					<graphicElement>
+						<pen lineWidth="0.25" lineStyle="Dotted" lineColor="#000000"/>
+					</graphicElement>
+				</line>
+			</frame>
+		</band>
+		<band height="150">
+			<frame>
+				<reportElement x="0" y="0" width="290" height="150" uuid="6f0e0fce-1832-4d03-aabe-ab59ee9e7257"/>
+				<box>
+					<leftPen lineWidth="1.5"/>
+					<bottomPen lineWidth="1.5"/>
+					<rightPen lineWidth="1.5"/>
+				</box>
+				<staticText>
+					<reportElement x="15" y="5" width="100" height="15" forecolor="#585858" uuid="df2ce5c0-f5ab-45ad-b8b3-d51b4467a7b2">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					</reportElement>
+					<textElement>
+						<font fontName="Open Sans" size="10" isBold="false"/>
+					</textElement>
+					<text><![CDATA[N° de comprobante]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true">
+					<reportElement x="140" y="5" width="135" height="15" forecolor="#585858" uuid="ba9f640f-093f-45c6-bf91-18978ce054ae">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Right" verticalAlignment="Top">
+						<font fontName="Open Sans Light" size="9" isBold="true" isStrikeThrough="false" isPdfEmbedded="true"/>
+						<paragraph lineSpacing="1_1_2"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{NRO_COMPROBANTE}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="15" y="30" width="260" height="1" uuid="6796cef2-52f4-400b-a043-4b6925ba91a9">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					</reportElement>
+					<graphicElement>
+						<pen lineWidth="0.25" lineStyle="Dotted" lineColor="#000000"/>
+					</graphicElement>
+				</line>
+				<textField isStretchWithOverflow="true">
+					<reportElement stretchType="RelativeToBandHeight" x="23" y="40" width="243" height="15" forecolor="#585858" uuid="83fdb310-6eee-480c-865b-8902445ae716">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Justified">
+						<font fontName="Open Sans" size="9" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{LEGALES}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement positionType="Float" x="55" y="90" width="175" height="15" forecolor="#585858" uuid="7128ad91-a57a-4218-853c-977c08ba7613">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center">
+						<font fontName="Open Sans" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{FECHA_HORA_COMPROBANTE}]]></textFieldExpression>
+				</textField>
+				<image>
+					<reportElement positionType="Float" x="90" y="110" width="100" height="25" uuid="8bb3f9da-2e33-4062-bd9f-06cd3a431f98">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<imageExpression><![CDATA[$P{LOGO_PIE}]]></imageExpression>
+				</image>
+				<textField isStretchWithOverflow="true">
+					<reportElement stretchType="RelativeToBandHeight" x="23" y="65" width="243" height="15" forecolor="#585858" uuid="4375f978-97a4-4c79-aa88-ce221dc6d8e2">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Justified">
+						<font fontName="Open Sans" size="9" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{MENSAJE_REFINANCIACION}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+</jasperReport>

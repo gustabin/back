@@ -1,0 +1,1500 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.0.0.final using JasperReports Library version 6.0.0  -->
+<!-- 2020-01-02T15:34:25 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="detalle-operacion-licitacion-canje" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f6184e6d-ea20-4dc0-b98e-8afe6bb2f5c8">
+	<parameter name="LOGO_TOP" class="java.lang.String"/>
+	<parameter name="LOGO_CABECERA" class="java.lang.String"/>
+	<parameter name="LOGO_PIE" class="java.lang.String"/>
+	<parameter name="DESCRIPCION" class="java.lang.String"/>
+	<parameter name="FECHA" class="java.lang.String"/>
+	<parameter name="NUMERO_OPERACION" class="java.lang.String"/>
+	<parameter name="ESTADO" class="java.lang.String"/>
+	<parameter name="TIPO" class="java.lang.String"/>
+	<parameter name="MONEDA_ESPECIE_ORIGEN" class="java.lang.String"/>
+	<parameter name="ESPECIE_DESTINO" class="java.lang.String"/>
+	<parameter name="MONEDA_ESPECIE_DESTINO" class="java.lang.String"/>
+	<parameter name="VALOR_NOMINAL_A_CANJEAR" class="java.lang.String"/>
+	<parameter name="TIPO_PRECIO" class="java.lang.String"/>
+	<parameter name="TIPO_PRECIO_DATO" class="java.lang.String"/>
+	<parameter name="IMPORTE_A_DEBITAR" class="java.lang.String"/>
+	<parameter name="CUENTA_TITULOS" class="java.lang.String"/>
+	<parameter name="CUENTA_OPERATIVA" class="java.lang.String"/>
+	<parameter name="TIPO_CUENTA_OPERATIVA" class="java.lang.String"/>
+	<parameter name="CANTIDAD_ADJUDICADA" class="java.lang.String"/>
+	<parameter name="PRECIO_ADJUDICADO" class="java.lang.String"/>
+	<parameter name="FECHA_DEBITO" class="java.lang.String"/>
+	<parameter name="FECHA_HORA_CIERRE" class="java.lang.String"/>
+	<parameter name="FECHA_ADJUDICACION" class="java.lang.String"/>
+	<parameter name="FECHA_LIQUIDACION_TITULOS" class="java.lang.String"/>
+	<parameter name="COMISIONES" class="java.lang.String"/>
+	<parameter name="IMPUESTOS" class="java.lang.String"/>
+	<parameter name="LEGAL" class="java.lang.String"/>
+	<parameter name="TRAMO" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="102" height="14" uuid="ee160f79-9b6e-4a19-b5b7-243f471b3683"/>
+				<imageExpression><![CDATA[$P{LOGO_TOP}]]></imageExpression>
+			</image>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="40" splitType="Stretch">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<image>
+				<reportElement mode="Transparent" x="123" y="0" width="288" height="40" backcolor="#EB0000" uuid="62727937-672c-4c8a-abeb-03f562d6fb3c"/>
+				<imageExpression><![CDATA[$P{LOGO_CABECERA}]]></imageExpression>
+			</image>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="40" uuid="d9f1b027-9e93-4c15-b7ba-1e1314369a8e"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="122" y="0" width="290" height="1" uuid="54a8edcb-1c62-46d7-852a-5044095e71d4"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="40" uuid="afdfa8a4-ecc5-4793-878c-6549e9c326db"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="122" y="39" width="290" height="1" uuid="1c2e145c-cc30-4417-9e4f-fe0df0c3583a"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+		</band>
+		<band height="15">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="15" uuid="f10d0136-e4a1-4cd5-bb96-faef2e17bd74"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="15" uuid="7ede700f-704f-4c4a-a3e8-7ef96352b1f3"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+		</band>
+		<band height="15">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="15" uuid="b4a9875a-7378-4397-a7dc-cf42e18354b7"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="15" uuid="26c575fc-023a-4cda-9457-2a5c124e5285"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="142" y="0" width="250" height="15" uuid="a865fc63-1f9a-4f64-9fcf-54f9bb0dab5c">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="OpenSansLight" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Comprobante de operación de canje]]></text>
+			</staticText>
+		</band>
+		<band height="15">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="15" uuid="9f415751-64fd-4484-a17d-b3f82939120b"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="15" uuid="c4fb95fc-06a0-4dd9-83c2-440a78c0048f"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+		</band>
+		<band height="30">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<line>
+				<reportElement x="122" y="0" width="290" height="1" uuid="9a0b07c1-1373-4ae0-aaf5-f9899940fbd6"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="30" uuid="194c287a-08bb-4bce-9206-ff76c04c4613">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="30" uuid="ec19c0c2-5fc3-4d8f-9b9d-dac2636c4614">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+		</band>
+		<band height="82">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="82" uuid="6fe82c1e-f931-44c1-87fb-fcb836c13eaf">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="82" uuid="e7cbb179-93de-4d91-8d58-cd7375ca0fa9">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement x="132" y="10" width="270" height="70" uuid="f50939fa-1ab1-4e8d-b1de-0b25f2faefdb">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="OpenSansLight" size="19"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{DESCRIPCION}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="30">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<line>
+				<reportElement x="122" y="29" width="290" height="1" uuid="58d09ffb-1721-4fea-9bd3-0cdde1330968">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="1.0" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="30" uuid="67f27d39-a91c-4287-b1b7-06e9a501896b">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="30" uuid="2083bdf7-6c2f-44e5-b628-388f6e030816">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+		</band>
+		<band height="20">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="20" uuid="79a6b0d0-9b38-48f3-a4c5-5126ebade039"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="20" uuid="f4e23835-4bc0-4f39-ad30-3c39100aa3e9"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+		</band>
+		<band height="15">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="15" uuid="bc7565ad-e523-4370-9fa2-b725e22ee4f4"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="15" uuid="2e684f2e-c9df-4ddb-ab4c-b9f2fe62a21c"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="153" y="1" width="80" height="14" uuid="5e8ede22-46b2-4a65-a2c5-f3308a81fb10"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="OpenSans" size="9" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Fecha]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="233" y="1" width="148" height="14" uuid="a4b4e884-c301-4f66-a63e-53c000f8a5be"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font fontName="OpenSansLight" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{FECHA}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="20">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="20" uuid="442d85ad-36f0-4fb6-af85-40edcc6fc0f5"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="20" uuid="9c8f71be-8447-4fc5-b2ea-48431354156a"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="142" y="10" width="250" height="1" uuid="22403aa5-afaf-4935-b73b-10ff0937824f"/>
+				<graphicElement>
+					<pen lineWidth="0.25" lineStyle="Dotted" lineColor="#000000"/>
+				</graphicElement>
+			</line>
+		</band>
+		<band height="15">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="15" uuid="b74fa4b1-3739-46e0-9ddd-825f537dd94c"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="15" uuid="957e2b28-7f98-45a9-813f-312caf33fd53"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="153" y="1" width="97" height="14" uuid="24a0a3ef-f922-4227-9edb-720b785ee0a7"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="OpenSans" size="9" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Numero de operación]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="250" y="1" width="131" height="14" uuid="2155f6f5-dfb5-4da7-ba2c-10c3c0719ebd"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font fontName="OpenSansLight" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{NUMERO_OPERACION}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="20">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="20" uuid="a2599c1a-c40b-4169-a5b3-6c957ec9def9"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="20" uuid="2e40e25e-bd49-42c9-8684-743d4d4cc5b2"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="142" y="10" width="250" height="1" uuid="40f972a5-7303-47e8-a567-984dc6351894"/>
+				<graphicElement>
+					<pen lineWidth="0.25" lineStyle="Dotted" lineColor="#000000"/>
+				</graphicElement>
+			</line>
+		</band>
+		<band height="15">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="15" uuid="3741f82d-6846-4cd2-be0d-559f7ae8023f"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="15" uuid="260f9916-4ac3-47a8-b97f-496ab52b3425"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="153" y="1" width="47" height="14" uuid="22aa20a5-7666-4bce-b544-19f9a56e8368"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="OpenSans" size="9" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Estado]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="200" y="1" width="181" height="14" uuid="e78eec44-d3c8-4c34-9dc0-6422b9d77d23"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font fontName="OpenSansLight" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{ESTADO}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="20">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="20" uuid="e7ed53d7-3d63-449d-8134-c53c2d5ddfd1"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="20" uuid="71093120-09cb-493c-b1ef-8769f95bfdd9"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="142" y="10" width="250" height="1" uuid="138eacc2-7202-4766-988a-ba4919ff0d50"/>
+				<graphicElement>
+					<pen lineWidth="0.25" lineStyle="Dotted" lineColor="#000000"/>
+				</graphicElement>
+			</line>
+		</band>
+		<band height="15">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="15" uuid="f848b669-c539-4744-b7fb-ffe7d21ecdd2"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="15" uuid="54a94e26-90ec-4226-b423-4dc5f1ba474f"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="153" y="1" width="47" height="14" uuid="649e7d9c-6b03-43bc-8b33-3d3cf37b08c8"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="OpenSans" size="9" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Tipo]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="200" y="1" width="181" height="14" uuid="d0271af2-880c-48ae-952a-e00c04acad4f"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font fontName="OpenSansLight" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{TIPO}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="20">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="20" uuid="dfb144d4-a06b-4f01-a58b-89013b00d2f1"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="20" uuid="83c6b98b-e86c-4a93-9d89-d6caee88beb5"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="142" y="10" width="250" height="1" uuid="2b6a8ca5-f0e4-4d38-8c4e-ee60908efff6"/>
+				<graphicElement>
+					<pen lineWidth="0.25" lineStyle="Dotted" lineColor="#000000"/>
+				</graphicElement>
+			</line>
+		</band>
+		<band height="15">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="15" uuid="9d1f898b-5936-417d-9445-d1972638469e"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="15" uuid="e65a83b9-aadd-4165-b96c-ceba5029cc71"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="153" y="1" width="127" height="14" uuid="41a785ad-7d49-49ae-a3bd-e2239505393f"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="OpenSans" size="9" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Moneda de la especie origen]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="280" y="1" width="101" height="14" uuid="6b52ec67-ccfb-45ac-855b-a69df3dc2d18"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font fontName="OpenSansLight" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{MONEDA_ESPECIE_ORIGEN}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="20">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="20" uuid="597c2ac5-4b89-4f1f-b991-bfa6a90b327c"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="20" uuid="03c51cb0-77a3-4462-9b05-32d866d1f415"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="142" y="10" width="250" height="1" uuid="ef70fba0-f23a-4180-b063-c9d9d0aaf872"/>
+				<graphicElement>
+					<pen lineWidth="0.25" lineStyle="Dotted" lineColor="#000000"/>
+				</graphicElement>
+			</line>
+		</band>
+		<band height="15">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="15" uuid="008f55e9-05d7-4dd3-97fa-bf4b981fc828"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="15" uuid="987c2152-75f4-44c1-b432-dc0226ab0f8d"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="153" y="1" width="80" height="14" uuid="c835c08d-484d-42c4-83ad-0b62d0d386d3"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="OpenSans" size="9" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Especie destino]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="233" y="1" width="148" height="14" uuid="f25f2e97-b730-43d6-90f7-c3fb01a9ef2e"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font fontName="OpenSansLight" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{ESPECIE_DESTINO}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="20">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="20" uuid="36889425-7329-42eb-ba72-f70d9a9744d3"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="20" uuid="724d711e-2dea-405b-9634-eb5613894d2a"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="142" y="10" width="250" height="1" uuid="77186610-01cf-437b-a295-148e3e952e6b"/>
+				<graphicElement>
+					<pen lineWidth="0.25" lineStyle="Dotted" lineColor="#000000"/>
+				</graphicElement>
+			</line>
+		</band>
+		<band height="15">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="15" uuid="27324d25-14e7-4207-aac0-3c9444ca4e92"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="15" uuid="df284fba-92cd-4843-8b5e-b880571dce7a"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="153" y="1" width="127" height="14" uuid="a8b0083a-5b9c-4617-8d91-db7c8d4c993a"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="OpenSans" size="9" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Moneda de la especie destino]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="280" y="1" width="101" height="14" uuid="945f7f08-2ee8-4043-a436-cfb7bbc89fb3"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font fontName="OpenSansLight" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{MONEDA_ESPECIE_DESTINO}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="20">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="20" uuid="6681a903-21d0-4d89-9018-94927db80d4c"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="20" uuid="ff864d9a-9609-4500-b961-cf2a2f75ac5b"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="142" y="10" width="250" height="1" uuid="7e642b10-3d5d-43ff-af54-a099738d7450"/>
+				<graphicElement>
+					<pen lineWidth="0.25" lineStyle="Dotted" lineColor="#000000"/>
+				</graphicElement>
+			</line>
+		</band>
+		<band height="15">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="15" uuid="f2520897-21b9-44ac-b2e5-8a7df3cc5a91"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="15" uuid="8a51004f-d17a-4c5d-9b5b-4c2fa1eb7ace"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="153" y="1" width="107" height="14" uuid="7dbcb408-a260-42a7-94bb-68c027f644d0"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="OpenSans" size="9" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Valor nominal a canjear]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="260" y="1" width="121" height="14" uuid="03814e97-b912-454f-b357-28af56cdd58f"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font fontName="OpenSansLight" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{VALOR_NOMINAL_A_CANJEAR}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="20">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="20" uuid="daa3f987-2b33-49d5-b26a-af993143a9e5"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="20" uuid="45ccf450-6ae9-4799-82fd-b1d4f3218510"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="142" y="10" width="250" height="1" uuid="c768e176-6294-4919-b02b-5381130e7b06"/>
+				<graphicElement>
+					<pen lineWidth="0.25" lineStyle="Dotted" lineColor="#000000"/>
+				</graphicElement>
+			</line>
+		</band>
+		<band height="15">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="15" uuid="66f7413d-6ff8-436e-9fc0-6596b5ef6087"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="15" uuid="9991ad40-0bd4-4aee-a515-3c01bb2e3989"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="153" y="1" width="47" height="14" uuid="e43143c3-2113-4329-8ac4-569d95999c15"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="OpenSans" size="9" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Tramo]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="200" y="1" width="181" height="14" uuid="4bcab81b-e1b0-4d35-9236-89420e502a20"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font fontName="OpenSansLight" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{TRAMO}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="20">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="20" uuid="e4c1f783-03a3-4fa0-8e96-58bf6e400e0d"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="20" uuid="e6046a0d-9d0d-4a47-9573-3980a9de73b1"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="142" y="10" width="250" height="1" uuid="7a0840d1-0458-405a-8161-d407070676da"/>
+				<graphicElement>
+					<pen lineWidth="0.25" lineStyle="Dotted" lineColor="#000000"/>
+				</graphicElement>
+			</line>
+		</band>
+		<band height="15">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="15" uuid="63b92a8f-bcc9-4178-ac74-86b845c8261f"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="15" uuid="947e793a-9133-4f55-bd2a-a31129121923"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="260" y="1" width="121" height="14" uuid="cce6280d-622f-4596-9575-c2a974072e07"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font fontName="OpenSansLight" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{TIPO_PRECIO_DATO}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="153" y="0" width="107" height="14" uuid="9c83f348-2cf1-4749-b348-bd97cedb2332"/>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font fontName="OpenSans" size="9" isBold="false" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{TIPO_PRECIO}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="20">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="20" uuid="89bd2a9c-805a-445a-aaf1-6e8ccafe0fc7"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="20" uuid="c1fa5636-957c-4edb-ab7d-7e599880fbd7"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="142" y="10" width="250" height="1" uuid="290f15c3-0977-4ce9-8f9e-846fe9a6d36d"/>
+				<graphicElement>
+					<pen lineWidth="0.25" lineStyle="Dotted" lineColor="#000000"/>
+				</graphicElement>
+			</line>
+		</band>
+		<band height="15">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="15" uuid="01d975e0-5cdd-41f9-823e-aa40b57035da"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="15" uuid="c042c56b-4423-4322-b63c-257be5a37f21"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="153" y="1" width="79" height="14" uuid="61eb854b-9a00-4123-8b62-ab4b868dd6ed"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="OpenSans" size="9" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Importe a debitar]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="233" y="1" width="148" height="14" uuid="b9483d20-2d6e-47df-b509-a2828da0b1e3"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font fontName="OpenSansLight" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{IMPORTE_A_DEBITAR}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="20">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="20" uuid="38e17917-ee43-403d-966a-86377e78968d"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="20" uuid="2f57edf2-52b2-4c80-9aa8-e846026d0ee9"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="142" y="10" width="250" height="1" uuid="3de0126a-a266-4956-892c-63562389b734"/>
+				<graphicElement>
+					<pen lineWidth="0.25" lineStyle="Dotted" lineColor="#000000"/>
+				</graphicElement>
+			</line>
+		</band>
+		<band height="15">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="15" uuid="b70622d8-d75f-4e26-871b-085f65a50d22"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="15" uuid="0c9d228c-605a-4d8a-a398-6d4e1b31de52"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="153" y="1" width="87" height="14" uuid="9e41f4c5-c9e7-4d50-94d9-cbaf0c0743aa"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="OpenSans" size="9" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Cuenta títulos]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="240" y="1" width="141" height="14" uuid="0f4369e4-dc8f-4a82-bea9-6d8143229d9a"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font fontName="OpenSansLight" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{CUENTA_TITULOS}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="20">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="20" uuid="992c158e-9880-4582-bdce-a0cbe1842637"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="20" uuid="ec742ee4-66f5-402c-9946-cb4f5ee198c9"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="142" y="10" width="250" height="1" uuid="8488f3ad-cee8-4867-a3d1-eb23bd67b9c7"/>
+				<graphicElement>
+					<pen lineWidth="0.25" lineStyle="Dotted" lineColor="#000000"/>
+				</graphicElement>
+			</line>
+		</band>
+		<band height="15">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="15" uuid="5562d136-59a3-4c0c-a875-ace77bcbf99c"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="15" uuid="b5730a97-3568-4efc-b3f3-b6f448ecf78d"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="153" y="1" width="79" height="14" uuid="8232c2ca-1848-487b-9cc2-837e64a8af49"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="OpenSans" size="9" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Cuenta operativa]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="232" y="1" width="149" height="14" uuid="164fb5fa-ecb9-44a0-b00e-4d8f90dad908"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font fontName="OpenSansLight" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{CUENTA_OPERATIVA}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="15">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="15" uuid="f9100609-b2e2-4361-844d-950597c38359"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="15" uuid="e14995f2-1356-4405-9b3e-e03379ce87b7"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="232" y="1" width="149" height="14" uuid="a8fdc1da-6fa9-4241-850a-bf79bab6cf59"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font fontName="OpenSans" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{TIPO_CUENTA_OPERATIVA}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="20">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="20" uuid="2e7aac08-accb-4f3a-a6ee-9c6de20ff23c"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="20" uuid="6bd75177-751a-4342-96ec-34bb0375e993"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="142" y="10" width="250" height="1" uuid="10a209db-0882-48d8-a7b5-e9a8efeffdf3"/>
+				<graphicElement>
+					<pen lineWidth="0.25" lineStyle="Dotted" lineColor="#000000"/>
+				</graphicElement>
+			</line>
+		</band>
+		<band height="15">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="15" uuid="4f4024c3-11e6-46ca-ab94-a94ba1a9d698"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="15" uuid="98778ef7-b0c3-4a78-9ed3-05e38c7d2b4a"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="153" y="1" width="97" height="14" uuid="19eda1e8-0996-4e1e-a853-519ec94f36eb"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="OpenSans" size="9" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Cantidad adjudicada]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="250" y="1" width="131" height="14" uuid="3f61a36f-d96f-4252-8860-2f0b5ce07eac"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font fontName="OpenSansLight" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{CANTIDAD_ADJUDICADA}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="20">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="20" uuid="3da44aa1-ddc9-400a-acae-e728f59a7909"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="20" uuid="aebf3c59-975c-460a-9258-df1e59b15824"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="142" y="10" width="250" height="1" uuid="c5cba559-859d-4eac-b403-696b01e1038e"/>
+				<graphicElement>
+					<pen lineWidth="0.25" lineStyle="Dotted" lineColor="#000000"/>
+				</graphicElement>
+			</line>
+		</band>
+		<band height="15">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<printWhenExpression><![CDATA[$P{PRECIO_ADJUDICADO}.length() > 0]]></printWhenExpression>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="15" uuid="e0c7d528-5783-4b3b-b9e8-0297a4c64c0b"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="15" uuid="67d5f233-a05b-4cd9-a3e3-030d529f8a7b"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="153" y="1" width="87" height="14" uuid="0425a97a-3f56-4a6c-9ea4-7e7828370f80"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="OpenSans" size="9" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Precio adjudicado]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="240" y="1" width="141" height="14" uuid="149d018d-6689-43ab-9d82-6cfb743c083e"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font fontName="OpenSansLight" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{PRECIO_ADJUDICADO}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="20">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<printWhenExpression><![CDATA[$P{PRECIO_ADJUDICADO}.length() > 0]]></printWhenExpression>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="20" uuid="b0db969b-573c-4f1b-921a-bc624a32c5c9"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="20" uuid="f50aa1de-52e7-445b-8a66-350a400472f8"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="142" y="10" width="250" height="1" uuid="01e94ee8-2931-4643-accf-a05a16470af0"/>
+				<graphicElement>
+					<pen lineWidth="0.25" lineStyle="Dotted" lineColor="#000000"/>
+				</graphicElement>
+			</line>
+		</band>
+		<band height="15">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="15" uuid="1fd45041-32f8-4b6b-abf9-340988a1e4af"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="15" uuid="094a6a70-6522-4392-95d0-43afc446882d"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="153" y="1" width="67" height="14" uuid="d73c58a9-390d-4305-b12b-48228a701544"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="OpenSans" size="9" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Fecha débito]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="220" y="1" width="161" height="14" uuid="7c2e3d21-e521-43a9-ae27-47661f1b9058"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font fontName="OpenSansLight" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{FECHA_DEBITO}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="20">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="20" uuid="99c3bca1-a852-401d-b3de-2b7b3ebbebcd"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="20" uuid="4dc0eca2-7a81-424f-a1a0-cc067435ed7f"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="142" y="10" width="250" height="1" uuid="fcf2f806-6df0-4c1c-8451-94e5222bd020"/>
+				<graphicElement>
+					<pen lineWidth="0.25" lineStyle="Dotted" lineColor="#000000"/>
+				</graphicElement>
+			</line>
+		</band>
+		<band height="15">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="15" uuid="190c6b17-2231-4822-9d8c-b4028bf20ba2"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="15" uuid="99393320-eaf9-407a-8e12-702d51553966"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="153" y="1" width="97" height="14" uuid="891f834c-ccca-42d1-93c3-24ff4bc82cad"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="OpenSans" size="9" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Fecha y hora de cierre]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="250" y="1" width="131" height="14" uuid="3a3aa8e5-a6cb-4c76-91d6-d5cefd5176c3"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font fontName="OpenSansLight" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{FECHA_HORA_CIERRE}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="20">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="20" uuid="8a27f99f-872a-4476-9867-50a0c67f6629"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="20" uuid="012e83b6-bac0-4bad-bbe0-6b6fef9d5a69"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="142" y="10" width="250" height="1" uuid="ad03f132-8fe1-41d5-8c56-e4ea4fb3748a"/>
+				<graphicElement>
+					<pen lineWidth="0.25" lineStyle="Dotted" lineColor="#000000"/>
+				</graphicElement>
+			</line>
+		</band>
+		<band height="15">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="15" uuid="0484bf84-9dbf-4c4b-8beb-820c8244fccb"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="15" uuid="fffa07db-d6f9-4f93-a6bc-c5ee8a9fd5d7"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="153" y="1" width="97" height="14" uuid="d4c17f39-feb7-4bcd-98a0-0176906af0e9"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="OpenSans" size="9" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Fecha de adjudicación]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="250" y="1" width="131" height="14" uuid="bd34ab18-0511-403e-81e6-8bb86f8f148f"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font fontName="OpenSansLight" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{FECHA_ADJUDICACION}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="20">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="20" uuid="5d21257f-2ed4-4191-953b-930f187af3d3"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="20" uuid="3cabc0fd-d657-433e-97be-f007b83c683a"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="142" y="10" width="250" height="1" uuid="0e0400e6-8111-47fa-83ac-cc3b2dda08af"/>
+				<graphicElement>
+					<pen lineWidth="0.25" lineStyle="Dotted" lineColor="#000000"/>
+				</graphicElement>
+			</line>
+		</band>
+		<band height="15">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="15" uuid="bc9a4b39-c511-4ef8-bbcf-e1d0bceb9412"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="15" uuid="ce438f71-72c9-4b6d-979f-f63dd6b76669"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="153" y="1" width="127" height="14" uuid="976d6ba0-dda9-4370-9014-f8ae59da96fc"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="OpenSans" size="9" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Fecha de liquidación del título]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="280" y="1" width="101" height="14" uuid="c3f190eb-3175-4e8a-a495-17ad3a0f3e17"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font fontName="OpenSansLight" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{FECHA_LIQUIDACION_TITULOS}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="20">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="20" uuid="addc4fac-51da-4502-932b-2f2f854a83ad"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="20" uuid="5760e0e2-9e03-42cb-8691-59df0512dfb8"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="142" y="10" width="250" height="1" uuid="131e4547-7a00-4479-95ca-2421be289cc0"/>
+				<graphicElement>
+					<pen lineWidth="0.25" lineStyle="Dotted" lineColor="#000000"/>
+				</graphicElement>
+			</line>
+		</band>
+		<band height="15">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<printWhenExpression><![CDATA[$P{COMISIONES}.length() > 0]]></printWhenExpression>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="15" uuid="f8a3e900-9136-475b-a1d8-47ec5e0cca5f"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="15" uuid="d502bd5a-5856-41af-b9fb-4df2cc4339e5"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="153" y="1" width="67" height="14" uuid="ce7dbade-e440-425b-8744-9b1cdcc71a1f"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="OpenSans" size="9" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Comisiones]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="220" y="1" width="161" height="14" uuid="081475e0-6899-4dc6-979d-b43947978680"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font fontName="OpenSansLight" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{COMISIONES}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="20">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<printWhenExpression><![CDATA[$P{COMISIONES}.length() > 0]]></printWhenExpression>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="20" uuid="0f7fa29c-991e-4a70-9650-9218390d2a31"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="20" uuid="448885a9-2366-4eb4-bbdc-f61c1f720553"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="142" y="10" width="250" height="1" uuid="aeea0ca6-dab7-4d56-b58f-22fcee1e3b0e"/>
+				<graphicElement>
+					<pen lineWidth="0.25" lineStyle="Dotted" lineColor="#000000"/>
+				</graphicElement>
+			</line>
+		</band>
+		<band height="15">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<printWhenExpression><![CDATA[$P{IMPUESTOS}.length() > 0]]></printWhenExpression>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="15" uuid="a08d550b-de80-495a-a2b5-c4cea15258c6"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="15" uuid="f6dc25dd-d76c-4606-a752-54a24dbde103"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="153" y="1" width="67" height="14" uuid="6277470e-8e9b-495a-842b-b2624b293f39"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="OpenSans" size="9" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Impuestos]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="220" y="1" width="161" height="14" uuid="253f36ca-3a6f-4af2-b5ee-15964c67c873"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font fontName="OpenSansLight" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{IMPUESTOS}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="20">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<printWhenExpression><![CDATA[$P{IMPUESTOS}.length() > 0]]></printWhenExpression>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="20" uuid="5dc07596-35b2-432c-bf28-7861f0334902"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="20" uuid="cc020911-3779-440a-ace9-3b488c09151c"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="142" y="10" width="250" height="1" uuid="73cd89f1-e6f5-4045-862f-05f5b5bac2d8"/>
+				<graphicElement>
+					<pen lineWidth="0.25" lineStyle="Dotted" lineColor="#000000"/>
+				</graphicElement>
+			</line>
+		</band>
+		<band height="35">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="35" uuid="d43d2246-b8cc-49e8-bdfd-275419816985">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="35" uuid="0bbd1d7a-fede-4f1f-b662-06dc4f5321ec">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<image scaleImage="RetainShape" hAlign="Center" vAlign="Middle">
+				<reportElement x="217" y="10" width="100" height="20" uuid="51c14cb7-d621-4efd-80a8-d805510fc62b"/>
+				<imageExpression><![CDATA[$P{LOGO_PIE}]]></imageExpression>
+			</image>
+		</band>
+		<band height="30">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<line>
+				<reportElement stretchType="RelativeToTallestObject" x="122" y="0" width="1" height="30" uuid="d2e20651-76e4-4717-9f5e-161417ccde98">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToTallestObject" x="411" y="0" width="1" height="30" uuid="78384c6c-d906-4129-bfd4-d7f6ec7bcd29">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="132" y="8" width="270" height="14" forecolor="#666666" uuid="a4ea3169-3415-4003-bab9-cc25003c7b9b">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" verticalAlignment="Middle" markup="html">
+					<font fontName="OpenSans" size="8" isBold="false" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{LEGAL}]]></textFieldExpression>
+			</textField>
+			<line direction="BottomUp">
+				<reportElement positionType="FixRelativeToBottom" x="122" y="29" width="290" height="1" uuid="56d9a7dd-d992-4f6e-97fd-290637cbeba2">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="122" y="0" width="1" height="30" uuid="f12a5255-9989-4465-85af-b1047710638b">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="30" uuid="9e8a906f-54cd-47c1-ba32-fd407a6be924">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField>
+				<reportElement x="496" y="9" width="11" height="20" uuid="a239d03e-5407-4283-88b7-56bc73baa71f"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="OpenSansLight" size="9" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="524" y="9" width="11" height="20" uuid="ed6c36f9-a56d-41b9-bf5d-f45aad158a2d"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="OpenSansLight" size="9" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="509" y="9" width="13" height="20" uuid="86c12353-b531-4bba-9169-7cdfd347395e"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="OpenSansLight" size="9" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[de]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="366" y="9" width="128" height="20" uuid="53799d7f-a32c-413a-a6a1-26dd70116743"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font fontName="OpenSansLight" size="9" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Página]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

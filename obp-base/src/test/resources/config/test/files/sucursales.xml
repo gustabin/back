@@ -1,0 +1,2541 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sucursales>
+  <cod_entidad cod="0072">
+    <cod_oficina id="0000">
+      <desc_completa>CASA CENTRAL</desc_completa>
+      <direccion>BME.MITRE 480- CAPITAL FEDERAL</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0006">
+      <desc_completa>FLORENCIO VARELA</desc_completa>
+      <direccion>AV. SAN MARTIN 17-FLORENCIO VARELA,BS AS</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0007">
+      <desc_completa>SAN FRANCISCO SOLANO</desc_completa>
+      <direccion>AV.J.A.LOPEZ 2485 - S.FCO.SOLANO</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0008">
+      <desc_completa>SAN JOSE</desc_completa>
+      <direccion>AV.PASCO 2930/40 - TEMPERLEY</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0010">
+      <desc_completa>BERAZATEGUI</desc_completa>
+      <direccion>AV. REGOLLEAU 4399- BERAZATEGUI, BS AS</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0011">
+      <desc_completa>EZPELETA</desc_completa>
+      <direccion>CTE.CARBONARI 302 - EZPELETA</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0012">
+      <desc_completa>ANGEL GALLARDO - ANEXO</desc_completa>
+      <direccion>AVDA. CORRIENTES 4641 - CAPITAL FEDERAL</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0013">
+      <desc_completa>SAN CAYETANO</desc_completa>
+      <direccion>AV 44 Nø 1582 E/26 Y 27-LA PLATA-BS AS</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0014">
+      <desc_completa>BELGRANO</desc_completa>
+      <direccion>AV. CABILDO 2491/99, CAPITAL FEDERAL</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0016">
+      <desc_completa>BARRACAS</desc_completa>
+      <direccion>AV. MONTES DE OCA 895-CAPITAL FEDERAL</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0017">
+      <desc_completa>TRIUNVIRATO</desc_completa>
+      <direccion>AVDA. TRIUNVIRATO 2891 - CAPITAL FEDERAL</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0018">
+      <desc_completa>DIAGONAL 80</desc_completa>
+      <direccion>DIAGONAL 80 601/19 - LA PLATA</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0020">
+      <desc_completa>FLORESTA</desc_completa>
+      <direccion>AV. ALVAREZ JONTE 4502- CAPITAL FEDERAL</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0021">
+      <desc_completa>BOCA</desc_completa>
+      <direccion>AVDA. ALTE. BROWN 795 - CAPITAL FEDERAL</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0022">
+      <desc_completa>CALLE 12</desc_completa>
+      <direccion>CALLE 12 Nø 1051- LA PLATA</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0024">
+      <desc_completa>ALMAGRO</desc_completa>
+      <direccion>AV. LA PLATA 1031- CAPITAL FEDERAL</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0025">
+      <desc_completa>POMPEYA</desc_completa>
+      <direccion>AV. FERNANDEZ DE LA CRUZ Nø809, CAP FED.</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0026">
+      <desc_completa>MATADEROS</desc_completa>
+      <direccion>AV. JUAN B. ALBERDI 6367- CABA</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0027">
+      <desc_completa>CIUDADELA</desc_completa>
+      <direccion>R.L.FALCON 3121 - CIUDADELA</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0028">
+      <desc_completa>FACULTAD</desc_completa>
+      <direccion>AVDA. CORDOBA 2621 - CAPITAL FEDERAL</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0029">
+      <desc_completa>AV. SANTA FE</desc_completa>
+      <direccion>AV. SANTA FE 1450- CAPITAL FEDERAL</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0030">
+      <desc_completa>VILLA CRESPO</desc_completa>
+      <direccion>AVDA.CORRIENTES 4641/5 - CAPITAL FEDERAL</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0031">
+      <desc_completa>GUADALUPE</desc_completa>
+      <direccion>AV. SANTA FE 3077- CAPITAL FEDERAL</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0032">
+      <desc_completa>AVENIDA DE LOS CONSTITUYENTES</desc_completa>
+      <direccion>AV. DE LOS CONSTITUYENTES 5857- CAP FED</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0033">
+      <desc_completa>TRIBUNALES</desc_completa>
+      <direccion>AV. CORRIENTES 1427- CAPITAL FEDERAL</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0034">
+      <desc_completa>SAN CRISTSBAL</desc_completa>
+      <direccion>AVDA. SAN JUAN 2812- CAPITAL FEDERAL</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0035">
+      <desc_completa>COLEGIALES</desc_completa>
+      <direccion>AV. CABILDO 763- CAPITAL FEDERAL</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0036">
+      <desc_completa>CHACARITA</desc_completa>
+      <direccion>AV FOREST 1187 ESQ ALVAREZ TOMAS-CAP FED</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0037">
+      <desc_completa>FLORES SUR</desc_completa>
+      <direccion>ECHEANDIA 2602-  CAPITAL FEDERAL</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0038">
+      <desc_completa>SAN JUSTO</desc_completa>
+      <direccion>AV. PROVINCIAS UNIDAS 3801- SAN JUSTO</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0039">
+      <desc_completa>LANUS</desc_completa>
+      <direccion>AV. HIPOLITO YRIGOYEN 3703- LANUS OESTE,</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0040">
+      <desc_completa>RUTA 8</desc_completa>
+      <direccion>AVDA.RICARDO BALBIN 2067 - SAN MARTIN</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0041">
+      <desc_completa>LOMAS DE ZAMORA</desc_completa>
+      <direccion>HIP YRIGOYEN 8820-LOMAS DE ZAMORA, BS AS</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0042">
+      <desc_completa>RETIRO</desc_completa>
+      <direccion>RECOQUISTA 1104- CAPITAL FEDERAL</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0043">
+      <desc_completa>QUILMES</desc_completa>
+      <direccion>ALSINA 202- QUILMES OESTE, BUENOS AIRES</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0044">
+      <desc_completa>ONCE</desc_completa>
+      <direccion>AV. CORRIENTES 2426- CAPITAL FEDERAL</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0045">
+      <desc_completa>CONSTITUCION</desc_completa>
+      <direccion>AV. ENTRE RIOS 1692- CAPITAL FEDERAL</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0046">
+      <desc_completa>PINEYRO</desc_completa>
+      <direccion>AVDA. GALICIA 89/99 - AVELLANEDA</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0047">
+      <desc_completa>CABALLITO</desc_completa>
+      <direccion>AV. RIVADAVIA 5173- CAPITAL FEDERAL</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0049">
+      <desc_completa>VILLA URQUIZA</desc_completa>
+      <direccion>AV. TRIUNVIRATO 4648- CAPITAL FEDERAL</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0050">
+      <desc_completa>PATERNAL</desc_completa>
+      <direccion>AV. SAN MART¡N 2219-CABA</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0052">
+      <desc_completa>VELEZ SARSFIELD</desc_completa>
+      <direccion>AV. RIVADAVIA 8799- CAPITAL FEDERAL</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0054">
+      <desc_completa>LANUS ESTE</desc_completa>
+      <direccion>AV. 9 DE JULIO 1472- LANUS ESTE, BS AS</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0055">
+      <desc_completa>SAN CARLOS</desc_completa>
+      <direccion>AV. RIVADAVIA 4364- CAPITAL FEDERAL</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0057">
+      <desc_completa>GAONA</desc_completa>
+      <direccion>AV. GAONA 3800- CAPITAL FEDERAL</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0058">
+      <desc_completa>BEIRO</desc_completa>
+      <direccion>AV.FRANCISCO BEIRO 5248-CAPITAL FEDERAL</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0060">
+      <desc_completa>BOULEVARD ORONO</desc_completa>
+      <direccion>BV ORO¥O 981-ROSARIO-SANTA FE</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0061">
+      <desc_completa>ROJAS</desc_completa>
+      <direccion>B. MITRE 363- ROJAS, BUENOS AIRES</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0062">
+      <desc_completa>C.PELLEGRINI</desc_completa>
+      <direccion>SAN MARTIN 590 - TUCUMAN</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0063">
+      <desc_completa>BELL VILLE</desc_completa>
+      <direccion>CORDOBA 499 - BELL VILLE</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0065">
+      <desc_completa>ROSARIO</desc_completa>
+      <direccion>ENTRE RIOS 864 - ROSARIO</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0066">
+      <desc_completa>CORDOBA</desc_completa>
+      <direccion>ROSARIO DE SANTA FE 177- CORDOBA</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0067">
+      <desc_completa>MAR DEL PLATA</desc_completa>
+      <direccion>BELGRANO 3182- MAR DEL PLATA</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0068">
+      <desc_completa>MENDOZA</desc_completa>
+      <direccion>AV. SAN MARTIN 898- MENDOZA</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0069">
+      <desc_completa>TUCUMAN</desc_completa>
+      <direccion>SAN MARTIN 586- TUCUMAN</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0070">
+      <desc_completa>SANTA FE</desc_completa>
+      <direccion>SAN MARTIN 2502 - SANTA FE</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0071">
+      <desc_completa>GRAL. PACHECO</desc_completa>
+      <direccion>AV. H.YRIGOYEN 797-GRAL PACHECO, BS AS</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0072">
+      <desc_completa>DON TORCUATO</desc_completa>
+      <direccion>AV.ANGEL T.DE ALVEAR - DON TORCUATO</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0073">
+      <desc_completa>VILLA ADELINA</desc_completa>
+      <direccion>PARANA 6566- VILLA ADELINA, BUENOS AIRES</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0074">
+      <desc_completa>ZARATE</desc_completa>
+      <direccion>19 DE MARZO 234-ZARATE, BUENOS AIRES</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0075">
+      <desc_completa>CAMPANA</desc_completa>
+      <direccion>AV. ING. A. ROCCA 71- CAMPANA, BS AS</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0076">
+      <desc_completa>VICTORIA</desc_completa>
+      <direccion>AV.PTE.JUAN D.PERON 3400 - VICTORIA</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0078">
+      <desc_completa>VICENTE LOPEZ</desc_completa>
+      <direccion>AV. MAIPU 1325/29- VICENTE LOPEZ, BS AS</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0079">
+      <desc_completa>MUNRO</desc_completa>
+      <direccion>AV. VELEZ SARFIELD 4299- MUNRO, BS AS</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0080">
+      <desc_completa>VIRREYES</desc_completa>
+      <direccion>AVDA.AVELLANEDA 1916 - VIRREYES</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0081">
+      <desc_completa>ACASSUSO</desc_completa>
+      <direccion>AV. SANTA FE 900- ACASUSSO, BUENOS AIRES</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0082">
+      <desc_completa>FLORIDA</desc_completa>
+      <direccion>AV. MITRE 1695- FLORIDA, BUENOS AIRES</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0083">
+      <desc_completa>RINCON DE MILBERG</desc_completa>
+      <direccion>STA MARIA Y RIVADAVIA - TIGRE</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0085">
+      <desc_completa>SAN MARTIN</desc_completa>
+      <direccion>CALLE 85 N0 1933- SAN MARTIN, BS AS</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0086">
+      <desc_completa>ALTO DEL TALAR</desc_completa>
+      <direccion>AV. HENRY FORD ESQ FOURNIER- PACHECO, BS</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0089">
+      <desc_completa>VILLA BALLESTER</desc_completa>
+      <direccion>ALVEAR 2495- VILLA BALLESTER, BS AS</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0090">
+      <desc_completa>SAN FERNANDO</desc_completa>
+      <direccion>CONSTITUCION 882- SAN FERNANDO, BS AS</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0091">
+      <desc_completa>HURLINGHAM</desc_completa>
+      <direccion>AV. A. JAURETCHE 1576- HURLINGHAM, BS AS</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0092">
+      <desc_completa>OLIVOS</desc_completa>
+      <direccion>AV. MAIPU 2602- OLIVOS, BUENOS AIRES</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0093">
+      <desc_completa>MARTINEZ</desc_completa>
+      <direccion>SANTA FE 1751/57- MARTINEZ, BS AS</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0094">
+      <desc_completa>TIGRE</desc_completa>
+      <direccion>AV. CAZON 1175/99- TIGRE, BS AS</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0095">
+      <desc_completa>CALCHAQUI</desc_completa>
+      <direccion>AV. CALCHAQUM 1602- QUILMES OESTE, BS AS</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0096">
+      <desc_completa>VILLA LURO</desc_completa>
+      <direccion>AVDA. LOPE DE VEGA 1102 - CAP FED</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0097">
+      <desc_completa>VILLA CRESPO</desc_completa>
+      <direccion>AV. CORRIENTES 5100- CAPITAL FEDERAL</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0099">
+      <desc_completa>CASA MATRIZ</desc_completa>
+      <direccion>CALLE 8, ESQ. 50- LA PLATA, BUENOS AIRES</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0100">
+      <desc_completa>PLAZA DE MAYO</desc_completa>
+      <direccion>AV. HIPOLITO YRIGOYEN 402 - CAP FED</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0101">
+      <desc_completa>CANADA DE GOMEZ</desc_completa>
+      <direccion>OCAMPO 954- SANTA FE</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0102">
+      <desc_completa>SANTA ROSA</desc_completa>
+      <direccion>C.PELLEGRINI 376- SANTA ROSA, LA PAMPA</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0104">
+      <desc_completa>GENERAL BELGRANO</desc_completa>
+      <direccion>SAN MARTIN 699- GENERAL BELGRANO, BS AS</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0105">
+      <desc_completa>GENERAL ACHA</desc_completa>
+      <direccion>AVELLANEDA ESQ. ESPANA - GRAL ACHA</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0106">
+      <desc_completa>MARCOS JUAREZ</desc_completa>
+      <direccion>BELGRANO 759 - MARCOS JUAREZ</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0107">
+      <desc_completa>VENADO TUERTO</desc_completa>
+      <direccion>SAN MARTIN 501- SANTA FE</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0108">
+      <desc_completa>CORONEL SUAREZ</desc_completa>
+      <direccion>BELGRANO 1302- CORONEL SUAREZ, BS AS</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0109">
+      <desc_completa>JUNCAL</desc_completa>
+      <direccion>JUNCAL 735- CAPITAL FEDERAL</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0110">
+      <desc_completa>COLON</desc_completa>
+      <direccion>CALLE 47 N0 1098- COLON, BUENOS AIRES</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0111">
+      <desc_completa>DAIREAUX</desc_completa>
+      <direccion>SAN MARTIN 590 - DAIREAUX</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0112">
+      <desc_completa>PERGAMINO</desc_completa>
+      <direccion>AVENIDA DE MAYO N§ 138/40/48/50 (ENTRE A</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0113">
+      <desc_completa>MONTE MAIZ</desc_completa>
+      <direccion>9 DE JULIO ESQ. JUJUY - MONTE MAIZ</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0114">
+      <desc_completa>TANDIL</desc_completa>
+      <direccion>9 DE JULIO 469- TANDIL, BUENOS AIRES</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0115">
+      <desc_completa>PLAZA LAVALLE</desc_completa>
+      <direccion>LAVALLE 1141- CAPITAL FEDERAL</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0116">
+      <desc_completa>BARADERO</desc_completa>
+      <direccion>ANCHORENA 1232- BARADERO, BUENOS AIRES</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0117">
+      <desc_completa>FIRMAT</desc_completa>
+      <direccion>BUENOS AIRES 902- SANTA FE</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0118">
+      <desc_completa>ROSARIO</desc_completa>
+      <direccion>SANTA FE 1260-ROSARIO</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0119">
+      <desc_completa>DEVOTO</desc_completa>
+      <direccion>ASUNCION 4189/93- CAPITAL FEDERAL</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0120">
+      <desc_completa>NECOCHEA</desc_completa>
+      <direccion>AV. 59 Nø 2760- NECOCHEA, BUENOS AIRES</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0121">
+      <desc_completa>ATLANTICA</desc_completa>
+      <direccion>AV. INDEPENDENCIA 2854- MAR DEL PLATA, B</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0122">
+      <desc_completa>ALVEAR</desc_completa>
+      <direccion>AVDA. GRAL ALVEAR 351 - MARTINEZ</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0123">
+      <desc_completa>AV. MAIPU</desc_completa>
+      <direccion>AV. MAIPU 3093- OLIVOS, BUENOS AIRES</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0124">
+      <desc_completa>NEUQUEN</desc_completa>
+      <direccion>JUAN B. JUSTO 50/60- NEUQUEN</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0125">
+      <desc_completa>ADROGUE</desc_completa>
+      <direccion>ESTEBAN ADROGUE 1212- ADROGUE, BS AS</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0126">
+      <desc_completa>CIPOLLETTI</desc_completa>
+      <direccion>ESPANA 266- CIPOLLETTI, RIO NEGRO</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0127">
+      <desc_completa>CERRITO</desc_completa>
+      <direccion>CERRITO 1146- CAPITAL FEDERAL</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0128">
+      <desc_completa>LA PLATA</desc_completa>
+      <direccion>SAN MARTIN 590 - LA PLATA</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0129">
+      <desc_completa>PRIMERA JUNTA</desc_completa>
+      <direccion>AV. RIVADAVIA 5300 - CAPITAL FEDERAL</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0130">
+      <desc_completa>CRAMER</desc_completa>
+      <direccion>CRAMER 2000- CAPITAL FEDERAL</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0131">
+      <desc_completa>DIAZ VELEZ</desc_completa>
+      <direccion>AV. DIAZ VELEZ 4101- CAPITAL FEDERAL</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0132">
+      <desc_completa>MICROCENTRO</desc_completa>
+      <direccion>SARMIENTO 662/664 - CAP FED</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0133">
+      <desc_completa>DIRECTORIO</desc_completa>
+      <direccion>AV. DIRECTORIO 1950- CAPITAL FEDERAL</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0134">
+      <desc_completa>SAN VICENTE DE PAUL</desc_completa>
+      <direccion>OLIDEN 1451 - CAPITAL FEDERAL</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0135">
+      <desc_completa>BAHIA BLANCA</desc_completa>
+      <direccion>O'HIGGINS 81- BAHIA BLANCA, BUENOS AIRES</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0136">
+      <desc_completa>RAMON L FALCON</desc_completa>
+      <direccion>SAN MARTIN 590 - CAPITAL</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0137">
+      <desc_completa>ANDINA</desc_completa>
+      <direccion>SAN MARTIN 590 - MENDOZA</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0138">
+      <desc_completa>CAMINO DE CINTURA</desc_completa>
+      <direccion>SAN MARTIN 590 - BUENOS AIRES</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0139">
+      <desc_completa>MEDITERRANEA</desc_completa>
+      <direccion>SAN MATIN 590 - CORDOBA</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0140">
+      <desc_completa>COMODORO RIVADAVIA</desc_completa>
+      <direccion>C. PELLEGRINI 575-C.RIVADAVIA-CHUBUT</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0141">
+      <desc_completa>JUNIN</desc_completa>
+      <direccion>M. LEBENSOHN 19- JUNIN, BUENOS AIRES</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0142">
+      <desc_completa>RIO CUARTO</desc_completa>
+      <direccion>CONSTITUCION 862 - RIO CUARTO</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0143">
+      <desc_completa>CASEROS</desc_completa>
+      <direccion>AVDA. SAN MARTIN 2643 - CASEROS</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0144">
+      <desc_completa>MORENO</desc_completa>
+      <direccion>BARTOLOME MITRE 3137- MORENO, BS AS</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0145">
+      <desc_completa>NUEVA CHICAGO</desc_completa>
+      <direccion>AVDA. DE LOS CORRALES 6902 - CAP FED</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0146">
+      <desc_completa>RECOLETA</desc_completa>
+      <direccion>AV. PUEYRREDON 1914- CAPITAL FEDERAL</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0147">
+      <desc_completa>MERLO</desc_completa>
+      <direccion>AVDA. LIBERTADOR Nø 557 - MERLO</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0149">
+      <desc_completa>MERCEDES</desc_completa>
+      <direccion>CALLE 27 N0 499-MERCEDES, BUENOS AIRES</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0152">
+      <desc_completa>BALCARCE</desc_completa>
+      <direccion>CALLE 16 N0 550- BALCARCE, BUENOS AIRES</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0153">
+      <desc_completa>GENERAL PICO</desc_completa>
+      <direccion>BELGRANO 599- GENERAL PICO, LA PAMPA</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0154">
+      <desc_completa>ORAN</desc_completa>
+      <direccion>CARLOS PELLEGRINI 321-ORAN-SALTA</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0155">
+      <desc_completa>TRES ARROYOS</desc_completa>
+      <direccion>AV. MORENO 399- MORENO, BUENOS AIRES</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0156">
+      <desc_completa>SANTA FE</desc_completa>
+      <direccion>SAN MARTIN 2501 - SANTA FE</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0157">
+      <desc_completa>GRAL. SARMIENTO</desc_completa>
+      <direccion>AV. RICARDO BALBIN 1080, SAN MIGUEL</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0158">
+      <desc_completa>AZUL</desc_completa>
+      <direccion>25 DE MAYO 599- AZUL, BUENOS AIRES</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0160">
+      <desc_completa>SAN PEDRO DE JUJUY</desc_completa>
+      <direccion>ALSINA 336 - S.P.DE JUJUY</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0161">
+      <desc_completa>MONOLITO</desc_completa>
+      <direccion>AVDA. LURO 5898 - MAR DEL PLATA</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0162">
+      <desc_completa>BOEDO</desc_completa>
+      <direccion>AV. BOEDO 802- CAPITAL FEDERAL</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0163">
+      <desc_completa>BARRIO NORTE</desc_completa>
+      <direccion>SANTA FE 2201- CAPITAL FEDERAL</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0165">
+      <desc_completa>SALTA</desc_completa>
+      <direccion>ESPAQA 635- SALTA</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0166">
+      <desc_completa>VILLA LURO</desc_completa>
+      <direccion>AV. RIVADAVIA 9711- CAPITAL FEDERAL</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0168">
+      <desc_completa>DIAGONAL NORTE</desc_completa>
+      <direccion>PTE. ROQUE SAENZ PE¥A 844/46- CAP FED</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0169">
+      <desc_completa>CONGRESO</desc_completa>
+      <direccion>AV. CALLAO 349- CAPITAL FEDERAL</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0170">
+      <desc_completa>SAAVEDRA</desc_completa>
+      <direccion>AV. CABILDO 4662/4 - CAPITAL FEDERAL</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0171">
+      <desc_completa>AVDA. JUAN B JUSTO</desc_completa>
+      <direccion>AVDA.JUAN B.JUSTO 3121 - MAR DEL PLATA</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0172">
+      <desc_completa>BALVANERA SUD</desc_completa>
+      <direccion>MORENO 2400- CAPITAL FEDERAL</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0175">
+      <desc_completa>PARQUE PATRICIOS</desc_completa>
+      <direccion>AV. CASEROS 2795- CAPITAL FEDERAL</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0177">
+      <desc_completa>PALERMO CHICO</desc_completa>
+      <direccion>J. SALGUERO 3094 - CAPITAL FEDERAL</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0179">
+      <desc_completa>SAN JUAN</desc_completa>
+      <direccion>MENDOZA (SUR) 170- SAN JUAN</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0180">
+      <desc_completa>MONTE GRANDE</desc_completa>
+      <direccion>TERRERO DE SANTAMARIN 420-MONTE GRANDE</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0181">
+      <desc_completa>POSADAS</desc_completa>
+      <direccion>FELIX DE AZARA 1853- POSADAS, MISIONES</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0182">
+      <desc_completa>CASEROS</desc_completa>
+      <direccion>AV. URQUIZA 4788- CASEROS, BUENOS AIRES</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0183">
+      <desc_completa>PUERTO</desc_completa>
+      <direccion>12 DE OCTUBRE 3220 - MAR DEL PLATA</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0184">
+      <desc_completa>ANDINA</desc_completa>
+      <direccion>SAN MARTIN 1024 - MENDOZA</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0186">
+      <desc_completa>VILLA MERCEDES (S. LUIS)</desc_completa>
+      <direccion>PEDERNERA 328- VILLA MERCEDES, SAN LUIS</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0187">
+      <desc_completa>AVENIDA CABILDO</desc_completa>
+      <direccion>AV. CABILDO 1741- CAPITAL FEDERAL</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0188">
+      <desc_completa>SAN NICOLAS DE LOS ARROYOS</desc_completa>
+      <direccion>BME MITRE 289/93- SAN NICOLAS, BS AS</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0189">
+      <desc_completa>SAN ANTONIO DE PADUA</desc_completa>
+      <direccion>AVDA. RIVADAVIA 23870 - S.A.DE PADUA</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0190">
+      <desc_completa>GENERAL RODRIGUEZ</desc_completa>
+      <direccion>P. WHELAN 142- GENERAL RODRIGUEZ, BS AS</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0191">
+      <desc_completa>ALTO PALERMO</desc_completa>
+      <direccion>AV SANTA FE 3228/32 - CAP FEDERAL</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0192">
+      <desc_completa>PARANA</desc_completa>
+      <direccion>CARLOS PELLEGRINI 29- ENTRE RIOS</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0193">
+      <desc_completa>BANFIELD</desc_completa>
+      <direccion>MAIPU 198- BANFIELD ESTE, BUENOS AIRES</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0194">
+      <desc_completa>PASEO ALCORTA</desc_completa>
+      <direccion>JERONIMO SALGUERO 3212- CAPITAL FEDERAL</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0195">
+      <desc_completa>AVENIDA PUEYRREDON</desc_completa>
+      <direccion>AV. PUEYRREDON 1055- CAPITAL FEDERAL</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0196">
+      <desc_completa>BOTANICO</desc_completa>
+      <direccion>AV. SANTA FE 3655- CAPITAL FEDERAL</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0199">
+      <desc_completa>CERRO DE LAS ROSAS</desc_completa>
+      <direccion>AV. RAFAEL NU#EZ 4495 - CORDOBA</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0200">
+      <desc_completa>ALTO AVELLANEDA</desc_completa>
+      <direccion>MANSILLA 846 - AVELLANEDA</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0201">
+      <desc_completa>25 DE MAYO</desc_completa>
+      <direccion>25 DE MAYO 140- CAPITAL FEDERAL</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0202">
+      <desc_completa>GENERAL PAZ</desc_completa>
+      <direccion>AV. DE LOS CONSTITUYENTES 6020 - CAP FED</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0203">
+      <desc_completa>SUCURSAL QUINTANA</desc_completa>
+      <direccion>AV. CALLAO 1833- CAPITAL FEDERAL</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0204">
+      <desc_completa>BELGRANO R</desc_completa>
+      <direccion>ROMULO NAON 1802- CAPITAL FEDERAL</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0205">
+      <desc_completa>SUCURSAL NUEVA CORDOBA</desc_completa>
+      <direccion>AV AMBROSIO OLMOS 494 (TORRE A)-CORDOBA</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0206">
+      <desc_completa>MARQUEZ</desc_completa>
+      <direccion>AV ROLON 117 ESQ MARCOS PAZ- SAN ISIDRO</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0207">
+      <desc_completa>LIBERTADOR</desc_completa>
+      <direccion>AV LIBERTADOR 14998 ESQ PERU- ACASUSSO</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0208">
+      <desc_completa>PLAZA ALEMANIA</desc_completa>
+      <direccion>JERONIMO SALGUERO 2727/51- CAP FED</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0209">
+      <desc_completa>BARRIO RIVER</desc_completa>
+      <direccion>AV. DEL LIBERTADOR 6421/23/25- CAP FED</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0211">
+      <desc_completa>INTERBALNEARIA</desc_completa>
+      <direccion>AV.CONSTITUCION 4039-MAR DEL PLATA,BS AS</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0212">
+      <desc_completa>GUEMES</desc_completa>
+      <direccion>GUEMES 2688- MAR DEL PLATA, BS AS</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0213">
+      <desc_completa>SUC. AUT. - CARLOS PELLEGRINI</desc_completa>
+      <direccion>CARLOS PELLEGRINI 701- CAPITAL FEDERAL</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0214">
+      <desc_completa>AVENIDA CALLAO</desc_completa>
+      <direccion>AV. CALLAO 1137- CAPITAL FEDERAL</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0215">
+      <desc_completa>PLAZA ROMA</desc_completa>
+      <direccion>LAVALLE 180- CAPITAL FEDERAL</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0216">
+      <desc_completa>VILLA BELGRANO</desc_completa>
+      <direccion>AV. MARTINOLLI Y ALBERDI- CORDOBA</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0218">
+      <desc_completa>GODOY CRUZ</desc_completa>
+      <direccion>AV. SAN MARTIN SUR 69-GODOY CRUZ MDZA</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0219">
+      <desc_completa>VICENTE LOPEZ</desc_completa>
+      <direccion>AV. MAIPU 1325/29- VICENTE LOPEZ, BS AS</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0220">
+      <desc_completa>LA LUCILA</desc_completa>
+      <direccion>AV. LIBERTADOR 13925- LA LUCILA, BS AS</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0222">
+      <desc_completa>PUERTO MADERO</desc_completa>
+      <direccion>AV. A. MOREAU DE JUSTO 164 - CAP FED</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0223">
+      <desc_completa>NUNEZ</desc_completa>
+      <direccion>AV. CABILDO 3822- CAPITAL FEDERAL</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0224">
+      <desc_completa>LOMAS DE ZAMORA - MEEKS</desc_completa>
+      <direccion>AV. MEEKS 223- LOMAS DE ZAMORA, BS AS</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0225">
+      <desc_completa>TUCUMAN - SUR</desc_completa>
+      <direccion>LAMADRID 399- TUCUMAN</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0226">
+      <desc_completa>PEDRO GOYENA</desc_completa>
+      <direccion>AV JUAN BAUTISTA ALBERDI 1617 CAP.FED</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0227">
+      <desc_completa>TUCUMAN YERBA BUENA</desc_completa>
+      <direccion>ACONQUIJA 1810- TUCUMAN</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0228">
+      <desc_completa>AVENIDA DE MAYO</desc_completa>
+      <direccion>SALTA 132- CAPITAL FEDERAL</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0229">
+      <desc_completa>MENDOZA QUINTA SECCION</desc_completa>
+      <direccion>PASO DE LOS ANDES 791 / 773 - MENDOZA</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0230">
+      <desc_completa>TUCUMAN NORTE</desc_completa>
+      <direccion>MAIPU Nø 684/86, TUCUMAN</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0231">
+      <desc_completa>CID CAMPEADOR</desc_completa>
+      <direccion>AV. GAONA 1198- CAPITAL FEDERAL</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0232">
+      <desc_completa>ITUZAINGO</desc_completa>
+      <direccion>ZUFRIATEGUI 888- ITUZAINGO, BUENOS AIRES</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0233">
+      <desc_completa>GONNET</desc_completa>
+      <direccion>J.COSTA 501 Y CNO CENTENARIO-LA PLATA</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0234">
+      <desc_completa>ROSARIO SUR</desc_completa>
+      <direccion>AV.SAN MARTIN 3098- ROSARIO, SANTA FE</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0235">
+      <desc_completa>AVELLANEDA</desc_completa>
+      <direccion>AV. MITRE 553- AVELLANEDA, BUENOS AIRES</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0236">
+      <desc_completa>PILAR SHOPPING</desc_completa>
+      <direccion>PANAMERICANA Y ACCESO MAYLING- PILAR</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0237">
+      <desc_completa>ROSARIO - AV. PELLEGRINI</desc_completa>
+      <direccion>AV. PELLEGRINI 1863- ROSARIO, SANTA FE</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0238">
+      <desc_completa>BANFIELD - AV. YRIGOYEN</desc_completa>
+      <direccion>AV. YRIGOYEN 7805- BANFIELD OESTE, BS AS</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0239">
+      <desc_completa>SUIPACHA</desc_completa>
+      <direccion>AV. SANTA FE 895- CAPITAL FEDERAL</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0240">
+      <desc_completa>ASAMBLEA</desc_completa>
+      <direccion>AV. ASAMBLEA 884- CAPITAL FEDERAL</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0241">
+      <desc_completa>SAN JUSTO PLAZA</desc_completa>
+      <direccion>ALMAFUERTE 2914- SAN JUSTO, BUENOS AIRES</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0242">
+      <desc_completa>CORDOBA - ALTA CORDOBA</desc_completa>
+      <direccion>MARIANO FRAGUEIRO 1867- CORDOBA</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0243">
+      <desc_completa>ROSARIO - FISHERTON</desc_completa>
+      <direccion>CORDOBA 7997- ROSARIO, SANTA FE</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0244">
+      <desc_completa>MENDOZA - TRIBUNALES</desc_completa>
+      <direccion>PEDRO MOLINA 203- MENDOZA</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0245">
+      <desc_completa>SALTA - TRES CERRITOS</desc_completa>
+      <direccion>VIRREY TOLEDO 749- SALTA</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0246">
+      <desc_completa>JESUS MARIA - CORDOBA</desc_completa>
+      <direccion>COLON 32 - JESUS MARIA - CORDOBA</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0247">
+      <desc_completa>CAPITALINAS</desc_completa>
+      <direccion>HUMBERTO PRIMO 650, COMPL.CAPITALINAS</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0248">
+      <desc_completa>TRENQUE LAUQUEN</desc_completa>
+      <direccion>ROCA 482 ESQ URUGUAY 191- BUENOS AIRES</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0249">
+      <desc_completa>RIO CUARTO - REGIMIENTO 14</desc_completa>
+      <direccion>AV. SABATTINI 1837- RIO CUARTO, CORDOBA</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0250">
+      <desc_completa>BCA. PRIV. - UNIDAD CENTRAL</desc_completa>
+      <direccion>BARTOLOME MITRE 480, PISO 11- CAP FED</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0251">
+      <desc_completa>BCA. PRIV. - UNIDAD CORDOBA</desc_completa>
+      <direccion>BV. CHACABUCO 1184 - CORDOBA</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0252">
+      <desc_completa>BCA. PRIV. - UNIDAD SAN ISIDRO</desc_completa>
+      <direccion>AV LIBERTADOR 14998 ESQ PERU- ACASUSSO</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0253">
+      <desc_completa>BANCA PRIVADA - UNIDAD MENDOZA</desc_completa>
+      <direccion>25 DE MAYO 1078- MENDOZA</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0254">
+      <desc_completa>BCA. PRIV. - UNID. LA PLATA</desc_completa>
+      <direccion>CALLE 8, ESQ. 50- LA PLATA, BUENOS AIRES</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0255">
+      <desc_completa>BCA. PRIV. - UNID. M DEL PLATA</desc_completa>
+      <direccion>PAUNERO 2121- MAR DEL PLATA, BS AS</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0256">
+      <desc_completa>BCA. PRIV. - UNID. ROSARIO</desc_completa>
+      <direccion>BLVD ORO¤O 1053- ROSARIO</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0257">
+      <desc_completa>BCA. PRIV. - UNID. NEUQUEN</desc_completa>
+      <direccion>J. B. JUSTO 50-NEUQUEN-NEUQUEN</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0258">
+      <desc_completa>BCA. PRIV. - UNID. TUCUMAN</desc_completa>
+      <direccion>SAN MARTIN 586- TUCUMAN</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0259">
+      <desc_completa>BANCA PRIVADA - UNIDAD PILAR</desc_completa>
+      <direccion>BARTOLOME MITRE 480, PISO 10- CAP FED</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0260">
+      <desc_completa>GENERAL ROCA</desc_completa>
+      <direccion>TUCUMAN 750- GENERAL ROCA, RIO NEGRO</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0261">
+      <desc_completa>SAN FRANCISCO - CORDOBA</desc_completa>
+      <direccion>BVD.25 DE MAYO 1563-SAN FRANCISCO,CDBA</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0262">
+      <desc_completa>SAN RAFAEL - MENDOZA</desc_completa>
+      <direccion>DR. CARLOS PELLEGRINI 270 - SAN RAFAEL</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0263">
+      <desc_completa>CORDOBA - BARRIO GRAL. PAZ</desc_completa>
+      <direccion>24 DE SEPTIEMBRE 1357- CORDOBA</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0265">
+      <desc_completa>RIO TERCERO - CORDOBA</desc_completa>
+      <direccion>AV. SANM MARTIN 256-RIO TERCERO-CORDOBA</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0266">
+      <desc_completa>VILLA MARIA - CORDOBA</desc_completa>
+      <direccion>SANTA FE 1285-VILLA MARIA-CORDOBA</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0267">
+      <desc_completa>CANUELAS</desc_completa>
+      <direccion>AV LIBERTAD 673 E/SAN M.Y BELGRANO-BS AS</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0268">
+      <desc_completa>ALTA GRACIA - CORDOBA</desc_completa>
+      <direccion>PADRE GRENON 207- ALTA GRACIA - CORDOBA</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0269">
+      <desc_completa>ADROGUE - BOULEVARD</desc_completa>
+      <direccion>IRIGOYEN 12961- ADROGUE, BUENOS AIRES</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0270">
+      <desc_completa>VILLA CARLOS PAZ - CORDOBA</desc_completa>
+      <direccion>ALBERDI N§ 37, VILLA CARLOS PAZ</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0271">
+      <desc_completa>CORDOBA - RUTA 9</desc_completa>
+      <direccion>AV SABATTINI 2143-CORDOBA</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0273">
+      <desc_completa>SANTA FE - ARIST. DEL VALLE</desc_completa>
+      <direccion>BELGRANO 3508- SANTA FE</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0274">
+      <desc_completa>CORDOBA - RUTA 20</desc_completa>
+      <direccion>AV FUERZA AEREA ARGENTINA 2529-CORDOBA</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0275">
+      <desc_completa>CAPILLA DEL SENOR</desc_completa>
+      <direccion>BME. MITRE 339- CAPILLA DEL SENOR</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0276">
+      <desc_completa>MENDOZA - NECOCHEA</desc_completa>
+      <direccion>NECOCHEA 71- MENDOZA</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0278">
+      <desc_completa>SANTA FE SUR</desc_completa>
+      <direccion>GENERAL LOPEZ 2824- SANTA FE</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0279">
+      <desc_completa>ATLANTICA</desc_completa>
+      <direccion>AV. INDEPENDENCIA 2854- MAR DEL PLATA</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0280">
+      <desc_completa>SAN ISIDRO - TOMKINSON</desc_completa>
+      <direccion>ING. TOMKINSON 2925- SAN ISIDRO, BUENOS</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0281">
+      <desc_completa>ITUZAINGO</desc_completa>
+      <direccion>AV. SANTA ROSA 1556 - ITUZAINGO</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0283">
+      <desc_completa>PARANA - NORTE</desc_completa>
+      <direccion>AV RIVADAVIA 290- PARANA</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0284">
+      <desc_completa>SGO. DEL ESTERO - AV. BELGRANO</desc_completa>
+      <direccion>AV. BELGRANO SUR 1987- SGO DEL ESTERO</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0286">
+      <desc_completa>TRELEW</desc_completa>
+      <direccion>RIVADAVIA 171- TRELEW, CHUBUT</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0287">
+      <desc_completa>VILLA CONSTITUCION - STA. FE</desc_completa>
+      <direccion>HIP YRIGOYEN 298- VILLA CONSTITUCION</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0288">
+      <desc_completa>MORON - AV. VERGARA</desc_completa>
+      <direccion>AV. VERGARA- MORON, BUENOS AIRES</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0289">
+      <desc_completa>NEUQUEN - BOULEVARD</desc_completa>
+      <direccion>JUAN B.JUSTO 50/58- NEUQUEN</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0290">
+      <desc_completa>HAEDO</desc_completa>
+      <direccion>AV. RIVADAVIA 16313- HAEDO, BUENOS AIRES</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0291">
+      <desc_completa>MARTINEZ - FLEMMING</desc_completa>
+      <direccion>AV FLEMMING 1976 H YRIGOY 1593-MARTINEZ</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0292">
+      <desc_completa>PARANA - CINCO ESQUINAS</desc_completa>
+      <direccion>GUALEGUAYCHU 907- PARANA, ENTRE RIOS</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0293">
+      <desc_completa>SALTA - SUR</desc_completa>
+      <direccion>BUENOS AIRES 298- SALTA</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0294">
+      <desc_completa>BAHIA BLANCA - AV. SARMIENTO</desc_completa>
+      <direccion>SARMIENTO 1198- BAHIA BLANCA, BS AS</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0295">
+      <desc_completa>VILLA GESELL</desc_completa>
+      <direccion>AV 3 ENTRE 102 Y 104- BUENOS AIRES</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0296">
+      <desc_completa>CITY BELL</desc_completa>
+      <direccion>PZA BELGRANO E/CANTILO Y 15 - CITY BELL</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0297">
+      <desc_completa>SAN PEDRO</desc_completa>
+      <direccion>BME MITRE 699 ESQ AYACUCHO-SAN PEDRO</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0298">
+      <desc_completa>QUILMES - CALLE ALEM</desc_completa>
+      <direccion>ALEM 225 Y MORENO- QUILMES</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0299">
+      <desc_completa>VICTORIA</desc_completa>
+      <direccion>AV TTE GRAL J D PERON 3400- VICTORIA</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0307">
+      <desc_completa>ARAOZ Y LAS HERAS</desc_completa>
+      <direccion>AV. LAS HERAS 3608- CAPITAL FEDERAL</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0308">
+      <desc_completa>MAR DEL PLATA - SHOPPING</desc_completa>
+      <direccion>RIVADAVIA 3050,SH LOS G.-MAR DEL PLATA</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0309">
+      <desc_completa>BAHIA BLANCA - SHOPPING</desc_completa>
+      <direccion>SARMIENTO 4114- BAHIA BLANCA, BS AS</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0310">
+      <desc_completa>ROSARIO - ALBERDI</desc_completa>
+      <direccion>BVAR. RONDEAU 1884- ROSARIO, SANTA FE</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0311">
+      <desc_completa>GRAL. SAN MARTMN - MENDOZA</desc_completa>
+      <direccion>9 DE JULIO 76/80 E/AV.E Y ALV-SAN MARTIN</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0313">
+      <desc_completa>PUERTO MADRYN</desc_completa>
+      <direccion>28 DE JULIO 56 PUERTO MADRYN-CHUBUT</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0314">
+      <desc_completa>VIEDMA</desc_completa>
+      <direccion>SAN MARTIN 53- VIEDMA, RIO NEGRO</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0315">
+      <desc_completa>SUCURSAL QUINTANA</desc_completa>
+      <direccion>AV CALLAO 1833- CAPITAL FEDERAL</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0316">
+      <desc_completa>DOLORES</desc_completa>
+      <direccion>CASTELLI 102 ESQ BELGRANO- DOLORES</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0317">
+      <desc_completa>GRAL. SAVIO</desc_completa>
+      <direccion>AVDA. GRAL SAVIO 1021 - RIO TERCERO</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0318">
+      <desc_completa>EMBALSE RIO TERCERO</desc_completa>
+      <direccion>AVDA. D.PERON 99 - RIO TERCERO</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0319">
+      <desc_completa>BARRANCAS</desc_completa>
+      <direccion>SUCRE 2223- CAPITAL FEDERAL</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0320">
+      <desc_completa>AV. LA PLATA</desc_completa>
+      <direccion>AV. LA PLATA 140- CAPITAL FEDERAL</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0321">
+      <desc_completa>PARAGUAY</desc_completa>
+      <direccion>ESMERALDA 902-CAPITAL FEDERAL</direccion>
+      <tipo_oficina>N</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0322">
+      <desc_completa>ACONCAGUA-MENDOZA</desc_completa>
+      <direccion>AV SAN MARTIN 1050- ACONCAGUA, MENDOZA</direccion>
+      <tipo_oficina>N</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0323">
+      <desc_completa>VIAMONTE</desc_completa>
+      <direccion>VIAMONTE 1632- CAPITAL FEDERAL</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0324">
+      <desc_completa>VERSAILLES</desc_completa>
+      <direccion>ALVAREZ JONTE 6284- CAPITAL FEDERAL</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0325">
+      <desc_completa>VILLA DEL PARQUE</desc_completa>
+      <direccion>CUENCA 3339/41- CAPITAL FEDERAL</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0326">
+      <desc_completa>VILLA LUGANO</desc_completa>
+      <direccion>AV. GRAL F.F. DE LA CRUZ 6212 - CAP FED</direccion>
+      <tipo_oficina>N</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0327">
+      <desc_completa>TARTAGAL</desc_completa>
+      <direccion>DR.ABRAHAM CORNEJO 458 - TARTAGAL</direccion>
+      <tipo_oficina>N</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0328">
+      <desc_completa>OBERA</desc_completa>
+      <direccion>AV. SARMIENTO Y JUJUY- OBERA</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0329">
+      <desc_completa>LINCOLN</desc_completa>
+      <direccion>GUEMES 38/40- LINCOLN</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0330">
+      <desc_completa>BRAGADO</desc_completa>
+      <direccion>CARLOS PELLEGRINI ESQ. SUAREZ- BRAGADO</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0331">
+      <desc_completa>RECOLETA II</desc_completa>
+      <direccion>AV. CALLAO 1833- CAPITAL FEDERAL</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0333">
+      <desc_completa>ESPERANZA</desc_completa>
+      <direccion>25 DE MAYO 1354-ESPERANZA</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0335">
+      <desc_completa>CONCEPCION DEL URUGUAY</desc_completa>
+      <direccion>9 DE JULIO 829-CONCEPCION DEL URUGUAY</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0336">
+      <desc_completa>GALVEZ - SANTA FE</desc_completa>
+      <direccion>BARTOLOME MITRE 357-GALVEZ, SANTA FE</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0337">
+      <desc_completa>RECONQUISTA - SANTA FE</desc_completa>
+      <direccion>S MARTIN E/G LOPEZ Y G IRIONDO-RECNQUIST</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0338">
+      <desc_completa>GOYA</desc_completa>
+      <direccion>J E MARTINEZ 529- GOYA</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0339">
+      <desc_completa>CHASCOMUS</desc_completa>
+      <direccion>ALVEAR S/N E/FRANKLIN Y R DE E-CHASCOMUS</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0340">
+      <desc_completa>LUJAN DE CUYO</desc_completa>
+      <direccion>SAN MARTIN 565-MENDOZA</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0341">
+      <desc_completa>MENDOZA MAIPU</desc_completa>
+      <direccion>PADRE VAZQUEZ 250-MENDOZA</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0342">
+      <desc_completa>9 DE JULIO</desc_completa>
+      <direccion>AV MITRE 1053-9 DE JULIO,BUENOS AIRES</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0343">
+      <desc_completa>CHACABUCO</desc_completa>
+      <direccion>SARMIENTO 31-CHACABUCO,BUENOS AIRES</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0344">
+      <desc_completa>MAR DE AJO</desc_completa>
+      <direccion>SAN MARTIN 570-MAR DE AJO,BUENOS AIRES</direccion>
+      <tipo_oficina>N</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0345">
+      <desc_completa>PINAMAR</desc_completa>
+      <direccion>SHAW 385-PINAMAR,BUENOS AIRES</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0346">
+      <desc_completa>BRANDSEN</desc_completa>
+      <direccion>FERRARI 200-BRANDSEN,BUENOS AIRES</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0347">
+      <desc_completa>AUTOMATICA 20</desc_completa>
+      <direccion />
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0348">
+      <desc_completa>AUTOMATICA 21</desc_completa>
+      <direccion />
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0349">
+      <desc_completa>AUTOMATICA 22</desc_completa>
+      <direccion />
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0350">
+      <desc_completa>AUTOMATICA 23</desc_completa>
+      <direccion />
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0351">
+      <desc_completa>TRADICIONAL 12</desc_completa>
+      <direccion />
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0352">
+      <desc_completa>TRADICIONAL 13</desc_completa>
+      <direccion />
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0353">
+      <desc_completa>AUTOMATICA 24</desc_completa>
+      <direccion />
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0354">
+      <desc_completa>AUTOMATICA 25</desc_completa>
+      <direccion />
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0355">
+      <desc_completa>AUTOMATICA 26</desc_completa>
+      <direccion />
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0356">
+      <desc_completa>AUTOMATICA 27</desc_completa>
+      <direccion />
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0357">
+      <desc_completa>AUTOMATICA 28</desc_completa>
+      <direccion />
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0358">
+      <desc_completa>GRAL. SAN MARTIN-MENDOZA</desc_completa>
+      <direccion>AV.BOULOGNE SUR MER 150-SAN MARTIN-MDOZA</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0359">
+      <desc_completa>PUERTO</desc_completa>
+      <direccion>12 DE OCTUBRE Nø 3468-MAR DEL PLATA</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0360">
+      <desc_completa>MENDOZA-GENERAL ESPEJO</desc_completa>
+      <direccion>GENERAL GERONIMO ESPEJO N§ 235-MENDOZA</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0361">
+      <desc_completa>MENDOZA-RODRIGUEZ PE¥A</desc_completa>
+      <direccion>RODRIGUEZ PE¥A Nø 2600-MENDOZA</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0363">
+      <desc_completa>INTERBALNEARIA</desc_completa>
+      <direccion>AV. CONSTITUCION 4039-MAR DEL PLATA</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0364">
+      <desc_completa>SANTIAGO DEL ESTERO-AV. BELGRANO</desc_completa>
+      <direccion>AV. BELGRANO SUR 1987-SGO. DEL ESTERO</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0365">
+      <desc_completa>TUCUMAN-YERBA BUENA</desc_completa>
+      <direccion>AV. ACONQUIJA 1395-TUCUMAN</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0366">
+      <desc_completa>HAEDO</desc_completa>
+      <direccion>AVDA. RIVADAVIA 16313-HAEDO-BUENOS AIRES</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0367">
+      <desc_completa>AVDA TRIUNVIRATO</desc_completa>
+      <direccion>AVDA. TRIUNVIRATO Nø 3633-CAP FEDERAL</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0368">
+      <desc_completa>BRAGADO</desc_completa>
+      <direccion>RIVADAVIA N§ 1733-BUENOS AIRES</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0369">
+      <desc_completa>PARQUE IDUSTRIAL PILAR</desc_completa>
+      <direccion>CALLE 9 Y CALLE DEL CANAL-PQUE IND PILAR</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0370">
+      <desc_completa>VIAMONTE</desc_completa>
+      <direccion>PARANA 645 - CABA</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0371">
+      <desc_completa>ROSARIO-FISHERTON</desc_completa>
+      <direccion>AVDA. EVA PERON Nø7659-ROSARIO-SANTA FE</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0372">
+      <desc_completa>NUEVA NUNEZ</desc_completa>
+      <direccion>AV. CABILDO 3349/53 - CAP FED</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0373">
+      <desc_completa>VILLA DEL PARQUE</desc_completa>
+      <direccion>NAZARRE 3225 - CAP FED</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0374">
+      <desc_completa>CBA- BARRIO JARDIN</desc_completa>
+      <direccion>ELIAS YOFRE 1294 - CORDOBA</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0375">
+      <desc_completa>BAJO DEL NEUQUEN</desc_completa>
+      <direccion>AVDA. OLASCOAGA N§250- NEUQUEN</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0376">
+      <desc_completa>SALTO</desc_completa>
+      <direccion>BUENOS AIRES 383 - SALTO</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0377">
+      <desc_completa>LOMAS -GORRITI</desc_completa>
+      <direccion>J. IGNACIO GORRITI 270/272 - L DE ZAMORA</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0378">
+      <desc_completa>CONCEPCION DEL URUGUAY</desc_completa>
+      <direccion>J.D.PERON 34 - CONCEPCION DEL URUGUAY</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0379">
+      <desc_completa>ESPERANZA</desc_completa>
+      <direccion>RIVADAVIA 2192 - ESPERANZA</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0380">
+      <desc_completa>BARRIO ROCA -COMODORO RIVADAVIA</desc_completa>
+      <direccion>LA PRENSA 12 - C RIVADAVIA</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0381">
+      <desc_completa>MADERO YACHTING</desc_completa>
+      <direccion>PIERINA DEALESSI Nø 360 ESQ. V OCAMPO</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0382">
+      <desc_completa>JUANA MANSO</desc_completa>
+      <direccion>JUANA MANSO 1530/96 - CAP FED</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0383">
+      <desc_completa>LOBOS</desc_completa>
+      <direccion>BUENOS AIRES 268 - LOBOS</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0384">
+      <desc_completa>PLAZA ITALIA</desc_completa>
+      <direccion>AVDA. SANTA FE Nø 4846 / 48</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0385">
+      <desc_completa>EL DORADO</desc_completa>
+      <direccion>AVDA. SAN MARTIN Nø 1645</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0386">
+      <desc_completa>AVDA. CENTRAL -SAN JUAN</desc_completa>
+      <direccion>AV. JOSE IGNACIO DE LA ROZA Nø 145</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0387">
+      <desc_completa>PLAZA MORON</desc_completa>
+      <direccion>GRAL. JOSE DE SAN MARTIN Nø 171</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0388">
+      <desc_completa>GARIN</desc_completa>
+      <direccion>AVDA. GRAL.BELGRANO Nø1054/58</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0389">
+      <desc_completa>BAHIA BLANCA -AVDA. SARMIENTO</desc_completa>
+      <direccion>AVDA. SARMIENTO Nø 1237 -BAHIA BLANCA</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0390">
+      <desc_completa>MANZANA JESUITICA -CORDOBA CENTRO</desc_completa>
+      <direccion>AVDA. VELEZ SARSFIELD Nø 122/128,CORDOBA</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0391">
+      <desc_completa>TABLADA</desc_completa>
+      <direccion>AVDA. CROVARA Nø 1169/1173 -LA TABLADA</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0392">
+      <desc_completa>LINCOLN</desc_completa>
+      <direccion>AVDA. 9 DE JULIO Nø 128 -LINCOLN</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0393">
+      <desc_completa>QUILMES - ALEM</desc_completa>
+      <direccion>LEANDRO N. ALEM Nø 159 -QUILMES</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0394">
+      <desc_completa>BAHIA BLANCA - CENTRO</desc_completa>
+      <direccion>DONADO Nø 56 -BAHIA BLANCA, BUENOS AIRES</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0395">
+      <desc_completa>PLAZA SERRANO</desc_completa>
+      <direccion>AVDA CORDOBA Nø 5030/34 -CAPITAL FEDERAL</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0396">
+      <desc_completa>PARANA NORTE</desc_completa>
+      <direccion>ALAMEDA DE LA FEDERACION 360E. RIOS</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0397">
+      <desc_completa>VICTORIA - ENTRE RIOS</desc_completa>
+      <direccion>FUNDADOR EZPELETA Nø 76 - ENTRE RIOS</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0398">
+      <desc_completa>LOMAS DEL MIRADOR</desc_completa>
+      <direccion>AVDA. JUAN MANUEL DE ROSAS Nø 1085/91</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0399">
+      <desc_completa>MERCADO NORTE -CORDOBA CENTRO</desc_completa>
+      <direccion>SAN MARTIN  NRO 502-BARRIO CENTRO-CBA</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0400">
+      <desc_completa>SAN MARTIN -CENTRO</desc_completa>
+      <direccion>SAN MARTIN Nø 1951, SAN MARTIN</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0401">
+      <desc_completa>LANUS -CENTRO</desc_completa>
+      <direccion>AVDA. HIPOLITO YRIGOYEN Nø4421/25/27</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0402">
+      <desc_completa>OBELISCO</desc_completa>
+      <direccion>AVDA. CORRIENTES Nø 1118/22, CAP. FED.</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0403">
+      <desc_completa>PLAZA ALMAGRO</desc_completa>
+      <direccion>AVDA. CORRIENTES Nø 4136, CAP. FED.</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0405">
+      <desc_completa>BELEN DE ESCOBAR</desc_completa>
+      <direccion>25 DE MAYO Nø1138 -ESCOBAR, BUENOS AIRES</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0406">
+      <desc_completa>AGUILAR</desc_completa>
+      <direccion>AV. CABILDO 1021- CAPITAL FEDERAL</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0407">
+      <desc_completa>ALTOS DE BELGRANO</desc_completa>
+      <direccion>AV. CABILDO 2754/56- CAPITAL FEDERAL</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0408">
+      <desc_completa>ROSARIO -PUERTO NORTE</desc_completa>
+      <direccion>AV. MADRES DE PLAZA 25 DE MAYO 3070/80</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0409">
+      <desc_completa>CAPITALINAS -CORDOBA</desc_completa>
+      <direccion>EDIFIC. EN CONSTRUCCION</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0410">
+      <desc_completa>LAS ROSAS</desc_completa>
+      <direccion>SAN MARTIN 173-SANTA FE</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0411">
+      <desc_completa>EL TREBOL</desc_completa>
+      <direccion>ITALIA 893-SANTA FE</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0412">
+      <desc_completa>SAN JORGE</desc_completa>
+      <direccion>SARMIENTO 1250-SANTA FE</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0413">
+      <desc_completa>ALEM</desc_completa>
+      <direccion>AV. LEANDRO N. ALEM 456- CAP FED</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0414">
+      <desc_completa>ALVEAR</desc_completa>
+      <direccion>AVDA. ALVEAR 1301/29 - CAPITAL FEDERAL</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0415">
+      <desc_completa>PLAZA LAS HERAS</desc_completa>
+      <direccion>AVDA. LAS HERAS 3201-CAP FED</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0416">
+      <desc_completa>DEL ANGEL</desc_completa>
+      <direccion>CUBA 1920/22 - CAP FED</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0417">
+      <desc_completa>PZA.S. MARTIN</desc_completa>
+      <direccion>AVDA. SANTA FE 880- CAP FED</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0418">
+      <desc_completa>OLLEROS</desc_completa>
+      <direccion>OLLEROS 1747</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0419">
+      <desc_completa>ESTACION MARTINEZ</desc_completa>
+      <direccion>EDUARDO COSTA 2060/68 - SAN ISIDRO</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0420">
+      <desc_completa>CENTRO PORTE¥O</desc_completa>
+      <direccion>MAIPU 440-CAPITAL FEDERAL</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0421">
+      <desc_completa>AV CALLAO</desc_completa>
+      <direccion>AVDA. CALLAO 1690- CAP FED</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0422">
+      <desc_completa>MONTEVIDEO</desc_completa>
+      <direccion>RODRIGUEZ PENA 1081- CAP FEDERAL</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0423">
+      <desc_completa>PLAZA SAN ISIDRO</desc_completa>
+      <direccion>ITUZAINGO 400 - SAN ISIDRO</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0427">
+      <desc_completa>LA ISLA</desc_completa>
+      <direccion>DR. LUIS AGOTE 2202- CAP FED</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0428">
+      <desc_completa>PLAZA LIBERTAD</desc_completa>
+      <direccion>AVDA. CORDOBA 1299 - CAP FED</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0430">
+      <desc_completa>SALADILLO</desc_completa>
+      <direccion>AV. SAN MARTIN Nø 3275, SALADILLO</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0431">
+      <desc_completa>AL RIO</desc_completa>
+      <direccion>AV. DEL LIBERTADOR 77/95- VICENTE LOPEZ</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0432">
+      <desc_completa>DOT BAIRES SHOPPING</desc_completa>
+      <direccion>VEDIA 3626 - CAPITAL FEDERAL</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0433">
+      <desc_completa>CHASCOMUS</desc_completa>
+      <direccion>BELGRANO 91 CHASCOMUS PCIA BUENOS AIRES</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0434">
+      <desc_completa>COLON ENTRE RIOS</desc_completa>
+      <direccion>SAN MARTIN NO. 267 -ENTRE RIOS</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0435">
+      <desc_completa>PUENTE ZARATE</desc_completa>
+      <direccion>LOPEZ Y PLANES Nø1360 ESQ GRAL.LAVALLE</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0436">
+      <desc_completa>ONCATIVO - CORDOBA</desc_completa>
+      <direccion>ITALIA Nø 150 ONCATIVO - CORDOBA</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0437">
+      <desc_completa>ROTONDA LAS FLORES - CORDOBA</desc_completa>
+      <direccion>AV. VELEZ SARSFIELD Nø 3523 - CORDOBA</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0438">
+      <desc_completa>PLAZA HOUSSAY</desc_completa>
+      <direccion>AV CORDOBA 2282</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0439">
+      <desc_completa>PEHUAJO</desc_completa>
+      <direccion>HIPOLITO IRIGOYEN Nø 456 -PEHUAJO</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0440">
+      <desc_completa>PALMARES MENDOZA</desc_completa>
+      <direccion>RUTA PANAMERICANA 2650 CIUDAD DE MENDOZA</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0441">
+      <desc_completa>GUAYMALLEN MENDOZA</desc_completa>
+      <direccion>AV. LIBERTAD 662, GUAYMALLEN- PROVINCIA</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0442">
+      <desc_completa>NUEVA BOEDO</desc_completa>
+      <direccion>RIVADAVIA 3681</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0443">
+      <desc_completa>VICUNA MACKENA</desc_completa>
+      <direccion>JULIO A. ROCA 597 ESQ. TIERNEY</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0444">
+      <desc_completa>RINCON DE CAMPANA</desc_completa>
+      <direccion>RIVADAVIA 1175, CAMPANA, BS AS</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0445">
+      <desc_completa>VILLAGUAY ENTRE RIOS</desc_completa>
+      <direccion>BARTOLOME MITRE 565 - VILLAGUAY, ER</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0446">
+      <desc_completa>CASILDA</desc_completa>
+      <direccion>1RO DE MAYO NRO 2060-CASILDA-STA FE</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0447">
+      <desc_completa>FUNES</desc_completa>
+      <direccion>AV. SANTA FE 1594 - FUNES - STA FE</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0448">
+      <desc_completa>SAN ANTONIO DE ARECO</desc_completa>
+      <direccion>ALSINA Nø 184 - SAN ANTONIO DE ARECO</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0449">
+      <desc_completa>CONCEPCION - TUCUMAN</desc_completa>
+      <direccion>9 DE JULIO Nø 62 - CONCEPCION- TUCUMAN</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0450">
+      <desc_completa>MAR DE AJO</desc_completa>
+      <direccion>LIBERTADOR 373- MAR DE AJO</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0451">
+      <desc_completa>PUERTO IGUAZU</desc_completa>
+      <direccion>REPUBLICA ARG.45 PUERTO IGUAZU MISIONES</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0452">
+      <desc_completa>CABRERA - CORDOBA</desc_completa>
+      <direccion>9 DE JULIO 601- GENERAL CABRERA</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0453">
+      <desc_completa>SANTA ROSA DE CALAMUCHITA</desc_completa>
+      <direccion>LIBERTAD 521 - SANTA ROSA DE CALAMUCHITA</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0454">
+      <desc_completa>TORTUGUITAS</desc_completa>
+      <direccion>PANAMERICANA RAMAL PILAR KILOMETRO 35.5</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0455">
+      <desc_completa>LA CARLOTA</desc_completa>
+      <direccion>HIPOLITO IRIGOYEN 127</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0456">
+      <desc_completa>LA FALDA</desc_completa>
+      <direccion>AV EDEN Nø 655- LA FALDA CORDOBA</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0457">
+      <desc_completa>MERCEDES CORRIENTES</desc_completa>
+      <direccion>SAN MART¡N 941- MERCEDES</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0458">
+      <desc_completa>LAS FLORES</desc_completa>
+      <direccion>AV CARMEN 540, LAS FLORES PCIA DE BS AS</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0459">
+      <desc_completa>AVENIDA LURO MAR DEL PLATA</desc_completa>
+      <direccion>AV. LURO Nø 6592 - MAR DEL PLATA</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0460">
+      <desc_completa>MAIPU MENDOZA</desc_completa>
+      <direccion>PADRE VAZQUEZ Nø 270 - MAIPU - MENDOZA</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0461">
+      <desc_completa>ARRECIFES</desc_completa>
+      <direccion>RICARDO GUTIERREZ Nø 543 - ARRECIFES -</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0462">
+      <desc_completa>TUCUMAN CENTRO</desc_completa>
+      <direccion>CRISOSTOMO ALVAREZ 651 TUCUMAN</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0463">
+      <desc_completa>VILLA CONSTITUCION</desc_completa>
+      <direccion>BELGRANO 1198 - VILLA CONSTITUCION</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0464">
+      <desc_completa>ARROYO SECO</desc_completa>
+      <direccion>MITRE 277 ARROYO SECO- SANTA FE</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0465">
+      <desc_completa>BENITO JUAREZ</desc_completa>
+      <direccion>ALSINA 62 BENITO JUAREZ - BUENOS AIRES</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0467">
+      <desc_completa>MENDOZA TRIBUNALES</desc_completa>
+      <direccion>AV. ESPA¤A NRO 528 - MENDOZA</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0469">
+      <desc_completa>VILLA ALLENDE CORDOBA</desc_completa>
+      <direccion>RIO DE JANEIRO Nø 325 - VILLA ALLENDE</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0470">
+      <desc_completa>CARLOS CASARES</desc_completa>
+      <direccion>BRANDSEN Nø 28 - CARLOS CASARES</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0471">
+      <desc_completa>ROSARIO ALBERDI</desc_completa>
+      <direccion>AV. ALBERDI NRO 859 - ROSARIO - SANTA FE</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0472">
+      <desc_completa>ROSARIO SUR</desc_completa>
+      <direccion>AV. GRAL. SAN MARTIN Nø 5035  - ROSARIO</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0473">
+      <desc_completa>9 DE JULIO</desc_completa>
+      <direccion>SAN MARTIN 1237</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0474">
+      <desc_completa>CHACABUCO</desc_completa>
+      <direccion>SARMIENTO 78 E/ RIVADAVIA Y CERVANTES</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0475">
+      <desc_completa>NORDELTA</desc_completa>
+      <direccion>AV. DE LOS LAGOS 6855-NORDELTA-TIGRE</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0477">
+      <desc_completa>CALETA OLIVIA</desc_completa>
+      <direccion>25 DE MAYO Nø340, CALETA OLVIA SANTA CRZ</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0478">
+      <desc_completa>ROSARIO PICHINCHA</desc_completa>
+      <direccion>SALTA Nø 2440- ROSARIO - SANTA FE</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0479">
+      <desc_completa>SALTA AV BELGRANO</desc_completa>
+      <direccion>AV. BELGRANO Nø 977 CIUDAD DE SALTA</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0480">
+      <desc_completa>PRIMERA JUNTA</desc_completa>
+      <direccion>ROSARIO NRO. 804- CAPITAL FEDERAL</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0481">
+      <desc_completa>ISIDRO CASANOVA</desc_completa>
+      <direccion>AV JUAN M DE ROSAS 6745/41,ISIDRO CASANO</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0482">
+      <desc_completa>BOLIVAR</desc_completa>
+      <direccion>SAN MART¡N Nø 580 - BOLIVAR-BS AS</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0483">
+      <desc_completa>PACHECO PANAMERICANA</desc_completa>
+      <direccion>HIPOLITO YRIGOYEN 2357</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0486">
+      <desc_completa>GRAND BOURG</desc_completa>
+      <direccion>CALLAO NRO 955 - GRAND BOURG</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0487">
+      <desc_completa>CANNING</desc_completa>
+      <direccion>AV MARIANO CASTEX 3489-CANNING-EZEIZA</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0488">
+      <desc_completa>BRANDSEN</desc_completa>
+      <direccion>FERRARI 167 - BRANDSEN - BS AS</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0489">
+      <desc_completa>TORCUATO PANAMERICANA</desc_completa>
+      <direccion>RIOBAMBA 1515 - DON TORCUATO</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0490">
+      <desc_completa>JUSTINIANO POSSE</desc_completa>
+      <direccion>AV. DE MAYO 255-JUST POSSE - CORDOBA</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0492">
+      <desc_completa>MARCOS PAZ</desc_completa>
+      <direccion>INDEPENDENCIA 455 - MARCOS PAZ - BS AS</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0493">
+      <desc_completa>MONTE MAIZ</desc_completa>
+      <direccion>JUJUY 1309 - MONTE MAIZ - CORDOBA</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0494">
+      <desc_completa>JOSE LEON SUAREZ</desc_completa>
+      <direccion>J M DE ROSAS 2431-J L SUAREZ-SAN MARTIN</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0495">
+      <desc_completa>MALARGUE</desc_completa>
+      <direccion>GRAL NAPOLEON URIBURU Nø 656</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0496">
+      <desc_completa>MARTINEZ OESTE</desc_completa>
+      <direccion>AV DARDO ROCHA 2300, SAN ISIDRO</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0497">
+      <desc_completa>VILLA CA¤AS</desc_completa>
+      <direccion>AVENIDA 50 Nø93 ESQ CALLE 53-VILLA CA¤AS</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0498">
+      <desc_completa>GRAL. LAS HERAS BS AS</desc_completa>
+      <direccion>LAS HERAS NRO. 864- LAS HERAS - BS AS</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0499">
+      <desc_completa>3 DE FEBRERO</desc_completa>
+      <direccion>SABATTINI Nø 4681 - CASEROS - BS AS</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0500">
+      <desc_completa>PARQUE LEZAMA</desc_completa>
+      <direccion>MARTIN GARCIA Nø 673 - C.A.B.A</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0501">
+      <desc_completa>CRUCE VARELA</desc_completa>
+      <direccion>AV CALCHAQUI 5389 ESQ BOMBERO GALARZA</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0502">
+      <desc_completa>PARQUE INDUSTRIAL BURZACO</desc_completa>
+      <direccion>L.M. DRAGO Nø1951 ESQ. CARLOS VIEL</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0503">
+      <desc_completa>LAS HERAS SANTA CRUZ</desc_completa>
+      <direccion>PERITO MORENO E-ISLAS MALVINAS Y RIVADAV</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0504">
+      <desc_completa>TEMPERLEY</desc_completa>
+      <direccion>H.YRIGOYEN Nø 10541 - TEMPERLEY -BS AS</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0505">
+      <desc_completa>CHARATA</desc_completa>
+      <direccion>MONSENOR DE CARLO 355/57-CHARATA-CHACO</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0506">
+      <desc_completa>PEREZ</desc_completa>
+      <direccion>BV SAN MARTIN 1825-PEREZ-STA FE</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0507">
+      <desc_completa>VILLA KRAUSE-SAN JUAN</desc_completa>
+      <direccion>MENDOZA 1796-RAWSON-SAN JUAN</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0508">
+      <desc_completa>ROQUE PEREZ</desc_completa>
+      <direccion>ALSINA 1250 E/BELG E YRIG-ROQUE PEREZ</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0509">
+      <desc_completa>LOS POLVORINES</desc_completa>
+      <direccion>PRES PERON 2888-LOS POLVORINES-BS AS</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0510">
+      <desc_completa>GENERAL VILLEGAS</desc_completa>
+      <direccion>SAN MARTIN 454-GRAL VILLEGAS-BS AS</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0511">
+      <desc_completa>AV. CORDOBA</desc_completa>
+      <direccion>AV. CORDOBA 3411/13-CAP FED</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0512">
+      <desc_completa>RECONQUISTA - SANTA FE</desc_completa>
+      <direccion>PRES JULIO A ROCA 925/933-RECONQ-STA FE</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0513">
+      <desc_completa>LA CALERA - CORDOBA</desc_completa>
+      <direccion>AV GRAL PAZ 102-LA CALERA-CORDOBA</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0514">
+      <desc_completa>PALMAS DEL PILAR</desc_completa>
+      <direccion>COLECTORA PANAMERIC KM50-PILAR-BS AS</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0515">
+      <desc_completa>CIUDADELA</desc_completa>
+      <direccion>AV RIVADAVIA 12522/24-CIUDADELA</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0516">
+      <desc_completa>MORTEROS</desc_completa>
+      <direccion>9 DE JULIO 845 - MORTEROS - CORDOBA</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0517">
+      <desc_completa>JOSE C. PAZ</desc_completa>
+      <direccion>GRANADEROS A CABALLO 4830-JOSE C PAZ</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0518">
+      <desc_completa>PARQUE LELOIR</desc_completa>
+      <direccion>AV.PRESIDENTE PERON S/N -PARQUE LELOIR</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0519">
+      <desc_completa>BAJO BELGRANO</desc_completa>
+      <direccion>AV.DEL LIBERTADOR 6156/58-CABA</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0520">
+      <desc_completa>PUERTO GRAL SAN MARTIN - SANTA FE</desc_completa>
+      <direccion>SAN MARTIN 144-GRAL SAN MARTIN-STA FE</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0521">
+      <desc_completa>LUIS GUILLON</desc_completa>
+      <direccion>BOULEVARD BUENOS AIRES 1235-LUIS GUILLON</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0522">
+      <desc_completa>MIRAMAR</desc_completa>
+      <direccion>CALLE 19 1045 ESQ DIAG ILLIA Y CALLE 22</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0523">
+      <desc_completa>LAFERRERE</desc_completa>
+      <direccion>GENERAL ROJO 2915 ESQ. HILARIO ASCASUBI</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0524">
+      <desc_completa>RADA TILLY</desc_completa>
+      <direccion>ALTE BROWN 407 (ESQ. AV. ACA) CHUBUT</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0525">
+      <desc_completa>BENAVIDEZ</desc_completa>
+      <direccion>AV.DE LOS CONSTITUYENTES 6195-BS.AS</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0526">
+      <desc_completa>LA PLATA NORTE</desc_completa>
+      <direccion>AV. 13 Nø34 ENTRE LAS CALLES 32 Y 33</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0527">
+      <desc_completa>ADROGUE CHICO</desc_completa>
+      <direccion>SEGUI 764/68/80 ENTRE CORDERO Y URIBURU</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0528">
+      <desc_completa>ROQUE SAENZ PE¥A - CHACO</desc_completa>
+      <direccion>CALLE 14 N 239-ROQUE SAENZ PE¥A-CHACO</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0529">
+      <desc_completa>NAVARRO</desc_completa>
+      <direccion>CALLE 22 BME.MITRE 469/75,NAVARRO-BSAS</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0530">
+      <desc_completa>RANCHOS</desc_completa>
+      <direccion>H YRIGOYEN 3270-RANCHOS-BS AS</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0531">
+      <desc_completa>CRUZ DEL EJE</desc_completa>
+      <direccion>RIVADAVIA 197-CRUZ DEL EJE-CORDOBA</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0532">
+      <desc_completa>GENERAL ALVEAR</desc_completa>
+      <direccion>JUAN DOMINGO PERON 545-BUENOS AIRES</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0533">
+      <desc_completa>BANFIELD OESTE</desc_completa>
+      <direccion>AV.HIPOLITO YRIGOYEN 7991/7 BS AS</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0534">
+      <desc_completa>LIBERTADOR GRAL. SAN MARTIN - JUJUY</desc_completa>
+      <direccion>AV LIBERTAD 569-LIB SAN MART-LEDESMA</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0535">
+      <desc_completa>EL CALAFATE</desc_completa>
+      <direccion>JULIO A ROCA 1257-EL CALAFATE-STA CRUZ</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0536">
+      <desc_completa>SARANDI</desc_completa>
+      <direccion>AVENIDA MITRE 2728 - SARANDI - BS AS</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0537">
+      <desc_completa>FRANCK</desc_completa>
+      <direccion>SAN MARTIN ESQ. MORENO, LOTES 6, 7 Y 8 -</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0538">
+      <desc_completa>PLOTTIER</desc_completa>
+      <direccion>JUAN B. JUSTO 62 - PLOTTIER - NEUQUEN</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0539">
+      <desc_completa>MAGDALENA</desc_completa>
+      <direccion>HIPOLITO YRIGOYEN 792 -MAGDALENA-BS.AS.</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0540">
+      <desc_completa>SANTO TOME</desc_completa>
+      <direccion>DOMINGO F. SARMIENTO Nø 1958-SANTO TOME</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0541">
+      <desc_completa>ING MASCHWITZ</desc_completa>
+      <direccion>AV. BENITO VILLANUEVA Nø 1655</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0542">
+      <desc_completa>SAN MIGUEL DEL MONTE</desc_completa>
+      <direccion>LEANDRO N. ALEM Nø 540-BS.AS.</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0543">
+      <desc_completa>VILLA GOBERNADOR GALVEZ</desc_completa>
+      <direccion>AV SAN MARTIN 2435-VILLA GOB GALVEZ</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0544">
+      <desc_completa>DOLORES</desc_completa>
+      <direccion>LEANDRO N ALEM 217-ESQ BS AS-DOLORES</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0545">
+      <desc_completa>CONCORDIA AL NORTE</desc_completa>
+      <direccion>AV EVA PERON 1334/52-CONCORDIA-E RIOS</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0546">
+      <desc_completa>TUNUYAN</desc_completa>
+      <direccion>SAN MARTIN Nø 1475 - TUNUYAN</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0547">
+      <desc_completa>SAN VICENTE</desc_completa>
+      <direccion>25 DE MAYO Nø281 -SAN VICENTE- BS.AS.</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0548">
+      <desc_completa>CURUZU CUATIA CORRIENTES</desc_completa>
+      <direccion>BERON DE ASTRADA 646-CURUZU CUATIA CORR</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0549">
+      <desc_completa>BARRIO GRAL MOSCONI -COMODORO RIVADAVIA</desc_completa>
+      <direccion>TEHELCHES 61 - C RIVADAVIA</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0550">
+      <desc_completa>CENTENARIO - NEUQUEN</desc_completa>
+      <direccion>PADRE JACINTO STABILE 357-CENTENARIO</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0551">
+      <desc_completa>RESISTENCIA 25 DE MAYO</desc_completa>
+      <direccion>AV 25 DE MAYO 1335- RESISTENCIA, CHACO</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0552">
+      <desc_completa>TRONCOS DEL TALAR</desc_completa>
+      <direccion>PALACIOS 1993(ESQ FADER),BS AS</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0553">
+      <desc_completa>RIO GALLEGOS</desc_completa>
+      <direccion>AV. KIRCHNER 568-RIO GALLEGOS-STA. CRUZ</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0555">
+      <desc_completa>EL SALVADOR</desc_completa>
+      <direccion>AV. CALLAO 692-CABA</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0557">
+      <desc_completa>DAIREAUX</desc_completa>
+      <direccion>BELGRANO 141-DAIREAUX-BUENOS AIRES</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0559">
+      <desc_completa>JORGE NEWBERY</desc_completa>
+      <direccion>AV CORDOBA 6091- CABA</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0561">
+      <desc_completa>MERCADO CENTRAL</desc_completa>
+      <direccion>LOTE TI020B-MERCADO CENTRAL-TAPIALES</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0562">
+      <desc_completa>ESTACION LA MATANZA</desc_completa>
+      <direccion>JOSE C. INDART 2356 - SAN JUSTO - BS AS</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0563">
+      <desc_completa>SAN JOSE</desc_completa>
+      <direccion>SALTA 850-ALMIRANTE BROWN-BS AS</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0564">
+      <desc_completa>SAN ANTONIO DE PADUA</desc_completa>
+      <direccion>PEDRO NOGUERA 230-S.ANTONIO DE PADUA-BA</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0565">
+      <desc_completa>LA REJA</desc_completa>
+      <direccion>AV. GAONA 11204 COLEC.SUR ACC OESTE KM41</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0566">
+      <desc_completa>GLEW</desc_completa>
+      <direccion>PTE. NICOLAS AVELLANEDA 85-GLEW-BS.AS.</direccion>
+      <tipo_oficina>S</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0567">
+      <desc_completa>RIVADAVIA-SAN JUAN</desc_completa>
+      <direccion>LIBERTADOR GRAL S MARTIN 3267-RIVADAVIA</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0801">
+      <desc_completa>OFICINA DIGITAL BARRIO NORTE</desc_completa>
+      <direccion>AV SANTA FE 2372/74/76-CABA</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="0802">
+      <desc_completa>OFICINA DIGITAL BELGRANO</desc_completa>
+      <direccion>AV CABILDO  2587 - CABA</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="2000">
+      <desc_completa>CASA CENTRAL</desc_completa>
+      <direccion>BME. MITRE 480 - CAPITAL FEDERAL</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="2405">
+      <desc_completa>RIVADAVIA-SAN JUAN (DEPENDENCIA)</desc_completa>
+      <direccion>LIBERTADOR GRAL S MARTIN 3267-RIVADAVIA</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="2407">
+      <desc_completa>DON ORIONE (OFICINA DE BANCARIZACION)</desc_completa>
+      <direccion>MANUEL ARAUJO 2638-CLAYPOLE, BS.AS.</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="2908">
+      <desc_completa>NODO MAR DEL PLATA</desc_completa>
+      <direccion>AV INDEPENDENCIA 1907 ESQ BELGRANO, MDP</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+    <cod_oficina id="2909">
+      <desc_completa>NODO CORDOBA II</desc_completa>
+      <direccion>AMBROSIO OLMOS 594 ,CORDOBA</direccion>
+      <tipo_oficina>F</tipo_oficina>
+    </cod_oficina>
+  </cod_entidad>
+</sucursales>
+

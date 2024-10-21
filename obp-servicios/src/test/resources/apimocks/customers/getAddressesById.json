@@ -1,0 +1,88 @@
+{
+  "addresses": [
+    {
+      "id": "02569328_001",
+      "type": "MAIN",
+      "streetName": "ITALIA",
+      "buildingNumber": "424",
+      "floor": "5",
+      "department": "23",
+      "city": "DIEGO DE ALVE",
+      "state": "AR-S",
+      "country": "ARG",
+      "zipCode": null
+    },
+    {
+      "id": "02569328_004",
+      "type": "WORK",
+      "streetName": "LOS SAUCES",
+      "buildingNumber": "1",
+      "floor": "5",
+      "department": "23",
+      "city": "IRIARTE",
+      "state": "AR-B",
+      "country": "ARG",
+      "zipCode": "B6042ANA"
+    },
+    {
+      "id": "02569328_016",
+      "type": "WORK",
+      "streetName": "BVRD 28",
+      "buildingNumber": "399",
+      "floor": "",
+      "department": "",
+      "city": "FLORENTINO AMEGHINO",
+      "state": "AR-B",
+      "country": "ARG",
+      "zipCode": "B6064ABD"
+    },
+    {
+      "id": "02569328_017",
+      "type": "WORK",
+      "streetName": "C CORREO",
+      "buildingNumber": "91",
+      "floor": "",
+      "department": "",
+      "city": "AMEGHINO",
+      "state": "AR-B",
+      "country": "ARG",
+      "zipCode": "B6064"
+    },
+    {
+      "id": "02569328_018",
+      "type": "WORK",
+      "streetName": "CALLE 11",
+      "buildingNumber": "596",
+      "floor": "",
+      "department": "",
+      "city": "FLORENTINO AMEGHINO",
+      "state": "AR-B",
+      "country": "ARG",
+      "zipCode": "B6064AFL"
+    },
+    {
+      "id": "02569328_019",
+      "type": "WORK",
+      "streetName": "CALLE 22",
+      "buildingNumber": "315",
+      "floor": "",
+      "department": "",
+      "city": "FLORENTINO AMEGHINO",
+      "state": "AR-B",
+      "country": "ARG",
+      "zipCode": "B6064ARG"
+    },
+    {
+      "id": "02569328_020",
+      "type": "WORK",
+      "streetName": "BARTOLOME MITRE",
+      "buildingNumber": "480",
+      "floor": "",
+      "department": "",
+      "city": "CABA",
+      "state": "AR-C",
+      "country": "ARG",
+      "zipCode": null
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "data": {
+    "holdings": [
+      {
+        "custodyAccount": "26382210",
+        "branch": 0,
+        "valueDate": "2023-05-17T12:03:09",
+        "holdings": [],
+        "key": "HOLDING:26382210",
+        "isBp": false,
+        "altairProduct": "60",
+        "holdingsTotalAmount": []
+      },
+      {
+        "custodyAccount": "42281258",
+        "branch": 0,
+        "valueDate": "2023-05-17T12:03:09",
+        "holdings": [],
+        "key": "HOLDING:42281258",
+        "isBp": false,
+        "altairProduct": "60",
+        "holdingsTotalAmount": []
+      }
+    ],
+    "holdingsTotal": [],
+    "holdingsLegals": [
+      {
+        "operationTypeName": "Tenencia",
+        "operationSubtypeName": null,
+        "legalMessage": "<p>Si realizaste suscripciones en el día de hoy, la cantidad de cuotapartes informada en la tenencia es estimada. Para ello, se toma como\nreferencia el valor de cierre del día hábil anterior. La cantidad final suscripta se calculará con el valor de la cuotaparte de cierre del día de la\noperación. Para el caso de cuotapartes del Fondo Super Ahorro $, si la suscripción fue realizada en el día de hoy, la cantidad de cuotapartes informada en la tenencia es la definitiva. El valor de la cuotaparte es neto de honorarios de la sociedad gerente y de la sociedad depositaria. Los honorarios y los gastos\nde suscripción, rescate y transferencia podrán consultarse <a href = \"https://www.santander.com.ar/banco/online/personas/inversiones/super-fondos/que-es-un-fondo-comun-de-inversion/normativas#comisiones\"  target=\"_blank\">desde aquí</a>. No existen honorarios de éxito y/u otros gastos a cargo de los\nFondos Comunes de Inversión diferentes a los informados.</br>Las inversiones en cuotapartes del fondo no constituyen depósitos en Banco Santander Argentina S.A. a los fines de la Ley de Entidades\nFinancieras ni cuentan con ninguna de las garantías que tales depósitos a la vista o a plazo puedan gozar de acuerdo a la legislación y\nreglamentación aplicables en materia de depósitos en entidades financieras. Asimismo, Banco Santander Argentina S.A. se encuentra impedido\npor normas del Banco Central de la República Argentina de asumir, tácita o expresamente, compromiso alguno en cuanto al\nmantenimiento, en cualquier momento, del valor del capital invertido, al rendimiento, al valor de rescate de las cuotapartes o al\notorgamiento de liquidez a tal fin.</br>\nLas inversiones en Fondos Comunes de Inversión pueden importar riesgos, incluyendo la posible pérdida de la inversión. Te aconsejamos\nefectuar un análisis e investigación independiente antes de tomar cualquier decisión de inversión. Asimismo, ponemos a tu disposición el\n<a>test de inversión</a> para conocer tu perfil de inversor</p>"
+      }
+    ]
+  }
+}

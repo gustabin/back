@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Comprobante Modelo 1" pageWidth="595" pageHeight="862" columnWidth="535" leftMargin="30" rightMargin="30" topMargin="30" bottomMargin="20" uuid="2196aed8-f594-4a19-985c-7eee6fff25e1">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="ireport.zoom" value="1.3636363636364055"/>
+	<property name="ireport.x" value="60"/>
+	<property name="ireport.y" value="144"/>
+	<subDataset name="controles" uuid="76fb2c2d-99bb-4f5b-a2ce-f75574cee6f9">
+		<field name="tipo" class="java.lang.String"/>
+		<field name="etiqueta" class="java.lang.String"/>
+		<field name="desde" class="java.lang.String"/>
+		<field name="desdeValor" class="java.lang.String"/>
+		<field name="hasta" class="java.lang.String"/>
+		<field name="hastaValor" class="java.lang.String"/>
+		<field name="valor" class="java.lang.String"/>
+	</subDataset>
+	<subDataset name="legales" uuid="20569e4f-1171-417d-893d-e34c4ea6af34">
+		<field name="_THIS" class="java.lang.String"/>
+	</subDataset>
+	<parameter name="LOGO_TOP" class="java.lang.String"/>
+	<parameter name="LOGO_CABECERA" class="java.lang.String"/>
+	<parameter name="TITULO_COMPROBANTE" class="java.lang.String"/>
+	<parameter name="CONTROLES" class="java.util.List"/>
+	<parameter name="LEGALES" class="java.util.List"/>
+	<parameter name="NUMERO_COMPROBANTE" class="java.lang.String"/>
+	<parameter name="FECHA_ACTUAL" class="java.lang.String"/>
+	<parameter name="LOGO_PIE" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<variable name="CURRENT_PAGE" class="java.lang.Integer" resetType="Page">
+		<variableExpression><![CDATA[$V{PAGE_NUMBER}]]></variableExpression>
+	</variable>
+	<variable name="V_CURRENT_PAGE_NUMBER" class="java.lang.Integer" resetType="Page">
+		<variableExpression><![CDATA[0]]></variableExpression>
+		<initialValueExpression><![CDATA[$V{PAGE_NUMBER}]]></initialValueExpression>
+	</variable>
+	<variable name="V_TOTAL_PAGE_NUMBER" class="java.lang.Integer" resetType="Page">
+		<variableExpression><![CDATA[1]]></variableExpression>
+		<initialValueExpression><![CDATA[$V{PAGE_NUMBER}]]></initialValueExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="44">
+			<image>
+				<reportElement x="0" y="0" width="102" height="14" uuid="2363bfee-73ec-4f07-8d7e-987df77310e4"/>
+				<imageExpression><![CDATA[$P{LOGO_TOP}]]></imageExpression>
+			</image>
+			<line>
+				<reportElement x="124" y="43" width="287" height="1" uuid="b3332502-5efd-49b5-b210-bed72b070a5c"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="40">
+			<image hAlign="Left" vAlign="Middle">
+				<reportElement mode="Transparent" x="124" y="0" width="288" height="40" backcolor="#EB0000" uuid="2fb3de8c-2051-45a2-b254-384ae62fadfb"/>
+				<imageExpression><![CDATA[$P{LOGO_CABECERA}]]></imageExpression>
+			</image>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="123" y="0" width="1" height="40" uuid="047462eb-d930-4660-88ed-cf172770b759"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="40" uuid="d2b33bbd-4178-48d6-829e-7eb3bdbef632"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="124" y="0" width="288" height="1" uuid="bfa9414f-824c-444d-9b04-3ea3adf60bc9"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+		</band>
+		<band height="30" splitType="Immediate">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="123" y="0" width="1" height="30" uuid="df8d3065-0e95-473c-b6c0-319cd401b218">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="30" uuid="b1472843-844a-46f2-807e-201dc044fb2f">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="123" y="0" width="288" height="1" uuid="6c362069-e070-4e4d-8974-32d44343a4e4"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="142" y="1" width="250" height="29" uuid="17b55dc8-650f-4480-91a7-a612f91a214d"/>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font fontName="OpenSans" size="10" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Comprobante de solicitud de stop debit o reverso de débito automático]]></text>
+			</staticText>
+		</band>
+		<band height="30" splitType="Immediate">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<line>
+				<reportElement x="123" y="0" width="290" height="1" uuid="d595e0cf-96c1-44ea-8615-230556ddc13c">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="1.0" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="123" y="0" width="1" height="30" uuid="15d1762b-ca13-4916-83ad-8b7ec4b4e5e0">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="30" uuid="945112ad-1a6b-4cfe-97f2-ba594fa434bb">
+					<property name="local_mesure_unitheight" value="pixel"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+		</band>
+		<band height="54">
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="123" y="0" width="1" height="54" uuid="2f67908c-5830-4ede-ba41-5e1535bc3ac6">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="54" uuid="9ccc87ef-8d22-45ef-9c55-601807946b55">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="142" y="0" width="250" height="29" uuid="b59eff9a-fe3a-46fd-9d0f-e1d91c6b986d">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="OpenSans" size="10" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[ Solicitud de stop debit o reverso de débito automático de cuota préstamo]]></text>
+			</staticText>
+		</band>
+		<band height="30" splitType="Immediate">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="123" y="0" width="1" height="30" uuid="b3c239ba-f27a-43a8-8ff9-25eda27d2f80">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="30" uuid="cdb742a3-24f3-4110-af20-918cbd67f05c">
+					<property name="local_mesure_unitheight" value="pixel"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="122" y="29" width="290" height="1" uuid="66d387e5-62b8-4a5e-ab65-e13dca9e29a9">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="1.0" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+		</band>
+		<band height="52" splitType="Stretch">
+			<printWhenExpression><![CDATA[!$P{CONTROLES}.isEmpty()]]></printWhenExpression>
+			<componentElement>
+				<reportElement stretchType="RelativeToTallestObject" x="123" y="0" width="289" height="52" isRemoveLineWhenBlank="true" isPrintWhenDetailOverflows="true" uuid="62bab4b5-9f88-4e1e-9df2-b94e1c68423b"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+					<datasetRun subDataset="controles" uuid="4de5492c-73c1-47d1-bffa-36b4c91c3a37">
+						<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($P{CONTROLES})]]></dataSourceExpression>
+					</datasetRun>
+					<jr:listContents height="52" width="289">
+						<line>
+							<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="1" height="52" isPrintWhenDetailOverflows="true" uuid="fd3f0b20-7918-446b-a26e-b7545acffcdd"/>
+							<graphicElement>
+								<pen lineWidth="0.25"/>
+							</graphicElement>
+						</line>
+						<line>
+							<reportElement stretchType="RelativeToBandHeight" x="288" y="0" width="1" height="52" isPrintWhenDetailOverflows="true" uuid="4a2085d8-c4f9-441a-8746-196eda14a803"/>
+							<graphicElement>
+								<pen lineWidth="0.25"/>
+							</graphicElement>
+						</line>
+						<textField isStretchWithOverflow="true">
+							<reportElement x="30" y="17" width="120" height="14" uuid="c4a92566-f2d4-4817-9388-901fe7198968">
+								<printWhenExpression><![CDATA[!"importe-compuesto".equals($F{tipo})]]></printWhenExpression>
+							</reportElement>
+							<textElement textAlignment="Left" verticalAlignment="Bottom">
+								<font fontName="Open Sans" size="9" isBold="false" isPdfEmbedded="true"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{etiqueta}]]></textFieldExpression>
+						</textField>
+						<textField isStretchWithOverflow="true">
+							<reportElement x="148" y="17" width="115" height="14" uuid="c4a92566-f2d4-4817-9388-901fe7198968">
+								<printWhenExpression><![CDATA[!"importe-compuesto".equals($F{tipo})]]></printWhenExpression>
+							</reportElement>
+							<textElement textAlignment="Right" verticalAlignment="Top" markup="html">
+								<font fontName="Open Sans" isBold="true" isStrikeThrough="false" isPdfEmbedded="true"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{valor}]]></textFieldExpression>
+						</textField>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+		</band>
+		<band height="65" splitType="Prevent">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="124" y="1" width="287" height="15" forecolor="#666666" uuid="f28f1ede-860d-42bb-a771-a50eeec375c1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Open Sans" size="7" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{FECHA_ACTUAL}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" stretchType="RelativeToBandHeight" x="123" y="0" width="1" height="65" isPrintWhenDetailOverflows="true" uuid="cd792fab-4c0e-4a5d-9890-90cf62693802"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="411" y="0" width="1" height="65" uuid="814c41ab-d973-4abe-9085-dae64cf256fe"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<image>
+				<reportElement mode="Transparent" x="217" y="25" width="100" height="40" backcolor="#EB0000" uuid="56b1a199-9965-4e20-a2b0-5a2cb4cc14d8"/>
+				<imageExpression><![CDATA[$P{LOGO_PIE}]]></imageExpression>
+			</image>
+		</band>
+		<band height="10" splitType="Immediate">
+			<printWhenExpression><![CDATA[!$P{LEGALES}.isEmpty()]]></printWhenExpression>
+			<componentElement>
+				<reportElement x="123" y="0" width="289" height="10" uuid="1aa62835-a755-4516-a411-23007717827c"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical" ignoreWidth="true">
+					<datasetRun subDataset="legales" uuid="0cf25fc7-3ac4-4797-abbc-855622bfb843">
+						<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($P{LEGALES})]]></dataSourceExpression>
+					</datasetRun>
+					<jr:listContents height="10" width="289">
+						<line>
+							<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="1" height="10" isPrintWhenDetailOverflows="true" uuid="2f20af72-7a51-4d43-be99-18e1a3c5cabe"/>
+							<graphicElement>
+								<pen lineWidth="0.25"/>
+							</graphicElement>
+						</line>
+						<line>
+							<reportElement stretchType="RelativeToBandHeight" x="288" y="0" width="1" height="10" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" uuid="620048ce-810f-4bce-b249-e6d86c1f0684"/>
+							<graphicElement>
+								<pen lineWidth="0.25"/>
+							</graphicElement>
+						</line>
+						<textField isStretchWithOverflow="true" isBlankWhenNull="false">
+							<reportElement stretchType="RelativeToBandHeight" x="30" y="10" width="230" height="0" forecolor="#666666" uuid="dc14da7a-b2a6-4561-adbd-8ca27ed26d6f"/>
+							<textElement textAlignment="Justified" verticalAlignment="Bottom" markup="html">
+								<font fontName="Open Sans" size="7" isBold="false" isPdfEmbedded="true"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{_THIS}]]></textFieldExpression>
+						</textField>
+						<line>
+							<reportElement x="18" y="0" width="250" height="1" isPrintInFirstWholeBand="true" uuid="6ed75324-b886-4c95-8abd-f160f19d1229">
+								<printWhenExpression><![CDATA[$V{REPORT_COUNT}>1]]></printWhenExpression>
+							</reportElement>
+							<graphicElement>
+								<pen lineWidth="0.25" lineStyle="Dotted" lineColor="#000000"/>
+							</graphicElement>
+						</line>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+		</band>
+		<band height="10" splitType="Stretch">
+			<line>
+				<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="123" y="0" width="1" height="8" isPrintWhenDetailOverflows="true" uuid="ba9a485d-7cb2-4410-ae9f-63c9ea23963b"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToTallestObject" x="411" y="0" width="1" height="8" isPrintWhenDetailOverflows="true" uuid="ed23319b-9201-4eda-bc4a-8a191a3f9dec"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="123" y="8" width="289" height="1" isPrintInFirstWholeBand="true" uuid="49509526-b8c0-4cca-bfe2-28557028b504"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="30">
+			<textField>
+				<reportElement x="496" y="9" width="11" height="20" uuid="49f1c30c-6ad1-4dee-bdfb-12fd7ab12f4c"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="Open Sans Light" size="9" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="524" y="9" width="11" height="20" uuid="56ab1ce2-c9f6-425e-a69c-608696c826f6"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="Open Sans Light" size="9" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="509" y="9" width="13" height="20" uuid="483c29de-6e6b-4636-9361-a2005020e383"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="Open Sans Light" size="9" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[de]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="366" y="9" width="128" height="20" uuid="99610df4-338a-4999-b749-2cf93f1c0965"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font fontName="Open Sans Light" size="9" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Página]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<lastPageFooter>
+		<band height="50">
+			<textField>
+				<reportElement x="496" y="9" width="11" height="20" uuid="797d3d4e-7c06-46c0-ac03-6fa1bbb7a6e6"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="Open Sans Light" size="9" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="524" y="9" width="11" height="20" uuid="da51c0b2-aeb3-4979-a626-c8a4943ce6be"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="Open Sans Light" size="9" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="509" y="9" width="13" height="20" uuid="fc214999-a787-405a-912e-680ff0745683"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="Open Sans Light" size="9" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[de]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="366" y="9" width="128" height="20" uuid="f2d739ec-9779-4807-9285-7499007e6033"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font fontName="Open Sans Light" size="9" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Página]]></text>
+			</staticText>
+		</band>
+	</lastPageFooter>
+</jasperReport>

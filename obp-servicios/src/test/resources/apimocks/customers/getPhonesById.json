@@ -1,0 +1,92 @@
+{
+  "phones": [
+    {
+      "type": "linephone",
+      "class": "particular",
+      "areaCode": "011",
+      "number": "477286054505",
+      "internal": "",
+      "company": null,
+      "isActive": null,
+      "source": "CAC",
+      "updatedAt": "2020-07-07T00:46:38.439-03:00"
+    },
+    {
+      "type": "fax",
+      "class": "work",
+      "areaCode": "011",
+      "number": "477594064506",
+      "internal": "",
+      "company": null,
+      "isActive": null,
+      "source": "",
+      "updatedAt": "2007-04-26T18:20:54.452-03:00"
+    },
+    {
+      "type": "cellphone",
+      "class": "particular",
+      "areaCode": "01115",
+      "number": "563874074507",
+      "internal": "",
+      "company": "personal",
+      "isActive": true,
+      "source": "MYA",
+      "updatedAt": "2014-03-21T23:05:29.831-03:00"
+    },
+    {
+      "type": "linephone",
+      "class": "particular",
+      "areaCode": "011",
+      "number": "470628084508",
+      "internal": "",
+      "company": null,
+      "isActive": null,
+      "source": "",
+      "updatedAt": "2017-07-08T22:02:39.463-03:00"
+    },
+    {
+      "type": "cellphone",
+      "class": "particular",
+      "areaCode": "011",
+      "number": "116374094509",
+      "internal": "",
+      "company": null,
+      "isActive": null,
+      "source": "",
+      "updatedAt": "2017-07-08T22:02:39.463-03:00"
+    },
+    {
+      "type": "linephone",
+      "class": "work",
+      "areaCode": "011",
+      "number": "437325104510",
+      "internal": "",
+      "company": null,
+      "isActive": null,
+      "source": "",
+      "updatedAt": "2017-07-08T22:02:39.463-03:00"
+    },
+    {
+      "type": "linephone",
+      "class": "particular",
+      "areaCode": "11",
+      "number": "47728605",
+      "internal": "",
+      "company": null,
+      "isActive": null,
+      "source": "",
+      "updatedAt": "2021-07-23T11:58:30.634-03:00"
+    },
+    {
+      "type": "linephone",
+      "class": "work",
+      "areaCode": "11",
+      "number": "43411000",
+      "internal": "",
+      "company": null,
+      "isActive": null,
+      "source": "",
+      "updatedAt": "2021-07-23T11:58:30.751-03:00"
+    }
+  ]
+}

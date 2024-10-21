@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="subReportImportes" pageWidth="518" pageHeight="802" columnWidth="518" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="c03a76f2-e35a-4a3a-bd79-27e4d2982edb">
+	<property name="ireport.zoom" value="3.536921536500002"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="table_8">
+		<pen lineStyle="Dotted"/>
+		<box>
+			<pen lineWidth="0.5" lineStyle="Dotted" lineColor="#C9C9C9"/>
+			<topPen lineWidth="0.0" lineStyle="Dotted" lineColor="#C9C9C9"/>
+			<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#C9C9C9"/>
+			<bottomPen lineWidth="0.0" lineStyle="Dotted" lineColor="#C9C9C9"/>
+			<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#C9C9C9"/>
+		</box>
+	</style>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="label" class="java.lang.String"/>
+	<field name="value" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="27" splitType="Stretch">
+			<textField isStretchWithOverflow="true" pattern="">
+				<reportElement positionType="Float" x="3" y="1" width="146" height="19" uuid="b2c9a54c-1c10-46d7-ab4b-843cb13fbc92"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Open Sans" size="9" isBold="false" isPdfEmbedded="true"/>
+					<paragraph leftIndent="30" spacingBefore="5" tabStopWidth="30"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{label}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" x="148" y="1" width="114" height="19" uuid="1cf8f3a6-8879-4a97-905a-09e95c8a8cae"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Open Sans" size="9" isPdfEmbedded="true"/>
+					<paragraph rightIndent="27" spacingBefore="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{value}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement positionType="Float" x="24" y="25" width="212" height="1" uuid="69577504-e448-4d3f-95e5-a0dedfc633c7"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineStyle="Dotted" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+			<frame>
+				<reportElement style="table_8" positionType="Float" stretchType="RelativeToBandHeight" x="0" y="0" width="262" height="27" backcolor="#FFFFFF" uuid="d03f7c10-2d66-40a2-877e-be0ad365bc34"/>
+			</frame>
+		</band>
+	</detail>
+</jasperReport>

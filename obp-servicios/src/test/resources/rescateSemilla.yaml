@@ -1,0 +1,170 @@
+#Configuracion fondos rescate
+fondosMap:
+  240:
+    operacion: E
+    horarioInicio: 10:00
+    horarioFin: 16:00
+    importeMinimo: 100
+    importeMaximo: 1000
+  241:
+    operacion: E
+    horarioInicio: 10:00
+    horarioFin: 16:00
+    importeMinimo: 100
+    importeMaximo: 1000
+  238:
+    operacion: E
+    horarioInicio: 10:00
+    horarioFin: 16:00
+    importeMinimo: 100
+    importeMaximo: 1000
+  239:
+    operacion: E
+    horarioInicio: 10:00
+    horarioFin: 16:00
+    importeMinimo: 100
+    importeMaximo: 1000
+  255:
+    operacion: E
+    horarioInicio: 10:00
+    horarioFin: 16:00
+    importeMinimo: 100
+    importeMaximo: 1000
+  256:
+    operacion: E
+    horarioInicio: 10:00
+    horarioFin: 16:00
+    importeMinimo: 100
+    importeMaximo: 1000
+  250:
+    operacion: E
+    horarioInicio: 10:00
+    horarioFin: 16:00
+    importeMinimo: 100
+    importeMaximo: 1000
+  251:
+    operacion: E
+    horarioInicio: 10:00
+    horarioFin: 16:00
+    importeMinimo: 100
+    importeMaximo: 1000
+  275:
+    operacion: E
+    horarioInicio: 10:00
+    horarioFin: 16:00
+    importeMinimo: 100
+    importeMaximo: 1000
+  276:
+    operacion: E
+    horarioInicio: 10:00
+    horarioFin: 16:00
+    importeMinimo: 100
+    importeMaximo: 1000
+  260:
+    operacion: E
+    horarioInicio: 10:00
+    horarioFin: 16:00
+    importeMinimo: 100
+    importeMaximo: 1000
+  261:
+    operacion: E
+    horarioInicio: 10:00
+    horarioFin: 16:00
+    importeMinimo: 100
+    importeMaximo: 1000
+  280:
+    operacion: E
+    horarioInicio: 10:00
+    horarioFin: 16:00
+    importeMinimo: 100
+    importeMaximo: 1000
+  281:
+    operacion: E
+    horarioInicio: 10:00
+    horarioFin: 16:00
+    importeMinimo: 100
+    importeMaximo: 1000
+  286:
+    operacion: E
+    horarioInicio: 10:00
+    horarioFin: 16:00
+    importeMinimo: 100
+    importeMaximo: 1000
+  287:
+    operacion: E
+    horarioInicio: 10:00
+    horarioFin: 16:00
+    importeMinimo: 100
+    importeMaximo: 1000
+  290:
+    operacion: E
+    horarioInicio: 10:00
+    horarioFin: 16:00
+    importeMinimo: 100
+    importeMaximo: 1000
+  291:
+    operacion: E
+    horarioInicio: 10:00
+    horarioFin: 16:00
+    importeMinimo: 100
+    importeMaximo: 1000
+  190:
+    operacion: E
+    horarioInicio: 10:00
+    horarioFin: 16:00
+    importeMinimo: 100
+    importeMaximo: 1000
+  191:
+    operacion: E
+    horarioInicio: 10:00
+    horarioFin: 16:00
+    importeMinimo: 100
+    importeMaximo: 1000
+  265:
+    operacion: E
+    horarioInicio: 10:00
+    horarioFin: 16:00
+    importeMinimo: 100
+    importeMaximo: 1000
+  266:
+    operacion: E
+    horarioInicio: 10:00
+    horarioFin: 16:00
+    importeMinimo: 100
+    importeMaximo: 1000
+  270:
+    operacion: E
+    horarioInicio: 10:00
+    horarioFin: 16:00
+    importeMinimo: 100
+    importeMaximo: 1000
+  271:
+    operacion: E
+    horarioInicio: 10:00
+    horarioFin: 16:00
+    importeMinimo: 100
+    importeMaximo: 1000
+  295:
+    operacion: E
+    horarioInicio: 10:00
+    horarioFin: 16:00
+    importeMinimo: 100
+    importeMaximo: 1000
+  296:
+    operacion: E
+    horarioInicio: 10:00
+    horarioFin: 16:00
+    importeMinimo: 100
+    importeMaximo: 1000
+  300:
+    operacion: E
+    horarioInicio: 10:00
+    horarioFin: 16:00
+    importeMinimo: 100
+    importeMaximo: 1000
+  301:
+    operacion: E
+    horarioInicio: 10:00
+    horarioFin: 16:00
+    importeMinimo: 100
+    importeMaximo: 1000

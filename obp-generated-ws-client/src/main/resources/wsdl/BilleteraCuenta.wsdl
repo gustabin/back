@@ -1,0 +1,420 @@
+
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdl2="http://www.w3.org/ns/wsdl" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:wsoap="http://www.w3.org/ns/wsdl/soap" xmlns:tns="http://billetera.prismamp.com.ar/billeteraCuenta" xmlns:wrpc="http://www.w3.org/ns/wsdl/rpc" xmlns:wsdlx="http://www.w3.org/ns/wsdl-extensions" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:whttp="http://www.w3.org/ns/wsdl/http" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://billetera.prismamp.com.ar/billeteraCuenta">
+   <wsp:Policy xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" wsu:Id="SigEncr">
+      <wsp:ExactlyOne>
+         <wsp:All>
+            <sp:AsymmetricBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+               <wsp:Policy>
+                  <sp:InitiatorToken>
+                     <wsp:Policy>
+                        <sp:X509Token sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient">
+                           <wsp:Policy>
+                              <sp:RequireThumbprintReference></sp:RequireThumbprintReference>
+                              <sp:WssX509V3Token10></sp:WssX509V3Token10>
+                           </wsp:Policy>
+                        </sp:X509Token>
+                     </wsp:Policy>
+                  </sp:InitiatorToken>
+                  <sp:RecipientToken>
+                     <wsp:Policy>
+                        <sp:X509Token sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/Never">
+                           <wsp:Policy>
+                              <sp:RequireThumbprintReference></sp:RequireThumbprintReference>
+                              <sp:WssX509V3Token10></sp:WssX509V3Token10>
+                           </wsp:Policy>
+                        </sp:X509Token>
+                     </wsp:Policy>
+                  </sp:RecipientToken>
+                  <sp:AlgorithmSuite>
+                     <wsp:Policy>
+                        <sp:Basic256></sp:Basic256>
+                     </wsp:Policy>
+                  </sp:AlgorithmSuite>
+                  <sp:Layout>
+                     <wsp:Policy>
+                        <sp:Strict></sp:Strict>
+                     </wsp:Policy>
+                  </sp:Layout>
+                  <sp:IncludeTimestamp></sp:IncludeTimestamp>
+                  <sp:OnlySignEntireHeadersAndBody></sp:OnlySignEntireHeadersAndBody>
+               </wsp:Policy>
+            </sp:AsymmetricBinding>
+            <sp:Wss11 xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+               <sp:Policy>
+                  <sp:MustSupportRefKeyIdentifier></sp:MustSupportRefKeyIdentifier>
+                  <sp:MustSupportRefIssuerSerial></sp:MustSupportRefIssuerSerial>
+                  <sp:MustSupportRefThumbprint></sp:MustSupportRefThumbprint>
+                  <sp:RequireSignatureConfirmation></sp:RequireSignatureConfirmation>
+               </sp:Policy>
+            </sp:Wss11>
+            <sp:Wss10 xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+               <sp:Policy>
+                  <sp:MustSupportRefKeyIdentifier></sp:MustSupportRefKeyIdentifier>
+                  <sp:MustSupportRefIssuerSerial></sp:MustSupportRefIssuerSerial>
+               </sp:Policy>
+            </sp:Wss10>
+            <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+               <sp:Body></sp:Body>
+            </sp:SignedParts>
+            <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+               <sp:Body></sp:Body>
+            </sp:EncryptedParts>
+         </wsp:All>
+      </wsp:ExactlyOne>
+   </wsp:Policy>
+   <wsdl:types>
+      <xs:schema xmlns:ns0="http://billetera.prismamp.com.ar/billeteraCuenta" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://billetera.prismamp.com.ar/billeteraCuenta">
+         <xs:element name="DataServiceFault">
+            <xs:complexType>
+               <xs:sequence>
+                  <xs:element name="current_params" type="xs:string"></xs:element>
+                  <xs:element name="current_request_name" type="xs:string"></xs:element>
+                  <xs:element name="nested_exception" type="xs:string"></xs:element>
+                  <xs:element name="source_data_service">
+                     <xs:complexType>
+                        <xs:sequence>
+                           <xs:element name="location" type="xs:string"></xs:element>
+                           <xs:element name="default_namespace" type="xs:string"></xs:element>
+                           <xs:element name="description" type="xs:string"></xs:element>
+                           <xs:element name="data_service_name" type="xs:string"></xs:element>
+                        </xs:sequence>
+                     </xs:complexType>
+                  </xs:element>
+                  <xs:element name="ds_code" type="xs:string"></xs:element>
+               </xs:sequence>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="REQUEST_STATUS" type="xs:string"></xs:element>
+         <xs:element name="DATA_SERVICE_RESPONSE">
+            <xs:complexType>
+               <xs:sequence>
+                  <xs:any minOccurs="0"></xs:any>
+               </xs:sequence>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="modificarCuenta" type="tns:modificarCuenta"></xs:element>
+         <xs:element name="modificarCuentaResult" type="tns:modificarCuentaResult"></xs:element>
+         <xs:complexType name="modificarCuenta">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="arg0" type="tns:modificarCuentaRequest"></xs:element>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="modificarCuentaRequest">
+            <xs:sequence>
+               <xs:element name="idCuenta" nillable="true" type="xs:string"></xs:element>
+               <xs:element name="banco" nillable="true" type="xs:string"></xs:element>
+               <xs:element name="nombre" nillable="true" type="xs:string"></xs:element>
+               <xs:element name="apellido" nillable="true" type="xs:string"></xs:element>
+               <xs:element name="fechaNacimiento" nillable="true" type="xs:string"></xs:element>
+               <xs:element name="nacionalidad" nillable="true" type="xs:string"></xs:element>
+               <xs:element name="calle" nillable="true" type="xs:string"></xs:element>
+               <xs:element name="numeroCalle" nillable="true" type="xs:string"></xs:element>
+               <xs:element name="piso" nillable="true" type="xs:string"></xs:element>
+               <xs:element name="departamento" nillable="true" type="xs:string"></xs:element>
+               <xs:element name="codPostal" nillable="true" type="xs:string"></xs:element>
+               <xs:element name="provincia" nillable="true" type="xs:string"></xs:element>
+               <xs:element name="localidad" nillable="true" type="xs:string"></xs:element>
+               <xs:element name="telefonoFijo" nillable="true" type="xs:string"></xs:element>
+               <xs:element name="canal" nillable="true" type="xs:string"></xs:element>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="modificarCuentaResult">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="status" nillable="true" type="xs:string"></xs:element>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:element name="altaCuenta" type="tns:altaCuenta"></xs:element>
+         <xs:element name="altaCuentaResult" type="tns:altaCuentaResult"></xs:element>
+         <xs:complexType name="altaCuenta">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="arg0" type="tns:altaCuentaRequest"></xs:element>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="altaCuentaRequest">
+            <xs:sequence>
+               <xs:element name="banco" nillable="true" type="xs:string"></xs:element>
+               <xs:element name="tipoCuenta" nillable="true" type="xs:string"></xs:element>
+               <xs:element name="mail" nillable="true" type="xs:string"></xs:element>
+               <xs:element name="contrasenia" nillable="true" type="xs:string"></xs:element>
+               <xs:element name="preguntaSeguridad" nillable="true" type="xs:string"></xs:element>
+               <xs:element name="respPregSeguridad" nillable="true" type="xs:string"></xs:element>
+               <xs:element name="tipoDocumento" nillable="true" type="xs:string"></xs:element>
+               <xs:element name="nroDocumento" nillable="true" type="xs:string"></xs:element>
+               <xs:element name="genero" nillable="true" type="xs:string"></xs:element>
+               <xs:element name="nombre" nillable="true" type="xs:string"></xs:element>
+               <xs:element name="apellido" nillable="true" type="xs:string"></xs:element>
+               <xs:element name="fechaNacimiento" nillable="true" type="xs:string"></xs:element>
+               <xs:element name="nacionalidad" nillable="true" type="xs:string"></xs:element>
+               <xs:element name="calle" nillable="true" type="xs:string"></xs:element>
+               <xs:element name="numeroCalle" nillable="true" type="xs:string"></xs:element>
+               <xs:element name="piso" nillable="true" type="xs:string"></xs:element>
+               <xs:element name="departamento" nillable="true" type="xs:string"></xs:element>
+               <xs:element name="codPostal" nillable="true" type="xs:string"></xs:element>
+               <xs:element name="provincia" nillable="true" type="xs:string"></xs:element>
+               <xs:element name="localidad" nillable="true" type="xs:string"></xs:element>
+               <xs:element name="telefonoFijo" nillable="true" type="xs:string"></xs:element>
+               <xs:element name="companiaCelular" nillable="true" type="xs:string"></xs:element>
+               <xs:element name="numeroCelular" nillable="true" type="xs:string"></xs:element>
+               <xs:element name="aceptaTyC" nillable="true" type="xs:string"></xs:element>
+               <xs:element name="factorValidacion" nillable="true" type="xs:string"></xs:element>
+               <xs:element name="canal" nillable="true" type="xs:string"></xs:element>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="altaCuentaResult">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="status" nillable="true" type="xs:string"></xs:element>
+               <xs:element minOccurs="0" name="idCuenta" nillable="true" type="xs:string"></xs:element>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:element name="mailConfirmacionCuenta" type="tns:mailConfirmacionCuenta"></xs:element>
+         <xs:element name="mailConfirmacionCuentaResult" type="tns:mailConfirmacionCuentaResult"></xs:element>
+         <xs:complexType name="mailConfirmacionCuenta">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="arg0" type="tns:mailConfirmacionCuentaRequest"></xs:element>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="mailConfirmacionCuentaRequest">
+            <xs:sequence>
+               <xs:element name="idCuenta" nillable="true" type="xs:string"></xs:element>
+               <xs:element name="banco" nillable="true" type="xs:string"></xs:element>
+               <xs:element name="canal" nillable="true" type="xs:string"></xs:element>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="mailConfirmacionCuentaResult">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="status" nillable="true" type="xs:string"></xs:element>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:element name="consultarCuenta">
+            <xs:complexType>
+               <xs:sequence>
+                  <xs:element name="banco" nillable="true" type="xs:string"></xs:element>
+                  <xs:element name="tipoDocumento" nillable="true" type="xs:string"></xs:element>
+                  <xs:element name="nroDocumento" nillable="true" type="xs:string"></xs:element>
+                  <xs:element name="genero" nillable="true" type="xs:string"></xs:element>
+               </xs:sequence>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="consultaCuentaResult" type="tns:consultaCuentaResult"></xs:element>
+         <xs:complexType name="consultaCuentaResult">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="existeUsuario" nillable="true" type="xs:string"></xs:element>
+               <xs:element minOccurs="0" name="status" nillable="true" type="xs:string"></xs:element>
+               <xs:element maxOccurs="unbounded" minOccurs="0" ref="tns:cuentas"></xs:element>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:element name="cuentas" type="tns:cuenta"></xs:element>
+         <xs:complexType name="cuenta">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="idCuenta" nillable="true" type="xs:string"></xs:element>
+               <xs:element minOccurs="0" name="tipoCuentaTodoPago" nillable="true" type="xs:string"></xs:element>
+               <xs:element minOccurs="0" name="esPrimeraVez" nillable="true" type="xs:string"></xs:element>
+               <xs:element minOccurs="0" name="mail" nillable="true" type="xs:string"></xs:element>
+               <xs:element minOccurs="0" name="preguntaSeguridad" nillable="true" type="xs:string"></xs:element>
+               <xs:element minOccurs="0" name="estadoMail" nillable="true" type="xs:string"></xs:element>
+               <xs:element minOccurs="0" name="companiaCelular" nillable="true" type="xs:string"></xs:element>
+               <xs:element minOccurs="0" name="numeroCelular" nillable="true" type="xs:string"></xs:element>
+               <xs:element minOccurs="0" name="nombre" nillable="true" type="xs:string"></xs:element>
+               <xs:element minOccurs="0" name="apellido" nillable="true" type="xs:string"></xs:element>
+               <xs:element minOccurs="0" name="fechaNacimiento" nillable="true" type="xs:string"></xs:element>
+               <xs:element minOccurs="0" name="nacionalidad" nillable="true" type="xs:string"></xs:element>
+               <xs:element minOccurs="0" name="calle" nillable="true" type="xs:string"></xs:element>
+               <xs:element minOccurs="0" name="numeroCalle" nillable="true" type="xs:string"></xs:element>
+               <xs:element minOccurs="0" name="piso" nillable="true" type="xs:string"></xs:element>
+               <xs:element minOccurs="0" name="departamento" nillable="true" type="xs:string"></xs:element>
+               <xs:element minOccurs="0" name="codPostal" nillable="true" type="xs:string"></xs:element>
+               <xs:element minOccurs="0" name="provincia" nillable="true" type="xs:string"></xs:element>
+               <xs:element minOccurs="0" name="localidad" nillable="true" type="xs:string"></xs:element>
+               <xs:element minOccurs="0" name="telefonoFijo" nillable="true" type="xs:string"></xs:element>
+               <xs:element minOccurs="0" name="marcaCBU" nillable="true" type="xs:string"></xs:element>
+               <xs:element minOccurs="0" name="tipoCuenta" nillable="true" type="xs:string"></xs:element>
+               <xs:element minOccurs="0" name="monedaCuenta" nillable="true" type="xs:string"></xs:element>
+               <xs:element minOccurs="0" name="numeroCuenta" nillable="true" type="xs:string"></xs:element>
+               <xs:element minOccurs="0" name="numeroCBU" nillable="true" type="xs:string"></xs:element>
+               <xs:element minOccurs="0" name="tipoAcreditacion" nillable="true" type="xs:string"></xs:element>
+               <xs:element maxOccurs="unbounded" minOccurs="0" ref="tns:mediosDePago"></xs:element>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:element name="mediosDePago" type="tns:medioDePago"></xs:element>
+         <xs:complexType name="medioDePago">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="numeroTarjeta" nillable="true" type="xs:string"></xs:element>
+               <xs:element minOccurs="0" name="idMedioDePago" nillable="true" type="xs:string"></xs:element>
+               <xs:element minOccurs="0" name="favorito" nillable="true" type="xs:string"></xs:element>
+               <xs:element minOccurs="0" name="estadoMedioPago" nillable="true" type="xs:string"></xs:element>
+               <xs:element minOccurs="0" name="fechaVencimiento" nillable="true" type="xs:string"></xs:element>
+               <xs:element minOccurs="0" name="validaBanco" nillable="true" type="xs:string"></xs:element>
+               <xs:element minOccurs="0" name="tipoMedioPago" nillable="true" type="xs:string"></xs:element>
+               <xs:element minOccurs="0" name="flagMedioPagoBanco" nillable="true" type="xs:string"></xs:element>
+            </xs:sequence>
+         </xs:complexType>
+      </xs:schema>
+   </wsdl:types>
+   <wsdl:message name="consultarCuenta">
+      <wsdl:part name="parameters" element="tns:consultarCuenta"></wsdl:part>
+   </wsdl:message>
+   <wsdl:message name="consultaCuentaResult">
+      <wsdl:part name="parameters" element="tns:consultaCuentaResult"></wsdl:part>
+   </wsdl:message>
+   <wsdl:message name="DataServiceFault">
+      <wsdl:part name="parameters" element="tns:DataServiceFault"></wsdl:part>
+   </wsdl:message>
+   <wsdl:message name="mailConfirmacionCuenta">
+      <wsdl:part name="parameters" element="tns:mailConfirmacionCuenta"></wsdl:part>
+   </wsdl:message>
+   <wsdl:message name="mailConfirmacionCuentaResult">
+      <wsdl:part name="parameters" element="tns:mailConfirmacionCuentaResult"></wsdl:part>
+   </wsdl:message>
+   <wsdl:message name="modificarCuenta">
+      <wsdl:part name="parameters" element="tns:modificarCuenta"></wsdl:part>
+   </wsdl:message>
+   <wsdl:message name="modificarCuentaResult">
+      <wsdl:part name="parameters" element="tns:modificarCuentaResult"></wsdl:part>
+   </wsdl:message>
+   <wsdl:message name="altaCuenta">
+      <wsdl:part name="parameters" element="tns:altaCuenta"></wsdl:part>
+   </wsdl:message>
+   <wsdl:message name="altaCuentaResult">
+      <wsdl:part name="parameters" element="tns:altaCuentaResult"></wsdl:part>
+   </wsdl:message>
+   <wsdl:portType name="BilleteraCuentaPortType">
+      <wsdl:operation name="consultarCuenta">
+         <wsdl:input message="tns:consultarCuenta"></wsdl:input>
+         <wsdl:output message="tns:consultaCuentaResult" wsaw:Action="urn:consultarCuentaResponse"></wsdl:output>
+         <wsdl:fault message="tns:DataServiceFault" name="DataServiceFault" wsaw:Action="urn:consultarCuentaDataServiceFault"></wsdl:fault>
+      </wsdl:operation>
+      <wsdl:operation name="mailConfirmacionCuenta">
+         <wsdl:input message="tns:mailConfirmacionCuenta"></wsdl:input>
+         <wsdl:output message="tns:mailConfirmacionCuentaResult" wsaw:Action="urn:mailConfirmacionCuentaResult"></wsdl:output>
+         <wsdl:fault message="tns:DataServiceFault" name="DataServiceFault" wsaw:Action="urn:mailConfirmacionCuentaDataServiceFault"></wsdl:fault>
+      </wsdl:operation>
+      <wsdl:operation name="modificarCuenta">
+         <wsdl:input message="tns:modificarCuenta"></wsdl:input>
+         <wsdl:output message="tns:modificarCuentaResult" wsaw:Action="urn:modificarCuentaResult"></wsdl:output>
+         <wsdl:fault message="tns:DataServiceFault" name="DataServiceFault" wsaw:Action="urn:modificarCuentaDataServiceFault"></wsdl:fault>
+      </wsdl:operation>
+      <wsdl:operation name="altaCuenta">
+         <wsdl:input message="tns:altaCuenta"></wsdl:input>
+         <wsdl:output message="tns:altaCuentaResult" wsaw:Action="http://billetera.prismamp.com.ar/billeteraCuenta/BilleteraCuentaPortType/altaCuentaResult"></wsdl:output>
+         <wsdl:fault message="tns:DataServiceFault" name="DataServiceFault" wsaw:Action="urn:altaCuentaDataServiceFault"></wsdl:fault>
+      </wsdl:operation>
+   </wsdl:portType>
+   <wsdl:binding name="BilleteraCuentaSoap11Binding" type="tns:BilleteraCuentaPortType">
+      <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#SigEncr"></wsp:PolicyReference>
+      <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"></soap:binding>
+      <wsdl:operation name="consultarCuenta">
+         <soap:operation soapAction="" style="document"></soap:operation>
+         <wsdl:input>
+            <soap:body use="literal"></soap:body>
+         </wsdl:input>
+         <wsdl:output>
+            <soap:body use="literal"></soap:body>
+         </wsdl:output>
+         <wsdl:fault name="DataServiceFault">
+            <soap:fault use="literal" name="DataServiceFault"></soap:fault>
+         </wsdl:fault>
+      </wsdl:operation>
+      <wsdl:operation name="mailConfirmacionCuenta">
+         <soap:operation soapAction="" style="document"></soap:operation>
+         <wsdl:input>
+            <soap:body use="literal"></soap:body>
+         </wsdl:input>
+         <wsdl:output>
+            <soap:body use="literal"></soap:body>
+         </wsdl:output>
+         <wsdl:fault name="DataServiceFault">
+            <soap:fault use="literal" name="DataServiceFault"></soap:fault>
+         </wsdl:fault>
+      </wsdl:operation>
+      <wsdl:operation name="modificarCuenta">
+         <soap:operation soapAction="" style="document"></soap:operation>
+         <wsdl:input>
+            <soap:body use="literal"></soap:body>
+         </wsdl:input>
+         <wsdl:output>
+            <soap:body use="literal"></soap:body>
+         </wsdl:output>
+         <wsdl:fault name="DataServiceFault">
+            <soap:fault use="literal" name="DataServiceFault"></soap:fault>
+         </wsdl:fault>
+      </wsdl:operation>
+      <wsdl:operation name="altaCuenta">
+         <soap:operation soapAction="" style="document"></soap:operation>
+         <wsdl:input>
+            <soap:body use="literal"></soap:body>
+         </wsdl:input>
+         <wsdl:output>
+            <soap:body use="literal"></soap:body>
+         </wsdl:output>
+         <wsdl:fault name="DataServiceFault">
+            <soap:fault use="literal" name="DataServiceFault"></soap:fault>
+         </wsdl:fault>
+      </wsdl:operation>
+   </wsdl:binding>
+   <wsdl:binding name="BilleteraCuentaSoap12Binding" type="tns:BilleteraCuentaPortType">
+      <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#SigEncr"></wsp:PolicyReference>
+      <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"></soap12:binding>
+      <wsdl:operation name="consultarCuenta">
+         <soap12:operation soapAction="" style="document"></soap12:operation>
+         <wsdl:input>
+            <soap12:body use="literal"></soap12:body>
+         </wsdl:input>
+         <wsdl:output>
+            <soap12:body use="literal"></soap12:body>
+         </wsdl:output>
+         <wsdl:fault name="DataServiceFault">
+            <soap12:fault use="literal" name="DataServiceFault"></soap12:fault>
+         </wsdl:fault>
+      </wsdl:operation>
+      <wsdl:operation name="mailConfirmacionCuenta">
+         <soap12:operation soapAction="" style="document"></soap12:operation>
+         <wsdl:input>
+            <soap12:body use="literal"></soap12:body>
+         </wsdl:input>
+         <wsdl:output>
+            <soap12:body use="literal"></soap12:body>
+         </wsdl:output>
+         <wsdl:fault name="DataServiceFault">
+            <soap12:fault use="literal" name="DataServiceFault"></soap12:fault>
+         </wsdl:fault>
+      </wsdl:operation>
+      <wsdl:operation name="modificarCuenta">
+         <soap12:operation soapAction="" style="document"></soap12:operation>
+         <wsdl:input>
+            <soap12:body use="literal"></soap12:body>
+         </wsdl:input>
+         <wsdl:output>
+            <soap12:body use="literal"></soap12:body>
+         </wsdl:output>
+         <wsdl:fault name="DataServiceFault">
+            <soap12:fault use="literal" name="DataServiceFault"></soap12:fault>
+         </wsdl:fault>
+      </wsdl:operation>
+      <wsdl:operation name="altaCuenta">
+         <soap12:operation soapAction="" style="document"></soap12:operation>
+         <wsdl:input>
+            <soap12:body use="literal"></soap12:body>
+         </wsdl:input>
+         <wsdl:output>
+            <soap12:body use="literal"></soap12:body>
+         </wsdl:output>
+         <wsdl:fault name="DataServiceFault">
+            <soap12:fault use="literal" name="DataServiceFault"></soap12:fault>
+         </wsdl:fault>
+      </wsdl:operation>
+   </wsdl:binding>
+   <wsdl:service name="BilleteraCuenta">
+      <wsdl:port name="BilleteraCuentaHttpsSoap11Endpoint" binding="tns:BilleteraCuentaSoap11Binding">
+         <soap:address location="https://10.123.4.71:8243/services/t/1.2/BilleteraCuenta.BilleteraCuentaHttpsSoap11Endpoint"></soap:address>
+      </wsdl:port>
+      <wsdl:port name="BilleteraCuentaHttpSoap11Endpoint" binding="tns:BilleteraCuentaSoap11Binding">
+         <soap:address location="http://10.123.4.71:8280/services/t/1.2/BilleteraCuenta.BilleteraCuentaHttpSoap11Endpoint"></soap:address>
+      </wsdl:port>
+      <wsdl:port name="BilleteraCuentaHttpSoap12Endpoint" binding="tns:BilleteraCuentaSoap12Binding">
+         <soap12:address location="http://10.123.4.71:8280/services/t/1.2/BilleteraCuenta.BilleteraCuentaHttpSoap12Endpoint"></soap12:address>
+      </wsdl:port>
+      <wsdl:port name="BilleteraCuentaHttpsSoap12Endpoint" binding="tns:BilleteraCuentaSoap12Binding">
+         <soap12:address location="https://10.123.4.71:8243/services/t/1.2/BilleteraCuenta.BilleteraCuentaHttpsSoap12Endpoint"></soap12:address>
+      </wsdl:port>
+   </wsdl:service>
+</wsdl:definitions>

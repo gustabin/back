@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report2" pageWidth="560" pageHeight="900" columnWidth="520" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ea1a9d92-4997-45b6-ad1e-6c0e981616b9">
+	<property name="ireport.zoom" value="1.3636363636363644"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="26"/>
+	<style name="styleFrames">
+		<pen lineStyle="Dotted"/>
+		<box>
+			<pen lineWidth="1.0" lineStyle="Dotted" lineColor="#C9C9C9"/>
+			<topPen lineWidth="0.0" lineStyle="Dotted" lineColor="#C9C9C9"/>
+			<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#C9C9C9"/>
+			<bottomPen lineWidth="0.0" lineStyle="Dotted" lineColor="#C9C9C9"/>
+			<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#C9C9C9"/>
+		</box>
+	</style>
+	<style name="styleFooter">
+		<pen lineStyle="Dotted"/>
+		<box>
+			<pen lineWidth="0.5" lineStyle="Dotted" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineStyle="Dotted" lineColor="#FFFFFF"/>
+			<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#C9C9C9"/>
+			<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#C9C9C9"/>
+			<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#C9C9C9"/>
+		</box>
+	</style>
+	<style name="styleHeader">
+		<pen lineStyle="Dotted"/>
+		<box>
+			<pen lineWidth="0.5" lineStyle="Dotted" lineColor="#C9C9C9"/>
+			<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#C9C9C9"/>
+			<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#C9C9C9"/>
+			<bottomPen lineWidth="0.0" lineStyle="Dotted" lineColor="#C9C9C9"/>
+			<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#C9C9C9"/>
+		</box>
+	</style>
+	<style name="styleLegales">
+		<box>
+			<pen lineStyle="Double"/>
+			<topPen lineStyle="Double"/>
+			<leftPen lineStyle="Double"/>
+			<bottomPen lineStyle="Double"/>
+			<rightPen lineStyle="Double"/>
+		</box>
+	</style>
+	<subDataset name="importes" uuid="c92e1b65-9b39-48af-bfb3-a70a13c00e09">
+		<field name="label" class="java.lang.String"/>
+		<field name="value" class="java.lang.String"/>
+	</subDataset>
+	<parameter name="LOGO_PRESTAMO" class="java.lang.String"/>
+	<parameter name="cuentaDestino" class="java.lang.String"/>
+	<parameter name="monto" class="java.lang.String"/>
+	<parameter name="nroCuotas" class="java.lang.String"/>
+	<parameter name="tasa" class="java.lang.String"/>
+	<parameter name="motivo" class="java.lang.String"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String"/>
+	<parameter name="logoPrestamo" class="java.lang.String"/>
+	<parameter name="logoEncabezado" class="java.lang.String"/>
+	<parameter name="legales" class="java.lang.String"/>
+	<parameter name="tipoCuenta" class="java.lang.String"/>
+	<parameter name="logoFooter" class="java.lang.String"/>
+	<parameter name="textoFooter" class="java.lang.String"/>
+	<parameter name="nroComprobante" class="java.lang.String"/>
+	<parameter name="comision" class="java.lang.String"/>
+	<parameter name="impuestos" class="java.lang.String"/>
+	<parameter name="fechaPrimeraCuota" class="java.lang.String"/>
+	<parameter name="tipoTasa" class="java.lang.String"/>
+	<parameter name="tea" class="java.lang.String"/>
+	<parameter name="cuotaConstante" class="java.lang.String"/>
+	<parameter name="importeAcreditado" class="java.lang.String"/>
+	<parameter name="LOGO_CABECERA" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<pageHeader>
+		<band height="119">
+			<printWhenExpression><![CDATA[new Boolean($V{PAGE_NUMBER}.intValue() == 1)]]></printWhenExpression>
+			<staticText>
+				<reportElement x="143" y="29" width="262" height="25" forecolor="#3A3A3A" uuid="6970ddbd-9090-4a54-b6c0-5c7a5bf05642"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None">
+					<font fontName="Open Sans Semibold" size="8" isBold="true" isItalic="false" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+					<paragraph lineSpacing="Single" leftIndent="10"/>
+				</textElement>
+				<text><![CDATA[Comprobante de solicitud de préstamo personal Pre Aprobado]]></text>
+			</staticText>
+			<frame>
+				<reportElement style="styleHeader" x="143" y="0" width="262" height="119" uuid="46f735ec-d6e8-4b12-bbcf-df8771f0457a"/>
+				<line>
+					<reportElement x="0" y="0" width="262" height="1" uuid="0e9bb805-282d-4528-9a80-974550e2e0a1"/>
+					<graphicElement>
+						<pen lineWidth="1.0" lineColor="#C9C9C9"/>
+					</graphicElement>
+				</line>
+				<image hAlign="Center" vAlign="Middle">
+					<reportElement x="76" y="56" width="100" height="40" uuid="e58719c9-2841-43b4-9b93-5cba5ebef91c"/>
+					<imageExpression><![CDATA[$P{LOGO_PRESTAMO}]]></imageExpression>
+				</image>
+			</frame>
+			<line>
+				<reportElement x="143" y="118" width="262" height="1" uuid="a8499b4d-0198-4ee4-8c9c-30d38105cb25"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+			<textField isStretchWithOverflow="true">
+				<reportElement isPrintRepeatedValues="false" x="143" y="95" width="262" height="22" uuid="0c2b1ca6-d29a-469e-bfa0-e473faaf9acb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="html">
+					<font fontName="Open Sans Light" size="12" isBold="true" isPdfEmbedded="true"/>
+					<paragraph lineSpacing="Fixed" lineSpacingSize="18.0"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{importeAcreditado}]]></textFieldExpression>
+			</textField>
+			<image hAlign="Center">
+				<reportElement mode="Transparent" x="143" y="1" width="262" height="28" backcolor="#EB0000" uuid="a8f444ab-18c2-406e-8ffd-f91a0494c5d2"/>
+				<imageExpression><![CDATA[$P{LOGO_CABECERA}]]></imageExpression>
+			</image>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="40">
+			<line>
+				<reportElement positionType="Float" x="166" y="39" width="212" height="1" uuid="04782405-13e2-4f3a-ab81-5aafa8147fcb"/>
+				<graphicElement>
+					<pen lineStyle="Dotted" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement positionType="Float" x="148" y="4" width="135" height="32" uuid="0ab88cb9-066d-43fd-93d0-bf6b067141ba">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Open Sans Semibold" size="10"/>
+					<paragraph leftIndent="15" spacingAfter="5"/>
+				</textElement>
+				<text><![CDATA[Datos del préstamo]]></text>
+			</staticText>
+			<frame>
+				<reportElement style="styleFrames" positionType="Float" x="143" y="0" width="262" height="40" uuid="04eabfb4-ac00-4380-b63c-5678fb285deb"/>
+			</frame>
+		</band>
+		<band height="40">
+			<line>
+				<reportElement positionType="Float" x="166" y="39" width="212" height="1" uuid="67e06314-6426-424f-b1b8-d6be9bf45d46"/>
+				<graphicElement>
+					<pen lineStyle="Dotted" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" mode="Opaque" x="264" y="5" width="135" height="20" backcolor="#FFFFFF" uuid="7324def6-2d48-46f3-8331-fb07c4d7c475"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Open Sans Semibold" size="9" isPdfEmbedded="true"/>
+					<paragraph rightIndent="27"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{monto}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="148" y="4" width="113" height="32" forecolor="#585855" uuid="36f3546f-d959-4cff-94f2-ed44f60b0d6e"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Open Sans Semibold" size="9" isBold="false" isPdfEmbedded="true"/>
+					<paragraph leftIndent="25" spacingAfter="5"/>
+				</textElement>
+				<text><![CDATA[Importe neto a acreditar]]></text>
+			</staticText>
+			<frame>
+				<reportElement style="styleFrames" positionType="Float" x="143" y="0" width="262" height="40" uuid="04eabfb4-ac00-4380-b63c-5678fb285deb"/>
+			</frame>
+		</band>
+		<band height="47">
+			<printWhenExpression><![CDATA[$P{comision} != null]]></printWhenExpression>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" mode="Opaque" x="253" y="13" width="146" height="20" backcolor="#FFFFFF" uuid="d3c83850-c475-4c53-ad93-a4f9cb179663"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Open Sans Semibold" size="9" isBold="false" isPdfEmbedded="true"/>
+					<paragraph rightIndent="27"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{comision}]]></textFieldExpression>
+			</textField>
+			<frame>
+				<reportElement style="styleFrames" positionType="Float" x="143" y="0" width="262" height="47" isRemoveLineWhenBlank="true" uuid="770a01d7-13f8-4e89-ab81-5ed4ac970397"/>
+			</frame>
+			<staticText>
+				<reportElement positionType="Float" x="148" y="6" width="94" height="34" forecolor="#585855" uuid="34a43ad0-a9dc-4c0c-ad6c-188c48eb80ce"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Open Sans Semibold" size="9" isBold="false" isPdfEmbedded="true"/>
+					<paragraph leftIndent="25" spacingAfter="5"/>
+				</textElement>
+				<text><![CDATA[Comisión de otorgamiento]]></text>
+			</staticText>
+			<line>
+				<reportElement positionType="Float" x="166" y="46" width="212" height="1" uuid="cb5b1802-b2e7-4ffb-9501-33727c98a1e9"/>
+				<graphicElement>
+					<pen lineStyle="Dotted" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+		</band>
+		<band height="30">
+			<printWhenExpression><![CDATA[$P{impuestos} != null]]></printWhenExpression>
+			<line>
+				<reportElement positionType="Float" x="172" y="29" width="212" height="1" uuid="44cdb4f4-4152-4c53-821d-cd8c591d4b4b"/>
+				<graphicElement>
+					<pen lineStyle="Dotted" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+			<frame>
+				<reportElement style="styleFrames" positionType="Float" x="143" y="0" width="262" height="30" uuid="890edc00-a34d-431f-8aba-82244f5999ab"/>
+			</frame>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" mode="Opaque" x="253" y="5" width="146" height="20" backcolor="#FFFFFF" uuid="3018d7a5-e8bb-40c5-a361-5ccad03cdce1"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Open Sans Semibold" size="9" isPdfEmbedded="true"/>
+					<paragraph rightIndent="27"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{impuestos}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="148" y="5" width="94" height="19" forecolor="#585855" uuid="b1059cbb-2263-4bd3-b3e1-dc81a216e15e"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Open Sans Semibold" size="9" isBold="false" isPdfEmbedded="true"/>
+					<paragraph leftIndent="25" spacingAfter="5"/>
+				</textElement>
+				<text><![CDATA[Impuestos]]></text>
+			</staticText>
+		</band>
+		<band height="475">
+			<frame>
+				<reportElement style="styleFrames" positionType="Float" x="143" y="125" width="262" height="40" uuid="b35a00d2-151f-4f58-9fb3-bee24c683d16"/>
+				<textField isStretchWithOverflow="true">
+					<reportElement positionType="Float" mode="Opaque" x="137" y="10" width="119" height="20" backcolor="#FFFFFF" uuid="0be09077-d606-4250-bb35-2af50fdfd869"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Open Sans Semibold" size="9" isPdfEmbedded="true"/>
+						<paragraph rightIndent="27"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{fechaPrimeraCuota}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement positionType="Float" x="5" y="6" width="130" height="28" forecolor="#585855" uuid="603f0a87-5fb2-4089-8704-e412c7affe40"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Open Sans Semibold" size="9" isBold="false" isPdfEmbedded="true"/>
+						<paragraph leftIndent="25" spacingAfter="5"/>
+					</textElement>
+					<text><![CDATA[Fecha de la primera cuota]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement style="styleFrames" positionType="Float" x="143" y="165" width="262" height="35" uuid="939b3b64-d6d8-43e4-8da1-a52681683d60"/>
+				<staticText>
+					<reportElement positionType="Float" x="6" y="3" width="113" height="29" forecolor="#585855" uuid="2f3aee8b-fea8-4357-b2e5-460ee853cc27"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Open Sans Semibold" size="9" isBold="false" isPdfEmbedded="true"/>
+						<paragraph leftIndent="25" spacingAfter="5"/>
+					</textElement>
+					<text><![CDATA[Importe total de la primera cuota (2)]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true">
+					<reportElement positionType="Float" mode="Opaque" x="134" y="11" width="122" height="18" backcolor="#FFFFFF" uuid="0dc34d63-80e9-4795-9c4b-ac80b2a26a77"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Open Sans Semibold" size="9" isPdfEmbedded="true"/>
+						<paragraph rightIndent="27"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{cuotaConstante}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement style="styleFrames" positionType="Float" x="143" y="86" width="262" height="39" uuid="8e8eb5f4-21cf-4f04-84ae-201d0e46b62e"/>
+				<staticText>
+					<reportElement positionType="Float" x="6" y="6" width="94" height="28" forecolor="#585855" uuid="b98dc194-6987-4c4f-a6fa-a947e595c740"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Open Sans Semibold" size="9" isBold="false" isPdfEmbedded="true"/>
+						<paragraph leftIndent="25" spacingAfter="5"/>
+					</textElement>
+					<text><![CDATA[Destino de los fondos]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true">
+					<reportElement positionType="Float" mode="Opaque" x="110" y="6" width="142" height="28" backcolor="#FFFFFF" uuid="010e2eee-83a0-499e-870f-9c15e92d4951"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Open Sans Semibold" size="9" isPdfEmbedded="true"/>
+						<paragraph rightIndent="27"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{motivo}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement style="styleFooter" positionType="Float" stretchType="RelativeToTallestObject" x="143" y="385" width="262" height="61" uuid="d57e9f01-588a-4b53-b138-05db3dc46b50"/>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="styleLegales" positionType="Float" stretchType="RelativeToTallestObject" mode="Opaque" x="5" y="2" width="252" height="55" backcolor="#FFFFFF" uuid="f5ac5f89-ecfa-4894-88ae-8324196e56d4"/>
+					<textElement textAlignment="Justified" verticalAlignment="Top" markup="html">
+						<font fontName="Open Sans" size="8" isPdfEmbedded="true"/>
+						<paragraph leftIndent="25" rightIndent="25" spacingAfter="20"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{legales}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement style="styleFrames" positionType="Float" x="143" y="200" width="262" height="30" uuid="1e3f6960-054b-4a09-b7e7-590fab2c33c3"/>
+				<textField isStretchWithOverflow="true">
+					<reportElement positionType="Float" mode="Opaque" x="122" y="4" width="135" height="20" backcolor="#FFFFFF" uuid="e84639fb-0922-4f2f-905d-cc9bc34f5e27"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Open Sans Semibold" size="9" isPdfEmbedded="true"/>
+						<paragraph rightIndent="27"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{tipoTasa}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement positionType="Float" x="6" y="6" width="79" height="18" forecolor="#585855" uuid="f5923172-ab06-49d1-8686-bbdaf75ad28c"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Open Sans Semibold" size="9" isBold="false" isPdfEmbedded="true"/>
+						<paragraph leftIndent="25" spacingAfter="5"/>
+					</textElement>
+					<text><![CDATA[Tipo de tasa]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement style="styleFrames" positionType="Float" x="143" y="260" width="262" height="30" uuid="94411a96-adf5-4926-9c61-38c2245ab2d7"/>
+				<textField isStretchWithOverflow="true">
+					<reportElement positionType="Float" mode="Opaque" x="154" y="5" width="103" height="19" backcolor="#FFFFFF" uuid="a51918bd-dbc4-4416-8813-dc011d14c008"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Open Sans Semibold" size="9" isPdfEmbedded="true"/>
+						<paragraph rightIndent="27"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{tea}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement positionType="Float" x="6" y="6" width="148" height="19" forecolor="#585855" uuid="b2499977-6cd5-4d0b-95b9-955a807230a4"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Open Sans Semibold" size="9" isBold="false" isPdfEmbedded="true"/>
+						<paragraph leftIndent="25" spacingAfter="5"/>
+					</textElement>
+					<text><![CDATA[Tasa Efectiva Anual (T.E.A.)]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement style="styleFrames" positionType="Float" x="143" y="230" width="262" height="30" uuid="1d610514-d827-40aa-b026-22e0be5f935a"/>
+				<staticText>
+					<reportElement positionType="Float" x="6" y="6" width="148" height="19" forecolor="#585855" uuid="233aa38a-24f8-4abc-97e1-87ec2792ee02"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Open Sans Semibold" size="9" isBold="false" isPdfEmbedded="true"/>
+						<paragraph leftIndent="25" spacingAfter="5"/>
+					</textElement>
+					<text><![CDATA[Tasa Nominal Anual (T.N.A.)]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true">
+					<reportElement positionType="Float" mode="Opaque" x="154" y="5" width="102" height="20" backcolor="#FFFFFF" uuid="8b8966d3-929d-4cde-a56e-22852fe31f02"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Open Sans Semibold" size="9" isPdfEmbedded="true"/>
+						<paragraph rightIndent="27"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{tasa}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement style="styleFrames" positionType="Float" x="143" y="290" width="262" height="33" uuid="ba2b49c9-e7a4-4740-aba6-ab41861693e5"/>
+				<textField isStretchWithOverflow="true">
+					<reportElement positionType="Float" mode="Opaque" x="139" y="5" width="118" height="22" backcolor="#FFFFFF" uuid="da1f978b-ba8f-4825-91cc-ff652378fab3"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Open Sans Semibold" size="9" isPdfEmbedded="true"/>
+						<paragraph rightIndent="27"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{nroComprobante}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement positionType="Float" x="6" y="5" width="130" height="22" forecolor="#585855" uuid="47b8c9ce-a3c8-41c5-9d2e-95a0f998378c"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Open Sans Semibold" size="9" isBold="false" isPdfEmbedded="true"/>
+						<paragraph leftIndent="25"/>
+					</textElement>
+					<text><![CDATA[Comprobante]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement style="styleFrames" positionType="Float" x="143" y="323" width="262" height="62" uuid="9b45b9d8-660e-4cc6-8b5c-f0d37b24c2a0"/>
+				<image scaleImage="RealSize" hAlign="Center">
+					<reportElement positionType="Float" x="69" y="23" width="107" height="36" backcolor="#FF0000" uuid="a9018246-08eb-4d37-bafe-812bf492698f">
+						<printWhenExpression><![CDATA[new Boolean($V{PAGE_NUMBER}.intValue() == 1)]]></printWhenExpression>
+					</reportElement>
+					<imageExpression><![CDATA[$P{logoFooter}]]></imageExpression>
+				</image>
+				<textField pattern="dd/MM/yyyy - HH:mm">
+					<reportElement positionType="Float" x="69" y="4" width="107" height="16" uuid="b150a5d2-cf75-4f1d-96ea-af03cf1f1a3e"/>
+					<textElement textAlignment="Center" verticalAlignment="Bottom">
+						<font fontName="Open Sans" size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement style="styleFrames" positionType="Float" x="143" y="0" width="262" height="44" uuid="97f1690e-6567-4004-895d-6b53b1842f8d"/>
+				<textField isStretchWithOverflow="true" pattern="">
+					<reportElement positionType="Float" mode="Opaque" x="121" y="6" width="135" height="16" backcolor="#FFFFFF" uuid="4ccf6d79-12cb-4b68-8ce3-1a50ff8ab52e"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Open Sans Semibold" size="8" isBold="false" isPdfEmbedded="true"/>
+						<paragraph lineSpacing="Single" leftIndent="3" rightIndent="27" spacingBefore="5"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{cuentaDestino}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement positionType="Float" mode="Opaque" x="120" y="23" width="136" height="12" backcolor="#FFFFFF" uuid="ce14ceea-14ef-4961-a660-70956060cd54"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Open Sans" size="8" isBold="false" isPdfEmbedded="true"/>
+						<paragraph rightIndent="27" spacingAfter="5"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{tipoCuenta}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement positionType="Float" x="6" y="6" width="113" height="29" forecolor="#585855" uuid="f71a11d2-6182-4f38-881d-6a12f5057650"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Open Sans Semibold" size="9" isBold="false" isPdfEmbedded="true"/>
+						<paragraph leftIndent="25" spacingAfter="5"/>
+					</textElement>
+					<text><![CDATA[Cuenta Destino]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement style="styleFrames" positionType="Float" x="143" y="44" width="262" height="42" uuid="7e793738-beab-44ab-95eb-9eafb4d73b13"/>
+				<textField isStretchWithOverflow="true">
+					<reportElement positionType="Float" mode="Opaque" x="120" y="14" width="136" height="21" backcolor="#FFFFFF" uuid="55a53cb8-ba7e-4e8f-9cf7-86776d6559ec"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Open Sans Semibold" size="9" isPdfEmbedded="true"/>
+						<paragraph rightIndent="27"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{nroCuotas}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement positionType="Float" x="6" y="6" width="94" height="29" forecolor="#585855" uuid="d152933d-c3f2-4181-bed2-8cbf888bbdfa"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Open Sans Semibold" size="9" isBold="false" isPdfEmbedded="true"/>
+						<paragraph leftIndent="25" spacingAfter="5"/>
+					</textElement>
+					<text><![CDATA[Cantidad de cuotas (1)]]></text>
+				</staticText>
+			</frame>
+			<line>
+				<reportElement x="166" y="44" width="212" height="1" uuid="342a235b-591e-4954-a0e3-ba2d0fa79fb7"/>
+				<graphicElement>
+					<pen lineStyle="Dotted" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="166" y="85" width="212" height="1" uuid="3eab437e-c2b1-47ba-86f0-3804b067cff7"/>
+				<graphicElement>
+					<pen lineStyle="Dotted" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="166" y="125" width="212" height="1" uuid="38f4e1fc-5525-4d98-b4d4-704c2ddfb8ab"/>
+				<graphicElement>
+					<pen lineStyle="Dotted" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="Float" x="166" y="164" width="212" height="1" uuid="c68da323-27c1-4ef3-a16f-c299c3eeea55"/>
+				<graphicElement>
+					<pen lineStyle="Dotted" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="Float" x="172" y="199" width="212" height="1" uuid="1b6bb32d-4382-480d-b673-dbc75b105ec2"/>
+				<graphicElement>
+					<pen lineStyle="Dotted" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="Float" x="166" y="230" width="212" height="1" uuid="5af10bf1-f414-4725-9a54-1ebfd2defe23"/>
+				<graphicElement>
+					<pen lineStyle="Dotted" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="166" y="260" width="212" height="1" uuid="59b58f8c-ca49-4385-a0fe-095de668c8ca"/>
+				<graphicElement>
+					<pen lineStyle="Dotted" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="Float" x="166" y="290" width="212" height="1" uuid="1e643b95-d84a-4bc6-a4de-2c682ff5b8ef"/>
+				<graphicElement>
+					<pen lineStyle="Dotted" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="Float" x="166" y="322" width="212" height="1" uuid="dc3796d2-c5f2-41c3-9203-a369cba77d1d"/>
+				<graphicElement>
+					<pen lineStyle="Dotted" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="17">
+			<textField evaluationTime="Report">
+				<reportElement mode="Opaque" x="479" y="0" width="40" height="13" backcolor="#FFFFFF" uuid="19feb45d-6e9c-429d-a02f-fd43d900f745"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="0" y="0" width="478" height="13" backcolor="#FFFFFF" uuid="cf36adca-a14a-4a14-8a6e-7a7c5d69fba9"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Página "+$V{PAGE_NUMBER}+" de"]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

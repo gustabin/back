@@ -1,0 +1,10 @@
+{
+  "code": "login.invalid",
+  "message": "General error when retrieving customer information",
+  "errors": [
+    {
+      "code": "error",
+      "message": "General error when retrieving customer information"
+    }
+  ]
+}

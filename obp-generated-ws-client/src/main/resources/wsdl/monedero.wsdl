@@ -1,0 +1,1119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+	targetNamespace="http://tempuri.org/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"
+	xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+	xmlns:tns="http://tempuri.org/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/"
+	xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/"
+	xmlns:s="http://www.w3.org/2001/XMLSchema">
+
+
+
+	<wsdl:types>
+
+
+
+		<s:schema targetNamespace="http://tempuri.org/"
+			elementFormDefault="qualified">
+
+
+	
+			<s:element name="ObtenerCuenta">
+
+
+		
+				<s:complexType>
+
+
+			
+					<s:sequence>
+
+						<s:element name="Id_Banco" type="s:string" maxOccurs="1"
+							minOccurs="0" />
+
+						<s:element name="Password" type="s:string" maxOccurs="1"
+							minOccurs="0" />
+
+						<s:element name="TipoNumDoc" type="s:string" maxOccurs="1"
+							minOccurs="0" />
+
+						<s:element name="ID_CuentaVirtual" type="s:string"
+							maxOccurs="1" minOccurs="0" />
+
+					</s:sequence>
+
+				</s:complexType>
+
+			</s:element>
+
+
+	
+			<s:element name="ObtenerCuentaResponse">
+
+
+		
+				<s:complexType>
+
+
+			
+					<s:sequence>
+
+						<s:element name="ObtenerCuentaResult" type="s:string"
+							maxOccurs="1" minOccurs="0" />
+
+					</s:sequence>
+
+				</s:complexType>
+
+			</s:element>
+
+
+	
+			<s:element name="ObtenerUsuario">
+
+
+		
+				<s:complexType>
+
+
+			
+					<s:sequence>
+
+						<s:element name="Id_Banco" type="s:string" maxOccurs="1"
+							minOccurs="0" />
+
+						<s:element name="Password" type="s:string" maxOccurs="1"
+							minOccurs="0" />
+
+						<s:element name="TipoNumDoc" type="s:string" maxOccurs="1"
+							minOccurs="0" />
+
+					</s:sequence>
+
+				</s:complexType>
+
+			</s:element>
+
+
+	
+			<s:element name="ObtenerUsuarioResponse">
+
+
+		
+				<s:complexType>
+
+
+			
+					<s:sequence>
+
+						<s:element name="ObtenerUsuarioResult" type="s:string"
+							maxOccurs="1" minOccurs="0" />
+
+					</s:sequence>
+
+				</s:complexType>
+
+			</s:element>
+
+
+	
+			<s:element name="ObtenerPromociones">
+
+
+		
+				<s:complexType>
+
+
+			
+					<s:sequence>
+
+						<s:element name="Id_Banco" type="s:string" maxOccurs="1"
+							minOccurs="0" />
+
+						<s:element name="Password" type="s:string" maxOccurs="1"
+							minOccurs="0" />
+
+						<s:element name="TipoNumDoc" type="s:string" maxOccurs="1"
+							minOccurs="0" />
+
+						<s:element name="Emisor" type="s:string" maxOccurs="1"
+							minOccurs="0" />
+
+						<s:element name="ID_Novedad" type="s:string" maxOccurs="1"
+							minOccurs="0" />
+
+						<s:element name="PagCantReg" type="s:string" maxOccurs="1"
+							minOccurs="0" />
+
+						<s:element name="PagNum" type="s:string" maxOccurs="1"
+							minOccurs="0" />
+
+					</s:sequence>
+
+				</s:complexType>
+
+			</s:element>
+
+
+	
+			<s:element name="ObtenerPromocionesResponse">
+
+
+		
+				<s:complexType>
+
+
+			
+					<s:sequence>
+
+						<s:element name="ObtenerPromocionesResult" type="s:string"
+							maxOccurs="1" minOccurs="0" />
+
+					</s:sequence>
+
+				</s:complexType>
+
+			</s:element>
+
+
+	
+			<s:element name="ObtenerTags">
+
+
+		
+				<s:complexType>
+
+
+			
+					<s:sequence>
+
+						<s:element name="Id_Banco" type="s:string" maxOccurs="1"
+							minOccurs="0" />
+
+						<s:element name="Password" type="s:string" maxOccurs="1"
+							minOccurs="0" />
+
+						<s:element name="TipoNumDoc" type="s:string" maxOccurs="1"
+							minOccurs="0" />
+
+						<s:element name="ID_CuentaVirtual" type="s:string"
+							maxOccurs="1" minOccurs="0" />
+
+						<s:element name="Categoria" type="s:string" maxOccurs="1"
+							minOccurs="0" />
+
+						<s:element name="ID_Usuario" type="s:string" maxOccurs="1"
+							minOccurs="0" />
+
+						<s:element name="ID_Tag" type="s:string" maxOccurs="1"
+							minOccurs="0" />
+
+						<s:element name="PagCantReg" type="s:string" maxOccurs="1"
+							minOccurs="0" />
+
+						<s:element name="PagNum" type="s:string" maxOccurs="1"
+							minOccurs="0" />
+
+					</s:sequence>
+
+				</s:complexType>
+
+			</s:element>
+
+
+	
+			<s:element name="ObtenerTagsResponse">
+
+
+		
+				<s:complexType>
+
+
+			
+					<s:sequence>
+
+						<s:element name="ObtenerTagsResult" type="s:string"
+							maxOccurs="1" minOccurs="0" />
+
+					</s:sequence>
+
+				</s:complexType>
+
+			</s:element>
+
+
+	
+			<s:element name="ActivarTag">
+
+
+		
+				<s:complexType>
+
+
+			
+					<s:sequence>
+
+						<s:element name="Id_Banco" type="s:string" maxOccurs="1"
+							minOccurs="0" />
+
+						<s:element name="Password" type="s:string" maxOccurs="1"
+							minOccurs="0" />
+
+						<s:element name="TipoNumDoc" type="s:string" maxOccurs="1"
+							minOccurs="0" />
+
+						<s:element name="ID_Tag" type="s:string" maxOccurs="1"
+							minOccurs="0" />
+
+						<s:element name="Accion" type="s:string" maxOccurs="1"
+							minOccurs="0" />
+
+					</s:sequence>
+
+				</s:complexType>
+
+			</s:element>
+
+
+	
+			<s:element name="ActivarTagResponse">
+
+
+		
+				<s:complexType>
+
+
+			
+					<s:sequence>
+
+						<s:element name="ActivarTagResult" type="s:string"
+							maxOccurs="1" minOccurs="0" />
+
+					</s:sequence>
+
+				</s:complexType>
+
+			</s:element>
+
+
+	
+			<s:element name="ObtenerTransaccionesTag">
+
+
+		
+				<s:complexType>
+
+
+			
+					<s:sequence>
+
+						<s:element name="Id_Banco" type="s:string" maxOccurs="1"
+							minOccurs="0" />
+
+						<s:element name="Password" type="s:string" maxOccurs="1"
+							minOccurs="0" />
+
+						<s:element name="TipoNumDoc" type="s:string" maxOccurs="1"
+							minOccurs="0" />
+
+						<s:element name="ID_Tag" type="s:string" maxOccurs="1"
+							minOccurs="0" />
+
+						<s:element name="FecDesde" type="s:string" maxOccurs="1"
+							minOccurs="0" />
+
+						<s:element name="FecHasta" type="s:string" maxOccurs="1"
+							minOccurs="0" />
+
+						<s:element name="PagCantReg" type="s:string" maxOccurs="1"
+							minOccurs="0" />
+
+						<s:element name="PagNum" type="s:string" maxOccurs="1"
+							minOccurs="0" />
+
+					</s:sequence>
+
+				</s:complexType>
+
+			</s:element>
+
+
+	
+			<s:element name="ObtenerTransaccionesTagResponse">
+
+
+		
+				<s:complexType>
+
+
+			
+					<s:sequence>
+
+						<s:element name="ObtenerTransaccionesTagResult" type="s:string"
+							maxOccurs="1" minOccurs="0" />
+
+					</s:sequence>
+
+				</s:complexType>
+
+			</s:element>
+
+
+	
+			<s:element name="ObtenerModulosRecargas">
+
+
+		
+				<s:complexType>
+
+
+			
+					<s:sequence>
+
+						<s:element name="Id_Banco" type="s:string" maxOccurs="1"
+							minOccurs="0" />
+
+						<s:element name="Password" type="s:string" maxOccurs="1"
+							minOccurs="0" />
+
+						<s:element name="TipoNumDoc" type="s:string" maxOccurs="1"
+							minOccurs="0" />
+
+						<s:element name="ID_Catalogo" type="s:string" maxOccurs="1"
+							minOccurs="0" />
+
+					</s:sequence>
+
+				</s:complexType>
+
+			</s:element>
+
+
+	
+			<s:element name="ObtenerModulosRecargasResponse">
+
+
+		
+				<s:complexType>
+
+
+			
+					<s:sequence>
+
+						<s:element name="ObtenerModulosRecargasResult" type="s:string"
+							maxOccurs="1" minOccurs="0" />
+
+					</s:sequence>
+
+				</s:complexType>
+
+			</s:element>
+
+
+	
+			<s:element name="ObtenerMediosRecarga">
+
+
+		
+				<s:complexType>
+
+
+			
+					<s:sequence>
+
+						<s:element name="Id_Banco" type="s:string" maxOccurs="1"
+							minOccurs="0" />
+
+						<s:element name="Password" type="s:string" maxOccurs="1"
+							minOccurs="0" />
+
+						<s:element name="TipoNumDoc" type="s:string" maxOccurs="1"
+							minOccurs="0" />
+
+						<s:element name="ID_CuentaVirtual" type="s:string"
+							maxOccurs="1" minOccurs="0" />
+
+					</s:sequence>
+
+				</s:complexType>
+
+			</s:element>
+
+
+	
+			<s:element name="ObtenerMediosRecargaResponse">
+
+
+		
+				<s:complexType>
+
+
+			
+					<s:sequence>
+
+						<s:element name="ObtenerMediosRecargaResult" type="s:string"
+							maxOccurs="1" minOccurs="0" />
+
+					</s:sequence>
+
+				</s:complexType>
+
+			</s:element>
+
+		</s:schema>
+
+	</wsdl:types>
+
+
+
+	<wsdl:message name="ObtenerCuentaSoapIn">
+
+		<wsdl:part name="parameters" element="tns:ObtenerCuenta" />
+
+	</wsdl:message>
+
+
+
+	<wsdl:message name="ObtenerCuentaSoapOut">
+
+		<wsdl:part name="parameters" element="tns:ObtenerCuentaResponse" />
+
+	</wsdl:message>
+
+
+
+	<wsdl:message name="ObtenerUsuarioSoapIn">
+
+		<wsdl:part name="parameters" element="tns:ObtenerUsuario" />
+
+	</wsdl:message>
+
+
+
+	<wsdl:message name="ObtenerUsuarioSoapOut">
+
+		<wsdl:part name="parameters" element="tns:ObtenerUsuarioResponse" />
+
+	</wsdl:message>
+
+
+
+	<wsdl:message name="ObtenerPromocionesSoapIn">
+
+		<wsdl:part name="parameters" element="tns:ObtenerPromociones" />
+
+	</wsdl:message>
+
+
+
+	<wsdl:message name="ObtenerPromocionesSoapOut">
+
+		<wsdl:part name="parameters" element="tns:ObtenerPromocionesResponse" />
+
+	</wsdl:message>
+
+
+
+	<wsdl:message name="ObtenerTagsSoapIn">
+
+		<wsdl:part name="parameters" element="tns:ObtenerTags" />
+
+	</wsdl:message>
+
+
+
+	<wsdl:message name="ObtenerTagsSoapOut">
+
+		<wsdl:part name="parameters" element="tns:ObtenerTagsResponse" />
+
+	</wsdl:message>
+
+
+
+	<wsdl:message name="ActivarTagSoapIn">
+
+		<wsdl:part name="parameters" element="tns:ActivarTag" />
+
+	</wsdl:message>
+
+
+
+	<wsdl:message name="ActivarTagSoapOut">
+
+		<wsdl:part name="parameters" element="tns:ActivarTagResponse" />
+
+	</wsdl:message>
+
+
+
+	<wsdl:message name="ObtenerTransaccionesTagSoapIn">
+
+		<wsdl:part name="parameters" element="tns:ObtenerTransaccionesTag" />
+
+	</wsdl:message>
+
+
+
+	<wsdl:message name="ObtenerTransaccionesTagSoapOut">
+
+		<wsdl:part name="parameters" element="tns:ObtenerTransaccionesTagResponse" />
+
+	</wsdl:message>
+
+
+
+	<wsdl:message name="ObtenerModulosRecargasSoapIn">
+
+		<wsdl:part name="parameters" element="tns:ObtenerModulosRecargas" />
+
+	</wsdl:message>
+
+
+
+	<wsdl:message name="ObtenerModulosRecargasSoapOut">
+
+		<wsdl:part name="parameters" element="tns:ObtenerModulosRecargasResponse" />
+
+	</wsdl:message>
+
+
+
+	<wsdl:message name="ObtenerMediosRecargaSoapIn">
+
+		<wsdl:part name="parameters" element="tns:ObtenerMediosRecarga" />
+
+	</wsdl:message>
+
+
+
+	<wsdl:message name="ObtenerMediosRecargaSoapOut">
+
+		<wsdl:part name="parameters" element="tns:ObtenerMediosRecargaResponse" />
+
+	</wsdl:message>
+
+
+
+	<wsdl:portType name="SingleServiceSoap">
+
+
+
+		<wsdl:operation name="ObtenerCuenta">
+
+			<wsdl:input message="tns:ObtenerCuentaSoapIn" />
+
+			<wsdl:output message="tns:ObtenerCuentaSoapOut" />
+
+		</wsdl:operation>
+
+
+
+		<wsdl:operation name="ObtenerUsuario">
+
+			<wsdl:input message="tns:ObtenerUsuarioSoapIn" />
+
+			<wsdl:output message="tns:ObtenerUsuarioSoapOut" />
+
+		</wsdl:operation>
+
+
+
+		<wsdl:operation name="ObtenerPromociones">
+
+			<wsdl:input message="tns:ObtenerPromocionesSoapIn" />
+
+			<wsdl:output message="tns:ObtenerPromocionesSoapOut" />
+
+		</wsdl:operation>
+
+
+
+		<wsdl:operation name="ObtenerTags">
+
+			<wsdl:input message="tns:ObtenerTagsSoapIn" />
+
+			<wsdl:output message="tns:ObtenerTagsSoapOut" />
+
+		</wsdl:operation>
+
+
+
+		<wsdl:operation name="ActivarTag">
+
+			<wsdl:input message="tns:ActivarTagSoapIn" />
+
+			<wsdl:output message="tns:ActivarTagSoapOut" />
+
+		</wsdl:operation>
+
+
+
+		<wsdl:operation name="ObtenerTransaccionesTag">
+
+			<wsdl:input message="tns:ObtenerTransaccionesTagSoapIn" />
+
+			<wsdl:output message="tns:ObtenerTransaccionesTagSoapOut" />
+
+		</wsdl:operation>
+
+
+
+		<wsdl:operation name="ObtenerModulosRecargas">
+
+			<wsdl:input message="tns:ObtenerModulosRecargasSoapIn" />
+
+			<wsdl:output message="tns:ObtenerModulosRecargasSoapOut" />
+
+		</wsdl:operation>
+
+
+
+		<wsdl:operation name="ObtenerMediosRecarga">
+
+			<wsdl:input message="tns:ObtenerMediosRecargaSoapIn" />
+
+			<wsdl:output message="tns:ObtenerMediosRecargaSoapOut" />
+
+		</wsdl:operation>
+
+	</wsdl:portType>
+
+
+
+	<wsdl:binding name="SingleServiceSoap" type="tns:SingleServiceSoap">
+
+		<soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+
+
+
+		<wsdl:operation name="ObtenerCuenta">
+
+			<soap:operation style="document"
+				soapAction="http://tempuri.org/ObtenerCuenta" />
+
+
+	
+			<wsdl:input>
+
+				<soap:body use="literal" />
+
+			</wsdl:input>
+
+
+	
+			<wsdl:output>
+
+				<soap:body use="literal" />
+
+			</wsdl:output>
+
+		</wsdl:operation>
+
+
+
+		<wsdl:operation name="ObtenerUsuario">
+
+			<soap:operation style="document"
+				soapAction="http://tempuri.org/ObtenerUsuario" />
+
+
+	
+			<wsdl:input>
+
+				<soap:body use="literal" />
+
+			</wsdl:input>
+
+
+	
+			<wsdl:output>
+
+				<soap:body use="literal" />
+
+			</wsdl:output>
+
+		</wsdl:operation>
+
+
+
+		<wsdl:operation name="ObtenerPromociones">
+
+			<soap:operation style="document"
+				soapAction="http://tempuri.org/ObtenerPromociones" />
+
+
+	
+			<wsdl:input>
+
+				<soap:body use="literal" />
+
+			</wsdl:input>
+
+
+	
+			<wsdl:output>
+
+				<soap:body use="literal" />
+
+			</wsdl:output>
+
+		</wsdl:operation>
+
+
+
+		<wsdl:operation name="ObtenerTags">
+
+			<soap:operation style="document" soapAction="http://tempuri.org/ObtenerTags" />
+
+
+	
+			<wsdl:input>
+
+				<soap:body use="literal" />
+
+			</wsdl:input>
+
+
+	
+			<wsdl:output>
+
+				<soap:body use="literal" />
+
+			</wsdl:output>
+
+		</wsdl:operation>
+
+
+
+		<wsdl:operation name="ActivarTag">
+
+			<soap:operation style="document" soapAction="http://tempuri.org/ActivarTag" />
+
+
+	
+			<wsdl:input>
+
+				<soap:body use="literal" />
+
+			</wsdl:input>
+
+
+	
+			<wsdl:output>
+
+				<soap:body use="literal" />
+
+			</wsdl:output>
+
+		</wsdl:operation>
+
+
+
+		<wsdl:operation name="ObtenerTransaccionesTag">
+
+			<soap:operation style="document"
+				soapAction="http://tempuri.org/ObtenerTransaccionesTag" />
+
+
+	
+			<wsdl:input>
+
+				<soap:body use="literal" />
+
+			</wsdl:input>
+
+
+	
+			<wsdl:output>
+
+				<soap:body use="literal" />
+
+			</wsdl:output>
+
+		</wsdl:operation>
+
+
+
+		<wsdl:operation name="ObtenerModulosRecargas">
+
+			<soap:operation style="document"
+				soapAction="http://tempuri.org/ObtenerModulosRecargas" />
+
+
+	
+			<wsdl:input>
+
+				<soap:body use="literal" />
+
+			</wsdl:input>
+
+
+	
+			<wsdl:output>
+
+				<soap:body use="literal" />
+
+			</wsdl:output>
+
+		</wsdl:operation>
+
+
+
+		<wsdl:operation name="ObtenerMediosRecarga">
+
+			<soap:operation style="document"
+				soapAction="http://tempuri.org/ObtenerMediosRecarga" />
+
+
+	
+			<wsdl:input>
+
+				<soap:body use="literal" />
+
+			</wsdl:input>
+
+
+	
+			<wsdl:output>
+
+				<soap:body use="literal" />
+
+			</wsdl:output>
+
+		</wsdl:operation>
+
+	</wsdl:binding>
+
+
+
+	<wsdl:binding name="SingleServiceSoap12" type="tns:SingleServiceSoap">
+
+		<soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+
+
+
+		<wsdl:operation name="ObtenerCuenta">
+
+			<soap12:operation style="document"
+				soapAction="http://tempuri.org/ObtenerCuenta" />
+
+
+	
+			<wsdl:input>
+
+				<soap12:body use="literal" />
+
+			</wsdl:input>
+
+
+	
+			<wsdl:output>
+
+				<soap12:body use="literal" />
+
+			</wsdl:output>
+
+		</wsdl:operation>
+
+
+
+		<wsdl:operation name="ObtenerUsuario">
+
+			<soap12:operation style="document"
+				soapAction="http://tempuri.org/ObtenerUsuario" />
+
+
+	
+			<wsdl:input>
+
+				<soap12:body use="literal" />
+
+			</wsdl:input>
+
+
+	
+			<wsdl:output>
+
+				<soap12:body use="literal" />
+
+			</wsdl:output>
+
+		</wsdl:operation>
+
+
+
+		<wsdl:operation name="ObtenerPromociones">
+
+			<soap12:operation style="document"
+				soapAction="http://tempuri.org/ObtenerPromociones" />
+
+
+	
+			<wsdl:input>
+
+				<soap12:body use="literal" />
+
+			</wsdl:input>
+
+
+	
+			<wsdl:output>
+
+				<soap12:body use="literal" />
+
+			</wsdl:output>
+
+		</wsdl:operation>
+
+
+
+		<wsdl:operation name="ObtenerTags">
+
+			<soap12:operation style="document"
+				soapAction="http://tempuri.org/ObtenerTags" />
+
+
+	
+			<wsdl:input>
+
+				<soap12:body use="literal" />
+
+			</wsdl:input>
+
+
+	
+			<wsdl:output>
+
+				<soap12:body use="literal" />
+
+			</wsdl:output>
+
+		</wsdl:operation>
+
+
+
+		<wsdl:operation name="ActivarTag">
+
+			<soap12:operation style="document"
+				soapAction="http://tempuri.org/ActivarTag" />
+
+
+	
+			<wsdl:input>
+
+				<soap12:body use="literal" />
+
+			</wsdl:input>
+
+
+	
+			<wsdl:output>
+
+				<soap12:body use="literal" />
+
+			</wsdl:output>
+
+		</wsdl:operation>
+
+
+
+		<wsdl:operation name="ObtenerTransaccionesTag">
+
+			<soap12:operation style="document"
+				soapAction="http://tempuri.org/ObtenerTransaccionesTag" />
+
+
+	
+			<wsdl:input>
+
+				<soap12:body use="literal" />
+
+			</wsdl:input>
+
+
+	
+			<wsdl:output>
+
+				<soap12:body use="literal" />
+
+			</wsdl:output>
+
+		</wsdl:operation>
+
+
+
+		<wsdl:operation name="ObtenerModulosRecargas">
+
+			<soap12:operation style="document"
+				soapAction="http://tempuri.org/ObtenerModulosRecargas" />
+
+
+	
+			<wsdl:input>
+
+				<soap12:body use="literal" />
+
+			</wsdl:input>
+
+
+	
+			<wsdl:output>
+
+				<soap12:body use="literal" />
+
+			</wsdl:output>
+
+		</wsdl:operation>
+
+
+
+		<wsdl:operation name="ObtenerMediosRecarga">
+
+			<soap12:operation style="document"
+				soapAction="http://tempuri.org/ObtenerMediosRecarga" />
+
+
+	
+			<wsdl:input>
+
+				<soap12:body use="literal" />
+
+			</wsdl:input>
+
+
+	
+			<wsdl:output>
+
+				<soap12:body use="literal" />
+
+			</wsdl:output>
+
+		</wsdl:operation>
+
+	</wsdl:binding>
+
+
+
+	<wsdl:service name="SingleService">
+
+
+
+		<wsdl:port name="SingleServiceSoap" binding="tns:SingleServiceSoap">
+
+			<soap:address
+				location="https://portalmicropago.monedero.com.ar/wsentidadesbancarias/SingleService.asmx" />
+
+		</wsdl:port>
+
+
+
+		<wsdl:port name="SingleServiceSoap12" binding="tns:SingleServiceSoap12">
+
+			<soap12:address
+				location="https://portalmicropago.monedero.com.ar/wsentidadesbancarias/SingleService.asmx" />
+
+		</wsdl:port>
+
+	</wsdl:service>
+
+</wsdl:definitions>

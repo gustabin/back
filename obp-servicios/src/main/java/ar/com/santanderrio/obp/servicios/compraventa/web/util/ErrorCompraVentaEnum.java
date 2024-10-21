@@ -1,0 +1,178 @@
+/**
+ * 
+ */
+package ar.com.santanderrio.obp.servicios.compraventa.web.util;
+
+import ar.com.santanderrio.obp.servicios.comun.mensajes.util.CodigoMensajeConstantes;
+import ar.com.santanderrio.obp.servicios.comun.respuesta.TipoError;
+
+// TODO: Auto-generated Javadoc
+/**
+ * The Enum ErrorCompraVentaEnum.
+ *
+ * @author sabrina.cis
+ */
+public enum ErrorCompraVentaEnum {
+
+	/** The operacion fuera horario. */
+	OPERACION_FUERA_HORARIO(10000077, CompraVentaStringUtil.SUCURSAL_ORIGEN_FUERA_HORARIO, TipoError.WARNING_SUCURSAL_ORIGEN_FUERA_HORARIO, CodigoMensajeConstantes.CODIGO_ERROR_OPERACION_NO_DISPONIBLE_HORARIO_SUCURSAL),
+
+	/** The cambio la cotizacion. */
+	CAMBIO_LA_COTIZACION(10000006, CompraVentaStringUtil.CAMBIO_COTIZACION_DOLAR, TipoError.ERROR_CAMBIO_COTIZACION_DOLAR, CodigoMensajeConstantes.CODIGO_ERROR_CAMBIO_COTIZACION_DOLAR),
+
+	/** The actualizacion datos cuenta. */
+	ACTUALIZACION_DATOS_CUENTA(10000004, CompraVentaStringUtil.ACTUALIZACION_DATOS_CUENTA, TipoError.ERROR_ACTUALIZACION_DATOS_CUENTA, CodigoMensajeConstantes.CODIGO_ERROR_ACTUALIZACION_DATOS_CUENTA),		
+	
+	/** The monto excede el permitido 2. */
+	MONTO_EXCEDE_EL_PERMITIDO_2(10000002, CompraVentaStringUtil.MONTO_EXCEDE_TRANSACCION_PERMITIDA, TipoError.ERROR_MONTO_EXCEDE_TRANSACCION_PERMITIDA, CodigoMensajeConstantes.CODIGO_ERROR_MONTO_EXCEDE_TRANSACCION_PERMITIDA),
+
+	/** The monto excede maximo permitido. */
+	MONTO_EXCEDE_MAXIMO_PERMITIDO(10000002, CompraVentaStringUtil.MONTO_EXCEDE_MAXIMO_TRANSACCIONA, TipoError.ERROR_MONTO_EXCEDE_TRANSACCION_PERMITIDA, CodigoMensajeConstantes.CODIGO_ERROR_MONTO_EXCEDE_MAXIMO_PERMITIDO),
+	
+	/** The cuenta inhabilitada 1. */
+	CUENTA_INHABILITADA_1(10002001, CompraVentaStringUtil.ERROR_DE_SERVICIO, TipoError.ERROR_DE_SERVICIOS_COMPRA_VENTA, CodigoMensajeConstantes.CODIGO_ERROR_DE_SERVICIOS_COMPRA_VENTA),
+
+	/** The cuenta inhabilitada 2. */
+	CUENTA_INHABILITADA_2(10000008, CompraVentaStringUtil.CUENTA_DOLARES_PESOS_INHABILITADA, TipoError.ERROR_CUENTA_DOLARES_PESOS_INHABILITADA, CodigoMensajeConstantes.CODIGO_ERROR_SIN_CUENTA_DOLARES_PESOS_HABILITADA),
+
+	/** The cuentainhabilitada 3. */
+	CUENTAINHABILITADA_3(10002065, CompraVentaStringUtil.CUENTA_DOLARES_PESOS_INHABILITADA, TipoError.ERROR_CUENTA_DOLARES_PESOS_INHABILITADA, CodigoMensajeConstantes.CODIGO_ERROR_SIN_CUENTA_DOLARES_PESOS_HABILITADA),
+
+	/** The saldo insuficiente 1. */
+	SALDO_INSUFICIENTE_1(10002122, CompraVentaStringUtil.SALDO_INSUFICIENTE2, TipoError.ERROR_SALDO_INSUFICIENTE, CodigoMensajeConstantes.CODIGO_ERROR_SALDO_INSUFICIENTE),
+
+	/** The saldo insuficiente 2. */
+	SALDO_INSUFICIENTE_2(10000515, CompraVentaStringUtil.SALDO_INSUFICIENTE2, TipoError.ERROR_SALDO_INSUFICIENTE, CodigoMensajeConstantes.CODIGO_ERROR_SALDO_INSUFICIENTE),
+
+	/** The saldo insuficiente 3. */
+	SALDO_INSUFICIENTE_3(10002122, CompraVentaStringUtil.SALDO_INSUFICIENTE2, TipoError.ERROR_SALDO_INSUFICIENTE, CodigoMensajeConstantes.CODIGO_ERROR_SALDO_INSUFICIENTE2),
+
+	/** The error de servicio. */
+	ERROR_DE_SERVICIO(10000515, CompraVentaStringUtil.ERROR_DE_SERVICIO, TipoError.ERROR_DE_SERVICIOS_COMPRA_VENTA, CodigoMensajeConstantes.CODIGO_ERROR_DE_SERVICIOS_COMPRA_VENTA),
+	
+	/** The error de servicio. */
+	ERROR_SERVICIO_CNSCOTCN_INACTIVO(10099906, CompraVentaStringUtil.ERROR_DE_SERVICIO, TipoError.ERROR_DE_SERVICIOS_COMPRA_VENTA, CodigoMensajeConstantes.CODIGO_ERROR_DE_SERVICIOS_COTIZACION_INACTIVO),
+
+	/** The no se puede realizar la operacion. */
+	NO_SE_PUEDE_REALIZAR_LA_OPERACION(999, CompraVentaStringUtil.OPERACION_INHABILITADA, TipoError.ERROR_OPERACION_INHABILITADA, CodigoMensajeConstantes.CODIGO_ERROR_NO_SE_PUEDE_REALIZAR_LA_OPERACION),
+
+	/** The sin acceso a la informacion. */
+	SIN_ACCESO_A_LA_INFORMACION(1, CompraVentaStringUtil.SIN_INFORMACION, TipoError.ERROR_SIN_ACCESO_A_INFORMACION, CodigoMensajeConstantes.CODIGO_ERROR_NO_SE_PUEDE_ACCEDER_A_LA_INFORMACION),
+
+	/** The no se encontro doc valido. */
+	NO_SE_ENCONTRO_DOC_VALIDO(2, CompraVentaStringUtil.DOCUMENTO_INVALIDO, TipoError.DOCUMENTO_INVALIDO, CodigoMensajeConstantes.CODIGO_ERROR_DOCUMENTO_INVALIDO),
+
+	/** The cuenta origen fuera horario. */
+	CUENTA_ORIGEN_FUERA_HORARIO(3, CompraVentaStringUtil.CUENTA_ORIGEN_FUERA_HORARIO, TipoError.ERROR_CUENTA_ORIGEN_FUERA_HORARIO, CodigoMensajeConstantes.CODIGO_ERROR_OPERACION_NO_DISPONIBLE_HORARIO_SUCURSAL),
+
+	/** The cotizacion error servicio. */
+	COTIZACION_ERROR_SERVICIO(4, CompraVentaStringUtil.COTIZACION_SERVICIO_ERROR, TipoError.ERROR_SIN_ACCESO_A_INFORMACION, CodigoMensajeConstantes.CODIGO_ERROR_NO_SE_PUEDE_ACCEDER_A_LA_INFORMACION),
+
+    /** The cuenta 180 dias sin operar. */
+    CUENTA_180_DIAS_SIN_OPERAR(10000117,CompraVentaStringUtil.CUENTA_SIN_OPERAR,TipoError.ERROR_CUENTA_180_DIAS_SIN_OPERAR,CodigoMensajeConstantes.CODIGO_ERROR_CUENTA_180_DIAS_SIN_OPERAR),
+    
+    /** The documentacion insufiiente error servicio. */
+    DOCUMENTACION_INSUFICIENTE_COMPRA(10000071,CompraVentaStringUtil.DOCUMENTACION_INSUFICIENTE,TipoError.ERROR_DOCUMENTACION_RESPALDATORIA_INSUFICIENTE,CodigoMensajeConstantes.CODIGO_DOCUMENTACION_INSUFICIENTE_COMPRA),
+
+    /** The documentacion insufiiente error servicio. */
+	DOCUMENTACION_INSUFICIENTE_VENTA(10000071,CompraVentaStringUtil.DOCUMENTACION_INSUFICIENTE,TipoError.ERROR_DOCUMENTACION_RESPALDATORIA_INSUFICIENTE,CodigoMensajeConstantes.CODIGO_DOCUMENTACION_INSUFICIENTE_VENTA),
+	
+	/** The operacion fuera horario. */
+	CODIGO_BOTON_PANICO(10000777, CompraVentaStringUtil.BOTON_PANICO, TipoError.ERROR_BOTON_PANICO, null),
+		
+	/** The codigo online bcra. */
+	CODIGO_ONLINE_BCRA(10000778, CompraVentaStringUtil.CODIGO_ONLINE_BCRA, TipoError.CODIGO_ONLINE_BCRA, null),
+
+    /** The codigo online bcra. */
+    CODIGO_ONLINE_BCRA_OPERACION_NO_PERMITIDA(10000123, CompraVentaStringUtil.CODIGO_OPERACION_NO_PERMITIDA, TipoError.OPERACION_NO_PERMITIDA, CodigoMensajeConstantes.ERROR_COMPRA_VENTA_OPERACION_NO_PERMITIDA),
+    
+    OPERACION_NO_PERMITIDA_COD_7105(10009077, CompraVentaStringUtil.OPERACION_INHABILITADA_NORMATIVO_7105, TipoError.ERROR_OPERACION_INHABILITADA, CodigoMensajeConstantes.COMPRA_DOLARES_INVITACION_CARGA_DOCUMENTACION ),
+    
+    ERROR_COMPRA_USD_NO_DOCUMENTA_INGRESOS(10000161, CompraVentaStringUtil.COMPRA_USD_NO_DOCUMENTA_INGRESOS, TipoError.ERROR_COMPRA_USD_NO_DOCUMENTA_INGRESOS, CodigoMensajeConstantes.COMPRA_DOLARES_INVITACION_CARGA_DOCUMENTACION), 
+    
+    ERROR_OPERA_USD_ERROR_INHABILITADO_BCRA(10000005, CompraVentaStringUtil.ERROR_INHABILITADO_BCRA, TipoError.ERROR_INHABILITADO_BCRA, CodigoMensajeConstantes.ERROR_OPERA_USD_ERROR_INHABILITADO_BCRA),
+    
+    ERROR_OPERA_USD_SUB_ANSES(10000771, CompraVentaStringUtil.OPERA_USD_SUB_ANSES, TipoError.ERROR_OPERA_USD_SUB_ANSES, CodigoMensajeConstantes.ERROR_OPERA_USD_SUBSIDIO_ANSES), 
+    ERROR_OPERA_USD_EXCEDE_LIMITE_ATESORAMIENTO(10000772, CompraVentaStringUtil.OPERA_USD_EXCEDE_LIMITE_ATESORAMIENTO, TipoError.ERROR_OPERA_USD_EXCEDE_LIMITE_ATESORAMIENTO, CodigoMensajeConstantes.ERROR_OPERA_USD_EXCEDE_LIM_CONSUMIDO_CLIENTE), 
+    ERROR_OPERA_USD_EXCEDE_TRJ_Y_ATESORAMIENTO_2(10000773, CompraVentaStringUtil.OPERA_USD_EXCEDE_TRJ_Y_ATESORAMIENTO_2, TipoError.ERROR_OPERA_USD_EXCEDE_TRJ_Y_ATESORAMIENTO_2, CodigoMensajeConstantes.ERROR_OPERA_USD_EXCEDE_LIM_CONSUMIDO_CLIENTE_TRJ), 
+    ERROR_OPERA_USD_EXCEDE_TRJ_Y_ATESORAMIENTO(10000774, CompraVentaStringUtil.OPERA_USD_EXCEDE_EXCEDE_CONSUMIDO_CLIENTE_AMBOS, TipoError.ERROR_USD_EXCEDE_TRJ_Y_ATESORAMIENTO, CodigoMensajeConstantes.ERROR_OPERA_USD_EXCEDE_CONSUMIDO_CLIENTE_AMBOS), 
+    ERROR_OPERA_USD_YA_REGISTRA_OPERACION_MENSUAL(10000775, CompraVentaStringUtil.OPERA_USD_YA_REGISTRA_OPERACION_MENSUAL, TipoError.ERROR_OPERA_USD_YA_REGISTRA_OPERACION_MENSUAL, CodigoMensajeConstantes.ERROR_OPERA_USD_OPER_OTRO_TITULAR), 
+    ERROR_OPERA_USD_VENDE_BONOS_USD(10000776, CompraVentaStringUtil.OPERA_USD_VENDE_BONOS_USD, TipoError.ERROR_OPERA_USD_VENDE_BONOS_USD, CodigoMensajeConstantes.ERROR_OPERA_USD_VERIFICAR_COMP_A),
+    ERROR_OPERA_USD_EXCEDE_LIMITE_TRJ(10000779, CompraVentaStringUtil.OPERA_USD_EXCEDE_LIMITE_TRJ, TipoError.ERROR_OPERA_USD_EXCEDE_LIMITE_TRJ, CodigoMensajeConstantes.ERROR_OPERA_USD_EXCEDE_LIMITE_CLIENTE_TRJ), 
+    ERROR_OPERA_USD_EXCEDE_TRJ_Y_ATESORAMIENTO_3(10000780, CompraVentaStringUtil.OPERA_USD_EXCEDE_LIMITE_CLIENTE_AMBOS, TipoError.ERROR_OPERA_USD_EXCEDE_TRJ_Y_ATESORAMIENTO_3, CodigoMensajeConstantes.ERROR_OPERA_USD_EXCEDE_LIMITE_CLIENTE_AMBOS),
+    ERROR_OPERA_USD_FUNCIONARIO_PUBLICO(10000770, CompraVentaStringUtil.OPERA_USD_FUNCIONARIO_PUBLICO, TipoError.ERROR_OPERA_USD_FUNCIONARIO_PUBLICO, CodigoMensajeConstantes.ERROR_OPERA_USD_NO_PERMITIDA_FUNCIONARIO_PUBLICO),
+    ERROR_OPERA_USD_NO_PERMITIDA_CERTIFICACION_POSITIVA(10009078, CompraVentaStringUtil.OPERA_USD_ERROR_CERTIFICACION_POSITIVA, TipoError.ERROR_OPERA_USD_CERTIFICACION_POSITIVA, CodigoMensajeConstantes.ERROR_OPERA_USD_NO_PERMITIDA_CERTIFICACION_POSITIVA),
+	ERROR_OPERA_USB_INHABILITADO_BCRA_AMEC_21(10000021, CompraVentaStringUtil.ERROR_INHABILITADO_BCRA_AMEC_21, TipoError.ERROR_INHABILITADO_BCRA_AMEC_21, CodigoMensajeConstantes.ERROR_OPERA_USB_INHABILITADO_BCRA_AMEC_21),
+	ERROR_INHABILITADO_BCRA_AMEC_43(10000043, CompraVentaStringUtil.ERROR_INHABILITADO_BCRA_AMEC_43, TipoError.ERROR_INHABILITADO_BCRA_AMEC_43, CodigoMensajeConstantes.ERROR_OPERA_USB_INHABILITADO_BCRA_AMEC_43),
+	ERROR_INHABILITADO_BCRA_AMEC_42(10000042, CompraVentaStringUtil.ERROR_INHABILITADO_BCRA_AMEC_42, TipoError.ERROR_INHABILITADO_BCRA_AMEC_42, CodigoMensajeConstantes.ERROR_OPERA_USB_INHABILITADO_BCRA_AMEC_42),
+	COD_CUENTA_ALFA_NO_VERIFICADA_NUNCA_OPERO_USD(10009079, CompraVentaStringUtil.COD_CUENTA_ALFA_NO_VERIFICADA_NUNCA_OPERO_USD, TipoError.ERROR_OPERACION_INHABILITADA, CodigoMensajeConstantes.ERROR_CUENTA_ALFA_NO_VERIFICADA_NUNCA_OPERO_USD),
+	COD_CUENTA_ALFA_NO_VERIFICADA(10009080, CompraVentaStringUtil.COD_CUENTA_ALFA_NO_VERIFICADA, TipoError.ERROR_OPERACION_INHABILITADA, CodigoMensajeConstantes.ERROR_CUENTA_ALFA_NO_VERIFICADA);
+
+	/** The codigo. */
+	private Integer codigo;
+
+	/** The tag. */
+	private String tag;
+
+	/** The tipo error. */
+	private TipoError tipoError;
+
+	/** The codigo mensaje. */
+	private String codigoMensaje;
+
+	/**
+	 * Instantiates a new error compra venta enum.
+	 *
+	 * @param codigo
+	 *            the codigo
+	 * @param tag
+	 *            the tag
+	 * @param tipoError
+	 *            the tipo error
+	 * @param codigoMensaje
+	 *            the codigo mensaje
+	 */
+	ErrorCompraVentaEnum(Integer codigo, String tag, TipoError tipoError, String codigoMensaje) {
+		this.codigo = codigo;
+		this.tag = tag;
+		this.tipoError = tipoError;
+		this.codigoMensaje = codigoMensaje;
+	}
+
+	/**
+	 * Gets the tag.
+	 *
+	 * @return the tag
+	 */
+	public String getTag() {
+		return tag;
+	}
+
+	/**
+	 * Gets the tipo error.
+	 *
+	 * @return the tipo error
+	 */
+	public TipoError getTipoError() {
+		return tipoError;
+	}
+
+	/**
+	 * Gets the codigo mensaje.
+	 *
+	 * @return the codigo mensaje
+	 */
+	public String getCodigoMensaje() {
+		return codigoMensaje;
+	}
+
+	/**
+	 * Gets the codigo.
+	 *
+	 * @return the codigo
+	 */
+	public Integer getCodigo() {
+		return codigo;
+	}
+
+}

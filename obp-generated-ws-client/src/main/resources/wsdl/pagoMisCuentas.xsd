@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xs:schema xmlns:xs='http://www.w3.org/2001/XMLSchema'>
+	<xs:element name="Pagos">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Usuario">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="tipoDocumento">
+								<xs:simpleType>
+									<xs:restriction base="xs:normalizedString">
+										<xs:enumeration value="DNI"/>
+										<xs:enumeration value="dni"/>
+										<xs:enumeration value="CI"/>
+										<xs:enumeration value="ci"/>
+										<xs:enumeration value="LE"/>
+										<xs:enumeration value="le"/>
+										<xs:enumeration value="LC"/>
+										<xs:enumeration value="lc"/>
+										<xs:enumeration value="PAS"/>
+										<xs:enumeration value="pas"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="nroDocumento">
+								<xs:simpleType>
+									<xs:restriction base="xs:normalizedString">
+										<xs:maxLength value="12"/>
+										<xs:pattern value="([0-9])*"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="nroTarjeta">
+								<xs:simpleType>
+									<xs:restriction base="xs:normalizedString">
+										<xs:pattern value="([0-9])*"/>
+										<xs:minLength value="16"/>
+										<xs:maxLength value="19"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Pago" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:choice>
+								<xs:element name="Cuenta">
+									<xs:complexType>
+										<xs:sequence>
+											<xs:element name="moneda" type="monedaType"/>
+											<xs:element name="tipo">
+												<xs:annotation>
+													<xs:documentation>
+														Tipo de Cuenta (0=CC, 1=CA)
+													</xs:documentation>
+												</xs:annotation>
+												<xs:simpleType>
+													<xs:restriction base="xs:integer">
+														<xs:minInclusive value="0"/>
+														<xs:maxInclusive value="2"/>
+													</xs:restriction>
+												</xs:simpleType>
+											</xs:element>
+											<xs:element name="numero">
+												<xs:simpleType>
+													<xs:restriction base="xs:normalizedString">
+														<xs:pattern value="([0-9])*"/>
+													</xs:restriction>
+												</xs:simpleType>
+											</xs:element>
+											<xs:element name="ctaEspecial" default="false" maxOccurs="1" 
+																minOccurs="0" type="xs:boolean">
+												<xs:annotation>
+													<xs:documentation>
+														Determina si es Cuenta Especial
+													</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+								<xs:element  name="Tarjeta">
+									<xs:complexType>
+										<xs:sequence>
+											<xs:element name="numero">
+										<xs:annotation>
+													<xs:documentation>
+														Numero de la Tarjeta de Credito
+													</xs:documentation>
+												</xs:annotation>
+												<xs:simpleType>
+													<xs:restriction base="xs:normalizedString">
+														<xs:pattern value="([0-9])*"/>
+													</xs:restriction>
+												</xs:simpleType>
+											</xs:element>
+											<xs:element name="fechaVencimiento">
+												<xs:annotation>
+													<xs:documentation>
+														Fecha de Vencimiento de la Tarjeta de Credito en formato MMYY
+													</xs:documentation>
+												</xs:annotation>
+												<xs:simpleType>
+													<xs:restriction base="xs:normalizedString">
+														<xs:pattern value="([0-9])*"/>
+														<xs:length value="4"></xs:length>
+													</xs:restriction>
+												</xs:simpleType>
+											</xs:element>
+											<xs:element name="marcaTarjeta">
+												<xs:annotation>
+													<xs:documentation>
+														Marca de la Tarjeta de Credito (04=VISA)
+													</xs:documentation>
+												</xs:annotation>
+												<xs:simpleType>
+													<xs:restriction base="xs:normalizedString">
+														<xs:pattern value="([0-9])*"/>
+														<xs:length value="2"></xs:length>
+													</xs:restriction>
+												</xs:simpleType>
+											</xs:element>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+							</xs:choice>
+							<xs:element name="Deuda">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="corpId">
+											<xs:annotation>
+												<xs:documentation>Id de la Empresa</xs:documentation>
+											</xs:annotation>
+											<xs:simpleType>
+												<xs:restriction base="xs:normalizedString">
+													<xs:maxLength value="4"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="idCliente" maxOccurs="1" minOccurs="0"
+															type="xs:normalizedString">
+											<xs:annotation>
+												<xs:documentation>
+													Identificacion del Cliente
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="moneda" maxOccurs="1" minOccurs="0" 
+															type="monedaType">
+											<xs:annotation>
+												<xs:documentation>Moneda de la deuda</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="importe" maxOccurs="1" minOccurs="0" 
+															type="xs:double">
+											<xs:annotation>
+												<xs:documentation>Importe de la deuda</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="modoAlta" maxOccurs="1" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>
+													Modo de Alta de la deuda
+												</xs:documentation>
+											</xs:annotation>
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:pattern value=" |A|B|P|Q"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="tipoPago" maxOccurs="1" minOccurs="0" >
+											<xs:annotation>
+												<xs:documentation>
+													Tipo de pago (3=total o 0=otro importe) solo para empresas tipo 3 o tarjetas de credito sin deuda
+												</xs:documentation>
+											</xs:annotation>
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:pattern value="0|3"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="nroFactura" maxOccurs="1" minOccurs="0"
+															type="xs:normalizedString">
+											<xs:annotation>
+												<xs:documentation>
+													Numero de Factura solo para empresas tipo 3 o tarjetas de crédito sin deuda. CUIT del empleador solo para empresas tipo 2 y período posterior a  11/2014 inclusive.
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="vencimiento" maxOccurs="1" minOccurs="0"
+											nillable="true" type="xs:dateTime">
+											<xs:annotation>
+												<xs:documentation>
+													Vencimiento de la factura. Solo empresas tipo 3 o tarjetas de credito sin deuda
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="idAdelanto" maxOccurs="1" minOccurs="0"
+															type="xs:normalizedString">
+											<xs:annotation>
+												<xs:documentation>
+													Id del adelanto para empresas tipo 2
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="diffPrePago" default="0" maxOccurs="1" 
+															minOccurs="0" type="xs:integer">
+											<xs:annotation>
+												<xs:documentation>
+													Numero random para los prepagos
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="otrasCuentas" default="false" maxOccurs="1"
+															minOccurs="0" type="xs:boolean">
+											<xs:annotation>
+												<xs:documentation>
+													Determina si la deuda viene de la grilla (false) o no (true)
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="textoPantalla" maxOccurs="1" minOccurs="0">
+											<xs:simpleType>
+												<xs:annotation>
+													<xs:documentation>Texto Pantalla solo
+														para empresas tipo 3 o tarjetas de
+														credito sin deuda</xs:documentation>
+												</xs:annotation>
+												<xs:restriction base="xs:normalizedString">
+													<xs:maxLength value="15"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:simpleType name="monedaType">
+		<xs:restriction base="xs:integer">
+			<xs:enumeration value="32"/>
+			<xs:enumeration value="840"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

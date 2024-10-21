@@ -1,0 +1,345 @@
+package ar.com.santanderrio.obp.servicios.scomp.client.domain;
+
+import javax.xml.bind.annotation.*;
+
+/**
+ * The Class TransferenciaPMCConDeuda.
+ */
+@XmlRootElement
+@XmlType
+@XmlAccessorType(XmlAccessType.FIELD)
+public class TransferenciaPMCOpenBank {
+    /** The empresa. */
+    @XmlElement(name = "Empresa")
+    protected String empresa;
+
+    /** The moneda. */
+    @XmlElement(name = "Moneda")
+    protected String moneda;
+
+    /** The importe. */
+    @XmlElement(name = "Importe")
+    protected String importe;
+
+    /** The identificacion. */
+    @XmlElement(name = "Identificacion")
+    protected String identificacion;
+
+    /** The fecha hora pago. */
+    @XmlElement(name = "FechaHoraPago")
+    protected String fechaHoraPago;
+
+    /** The fecha vencimiento. */
+    @XmlElement(name = "FechaVencimiento")
+    protected String fechaVencimiento;
+
+    /** The tipo tarjeta credito. */
+    @XmlElement(name = "TipoTarjetaCredito")
+    protected String tipoTarjetaCredito;
+
+    /** The numero tarjeta credito. */
+    @XmlElement(name = "NumeroTarjetaCredito")
+    protected String numeroTarjetaCredito;
+
+    /** The tipo cuenta debito. */
+    @XmlElement(name = "TipoCuentaDebito")
+    protected String tipoCuentaDebito;
+
+    /** The sucursal cuenta debito. */
+    @XmlElement(name = "SucursalCuentaDebito")
+    protected String sucursalCuentaDebito;
+
+    /** The numero cuenta debito. */
+    @XmlElement(name = "NumeroCuentaDebito")
+    protected String numeroCuentaDebito;
+
+    /** The leyenda factura. */
+    @XmlElement(name = "LeyendaFactura")
+    protected String leyendaFactura;
+
+    /** The num control. */
+    @XmlElement(name = "NumControl")
+    protected String numControl;
+
+    /** The nro comprobante. */
+    @XmlElement(name = "NroComprobante")
+    protected String nroComprobante;
+
+    @XmlElement(name = "NroTransaccion")
+    protected String nroTransaccion;
+
+    /**
+     * Gets the empresa.
+     *
+     * @return the empresa
+     */
+    public String getEmpresa() {
+        return empresa;
+    }
+
+    /**
+     * Sets the empresa.
+     *
+     * @param empresa
+     *            the new empresa
+     */
+    public void setEmpresa(String empresa) {
+        this.empresa = empresa;
+    }
+
+    /**
+     * Gets the moneda.
+     *
+     * @return the moneda
+     */
+    public String getMoneda() {
+        return moneda;
+    }
+
+    /**
+     * Sets the moneda.
+     *
+     * @param moneda
+     *            the new moneda
+     */
+    public void setMoneda(String moneda) {
+        this.moneda = moneda;
+    }
+
+    /**
+     * Gets the importe.
+     *
+     * @return the importe
+     */
+    public String getImporte() {
+        return importe;
+    }
+
+    /**
+     * Sets the importe.
+     *
+     * @param importe
+     *            the new importe
+     */
+    public void setImporte(String importe) {
+        this.importe = importe;
+    }
+
+    /**
+     * Gets the identificacion.
+     *
+     * @return the identificacion
+     */
+    public String getIdentificacion() {
+        return identificacion;
+    }
+
+    /**
+     * Sets the identificacion.
+     *
+     * @param identificacion
+     *            the new identificacion
+     */
+    public void setIdentificacion(String identificacion) {
+        this.identificacion = identificacion;
+    }
+
+    /**
+     * Gets the fecha hora pago.
+     *
+     * @return the fecha hora pago
+     */
+    public String getFechaHoraPago() {
+        return fechaHoraPago;
+    }
+
+    /**
+     * Sets the fecha hora pago.
+     *
+     * @param fechaHoraPago
+     *            the new fecha hora pago
+     */
+    public void setFechaHoraPago(String fechaHoraPago) {
+        this.fechaHoraPago = fechaHoraPago;
+    }
+
+    /**
+     * Gets the fecha vencimiento.
+     *
+     * @return the fecha vencimiento
+     */
+    public String getFechaVencimiento() {
+        return fechaVencimiento;
+    }
+
+    /**
+     * Sets the fecha vencimiento.
+     *
+     * @param fechaVencimiento
+     *            the new fecha vencimiento
+     */
+    public void setFechaVencimiento(String fechaVencimiento) {
+        this.fechaVencimiento = fechaVencimiento;
+    }
+
+    /**
+     * Gets the tipo cuenta debito.
+     *
+     * @return the tipo cuenta debito
+     */
+    public String getTipoCuentaDebito() {
+        return tipoCuentaDebito;
+    }
+
+    /**
+     * Sets the tipo cuenta debito.
+     *
+     * @param tipoCuentaDebito
+     *            the new tipo cuenta debito
+     */
+    public void setTipoCuentaDebito(String tipoCuentaDebito) {
+        this.tipoCuentaDebito = tipoCuentaDebito;
+    }
+
+    /**
+     * Gets the sucursal cuenta debito.
+     *
+     * @return the sucursal cuenta debito
+     */
+    public String getSucursalCuentaDebito() {
+        return sucursalCuentaDebito;
+    }
+
+    /**
+     * Sets the sucursal cuenta debito.
+     *
+     * @param sucursalCuentaDebito
+     *            the new sucursal cuenta debito
+     */
+    public void setSucursalCuentaDebito(String sucursalCuentaDebito) {
+        this.sucursalCuentaDebito = sucursalCuentaDebito;
+    }
+
+    /**
+     * Gets the numero cuenta debito.
+     *
+     * @return the numero cuenta debito
+     */
+    public String getNumeroCuentaDebito() {
+        return numeroCuentaDebito;
+    }
+
+    /**
+     * Sets the numero cuenta debito.
+     *
+     * @param numeroCuentaDebito
+     *            the new numero cuenta debito
+     */
+    public void setNumeroCuentaDebito(String numeroCuentaDebito) {
+        this.numeroCuentaDebito = numeroCuentaDebito;
+    }
+
+    /**
+     * Gets the leyenda factura.
+     *
+     * @return the leyenda factura
+     */
+    public String getLeyendaFactura() {
+        return leyendaFactura;
+    }
+
+    /**
+     * Sets the leyenda factura.
+     *
+     * @param leyendaFactura
+     *            the new leyenda factura
+     */
+    public void setLeyendaFactura(String leyendaFactura) {
+        this.leyendaFactura = leyendaFactura;
+    }
+
+    /**
+     * Gets the num control.
+     *
+     * @return the num control
+     */
+    public String getNumControl() {
+        return numControl;
+    }
+
+    /**
+     * Sets the num control.
+     *
+     * @param numControl
+     *            the new num control
+     */
+    public void setNumControl(String numControl) {
+        this.numControl = numControl;
+    }
+
+    /**
+     * Gets the nro comprobante.
+     *
+     * @return the nro comprobante
+     */
+    public String getNroComprobante() {
+        return nroComprobante;
+    }
+
+    /**
+     * Sets the nro comprobante.
+     *
+     * @param nroComprobante
+     *            the new nro comprobante
+     */
+    public void setNroComprobante(String nroComprobante) {
+        this.nroComprobante = nroComprobante;
+    }
+
+    /**
+     * Gets the tipo tarjeta credito.
+     *
+     * @return the tipoTarjetaCredito
+     */
+    public String getTipoTarjetaCredito() {
+        return tipoTarjetaCredito;
+    }
+
+    /**
+     * Sets the tipo tarjeta credito.
+     *
+     * @param tipoTarjetaCredito
+     *            the tipoTarjetaCredito to set
+     */
+    public void setTipoTarjetaCredito(String tipoTarjetaCredito) {
+        this.tipoTarjetaCredito = tipoTarjetaCredito;
+    }
+
+    /**
+     * Gets the numero tarjeta credito.
+     *
+     * @return the numeroTarjetaCredito
+     */
+    public String getNumeroTarjetaCredito() {
+        return numeroTarjetaCredito;
+    }
+
+    /**
+     * Sets the numero tarjeta credito.
+     *
+     * @param numeroTarjetaCredito
+     *            the numeroTarjetaCredito to set
+     */
+    public void setNumeroTarjetaCredito(String numeroTarjetaCredito) {
+        this.numeroTarjetaCredito = numeroTarjetaCredito;
+    }
+
+    public String getNroTransaccion() {
+        return nroTransaccion;
+    }
+
+    public void setNroTransaccion(String nroTransaccion) {
+        this.nroTransaccion = nroTransaccion;
+    }
+
+}

@@ -1,0 +1,92 @@
+{
+  "audiences": [
+    {
+      "indicator": "AVI",
+      "indicatorValue": "1",
+      "type": "internals",
+      "createdBy": "PE4C3800",
+      "createdAt": "2021-02-01T00:00:00.000-03:00",
+      "modificationUser": "PE4C3800",
+      "modificationTerminal": "BATC",
+      "modificationBranch": "2278",
+      "updatedAt": "2021-04-07T07:39:17.966-03:00"
+    },
+    {
+      "indicator": "CIT",
+      "indicatorValue": "E",
+      "type": "internals",
+      "createdBy": "PE4C3800",
+      "createdAt": "2017-07-08T00:00:00.000-03:00",
+      "modificationUser": "PE4C3800",
+      "modificationTerminal": "BATC",
+      "modificationBranch": "2278",
+      "updatedAt": "2017-07-08T20:28:00.286-03:00"
+    },
+    {
+      "indicator": "GES",
+      "indicatorValue": "D",
+      "type": "models",
+      "createdBy": "PE4C3800",
+      "createdAt": "2020-12-10T00:00:00.000-03:00",
+      "modificationUser": "PE4C3800",
+      "modificationTerminal": "BATC",
+      "modificationBranch": "2278",
+      "updatedAt": "2020-12-12T07:34:12.620-03:00"
+    },
+    {
+      "indicator": "MIP",
+      "indicatorValue": "D",
+      "type": "tags",
+      "createdBy": "PE4C3800",
+      "createdAt": "2021-05-01T00:00:00.000-03:00",
+      "modificationUser": "PE4C3800",
+      "modificationTerminal": "BATC",
+      "modificationBranch": "2278",
+      "updatedAt": "2021-05-01T08:33:15.803-03:00"
+    },
+    {
+      "indicator": "PBC",
+      "indicatorValue": "S",
+      "type": "tags",
+      "createdBy": "PE4C3800",
+      "createdAt": "2021-01-09T00:00:00.000-03:00",
+      "modificationUser": "PE4C3800",
+      "modificationTerminal": "BATC",
+      "modificationBranch": "2278",
+      "updatedAt": "2021-01-09T06:53:03.284-03:00"
+    },
+    {
+      "indicator": "RSG",
+      "indicatorValue": "Y",
+      "type": "tags",
+      "createdBy": "PE4C3800",
+      "createdAt": "2021-04-29T00:00:00.000-03:00",
+      "modificationUser": "PE4C3800",
+      "modificationTerminal": "BATC",
+      "modificationBranch": "2278",
+      "updatedAt": "2021-04-30T07:32:18.974-03:00"
+    },
+    {
+      "indicator": "SEL",
+      "indicatorValue": "B",
+      "type": "audience",
+      "createdBy": "PE4C3800",
+      "createdAt": "2020-11-01T00:00:00.000-03:00",
+      "modificationUser": "PE4C3800",
+      "modificationTerminal": "BATC",
+      "modificationBranch": "2278",
+      "updatedAt": "2021-01-15T18:14:42.058-03:00"
+    },
+    {
+      "indicator": "TCL",
+      "indicatorValue": "S",
+      "type": "internals",
+      "createdBy": "AGUCI011",
+      "createdAt": "2002-05-28T00:00:00.000-03:00",
+      "modificationUser": "A284273",
+      "modificationTerminal": "T8JT",
+      "modificationBranch": "2525",
+      "updatedAt": "2016-10-21T16:31:03.735-03:00"
+    }
+  ]
+}

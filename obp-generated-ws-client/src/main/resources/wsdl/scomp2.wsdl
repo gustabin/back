@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.example.org/NewWSDLFile/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="NewWSDLFile" targetNamespace="http://www.example.org/NewWSDLFile/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.example.org/NewWSDLFile/">
+            <xsd:complexType name="NewType"></xsd:complexType>
+            <xsd:element name="ALTACOMPROBANTE">
+            	<xsd:complexType>
+            		<xsd:sequence>
+            			<xsd:element name="alta-soap-body">
+			            	<xsd:complexType>
+			            		<xsd:sequence>
+			            			<xsd:element name="cambio">
+						            	<xsd:complexType>
+						            		<xsd:sequence>
+						            			<xsd:element name="nombre" type="xsd:string"></xsd:element>
+						            			<xsd:element name="canal" type="xsd:int">
+						            			</xsd:element>
+						            			<xsd:element name="subcanal" type="xsd:int">
+						            			</xsd:element>
+						            			<xsd:element name="tipoComprobante"
+						            				type="xsd:int">
+						            			</xsd:element>
+						            			<xsd:element name="subTipoComprobante"
+						            				type="xsd:int">
+						            			</xsd:element>
+						            			<xsd:element name="comprobante"
+						            				type="xsd:string">
+						            			</xsd:element>
+						            		</xsd:sequence>
+						            	</xsd:complexType>
+					            	</xsd:element>
+			            		</xsd:sequence>
+			            	</xsd:complexType>
+		            	</xsd:element>
+            		</xsd:sequence>
+            	</xsd:complexType>
+            </xsd:element>
+            <xsd:element name="ALTACOMPROBANTEResponse">
+            	<xsd:complexType>
+            		<xsd:sequence>
+            			<xsd:element name="alta-response-soap-body">
+			            	<xsd:complexType>
+			            		<xsd:sequence>
+			            			<xsd:element name="respuesta_">
+						            	<xsd:complexType>
+						            		<xsd:sequence>
+						        				<xsd:element name="cod-ret" type="xsd:long"></xsd:element>
+						        				<xsd:element name="msj-info" type="xsd:string"></xsd:element>
+						        				<xsd:element name="msj-error" type="xsd:string"></xsd:element>
+						            		</xsd:sequence>
+						            	</xsd:complexType>
+					            	</xsd:element>
+			            		</xsd:sequence>
+			            	</xsd:complexType>
+		            	</xsd:element>
+            			<xsd:element name="soap-attach-part">
+			            	<xsd:complexType>
+			            		<xsd:sequence>
+			            			<xsd:element name="respuesta">
+						            	<xsd:complexType>
+						            		<xsd:sequence>
+						            			<xsd:element name="comprobante">
+									            	<xsd:complexType>
+									            		<xsd:sequence>
+						            						<xsd:element name="id" type="xsd:long"></xsd:element>
+									            		</xsd:sequence>
+									            	</xsd:complexType>
+									            </xsd:element>
+						            		</xsd:sequence>
+						            	</xsd:complexType>
+					            	</xsd:element>
+			            		</xsd:sequence>
+			            	</xsd:complexType>
+		            	</xsd:element>
+            		</xsd:sequence>
+            	</xsd:complexType>
+            </xsd:element>
+            <xsd:element name="CNSLISTACOMPROBANTES">
+            	<xsd:complexType>
+            		<xsd:sequence>
+            			<xsd:element name="lista-soap-body">
+			            	<xsd:complexType>
+			            		<xsd:sequence>
+			            			<xsd:element name="consulta">
+						            	<xsd:complexType>
+						            		<xsd:sequence>
+						            			<xsd:element name="nombre"
+						            				type="xsd:string">
+						            			</xsd:element>
+						            			<xsd:element name="version"
+						            				type="xsd:int">
+						            			</xsd:element>
+						            			<xsd:element name="canal"
+						            				type="xsd:int">
+						            			</xsd:element>
+						            			<xsd:element name="subcanal"
+						            				type="xsd:int">
+						            			</xsd:element>
+						            			<xsd:element name="filtros">
+									            	<xsd:complexType>
+									            		<xsd:sequence>
+									            			<xsd:element name="tpo-comp"
+									            				type="xsd:string">
+									            			</xsd:element>
+									            			<xsd:element name="sub-tpo-comp"
+									            				type="xsd:string">
+									            			</xsd:element>
+									            			<xsd:element name="estado-oper"
+									            				type="xsd:string">
+									            			</xsd:element>
+									            			<xsd:element name="fecha">
+												            	<xsd:complexType>
+												            		<xsd:sequence>
+												            			<xsd:element name="desde"
+												            				type="xsd:dateTime"></xsd:element>
+												            			<xsd:element name="hasta"
+												            				type="xsd:double"></xsd:element>
+												            		</xsd:sequence>
+												            	</xsd:complexType>
+									            			</xsd:element>
+									            			<xsd:element name="nup" type="xsd:string">
+									            			</xsd:element>
+									            			<xsd:element name="tpo-doc" type="xsd:string">
+									            			</xsd:element>
+									            			<xsd:element name="nro-doc" type="xsd:string">
+									            			</xsd:element>
+									            			<xsd:element name="id-emp-serv"
+									            				type="xsd:string">
+									            			</xsd:element>
+									            			<xsd:element name="id-medio-pago"
+									            				type="xsd:string">
+									            			</xsd:element>
+									            			<xsd:element name="id-cliente-emp"
+									            				type="xsd:string">
+									            			</xsd:element>
+									            			<xsd:element name="nom-emp-serv">
+												            	<xsd:complexType>
+												            		<xsd:sequence>
+												            			<xsd:element name="desde"
+												            				type="xsd:dateTime"></xsd:element>
+												            			<xsd:element name="hasta"
+												            				type="xsd:dateTime"></xsd:element>
+												            		</xsd:sequence>
+												            	</xsd:complexType>
+									            			</xsd:element>
+									            			<xsd:element name="categorias">
+												            	<xsd:complexType>
+												            		<xsd:sequence>
+												            			<xsd:element name="categoria">
+															            	<xsd:complexType>
+															            		<xsd:sequence>
+															            			<xsd:element name="id" type="xsd:int"></xsd:element>
+															            		</xsd:sequence>
+															            	</xsd:complexType>
+												            			</xsd:element>
+												            		</xsd:sequence>
+												            	</xsd:complexType>
+									            			</xsd:element>
+									            		</xsd:sequence>
+									            	</xsd:complexType>
+						            			</xsd:element>
+						            			<xsd:element name="parametros">
+									            	<xsd:complexType>
+									            		<xsd:sequence>
+									            			<xsd:element name="formato-respuesta"
+									            				type="xsd:string">
+								            				</xsd:element>
+									            		</xsd:sequence>
+									            	</xsd:complexType>
+						            			</xsd:element>
+						            		</xsd:sequence>
+						            	</xsd:complexType>
+				           			</xsd:element>
+				           		</xsd:sequence>
+				           	</xsd:complexType>
+	           			</xsd:element>
+	           		</xsd:sequence>
+	           	</xsd:complexType>
+            </xsd:element>
+            <xsd:element name="CNSLISTACOMPROBANTESResponse">
+            	<xsd:complexType>
+            		<xsd:sequence>
+            			<xsd:element name="lista-response-soap-body">
+			            	<xsd:complexType>
+			            		<xsd:sequence>
+			            			<xsd:element name="respuesta_">
+						            	<xsd:complexType>
+						            		<xsd:sequence>
+						        				<xsd:element name="cod-ret" type="xsd:long"></xsd:element>
+						        				<xsd:element name="msj-info" type="xsd:string"></xsd:element>
+						        				<xsd:element name="msj-error" type="xsd:string"></xsd:element>
+						            		</xsd:sequence>
+						            	</xsd:complexType>
+					            	</xsd:element>
+			            		</xsd:sequence>
+			            	</xsd:complexType>
+		            	</xsd:element>
+            			<xsd:element name="soap-attach-part">
+			            	<xsd:complexType>
+			            		<xsd:sequence>
+			            			<xsd:element name="respuesta">
+						            	<xsd:complexType>
+						            		<xsd:sequence>
+						            			<xsd:element name="comprobantes">
+									            	<xsd:complexType>
+									            		<xsd:sequence>
+									            			<xsd:element name="comprobante">
+												            	<xsd:complexType>
+												            		<xsd:sequence>
+												            			<xsd:element
+												            				name="id" type="xsd:int">
+												            			</xsd:element>
+			                                                            <xsd:element name="tipo" type="xsd:int">
+												            			</xsd:element>
+			                                                            <xsd:element
+												            				name="categorias">
+												            				<xsd:complexType>
+												            					<xsd:sequence>
+												            						<xsd:element
+												            							name="categoria">
+												            							<xsd:complexType>
+												            								<xsd:sequence>
+												            									<xsd:element
+												            										name="id" type="xsd:int">
+												            									</xsd:element>
+												            									<xsd:element
+												            										name="descripcion" type="xsd:string">
+												            									</xsd:element>
+												            								</xsd:sequence>
+												            							</xsd:complexType>
+												            						</xsd:element>
+												            					</xsd:sequence>
+												            				</xsd:complexType>
+												            			</xsd:element>
+												            			<xsd:element
+												            				name="detalle" type="xsd:string">
+												            			</xsd:element>			
+												            		</xsd:sequence>
+												            	</xsd:complexType>
+									            			</xsd:element>
+									            		</xsd:sequence>
+									            	</xsd:complexType>
+						            			</xsd:element>
+						            		</xsd:sequence>
+						            	</xsd:complexType>
+					            	</xsd:element>
+			            		</xsd:sequence>
+			            	</xsd:complexType>
+		            	</xsd:element>
+            		</xsd:sequence>
+            	</xsd:complexType>
+            </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ALTACOMPROBANTERequest">
+  	<wsdl:part name="parameters" element="tns:ALTACOMPROBANTE"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ALTACOMPROBANTEResponse">
+  	<wsdl:part name="parameters" element="tns:ALTACOMPROBANTEResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="CNSLISTACOMPROBANTESRequest">
+  	<wsdl:part name="parameters" element="tns:CNSLISTACOMPROBANTES"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="CNSLISTACOMPROBANTESResponse">
+  	<wsdl:part name="parameters" element="tns:CNSLISTACOMPROBANTESResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="NUEVO_SCOMP">
+    <wsdl:operation name="ALTACOMPROBANTE">
+    	<wsdl:input message="tns:ALTACOMPROBANTERequest"></wsdl:input>
+    	<wsdl:output message="tns:ALTACOMPROBANTEResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CNSLISTACOMPROBANTES">
+    	<wsdl:input message="tns:CNSLISTACOMPROBANTESRequest"></wsdl:input>
+    	<wsdl:output message="tns:CNSLISTACOMPROBANTESResponse"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NewWSDLFileSOAP" type="tns:NUEVO_SCOMP">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+  </wsdl:binding>
+  <wsdl:service name="WSDL_NUEVO_SCOMP">
+    <wsdl:port binding="tns:NewWSDLFileSOAP" name="WDSL_NUEVO_SCOMP">
+      <soap:address location="http://www.example.org/"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

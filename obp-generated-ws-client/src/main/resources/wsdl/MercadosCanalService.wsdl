@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions name="MercadosCanalService"
+	targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+	xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+	xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata"
+	xmlns:tns="http://tempuri.org/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing"
+	xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract"
+	xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/"
+	xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex">
+	<wsdl:types>
+		<xsd:schema targetNamespace="http://tempuri.org/Imports">
+			<xsd:import
+				schemaLocation="http://webbmgdesa2:5670/MercadosCanalService.svc?xsd=xsd0"
+				namespace="http://tempuri.org/" />
+			<xsd:import
+				schemaLocation="http://webbmgdesa2:5670/MercadosCanalService.svc?xsd=xsd4"
+				namespace="http://schemas.datacontract.org/2004/07/ISBAN.Mercados.ServiceContracts" />
+			<xsd:import
+				schemaLocation="http://webbmgdesa2:5670/MercadosCanalService.svc?xsd=xsd1"
+				namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+			<xsd:import
+				schemaLocation="http://webbmgdesa2:5670/MercadosCanalService.svc?xsd=xsd2"
+				namespace="http://schemas.datacontract.org/2004/07/Isban.Adsec.Service.Entity" />
+			<xsd:import
+				schemaLocation="http://webbmgdesa2:5670/MercadosCanalService.svc?xsd=xsd3"
+				namespace="http://schemas.datacontract.org/2004/07/Isban.Adsec.Service" />
+			<xsd:import
+				schemaLocation="http://webbmgdesa2:5670/MercadosCanalService.svc?xsd=xsd5"
+				namespace="http://schemas.datacontract.org/2004/07/ISBAN.Mercados.ServiceContracts.Parameters" />
+		</xsd:schema>
+	</wsdl:types>
+	<wsdl:message
+		name="IMercadosCanalService_ConsultarOperacionesWs_InputMessage">
+		<wsdl:part name="parameters" element="tns:ConsultarOperacionesWs" />
+	</wsdl:message>
+	<wsdl:message
+		name="IMercadosCanalService_ConsultarOperacionesWs_OutputMessage">
+		<wsdl:part name="parameters" element="tns:ConsultarOperacionesWsResponse" />
+	</wsdl:message>
+	<wsdl:message
+		name="IMercadosCanalService_ConsultarOperacionesWs_MercadosServiceFaultFault_FaultMessage">
+		<wsdl:part name="detail" element="q1:MercadosServiceFault"
+			xmlns:q1="http://schemas.datacontract.org/2004/07/ISBAN.Mercados.ServiceContracts" />
+	</wsdl:message>
+	<wsdl:message
+		name="IMercadosCanalService_ConsultarOperacionesText_InputMessage">
+		<wsdl:part name="parameters" element="tns:ConsultarOperacionesText" />
+	</wsdl:message>
+	<wsdl:message
+		name="IMercadosCanalService_ConsultarOperacionesText_OutputMessage">
+		<wsdl:part name="parameters" element="tns:ConsultarOperacionesTextResponse" />
+	</wsdl:message>
+	<wsdl:message
+		name="IMercadosCanalService_ConsultarOperacionesText_MercadosServiceFaultFault_FaultMessage">
+		<wsdl:part name="detail" element="q2:MercadosServiceFault"
+			xmlns:q2="http://schemas.datacontract.org/2004/07/ISBAN.Mercados.ServiceContracts" />
+	</wsdl:message>
+	<wsdl:message name="IMercadosCanalService_ConsultaDeOrdenes_InputMessage">
+		<wsdl:part name="parameters" element="tns:ConsultaDeOrdenes" />
+	</wsdl:message>
+	<wsdl:message name="IMercadosCanalService_ConsultaDeOrdenes_OutputMessage">
+		<wsdl:part name="parameters" element="tns:ConsultaDeOrdenesResponse" />
+	</wsdl:message>
+	<wsdl:message
+		name="IMercadosCanalService_ConsultaDeOrdenes_MercadosServiceFaultFault_FaultMessage">
+		<wsdl:part name="detail" element="q3:MercadosServiceFault"
+			xmlns:q3="http://schemas.datacontract.org/2004/07/ISBAN.Mercados.ServiceContracts" />
+	</wsdl:message>
+	<wsdl:message name="IMercadosCanalService_SolicitarReversa_InputMessage">
+		<wsdl:part name="parameters" element="tns:SolicitarReversa" />
+	</wsdl:message>
+	<wsdl:message name="IMercadosCanalService_SolicitarReversa_OutputMessage">
+		<wsdl:part name="parameters" element="tns:SolicitarReversaResponse" />
+	</wsdl:message>
+	<wsdl:message
+		name="IMercadosCanalService_SolicitarReversa_MercadosServiceFaultFault_FaultMessage">
+		<wsdl:part name="detail" element="q4:MercadosServiceFault"
+			xmlns:q4="http://schemas.datacontract.org/2004/07/ISBAN.Mercados.ServiceContracts" />
+	</wsdl:message>
+	<wsdl:portType name="IMercadosCanalService">
+		<wsdl:operation name="ConsultarOperacionesWs">
+			<wsdl:input
+				wsaw:Action="http://tempuri.org/IMercadosCanalService/ConsultarOperacionesWs"
+				message="tns:IMercadosCanalService_ConsultarOperacionesWs_InputMessage" />
+			<wsdl:output
+				wsaw:Action="http://tempuri.org/IMercadosCanalService/ConsultarOperacionesWsResponse"
+				message="tns:IMercadosCanalService_ConsultarOperacionesWs_OutputMessage" />
+			<wsdl:fault
+				wsaw:Action="http://tempuri.org/IMercadosCanalService/ConsultarOperacionesWsMercadosServiceFaultFault"
+				name="MercadosServiceFaultFault"
+				message="tns:IMercadosCanalService_ConsultarOperacionesWs_MercadosServiceFaultFault_FaultMessage" />
+		</wsdl:operation>
+		<wsdl:operation name="ConsultarOperacionesText">
+			<wsdl:input
+				wsaw:Action="http://tempuri.org/IMercadosCanalService/ConsultarOperacionesText"
+				message="tns:IMercadosCanalService_ConsultarOperacionesText_InputMessage" />
+			<wsdl:output
+				wsaw:Action="http://tempuri.org/IMercadosCanalService/ConsultarOperacionesTextResponse"
+				message="tns:IMercadosCanalService_ConsultarOperacionesText_OutputMessage" />
+			<wsdl:fault
+				wsaw:Action="http://tempuri.org/IMercadosCanalService/ConsultarOperacionesTextMercadosServiceFaultFault"
+				name="MercadosServiceFaultFault"
+				message="tns:IMercadosCanalService_ConsultarOperacionesText_MercadosServiceFaultFault_FaultMessage" />
+		</wsdl:operation>
+		<wsdl:operation name="ConsultaDeOrdenes">
+			<wsdl:input
+				wsaw:Action="http://tempuri.org/IMercadosCanalService/ConsultaDeOrdenes"
+				message="tns:IMercadosCanalService_ConsultaDeOrdenes_InputMessage" />
+			<wsdl:output
+				wsaw:Action="http://tempuri.org/IMercadosCanalService/ConsultaDeOrdenesResponse"
+				message="tns:IMercadosCanalService_ConsultaDeOrdenes_OutputMessage" />
+			<wsdl:fault
+				wsaw:Action="http://tempuri.org/IMercadosCanalService/ConsultaDeOrdenesMercadosServiceFaultFault"
+				name="MercadosServiceFaultFault"
+				message="tns:IMercadosCanalService_ConsultaDeOrdenes_MercadosServiceFaultFault_FaultMessage" />
+		</wsdl:operation>
+		<wsdl:operation name="SolicitarReversa">
+			<wsdl:input
+				wsaw:Action="http://tempuri.org/IMercadosCanalService/SolicitarReversa"
+				message="tns:IMercadosCanalService_SolicitarReversa_InputMessage" />
+			<wsdl:output
+				wsaw:Action="http://tempuri.org/IMercadosCanalService/SolicitarReversaResponse"
+				message="tns:IMercadosCanalService_SolicitarReversa_OutputMessage" />
+			<wsdl:fault
+				wsaw:Action="http://tempuri.org/IMercadosCanalService/SolicitarReversaMercadosServiceFaultFault"
+				name="MercadosServiceFaultFault"
+				message="tns:IMercadosCanalService_SolicitarReversa_MercadosServiceFaultFault_FaultMessage" />
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="MercadosCanalService" type="tns:IMercadosCanalService">
+		<soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="ConsultarOperacionesWs">
+			<soap:operation
+				soapAction="http://tempuri.org/IMercadosCanalService/ConsultarOperacionesWs"
+				style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="MercadosServiceFaultFault">
+				<soap:fault name="MercadosServiceFaultFault" use="literal" />
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="ConsultarOperacionesText">
+			<soap:operation
+				soapAction="http://tempuri.org/IMercadosCanalService/ConsultarOperacionesText"
+				style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="MercadosServiceFaultFault">
+				<soap:fault name="MercadosServiceFaultFault" use="literal" />
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="ConsultaDeOrdenes">
+			<soap:operation
+				soapAction="http://tempuri.org/IMercadosCanalService/ConsultaDeOrdenes"
+				style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="MercadosServiceFaultFault">
+				<soap:fault name="MercadosServiceFaultFault" use="literal" />
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="SolicitarReversa">
+			<soap:operation
+				soapAction="http://tempuri.org/IMercadosCanalService/SolicitarReversa"
+				style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="MercadosServiceFaultFault">
+				<soap:fault name="MercadosServiceFaultFault" use="literal" />
+			</wsdl:fault>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="MercadosCanalService">
+		<wsdl:port name="MercadosCanalService" binding="tns:MercadosCanalService">
+			<soap:address location="http://webbmgdesa2:5670/MercadosCanalService.svc" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

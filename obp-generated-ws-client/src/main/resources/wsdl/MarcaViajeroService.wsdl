@@ -1,0 +1,485 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions name="MarcaViajero" targetNamespace="http://visa.com.ar/visahome/integration/ws/mv" xmlns:ns1="http://visa.com.ar/visahome/integration/ws/mv" xmlns:p="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy" xmlns:wsaws="http://www.w3.org/2005/08/addressing" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+<xs:schema targetNamespace="http://visa.com.ar/visahome/integration/ws/mv/model" version="1.0" xmlns:ns1="http://visa.com.ar/visahome/integration/ws/mv" xmlns:p="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy" xmlns:tns="http://visa.com.ar/visahome/integration/ws/mv/model" xmlns:wsaws="http://www.w3.org/2005/08/addressing" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xs:import namespace="http://visa.com.ar/visahome/integration/ws/mv"/>
+			<xs:complexType name="tarjeta">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="apellidoNombre" type="xs:string"/>
+					<xs:element minOccurs="1" name="ultimosCuatro" type="xs:string"/>
+					<xs:element minOccurs="1" name="condicion" type="xs:string"/>
+					<xs:element minOccurs="1" name="producto" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="tarjetaConFecha">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="apellidoNombre" type="xs:string"/>
+					<xs:element minOccurs="1" name="ultimosCuatro" type="xs:string"/>
+					<xs:element minOccurs="1" name="condicion" type="xs:string"/>
+					<xs:element minOccurs="1" name="producto" type="xs:string"/>
+					<xs:element minOccurs="1" name="fechasInhabilitadas">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element maxOccurs="unbounded" minOccurs="1" ref="ns1:fecha"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="viaje">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="identificadorViaje" type="xs:long"/>
+					<xs:element minOccurs="1" name="fechaInicio" type="xs:date"/>
+					<xs:element minOccurs="1" name="fechaFin" type="xs:date"/>
+					<xs:element minOccurs="0" name="puedeActualizar" type="xs:boolean"/>
+					<xs:element minOccurs="1" name="status" type="xs:string"/>
+					<xs:element minOccurs="1" name="paises">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element maxOccurs="unbounded" minOccurs="1" ref="ns1:pais"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element minOccurs="1" name="tarjetas">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element maxOccurs="unbounded" minOccurs="1" ref="ns1:tarjeta"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element minOccurs="0" name="accionesPermitidas">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element maxOccurs="unbounded" minOccurs="0" name="accion" type="xs:string"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="fecha">
+				<xs:sequence>
+					<xs:element minOccurs="1" name="value" type="xs:date"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="pais">
+				<xs:sequence>
+					<xs:element minOccurs="1" name="codPais" type="xs:string"/>
+					<xs:element minOccurs="0" name="descripcionPais" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:schema>
+<xs:schema targetNamespace="http://visa.com.ar/visahome/integration/ws/mv/message" version="1.0" xmlns:ns1="http://visa.com.ar/visahome/integration/ws/mv" xmlns:ns2="http://visa.com.ar/visahome/integration/ws/mv/model" xmlns:p="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy" xmlns:tns="http://visa.com.ar/visahome/integration/ws/mv/message" xmlns:wsaws="http://www.w3.org/2005/08/addressing" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xs:import namespace="http://visa.com.ar/visahome/integration/ws/mv"/>
+			<xs:import namespace="http://visa.com.ar/visahome/integration/ws/mv/model"/>
+			<xs:complexType name="baseGatewayRequest">
+				<xs:complexContent>
+					<xs:extension base="tns:baseGatewayMessage">
+						<xs:sequence/>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:complexType name="baseGatewayMessage">
+				<xs:sequence>
+					<xs:element name="tipoDocumento" type="xs:string"/>
+					<xs:element name="numeroDocumento" type="xs:string"/>
+					<xs:element name="sexo" type="xs:string"/>
+					<xs:element name="emailSocio" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:complexType name="baseGatewayResponse">
+				<xs:complexContent>
+					<xs:extension base="tns:baseGatewayMessage">
+						<xs:sequence>
+							<xs:element default="0" minOccurs="0" name="codigoError" type="xs:int"/>
+							<xs:element minOccurs="0" name="descripcionError" type="xs:string"/>
+						</xs:sequence>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+		</xs:schema>
+<xs:schema elementFormDefault="unqualified" targetNamespace="http://visa.com.ar/visahome/integration/ws/mv" version="1.0" xmlns:ns1="http://visa.com.ar/visahome/integration/ws/mv/message" xmlns:ns2="http://visa.com.ar/visahome/integration/ws/mv/model" xmlns:p="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy" xmlns:tns="http://visa.com.ar/visahome/integration/ws/mv" xmlns:wsaws="http://www.w3.org/2005/08/addressing" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xs:import namespace="http://visa.com.ar/visahome/integration/ws/mv/message"/>
+			<xs:import namespace="http://visa.com.ar/visahome/integration/ws/mv/model"/>
+			<xs:element name="confirmarViajeRequest" type="tns:confirmarViajeRequest"/>
+			<xs:element name="confirmarViajeResponse" type="tns:confirmarViajeResponse"/>
+			<xs:element name="eliminarViajeRequest" type="tns:eliminarViajeRequest"/>
+			<xs:element name="eliminarViajeResponse" type="tns:eliminarViajeResponse"/>
+			<xs:element name="message" type="ns1:baseGatewayMessage"/>
+			<xs:element name="obtenerPaisesRequest" type="tns:obtenerPaisesRequest"/>
+			<xs:element name="obtenerPaisesResponse" type="tns:obtenerPaisesResponse"/>
+			<xs:element name="obtenerTarjetasDelSocioRequest" type="tns:obtenerTarjetasDelSocioRequest"/>
+			<xs:element name="obtenerTarjetasDelSocioResponse" type="tns:obtenerTarjetasDelSocioResponse"/>
+			<xs:element name="obtenerViajesRequest" type="tns:obtenerViajesRequest"/>
+			<xs:element name="obtenerViajesResponse" type="tns:obtenerViajesResponse"/>
+			<xs:element name="pais" type="ns2:pais"/>
+			<xs:element name="fecha" type="ns2:fecha"/>
+			<xs:element name="request" nillable="true" type="xs:anyType"/>
+			<xs:element name="response" nillable="true" type="xs:anyType"/>
+			<xs:element name="tarjeta" type="ns2:tarjeta"/>
+			<xs:element name="tarjetaConFecha" type="ns2:tarjetaConFecha"/>
+			<xs:element name="viaje" type="ns2:viaje"/>
+			<xs:complexType name="obtenerPaisesRequest">
+				<xs:sequence/>
+			</xs:complexType>
+			<xs:complexType name="obtenerPaisesResponse">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="paises">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element maxOccurs="unbounded" minOccurs="0" name="pais" type="ns2:pais"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="obtenerTarjetasDelSocioRequest">
+				<xs:complexContent>
+					<xs:extension base="ns1:baseGatewayRequest"/>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:complexType name="obtenerTarjetasDelSocioResponse">
+				<xs:complexContent>
+					<xs:extension base="ns1:baseGatewayResponse">
+						<xs:sequence>
+							<xs:element minOccurs="0" name="fechaInicioMaxima" type="xs:date"/>
+							<xs:element minOccurs="0" name="duracionMaxima" type="xs:int"/>
+							<xs:element minOccurs="0" name="tarjetas">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element maxOccurs="unbounded" minOccurs="0" name="tarjeta" type="ns2:tarjetaConFecha"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:complexType name="obtenerViajesRequest">
+				<xs:complexContent>
+					<xs:extension base="ns1:baseGatewayRequest">
+						<xs:sequence/>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:complexType name="obtenerViajesResponse">
+				<xs:complexContent>
+					<xs:extension base="ns1:baseGatewayResponse">
+						<xs:sequence>
+							<xs:element minOccurs="0" name="listaViajes">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element maxOccurs="unbounded" minOccurs="0" name="viaje" type="ns2:viaje"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:complexType name="confirmarViajeRequest">
+				<xs:complexContent>
+					<xs:extension base="ns1:baseGatewayRequest">
+						<xs:sequence>
+							<xs:element minOccurs="0" name="reintento" type="xs:boolean"/>
+							<xs:element minOccurs="0" name="telefono" type="xs:string"/>
+							<xs:element minOccurs="1" name="viaje" type="ns2:viaje"/>
+						</xs:sequence>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:complexType name="confirmarViajeResponse">
+				<xs:complexContent>
+					<xs:extension base="ns1:baseGatewayResponse">
+						<xs:sequence>
+							<xs:element minOccurs="0" name="viaje" type="ns2:viaje"/>
+						</xs:sequence>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:complexType name="eliminarViajeRequest">
+				<xs:complexContent>
+					<xs:extension base="ns1:baseGatewayRequest">
+						<xs:sequence>
+							<xs:element minOccurs="1" name="identificadorViaje" type="xs:long"/>
+						</xs:sequence>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:complexType name="eliminarViajeResponse">
+				<xs:complexContent>
+					<xs:extension base="ns1:baseGatewayResponse">
+						<xs:sequence/>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:element name="echoViajeRequest">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="message" type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="echoViajeResponse">
+				<xs:complexType>
+					<xs:sequence>
+
+						<xs:element name="message" type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="echoViajeResponse">
+    <wsdl:part element="ns1:echoViajeResponse" name="message">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="obtenerViajesResponse">
+    <wsdl:part element="ns1:obtenerViajesResponse" name="tarjetas">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="eliminarViajeResponse">
+    <wsdl:part element="ns1:eliminarViajeResponse" name="response">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="obtenerViajesRequest">
+    <wsdl:part element="ns1:obtenerViajesRequest" name="socio">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="obtenerTarjetasDelSocioRequest">
+    <wsdl:part element="ns1:obtenerTarjetasDelSocioRequest" name="socio">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="obtenerTarjetasDelSocioResponse">
+    <wsdl:part element="ns1:obtenerTarjetasDelSocioResponse" name="tarjetas">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="echoViajeRequest">
+    <wsdl:part element="ns1:echoViajeRequest" name="message">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="obtenerPaisesResponse">
+    <wsdl:part element="ns1:obtenerPaisesResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="obtenerPaisesRequest">
+    <wsdl:part element="ns1:obtenerPaisesRequest" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="eliminarViajeRequest">
+    <wsdl:part element="ns1:eliminarViajeRequest" name="request">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="confirmarViajeResponse">
+    <wsdl:part element="ns1:confirmarViajeResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="confirmarViajeRequest">
+    <wsdl:part element="ns1:confirmarViajeRequest" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="MarcaViajeroService">
+    <wsdl:operation name="eliminarViaje">
+      <wsdl:input message="ns1:eliminarViajeRequest" name="eliminarViaje">
+    </wsdl:input>
+      <wsdl:output message="ns1:eliminarViajeResponse" name="eliminarViajeResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtenerTarjetasDelSocio">
+      <wsdl:input message="ns1:obtenerTarjetasDelSocioRequest" name="obtenerTarjetasDelSocio">
+    </wsdl:input>
+      <wsdl:output message="ns1:obtenerTarjetasDelSocioResponse" name="obtenerTarjetasDelSocioResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtenerViajes">
+      <wsdl:input message="ns1:obtenerViajesRequest" name="obtenerViajes">
+    </wsdl:input>
+      <wsdl:output message="ns1:obtenerViajesResponse" name="obtenerViajesResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtenerPaises">
+      <wsdl:input message="ns1:obtenerPaisesRequest" name="obtenerPaises">
+    </wsdl:input>
+      <wsdl:output message="ns1:obtenerPaisesResponse" name="obtenerPaisesResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="confirmarViaje">
+      <wsdl:input message="ns1:confirmarViajeRequest" name="confirmarViaje">
+    </wsdl:input>
+      <wsdl:output message="ns1:confirmarViajeResponse" name="confirmarViajeResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="echoViaje">
+      <wsdl:input message="ns1:echoViajeRequest">
+    </wsdl:input>
+      <wsdl:output message="ns1:echoViajeResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MarcaViajero" type="ns1:MarcaViajeroService">
+    <wsp:PolicyReference URI="#SecurityServiceSignThenEncryptPolicy"/>
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="eliminarViaje">
+      <soap:operation soapAction="http://visa.com.ar/visahome/integration/ws/mv/eliminarViaje" style="document"/>
+      <wsdl:input name="eliminarViaje">
+    <wsp:PolicyReference URI="#InputBindingPolicy"/>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="eliminarViajeResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtenerTarjetasDelSocio">
+      <soap:operation soapAction="http://visa.com.ar/visahome/integration/ws/mv/obtenerTarjetasDelSocio" style="document"/>
+      <wsdl:input name="obtenerTarjetasDelSocio">
+    <wsp:PolicyReference URI="#InputBindingPolicy"/>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="obtenerTarjetasDelSocioResponse">
+    <wsp:PolicyReference URI="#OutputBindingPolicy"/>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtenerViajes">
+      <soap:operation soapAction="http://visa.com.ar/visahome/integration/ws/mv/obtenerViajes" style="document"/>
+      <wsdl:input name="obtenerViajes">
+    <wsp:PolicyReference URI="#InputBindingPolicy"/>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="obtenerViajesResponse">
+    <wsp:PolicyReference URI="#OutputBindingPolicy"/>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtenerPaises">
+      <soap:operation soapAction="http://visa.com.ar/visahome/integration/ws/mv/obtenerPaises" style="document"/>
+      <wsdl:input name="obtenerPaises">
+    <wsp:PolicyReference URI="#InputBindingPolicy"/>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="obtenerPaisesResponse">
+    <wsp:PolicyReference URI="#OutputBindingPolicy"/>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="confirmarViaje">
+      <soap:operation soapAction="http://visa.com.ar/visahome/integration/ws/mv/confirmarViaje" style="document"/>
+      <wsdl:input name="confirmarViaje">
+    <wsp:PolicyReference URI="#InputBindingPolicy"/>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="confirmarViajeResponse">
+    <wsp:PolicyReference URI="#OutputBindingPolicy"/>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="echoViaje">
+      <soap:operation soapAction="http://visa.com.ar/visahome/integration/ws/mv/echoViaje" style="document"/>
+      <wsdl:input>
+    <wsp:PolicyReference URI="#InputBindingPolicy"/>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+    <wsp:PolicyReference URI="#OutputBindingPolicy"/>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MarcaViajeroService">
+    <wsdl:port binding="ns1:MarcaViajero" name="MarcaViajeroServicePort">
+      <soap:address location="https://lapp-prpm104.visa2.com.ar:8443/visahomews/MarcaViajeroService"/>
+    </wsdl:port>
+  </wsdl:service>
+    <wsp:Policy wsu:Id="SecurityServiceSignThenEncryptPolicy" xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+		<wsp:ExactlyOne>
+			<wsp:All>
+				<sp:AsymmetricBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+					<wsp:Policy>
+						<sp:InitiatorToken>
+							<wsp:Policy>
+								<sp:X509Token sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient">
+									<wsp:Policy>
+										<sp:WssX509V1Token11/>
+									</wsp:Policy>
+								</sp:X509Token>
+							</wsp:Policy>
+						</sp:InitiatorToken>
+						<sp:RecipientToken>
+							<wsp:Policy>
+								<sp:X509Token sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/Never">
+									<wsp:Policy>
+										<sp:WssX509V1Token11/>
+									</wsp:Policy>
+								</sp:X509Token>
+							</wsp:Policy>
+						</sp:RecipientToken>
+						<sp:AlgorithmSuite>
+							<wsp:Policy>
+								<sp:Basic128/>
+							</wsp:Policy>
+						</sp:AlgorithmSuite>
+						<sp:Layout>
+							<wsp:Policy>
+								<sp:Lax/>
+							</wsp:Policy>
+						</sp:Layout>
+						<sp:IncludeTimestamp/>
+						<!-- <sp:EncryptSignature/> -->
+						<sp:OnlySignEntireHeadersAndBody/>
+						<sp:SignBeforeEncrypting/>
+					</wsp:Policy>
+				</sp:AsymmetricBinding>
+				<sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+					<sp:Header Name="Timestamp" Namespace="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"/>
+					<sp:Body/>
+				</sp:SignedParts>
+				<sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+					<sp:Body/>
+				</sp:EncryptedParts>
+				<sp:Wss10 xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+					<wsp:Policy>
+						<sp:MustSupportRefKeyIdentifier/>
+						<sp:MustSupportRefIssuerSerial/>
+						<sp:MustSupportRefThumbprint/>
+						<sp:MustSupportRefEncryptedKey/>
+						<sp:RequireSignatureConfirmation/>
+					</wsp:Policy>
+				</sp:Wss10>
+				<sp:Wss11>
+					<wsp:Policy>
+						<sp:MustSupportRefKeyIdentifier/>
+						<sp:MustSupportRefIssuerSerial/>
+						<sp:MustSupportRefThumbprint/>
+						<sp:MustSupportRefEncryptedKey/>
+						<sp:RequireSignatureConfirmation/>
+					</wsp:Policy>
+				</sp:Wss11>
+			</wsp:All>
+		</wsp:ExactlyOne>
+	</wsp:Policy>
+    <wsp:Policy wsu:Id="InputBindingPolicy">
+		<wsp:ExactlyOne>
+			<wsp:All>
+				<sp:EncryptedParts>
+					<sp:Body/>
+				</sp:EncryptedParts>
+				<sp:SignedParts>
+					<sp:Header Name="Timestamp" Namespace="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"/>
+					<sp:Body/>
+				</sp:SignedParts>
+			</wsp:All>
+		</wsp:ExactlyOne>
+	</wsp:Policy>
+    <wsp:Policy wsu:Id="OutputBindingPolicy">
+		<wsp:ExactlyOne>
+			<wsp:All>
+				<sp:EncryptedParts>
+					<sp:Body/>
+				</sp:EncryptedParts>
+				<sp:SignedParts>
+					<sp:Header Name="Timestamp" Namespace="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"/>
+					<sp:Body/>
+				</sp:SignedParts>
+			</wsp:All>
+		</wsp:ExactlyOne>
+	</wsp:Policy>
+</wsdl:definitions>

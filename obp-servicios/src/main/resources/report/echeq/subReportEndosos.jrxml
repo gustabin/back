@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="subReportEndosos" pageWidth="518" pageHeight="802" columnWidth="518" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="c03a76f2-e35a-4a3a-bd79-27e4d2982edb">
+	<property name="ireport.zoom" value="2.9282000000000012"/>
+	<property name="ireport.x" value="99"/>
+	<property name="ireport.y" value="0"/>
+	<style name="table_8">
+		<pen lineStyle="Dotted"/>
+		<box>
+			<pen lineWidth="0.5" lineStyle="Dotted" lineColor="#C9C9C9"/>
+			<topPen lineWidth="0.0" lineStyle="Dotted" lineColor="#C9C9C9"/>
+			<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#C9C9C9"/>
+			<bottomPen lineWidth="0.0" lineStyle="Dotted" lineColor="#C9C9C9"/>
+			<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#C9C9C9"/>
+		</box>
+	</style>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="beneficiario" class="java.lang.String"/>
+	<field name="fecha" class="java.lang.String"/>
+	<field name="cuit" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="40" splitType="Stretch">
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" x="108" y="10" width="132" height="13" uuid="1cf8f3a6-8879-4a97-905a-09e95c8a8cae"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Open Sans" size="9" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{beneficiario}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement positionType="Float" x="0" y="39" width="240" height="1" uuid="08a395e3-c9af-4574-98a5-221da5110852"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineStyle="Dotted" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+			<textField isStretchWithOverflow="true" pattern="">
+				<reportElement positionType="Float" x="0" y="10" width="108" height="13" uuid="b2c9a54c-1c10-46d7-ab4b-843cb13fbc92"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Open Sans" size="9" isBold="false" isPdfEmbedded="true"/>
+					<paragraph tabStopWidth="30"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fecha}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" x="108" y="26" width="132" height="13" uuid="fea012af-1b50-4701-9a5e-d1e868c6a10c"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Open Sans" size="9" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cuit}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

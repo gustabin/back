@@ -1,0 +1,72 @@
+{
+  "id": "02569328",
+  "type": "human_person",
+  "language": null,
+  "condition": "customer",
+  "segment": "business",
+  "audiences": [
+    "AVI",
+    "CIT",
+    "GES",
+    "MIP",
+    "PBC",
+    "RSG",
+    "SEL",
+    "TCL"
+  ],
+  "indicators": {
+    "audiences": [
+      "SEL"
+    ],
+    "tags": [
+      "MIP",
+      "PBC",
+      "RSG"
+    ],
+    "models": [
+      "GES"
+    ]
+  },
+  "phone": {
+    "areaCode": "01115",
+    "number": "563874074507"
+  },
+  "email": "CRISOFOROSER@BUGALLOSANCH.COM.AR",
+  "address": {
+    "streetName": "ITALIA",
+    "buildingNumber": "424",
+    "floor": "5",
+    "department": "23",
+    "city": "DIEGO DE ALVE",
+    "zipCode": null
+  },
+  "documents": [
+    {
+      "isPrincipal": true,
+      "type": "dni",
+      "number": "00018593959"
+    },
+    {
+      "isPrincipal": false,
+      "type": "cuit",
+      "number": "20185939597"
+    }
+  ],
+  "humanPerson": {
+    "firstName": "CRISOFORO SERVANDO ADELMO",
+    "lastName1": "BUGALLO SANCHEZ",
+    "lastName2": "CABORNERO",
+    "maritalStatus": "single",
+    "nationality": "ARG",
+    "birthCountry": "ARG",
+    "residenceCountry": "ARG",
+    "birthDate": "1967-12-10T00:00:00.000-03:00",
+    "gender": "male",
+    "deceaseDate": "9999-12-31T00:00:00.000-03:00",
+    "studiesLevel": "university_studies",
+    "employmentStatus": "professional_with_employees"
+  },
+  "isStaff": false,
+  "updatedAt": "2021-04-24T15:18:59.912-03:00",
+  "createdAt": "1994-07-19T00:00:00.000-03:00"
+}

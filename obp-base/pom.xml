@@ -1,0 +1,248 @@
+    <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>ar.com.santanderrio.obp</groupId>
+		<artifactId>obp-pom</artifactId>
+		<version>0.0.16-PIPELINE-RELEASE</version>
+	</parent>
+	<version>0.0.113-RELEASE</version>
+	<artifactId>obp-base</artifactId>
+	<packaging>jar</packaging>
+
+	<properties>
+		<skipFailsafe>true</skipFailsafe>
+		<skipSurefire>false</skipSurefire>
+		<argLine />
+	</properties>
+
+	<name>obp-base</name>
+
+	<dependencies>
+		<dependency>
+            <groupId>org.yaml</groupId>
+            <artifactId>snakeyaml</artifactId>
+            <version>1.15</version>
+        </dependency>
+		<!-- cxf -->
+		<dependency>
+			<groupId>org.apache.cxf</groupId>
+			<artifactId>cxf-rt-frontend-jaxws</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.cxf</groupId>
+			<artifactId>cxf-rt-transports-http</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.cxf</groupId>
+			<artifactId>cxf-rt-ws-security</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.wss4j</groupId>
+			<artifactId>wss4j-ws-security-stax</artifactId>
+		</dependency>
+		<!-- cxf -->
+		<!-- jwt -->
+		<dependency>
+			<groupId>com.auth0</groupId>
+			<artifactId>java-jwt</artifactId>
+		</dependency>
+		<!-- jwt -->
+		<!-- spring -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-aop</artifactId>
+			<exclusions>
+				<exclusion>
+					<artifactId>commons-logging</artifactId>
+					<groupId>commons-logging</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+		</dependency>
+		<!-- spring -->
+		<dependency>
+			<!-- loguear respuesta -->
+			<groupId>com.thoughtworks.xstream</groupId>
+			<artifactId>xstream</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+		</dependency>
+		<dependency>
+			<!-- excelbuilder -->
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-jexl3</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjrt</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjweaver</artifactId>
+		</dependency>
+		<!-- log -->
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-slf4j-impl</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>jcl-over-slf4j</artifactId>
+		</dependency>
+		<!-- log -->
+		<!-- buscador -->
+		<dependency>
+			<groupId>org.apache.lucene</groupId>
+			<artifactId>lucene-core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.lucene</groupId>
+			<artifactId>lucene-queryparser</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.lucene</groupId>
+			<artifactId>lucene-analyzers-common</artifactId>
+		</dependency>
+		<!-- buscador -->
+		<dependency>
+			<groupId>ar.com.santanderrio.obp</groupId>
+			<artifactId>com.ibm.mq</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>ar.com.santanderrio.obp</groupId>
+			<artifactId>com.ibm.dhbcore</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>ar.com.santanderrio.obp</groupId>
+			<artifactId>com.ibm.mqjms</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>ar.com.santanderrio.obp</groupId>
+			<artifactId>connector</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+		</dependency>
+		<!-- Librerias MQ -->
+		<dependency>
+			<groupId>javax.jms</groupId>
+			<artifactId>javax.jms-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jms</artifactId>
+		</dependency>
+		<!-- Librerias MQ -->
+		<dependency>
+			<groupId>ar.com.isban</groupId>
+			<artifactId>iatx</artifactId>
+		</dependency>
+		<!-- BouncyCastles -->
+		<dependency>
+			<groupId>org.bouncycastle</groupId>
+			<artifactId>bcprov-jdk15on</artifactId>
+		</dependency>
+		<!-- se excluye bcprov-ext-jdk15on por generar problemas de carga aleatorias 
+			en el websphere -->
+		<!-- <dependency> -->
+		<!-- <groupId>org.bouncycastle</groupId> -->
+		<!-- <artifactId>bcprov-ext-jdk15on</artifactId> -->
+		<!-- </dependency> -->
+		<dependency>
+			<groupId>org.bouncycastle</groupId>
+			<artifactId>bcmail-jdk15on</artifactId>
+		</dependency>
+		<!-- BouncyCastles -->
+		<dependency>
+			<groupId>ar.com.santanderrio.obp</groupId>
+			<artifactId>open-sans-fonts</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>ar.com.santanderrio.obp</groupId>
+			<artifactId>opensans-semibold-fonts</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>ar.com.santanderrio.obp</groupId>
+			<artifactId>opensans-light-fonts</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>ar.com.santanderrio.obp</groupId>
+			<artifactId>open-sans-fonts-dev1</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>commons-pool</groupId>
+			<artifactId>commons-pool</artifactId>
+		</dependency>
+		<!-- validacion -->
+		<dependency>
+			<groupId>org.apache.geronimo.specs</groupId>
+			<artifactId>geronimo-validation_1.0_spec</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.bval</groupId>
+			<artifactId>org.apache.bval.bundle</artifactId>
+		</dependency>
+		<!-- validacion -->
+		<!-- provided -->
+		<dependency>
+			<groupId>ar.com.santanderrio.obp</groupId>
+			<artifactId>ojdbc6</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+		<!-- provided -->
+		<!-- test -->
+		<!-- emular webscopes en test -->
+		<dependency>
+			<groupId>org.apache.tomcat</groupId>
+			<artifactId>catalina</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<!-- test -->
+
+		<dependency>
+		    <groupId>org.apache.tomcat</groupId>
+		    <artifactId>tomcat-jdbc</artifactId>
+		    <version>7.0.90</version>
+		</dependency>
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt</artifactId>
+            <version>0.6.0</version>
+        </dependency>
+
+	</dependencies>
+</project> 

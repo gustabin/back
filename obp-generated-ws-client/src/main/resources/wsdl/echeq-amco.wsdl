@@ -1,0 +1,1102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<definitions xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://echeq.amco.com.ar/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://echeq.amco.com.ar/" name="ws">
+    <types>
+        <xsd:schema>
+            <xsd:import namespace="http://echeq.amco.com.ar/" schemaLocation="echeq-amco.schema.xsd"/>
+        </xsd:schema>
+    </types>
+
+    
+<message name="ConsImpTot">
+    <part name="parameters" element="tns:ConsImpTot"/>
+</message>
+<message name="ConsImpTotResponse">
+<part name="parameters" element="tns:ConsImpTotResponse"/>
+</message>
+
+<message name="ListReceived">
+    <part name="parameters" element="tns:ListReceived"/>
+</message>
+<message name="ListReceivedResponse">
+<part name="parameters" element="tns:ListReceivedResponse"/>
+</message>
+
+<message name="ListReceivedOrEndorsed">
+    <part name="parameters" element="tns:ListReceivedOrEndorsed"/>
+</message>
+<message name="ListReceivedOrEndorsedResponse">
+<part name="parameters" element="tns:ListReceivedOrEndorsedResponse"/>
+</message>
+
+<message name="ListReceivedPend_BenefDir">
+    <part name="parameters" element="tns:ListReceivedPend_BenefDir"/>
+</message>
+<message name="ListReceivedPend_BenefDirResponse">
+<part name="parameters" element="tns:ListReceivedPend_BenefDirResponse"/>
+</message>
+
+<message name="ListReceivedPend_BenefEnd">
+    <part name="parameters" element="tns:ListReceivedPend_BenefEnd"/>
+</message>
+<message name="ListReceivedPend_BenefEndResponse">
+<part name="parameters" element="tns:ListReceivedPend_BenefEndResponse"/>
+</message>
+
+<message name="ListReceivedForDeposit">
+    <part name="parameters" element="tns:ListReceivedForDeposit"/>
+</message>
+<message name="ListReceivedForDepositResponse">
+<part name="parameters" element="tns:ListReceivedForDepositResponse"/>
+</message>
+
+<message name="ListReceivedForCustody">
+    <part name="parameters" element="tns:ListReceivedForCustody"/>
+</message>
+<message name="ListReceivedForCustodyResponse">
+<part name="parameters" element="tns:ListReceivedForCustodyResponse"/>
+</message>
+
+<message name="ListReceivedWithPendReturnRequest">
+    <part name="parameters" element="tns:ListReceivedWithPendReturnRequest"/>
+</message>
+<message name="ListReceivedWithPendReturnRequestResponse">
+<part name="parameters" element="tns:ListReceivedWithPendReturnRequestResponse"/>
+</message>
+
+<message name="ListReceivedForPostDatedDeposit">
+    <part name="parameters" element="tns:ListReceivedForPostDatedDeposit"/>
+</message>
+<message name="ListReceivedForPostDatedDepositResponse">
+<part name="parameters" element="tns:ListReceivedForPostDatedDepositResponse"/>
+</message>
+
+<message name="ListReceivedAndAssignment">
+    <part name="parameters" element="tns:ListReceivedAndAssignment"/>
+</message>
+<message name="ListReceivedAndAssignmentResponse">
+<part name="parameters" element="tns:ListReceivedAndAssignmentResponse"/>
+</message>
+
+<message name="ListReceivedAndEndorsed">
+    <part name="parameters" element="tns:ListReceivedAndEndorsed"/>
+</message>
+<message name="ListReceivedAndEndorsedResponse">
+<part name="parameters" element="tns:ListReceivedAndEndorsedResponse"/>
+</message>
+
+<message name="ListReceivedAndRejected">
+    <part name="parameters" element="tns:ListReceivedAndRejected"/>
+</message>
+<message name="ListReceivedAndRejectedResponse">
+<part name="parameters" element="tns:ListReceivedAndRejectedResponse"/>
+</message>
+
+<message name="ListReceivedInDiscount">
+    <part name="parameters" element="tns:ListReceivedInDiscount"/>
+</message>
+<message name="ListReceivedInDiscountResponse">
+<part name="parameters" element="tns:ListReceivedInDiscountResponse"/>
+</message>
+
+<message name="RetriveById">
+    <part name="parameters" element="tns:RetriveById"/>
+</message>
+<message name="RetriveByIdResponse">
+<part name="parameters" element="tns:RetriveByIdResponse"/>
+</message>
+
+<message name="ReceivedAcceptEcheq">
+    <part name="parameters" element="tns:ReceivedAcceptEcheq"/>
+</message>
+<message name="ReceivedAcceptEcheqResponse">
+<part name="parameters" element="tns:ReceivedAcceptEcheqResponse"/>
+</message>
+
+<message name="ReceivedRepudiateEcheq">
+    <part name="parameters" element="tns:ReceivedRepudiateEcheq"/>
+</message>
+<message name="ReceivedRepudiateEcheqResponse">
+<part name="parameters" element="tns:ReceivedRepudiateEcheqResponse"/>
+</message>
+
+<message name="DepositSubmit">
+    <part name="parameters" element="tns:DepositSubmit"/>
+</message>
+<message name="DepositSubmitResponse">
+<part name="parameters" element="tns:DepositSubmitResponse"/>
+</message>
+
+<message name="EndorseSubmit">
+    <part name="parameters" element="tns:EndorseSubmit"/>
+</message>
+<message name="EndorseSubmitResponse">
+<part name="parameters" element="tns:EndorseSubmitResponse"/>
+</message>
+
+<message name="CustodySubmit">
+    <part name="parameters" element="tns:CustodySubmit"/>
+</message>
+<message name="CustodySubmitResponse">
+<part name="parameters" element="tns:CustodySubmitResponse"/>
+</message>
+
+<message name="CustodyWithdraw">
+    <part name="parameters" element="tns:CustodyWithdraw"/>
+</message>
+<message name="CustodyWithdrawResponse">
+<part name="parameters" element="tns:CustodyWithdrawResponse"/>
+</message>
+
+<message name="ReturnRequestSubmit">
+    <part name="parameters" element="tns:ReturnRequestSubmit"/>
+</message>
+<message name="ReturnRequestSubmitResponse">
+<part name="parameters" element="tns:ReturnRequestSubmitResponse"/>
+</message>
+
+<message name="ReturnRequestCancel">
+    <part name="parameters" element="tns:ReturnRequestCancel"/>
+</message>
+<message name="ReturnRequestCancelResponse">
+<part name="parameters" element="tns:ReturnRequestCancelResponse"/>
+</message>
+
+<message name="ReturnRequestAccept">
+    <part name="parameters" element="tns:ReturnRequestAccept"/>
+</message>
+<message name="ReturnRequestAcceptResponse">
+<part name="parameters" element="tns:ReturnRequestAcceptResponse"/>
+</message>
+
+<message name="ReturnRequestDeny">
+    <part name="parameters" element="tns:ReturnRequestDeny"/>
+</message>
+<message name="ReturnRequestDenyResponse">
+<part name="parameters" element="tns:ReturnRequestDenyResponse"/>
+</message>
+
+<message name="IssueRejectCertificate">
+    <part name="parameters" element="tns:IssueRejectCertificate"/>
+</message>
+<message name="IssueRejectCertificateResponse">
+<part name="parameters" element="tns:IssueRejectCertificateResponse"/>
+</message>
+
+<message name="VerifyIsBankClient">
+    <part name="parameters" element="tns:VerifyIsBankClient"/>
+</message>
+<message name="VerifyIsBankClientResponse">
+<part name="parameters" element="tns:VerifyIsBankClientResponse"/>
+</message>
+
+<message name="KillCheck">
+    <part name="parameters" element="tns:KillCheck"/>
+</message>
+<message name="KillCheckResponse">
+<part name="parameters" element="tns:KillCheckResponse"/>
+</message>
+
+<message name="DeferCustodyDepositDate">
+    <part name="parameters" element="tns:DeferCustodyDepositDate"/>
+</message>
+<message name="DeferCustodyDepositDateResponse">
+<part name="parameters" element="tns:DeferCustodyDepositDateResponse"/>
+</message>
+
+<message name="CheckPendingNotifications">
+    <part name="parameters" element="tns:CheckPendingNotifications"/>
+</message>
+<message name="CheckPendingNotificationsResponse">
+<part name="parameters" element="tns:CheckPendingNotificationsResponse"/>
+</message>
+
+<message name="ECHEQPaidExecuted">
+    <part name="parameters" element="tns:ECHEQPaidExecuted"/>
+</message>
+<message name="ECHEQPaidExecutedResponse">
+<part name="parameters" element="tns:ECHEQPaidExecutedResponse"/>
+</message>
+
+<message name="ECHEQPaidRejected">
+    <part name="parameters" element="tns:ECHEQPaidRejected"/>
+</message>
+<message name="ECHEQPaidRejectedResponse">
+<part name="parameters" element="tns:ECHEQPaidRejectedResponse"/>
+</message>
+
+<message name="RetrieveByVisID">
+    <part name="parameters" element="tns:RetrieveByVisID"/>
+</message>
+<message name="RetrieveByVisIDResponse">
+<part name="parameters" element="tns:RetrieveByVisIDResponse"/>
+</message>
+
+<message name="ListIssued">
+    <part name="parameters" element="tns:ListIssued"/>
+</message>
+<message name="ListIssuedResponse">
+<part name="parameters" element="tns:ListIssuedResponse"/>
+</message>
+
+<message name="IssueECHEQ">
+    <part name="parameters" element="tns:IssueECHEQ"/>
+</message>
+<message name="IssueECHEQResponse">
+<part name="parameters" element="tns:IssueECHEQResponse"/>
+</message>
+
+<message name="AddCheckAccount">
+    <part name="parameters" element="tns:AddCheckAccount"/>
+</message>
+<message name="AddCheckAccountResponse">
+<part name="parameters" element="tns:AddCheckAccountResponse"/>
+</message>
+
+<message name="ExpireCheck">
+    <part name="parameters" element="tns:ExpireCheck"/>
+</message>
+<message name="ExpireCheckResponse">
+<part name="parameters" element="tns:ExpireCheckResponse"/>
+</message>
+
+<message name="NotificationDashboard">
+    <part name="parameters" element="tns:NotificationDashboard"/>
+</message>
+<message name="NotificationDashboardResponse">
+<part name="parameters" element="tns:NotificationDashboardResponse"/>
+</message>
+
+<message name="AddAccountAndIssue">
+    <part name="parameters" element="tns:AddAccountAndIssue"/>
+</message>
+<message name="AddAccountAndIssueResponse">
+<part name="parameters" element="tns:AddAccountAndIssueResponse"/>
+</message>
+
+<message name="RetrieveCert">
+    <part name="parameters" element="tns:RetrieveCert"/>
+</message>
+<message name="RetrieveCertResponse">
+<part name="parameters" element="tns:RetrieveCertResponse"/>
+</message>
+
+<message name="SetONP">
+    <part name="parameters" element="tns:SetONP"/>
+</message>
+<message name="SetONPResponse">
+<part name="parameters" element="tns:SetONPResponse"/>
+</message>
+
+<message name="ListIssuedExecStat">
+    <part name="parameters" element="tns:ListIssuedExecStat"/>
+</message>
+<message name="ListIssuedExecStatResponse">
+<part name="parameters" element="tns:ListIssuedExecStatResponse"/>
+</message>
+
+<message name="EndorseWithoutGuarantee">
+    <part name="parameters" element="tns:EndorseWithoutGuarantee"/>
+</message>
+<message name="EndorseWithoutGuaranteeResponse">
+<part name="parameters" element="tns:EndorseWithoutGuaranteeResponse"/>
+</message>
+
+<message name="EndorseInProcurement">
+    <part name="parameters" element="tns:EndorseInProcurement"/>
+</message>
+<message name="EndorseInProcurementResponse">
+<part name="parameters" element="tns:EndorseInProcurementResponse"/>
+</message>
+
+<message name="Consultar2">
+    <part name="parameters" element="tns:Consultar2"/>
+</message>
+<message name="Consultar2Response">
+<part name="parameters" element="tns:Consultar2Response"/>
+</message>
+
+<message name="AvalRepudiate">
+    <part name="parameters" element="tns:AvalRepudiate"/>
+</message>
+<message name="AvalRepudiateResponse">
+<part name="parameters" element="tns:AvalRepudiateResponse"/>
+</message>
+
+<message name="AvalCancel">
+    <part name="parameters" element="tns:AvalCancel"/>
+</message>
+<message name="AvalCancelResponse">
+<part name="parameters" element="tns:AvalCancelResponse"/>
+</message>
+
+<message name="AvalAccept">
+    <part name="parameters" element="tns:AvalAccept"/>
+</message>
+<message name="AvalAcceptResponse">
+<part name="parameters" element="tns:AvalAcceptResponse"/>
+</message>
+
+<message name="IssueAval">
+    <part name="parameters" element="tns:IssueAval"/>
+</message>
+<message name="IssueAvalResponse">
+<part name="parameters" element="tns:IssueAvalResponse"/>
+</message>
+
+<message name="IssueAssignment">
+    <part name="parameters" element="tns:IssueAssignment"/>
+</message>
+<message name="IssueAssignmentResponse">
+<part name="parameters" element="tns:IssueAssignmentResponse"/>
+</message>
+
+<message name="AssignmentCancel">
+    <part name="parameters" element="tns:AssignmentCancel"/>
+</message>
+<message name="AssignmentCancelResponse">
+<part name="parameters" element="tns:AssignmentCancelResponse"/>
+</message>
+
+<message name="AssignmentAccept">
+    <part name="parameters" element="tns:AssignmentAccept"/>
+</message>
+<message name="AssignmentAcceptResponse">
+<part name="parameters" element="tns:AssignmentAcceptResponse"/>
+</message>
+
+<message name="AssignmentRepudiate">
+    <part name="parameters" element="tns:AssignmentRepudiate"/>
+</message>
+<message name="AssignmentRepudiateResponse">
+<part name="parameters" element="tns:AssignmentRepudiateResponse"/>
+</message>
+
+<message name="RetrieveAssignment">
+    <part name="parameters" element="tns:RetrieveAssignment"/>
+</message>
+<message name="RetrieveAssignmentResponse">
+<part name="parameters" element="tns:RetrieveAssignmentResponse"/>
+</message>
+
+<message name="RetrieveMarketInfrastructure">
+    <part name="parameters" element="tns:RetrieveMarketInfrastructure"/>
+</message>
+<message name="RetrieveMarketInfrastructureResponse">
+<part name="parameters" element="tns:RetrieveMarketInfrastructureResponse"/>
+</message>
+
+<message name="IssueECHEQMulti">
+    <part name="parameters" element="tns:IssueECHEQMulti"/>
+</message>
+<message name="IssueECHEQMultiResponse">
+<part name="parameters" element="tns:IssueECHEQMultiResponse"/>
+</message>
+
+<message name="AddAccountAndIssueMulti">
+    <part name="parameters" element="tns:AddAccountAndIssueMulti"/>
+</message>
+<message name="AddAccountAndIssueMultiResponse">
+<part name="parameters" element="tns:AddAccountAndIssueMultiResponse"/>
+</message>
+
+<message name="ListAccounts">
+    <part name="parameters" element="tns:ListAccounts"/>
+</message>
+<message name="ListAccountsResponse">
+<part name="parameters" element="tns:ListAccountsResponse"/>
+</message>
+
+<message name="ListCheckStatus">
+    <part name="parameters" element="tns:ListCheckStatus"/>
+</message>
+<message name="ListCheckStatusResponse">
+<part name="parameters" element="tns:ListCheckStatusResponse"/>
+</message>
+
+<message name="EndorseCancel">
+    <part name="parameters" element="tns:EndorseCancel"/>
+</message>
+<message name="EndorseCancelResponse">
+<part name="parameters" element="tns:EndorseCancelResponse"/>
+</message>
+
+<message name="RejectOutExchange">
+    <part name="parameters" element="tns:RejectOutExchange"/>
+</message>
+<message name="RejectOutExchangeResponse">
+<part name="parameters" element="tns:RejectOutExchangeResponse"/>
+</message>
+<portType name="EcheqService">
+    <operation name="ConsImpTot">
+    <input wsam:Action="ConsImpTot" message="tns:ConsImpTot"/>
+    <output wsam:Action="http://echeq.amco.com.ar/EcheqService/ConsImpTotResponse" message="tns:ConsImpTotResponse"/>
+</operation><operation name="ListReceived">
+    <input wsam:Action="ListReceived" message="tns:ListReceived"/>
+    <output wsam:Action="http://echeq.amco.com.ar/EcheqService/ListReceivedResponse" message="tns:ListReceivedResponse"/>
+</operation><operation name="ListReceivedOrEndorsed">
+    <input wsam:Action="ListReceivedOrEndorsed" message="tns:ListReceivedOrEndorsed"/>
+    <output wsam:Action="http://echeq.amco.com.ar/EcheqService/ListReceivedOrEndorsedResponse" message="tns:ListReceivedOrEndorsedResponse"/>
+</operation><operation name="ListReceivedPend_BenefDir">
+    <input wsam:Action="ListReceivedPend_BenefDir" message="tns:ListReceivedPend_BenefDir"/>
+    <output wsam:Action="http://echeq.amco.com.ar/EcheqService/ListReceivedPend_BenefDirResponse" message="tns:ListReceivedPend_BenefDirResponse"/>
+</operation><operation name="ListReceivedPend_BenefEnd">
+    <input wsam:Action="ListReceivedPend_BenefEnd" message="tns:ListReceivedPend_BenefEnd"/>
+    <output wsam:Action="http://echeq.amco.com.ar/EcheqService/ListReceivedPend_BenefEndResponse" message="tns:ListReceivedPend_BenefEndResponse"/>
+</operation><operation name="ListReceivedForDeposit">
+    <input wsam:Action="ListReceivedForDeposit" message="tns:ListReceivedForDeposit"/>
+    <output wsam:Action="http://echeq.amco.com.ar/EcheqService/ListReceivedForDepositResponse" message="tns:ListReceivedForDepositResponse"/>
+</operation><operation name="ListReceivedForCustody">
+    <input wsam:Action="ListReceivedForCustody" message="tns:ListReceivedForCustody"/>
+    <output wsam:Action="http://echeq.amco.com.ar/EcheqService/ListReceivedForCustodyResponse" message="tns:ListReceivedForCustodyResponse"/>
+</operation><operation name="ListReceivedWithPendReturnRequest">
+    <input wsam:Action="ListReceivedWithPendReturnRequest" message="tns:ListReceivedWithPendReturnRequest"/>
+    <output wsam:Action="http://echeq.amco.com.ar/EcheqService/ListReceivedWithPendReturnRequestResponse" message="tns:ListReceivedWithPendReturnRequestResponse"/>
+</operation><operation name="ListReceivedForPostDatedDeposit">
+    <input wsam:Action="ListReceivedForPostDatedDeposit" message="tns:ListReceivedForPostDatedDeposit"/>
+    <output wsam:Action="http://echeq.amco.com.ar/EcheqService/ListReceivedForPostDatedDepositResponse" message="tns:ListReceivedForPostDatedDepositResponse"/>
+</operation><operation name="ListReceivedAndAssignment">
+    <input wsam:Action="ListReceivedAndAssignment" message="tns:ListReceivedAndAssignment"/>
+    <output wsam:Action="http://echeq.amco.com.ar/EcheqService/ListReceivedAndAssignmentResponse" message="tns:ListReceivedAndAssignmentResponse"/>
+</operation><operation name="ListReceivedAndEndorsed">
+    <input wsam:Action="ListReceivedAndEndorsed" message="tns:ListReceivedAndEndorsed"/>
+    <output wsam:Action="http://echeq.amco.com.ar/EcheqService/ListReceivedAndEndorsedResponse" message="tns:ListReceivedAndEndorsedResponse"/>
+</operation><operation name="ListReceivedAndRejected">
+    <input wsam:Action="ListReceivedAndRejected" message="tns:ListReceivedAndRejected"/>
+    <output wsam:Action="http://echeq.amco.com.ar/EcheqService/ListReceivedAndRejectedResponse" message="tns:ListReceivedAndRejectedResponse"/>
+</operation><operation name="ListReceivedInDiscount">
+    <input wsam:Action="ListReceivedInDiscount" message="tns:ListReceivedInDiscount"/>
+    <output wsam:Action="http://echeq.amco.com.ar/EcheqService/ListReceivedInDiscountResponse" message="tns:ListReceivedInDiscountResponse"/>
+</operation><operation name="RetriveById">
+    <input wsam:Action="RetriveById" message="tns:RetriveById"/>
+    <output wsam:Action="http://echeq.amco.com.ar/EcheqService/RetriveByIdResponse" message="tns:RetriveByIdResponse"/>
+</operation><operation name="ReceivedAcceptEcheq">
+    <input wsam:Action="ReceivedAcceptEcheq" message="tns:ReceivedAcceptEcheq"/>
+    <output wsam:Action="http://echeq.amco.com.ar/EcheqService/ReceivedAcceptEcheqResponse" message="tns:ReceivedAcceptEcheqResponse"/>
+</operation><operation name="ReceivedRepudiateEcheq">
+    <input wsam:Action="ReceivedRepudiateEcheq" message="tns:ReceivedRepudiateEcheq"/>
+    <output wsam:Action="http://echeq.amco.com.ar/EcheqService/ReceivedRepudiateEcheqResponse" message="tns:ReceivedRepudiateEcheqResponse"/>
+</operation><operation name="DepositSubmit">
+    <input wsam:Action="DepositSubmit" message="tns:DepositSubmit"/>
+    <output wsam:Action="http://echeq.amco.com.ar/EcheqService/DepositSubmitResponse" message="tns:DepositSubmitResponse"/>
+</operation><operation name="EndorseSubmit">
+    <input wsam:Action="EndorseSubmit" message="tns:EndorseSubmit"/>
+    <output wsam:Action="http://echeq.amco.com.ar/EcheqService/EndorseSubmitResponse" message="tns:EndorseSubmitResponse"/>
+</operation><operation name="CustodySubmit">
+    <input wsam:Action="CustodySubmit" message="tns:CustodySubmit"/>
+    <output wsam:Action="http://echeq.amco.com.ar/EcheqService/CustodySubmitResponse" message="tns:CustodySubmitResponse"/>
+</operation><operation name="CustodyWithdraw">
+    <input wsam:Action="CustodyWithdraw" message="tns:CustodyWithdraw"/>
+    <output wsam:Action="http://echeq.amco.com.ar/EcheqService/CustodyWithdrawResponse" message="tns:CustodyWithdrawResponse"/>
+</operation><operation name="ReturnRequestSubmit">
+    <input wsam:Action="ReturnRequestSubmit" message="tns:ReturnRequestSubmit"/>
+    <output wsam:Action="http://echeq.amco.com.ar/EcheqService/ReturnRequestSubmitResponse" message="tns:ReturnRequestSubmitResponse"/>
+</operation><operation name="ReturnRequestCancel">
+    <input wsam:Action="ReturnRequestCancel" message="tns:ReturnRequestCancel"/>
+    <output wsam:Action="http://echeq.amco.com.ar/EcheqService/ReturnRequestCancelResponse" message="tns:ReturnRequestCancelResponse"/>
+</operation><operation name="ReturnRequestAccept">
+    <input wsam:Action="ReturnRequestAccept" message="tns:ReturnRequestAccept"/>
+    <output wsam:Action="http://echeq.amco.com.ar/EcheqService/ReturnRequestAcceptResponse" message="tns:ReturnRequestAcceptResponse"/>
+</operation><operation name="ReturnRequestDeny">
+    <input wsam:Action="ReturnRequestDeny" message="tns:ReturnRequestDeny"/>
+    <output wsam:Action="http://echeq.amco.com.ar/EcheqService/ReturnRequestDenyResponse" message="tns:ReturnRequestDenyResponse"/>
+</operation><operation name="IssueRejectCertificate">
+    <input wsam:Action="IssueRejectCertificate" message="tns:IssueRejectCertificate"/>
+    <output wsam:Action="http://echeq.amco.com.ar/EcheqService/IssueRejectCertificateResponse" message="tns:IssueRejectCertificateResponse"/>
+</operation><operation name="VerifyIsBankClient">
+    <input wsam:Action="VerifyIsBankClient" message="tns:VerifyIsBankClient"/>
+    <output wsam:Action="http://echeq.amco.com.ar/EcheqService/VerifyIsBankClientResponse" message="tns:VerifyIsBankClientResponse"/>
+</operation><operation name="KillCheck">
+    <input wsam:Action="KillCheck" message="tns:KillCheck"/>
+    <output wsam:Action="http://echeq.amco.com.ar/EcheqService/KillCheckResponse" message="tns:KillCheckResponse"/>
+</operation><operation name="DeferCustodyDepositDate">
+    <input wsam:Action="DeferCustodyDepositDate" message="tns:DeferCustodyDepositDate"/>
+    <output wsam:Action="http://echeq.amco.com.ar/EcheqService/DeferCustodyDepositDateResponse" message="tns:DeferCustodyDepositDateResponse"/>
+</operation><operation name="CheckPendingNotifications">
+    <input wsam:Action="CheckPendingNotifications" message="tns:CheckPendingNotifications"/>
+    <output wsam:Action="http://echeq.amco.com.ar/EcheqService/CheckPendingNotificationsResponse" message="tns:CheckPendingNotificationsResponse"/>
+</operation><operation name="ECHEQPaidExecuted">
+    <input wsam:Action="ECHEQPaidExecuted" message="tns:ECHEQPaidExecuted"/>
+    <output wsam:Action="http://echeq.amco.com.ar/EcheqService/ECHEQPaidExecutedResponse" message="tns:ECHEQPaidExecutedResponse"/>
+</operation><operation name="ECHEQPaidRejected">
+    <input wsam:Action="ECHEQPaidRejected" message="tns:ECHEQPaidRejected"/>
+    <output wsam:Action="http://echeq.amco.com.ar/EcheqService/ECHEQPaidRejectedResponse" message="tns:ECHEQPaidRejectedResponse"/>
+</operation><operation name="RetrieveByVisID">
+    <input wsam:Action="RetrieveByVisID" message="tns:RetrieveByVisID"/>
+    <output wsam:Action="http://echeq.amco.com.ar/EcheqService/RetrieveByVisIDResponse" message="tns:RetrieveByVisIDResponse"/>
+</operation><operation name="ListIssued">
+    <input wsam:Action="ListIssued" message="tns:ListIssued"/>
+    <output wsam:Action="http://echeq.amco.com.ar/EcheqService/ListIssuedResponse" message="tns:ListIssuedResponse"/>
+</operation><operation name="IssueECHEQ">
+    <input wsam:Action="IssueECHEQ" message="tns:IssueECHEQ"/>
+    <output wsam:Action="http://echeq.amco.com.ar/EcheqService/IssueECHEQResponse" message="tns:IssueECHEQResponse"/>
+</operation><operation name="AddCheckAccount">
+    <input wsam:Action="AddCheckAccount" message="tns:AddCheckAccount"/>
+    <output wsam:Action="http://echeq.amco.com.ar/EcheqService/AddCheckAccountResponse" message="tns:AddCheckAccountResponse"/>
+</operation><operation name="ExpireCheck">
+    <input wsam:Action="ExpireCheck" message="tns:ExpireCheck"/>
+    <output wsam:Action="http://echeq.amco.com.ar/EcheqService/ExpireCheckResponse" message="tns:ExpireCheckResponse"/>
+</operation><operation name="NotificationDashboard">
+    <input wsam:Action="NotificationDashboard" message="tns:NotificationDashboard"/>
+    <output wsam:Action="http://echeq.amco.com.ar/EcheqService/NotificationDashboardResponse" message="tns:NotificationDashboardResponse"/>
+</operation><operation name="AddAccountAndIssue">
+    <input wsam:Action="AddAccountAndIssue" message="tns:AddAccountAndIssue"/>
+    <output wsam:Action="http://echeq.amco.com.ar/EcheqService/AddAccountAndIssueResponse" message="tns:AddAccountAndIssueResponse"/>
+</operation><operation name="RetrieveCert">
+    <input wsam:Action="RetrieveCert" message="tns:RetrieveCert"/>
+    <output wsam:Action="http://echeq.amco.com.ar/EcheqService/RetrieveCertResponse" message="tns:RetrieveCertResponse"/>
+</operation><operation name="SetONP">
+    <input wsam:Action="SetONP" message="tns:SetONP"/>
+    <output wsam:Action="http://echeq.amco.com.ar/EcheqService/SetONPResponse" message="tns:SetONPResponse"/>
+</operation><operation name="ListIssuedExecStat">
+    <input wsam:Action="ListIssuedExecStat" message="tns:ListIssuedExecStat"/>
+    <output wsam:Action="http://echeq.amco.com.ar/EcheqService/ListIssuedExecStatResponse" message="tns:ListIssuedExecStatResponse"/>
+</operation><operation name="EndorseWithoutGuarantee">
+    <input wsam:Action="EndorseWithoutGuarantee" message="tns:EndorseWithoutGuarantee"/>
+    <output wsam:Action="http://echeq.amco.com.ar/EcheqService/EndorseWithoutGuaranteeResponse" message="tns:EndorseWithoutGuaranteeResponse"/>
+</operation><operation name="EndorseInProcurement">
+    <input wsam:Action="EndorseInProcurement" message="tns:EndorseInProcurement"/>
+    <output wsam:Action="http://echeq.amco.com.ar/EcheqService/EndorseInProcurementResponse" message="tns:EndorseInProcurementResponse"/>
+</operation><operation name="Consultar2">
+    <input wsam:Action="Consultar2" message="tns:Consultar2"/>
+    <output wsam:Action="http://echeq.amco.com.ar/EcheqService/Consultar2Response" message="tns:Consultar2Response"/>
+</operation><operation name="AvalRepudiate">
+    <input wsam:Action="AvalRepudiate" message="tns:AvalRepudiate"/>
+    <output wsam:Action="http://echeq.amco.com.ar/EcheqService/AvalRepudiateResponse" message="tns:AvalRepudiateResponse"/>
+</operation><operation name="AvalCancel">
+    <input wsam:Action="AvalCancel" message="tns:AvalCancel"/>
+    <output wsam:Action="http://echeq.amco.com.ar/EcheqService/AvalCancelResponse" message="tns:AvalCancelResponse"/>
+</operation><operation name="AvalAccept">
+    <input wsam:Action="AvalAccept" message="tns:AvalAccept"/>
+    <output wsam:Action="http://echeq.amco.com.ar/EcheqService/AvalAcceptResponse" message="tns:AvalAcceptResponse"/>
+</operation><operation name="IssueAval">
+    <input wsam:Action="IssueAval" message="tns:IssueAval"/>
+    <output wsam:Action="http://echeq.amco.com.ar/EcheqService/IssueAvalResponse" message="tns:IssueAvalResponse"/>
+</operation><operation name="IssueAssignment">
+    <input wsam:Action="IssueAssignment" message="tns:IssueAssignment"/>
+    <output wsam:Action="http://echeq.amco.com.ar/EcheqService/IssueAssignmentResponse" message="tns:IssueAssignmentResponse"/>
+</operation><operation name="AssignmentCancel">
+    <input wsam:Action="AssignmentCancel" message="tns:AssignmentCancel"/>
+    <output wsam:Action="http://echeq.amco.com.ar/EcheqService/AssignmentCancelResponse" message="tns:AssignmentCancelResponse"/>
+</operation><operation name="AssignmentAccept">
+    <input wsam:Action="AssignmentAccept" message="tns:AssignmentAccept"/>
+    <output wsam:Action="http://echeq.amco.com.ar/EcheqService/AssignmentAcceptResponse" message="tns:AssignmentAcceptResponse"/>
+</operation><operation name="AssignmentRepudiate">
+    <input wsam:Action="AssignmentRepudiate" message="tns:AssignmentRepudiate"/>
+    <output wsam:Action="http://echeq.amco.com.ar/EcheqService/AssignmentRepudiateResponse" message="tns:AssignmentRepudiateResponse"/>
+</operation><operation name="RetrieveAssignment">
+    <input wsam:Action="RetrieveAssignment" message="tns:RetrieveAssignment"/>
+    <output wsam:Action="http://echeq.amco.com.ar/EcheqService/RetrieveAssignmentResponse" message="tns:RetrieveAssignmentResponse"/>
+</operation><operation name="RetrieveMarketInfrastructure">
+    <input wsam:Action="RetrieveMarketInfrastructure" message="tns:RetrieveMarketInfrastructure"/>
+    <output wsam:Action="http://echeq.amco.com.ar/EcheqService/RetrieveMarketInfrastructureResponse" message="tns:RetrieveMarketInfrastructureResponse"/>
+</operation><operation name="IssueECHEQMulti">
+    <input wsam:Action="IssueECHEQMulti" message="tns:IssueECHEQMulti"/>
+    <output wsam:Action="http://echeq.amco.com.ar/EcheqService/IssueECHEQMultiResponse" message="tns:IssueECHEQMultiResponse"/>
+</operation><operation name="AddAccountAndIssueMulti">
+    <input wsam:Action="AddAccountAndIssueMulti" message="tns:AddAccountAndIssueMulti"/>
+    <output wsam:Action="http://echeq.amco.com.ar/EcheqService/AddAccountAndIssueMultiResponse" message="tns:AddAccountAndIssueMultiResponse"/>
+</operation><operation name="ListAccounts">
+    <input wsam:Action="ListAccounts" message="tns:ListAccounts"/>
+    <output wsam:Action="http://echeq.amco.com.ar/EcheqService/ListAccountsResponse" message="tns:ListAccountsResponse"/>
+</operation><operation name="ListCheckStatus">
+    <input wsam:Action="ListCheckStatus" message="tns:ListCheckStatus"/>
+    <output wsam:Action="http://echeq.amco.com.ar/EcheqService/ListCheckStatusResponse" message="tns:ListCheckStatusResponse"/>
+</operation><operation name="EndorseCancel">
+    <input wsam:Action="EndorseCancel" message="tns:EndorseCancel"/>
+    <output wsam:Action="http://echeq.amco.com.ar/EcheqService/EndorseCancelResponse" message="tns:EndorseCancelResponse"/>
+</operation><operation name="RejectOutExchange">
+    <input wsam:Action="RejectOutExchange" message="tns:RejectOutExchange"/>
+    <output wsam:Action="http://echeq.amco.com.ar/EcheqService/RejectOutExchangeResponse" message="tns:RejectOutExchangeResponse"/>
+</operation>
+</portType>
+
+<binding name="EcheqServicePortBinding" type="tns:EcheqService">
+    <soap12:binding  transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+    <operation name="ConsImpTot">
+    <soap12:operation soapAction="ConsImpTot"/>
+    <input>
+        <soap12:body use="literal"/>
+    </input>
+    <output>
+        <soap12:body use="literal"/>
+    </output>
+</operation><operation name="ListReceived">
+    <soap12:operation soapAction="ListReceived"/>
+    <input>
+        <soap12:body use="literal"/>
+    </input>
+    <output>
+        <soap12:body use="literal"/>
+    </output>
+</operation><operation name="ListReceivedOrEndorsed">
+    <soap12:operation soapAction="ListReceivedOrEndorsed"/>
+    <input>
+        <soap12:body use="literal"/>
+    </input>
+    <output>
+        <soap12:body use="literal"/>
+    </output>
+</operation><operation name="ListReceivedPend_BenefDir">
+    <soap12:operation soapAction="ListReceivedPend_BenefDir"/>
+    <input>
+        <soap12:body use="literal"/>
+    </input>
+    <output>
+        <soap12:body use="literal"/>
+    </output>
+</operation><operation name="ListReceivedPend_BenefEnd">
+    <soap12:operation soapAction="ListReceivedPend_BenefEnd"/>
+    <input>
+        <soap12:body use="literal"/>
+    </input>
+    <output>
+        <soap12:body use="literal"/>
+    </output>
+</operation><operation name="ListReceivedForDeposit">
+    <soap12:operation soapAction="ListReceivedForDeposit"/>
+    <input>
+        <soap12:body use="literal"/>
+    </input>
+    <output>
+        <soap12:body use="literal"/>
+    </output>
+</operation><operation name="ListReceivedForCustody">
+    <soap12:operation soapAction="ListReceivedForCustody"/>
+    <input>
+        <soap12:body use="literal"/>
+    </input>
+    <output>
+        <soap12:body use="literal"/>
+    </output>
+</operation><operation name="ListReceivedWithPendReturnRequest">
+    <soap12:operation soapAction="ListReceivedWithPendReturnRequest"/>
+    <input>
+        <soap12:body use="literal"/>
+    </input>
+    <output>
+        <soap12:body use="literal"/>
+    </output>
+</operation><operation name="ListReceivedForPostDatedDeposit">
+    <soap12:operation soapAction="ListReceivedForPostDatedDeposit"/>
+    <input>
+        <soap12:body use="literal"/>
+    </input>
+    <output>
+        <soap12:body use="literal"/>
+    </output>
+</operation><operation name="ListReceivedAndAssignment">
+    <soap12:operation soapAction="ListReceivedAndAssignment"/>
+    <input>
+        <soap12:body use="literal"/>
+    </input>
+    <output>
+        <soap12:body use="literal"/>
+    </output>
+</operation><operation name="ListReceivedAndEndorsed">
+    <soap12:operation soapAction="ListReceivedAndEndorsed"/>
+    <input>
+        <soap12:body use="literal"/>
+    </input>
+    <output>
+        <soap12:body use="literal"/>
+    </output>
+</operation><operation name="ListReceivedAndRejected">
+    <soap12:operation soapAction="ListReceivedAndRejected"/>
+    <input>
+        <soap12:body use="literal"/>
+    </input>
+    <output>
+        <soap12:body use="literal"/>
+    </output>
+</operation><operation name="ListReceivedInDiscount">
+    <soap12:operation soapAction="ListReceivedInDiscount"/>
+    <input>
+        <soap12:body use="literal"/>
+    </input>
+    <output>
+        <soap12:body use="literal"/>
+    </output>
+</operation><operation name="RetriveById">
+    <soap12:operation soapAction="RetriveById"/>
+    <input>
+        <soap12:body use="literal"/>
+    </input>
+    <output>
+        <soap12:body use="literal"/>
+    </output>
+</operation><operation name="ReceivedAcceptEcheq">
+    <soap12:operation soapAction="ReceivedAcceptEcheq"/>
+    <input>
+        <soap12:body use="literal"/>
+    </input>
+    <output>
+        <soap12:body use="literal"/>
+    </output>
+</operation><operation name="ReceivedRepudiateEcheq">
+    <soap12:operation soapAction="ReceivedRepudiateEcheq"/>
+    <input>
+        <soap12:body use="literal"/>
+    </input>
+    <output>
+        <soap12:body use="literal"/>
+    </output>
+</operation><operation name="DepositSubmit">
+    <soap12:operation soapAction="DepositSubmit"/>
+    <input>
+        <soap12:body use="literal"/>
+    </input>
+    <output>
+        <soap12:body use="literal"/>
+    </output>
+</operation><operation name="EndorseSubmit">
+    <soap12:operation soapAction="EndorseSubmit"/>
+    <input>
+        <soap12:body use="literal"/>
+    </input>
+    <output>
+        <soap12:body use="literal"/>
+    </output>
+</operation><operation name="CustodySubmit">
+    <soap12:operation soapAction="CustodySubmit"/>
+    <input>
+        <soap12:body use="literal"/>
+    </input>
+    <output>
+        <soap12:body use="literal"/>
+    </output>
+</operation><operation name="CustodyWithdraw">
+    <soap12:operation soapAction="CustodyWithdraw"/>
+    <input>
+        <soap12:body use="literal"/>
+    </input>
+    <output>
+        <soap12:body use="literal"/>
+    </output>
+</operation><operation name="ReturnRequestSubmit">
+    <soap12:operation soapAction="ReturnRequestSubmit"/>
+    <input>
+        <soap12:body use="literal"/>
+    </input>
+    <output>
+        <soap12:body use="literal"/>
+    </output>
+</operation><operation name="ReturnRequestCancel">
+    <soap12:operation soapAction="ReturnRequestCancel"/>
+    <input>
+        <soap12:body use="literal"/>
+    </input>
+    <output>
+        <soap12:body use="literal"/>
+    </output>
+</operation><operation name="ReturnRequestAccept">
+    <soap12:operation soapAction="ReturnRequestAccept"/>
+    <input>
+        <soap12:body use="literal"/>
+    </input>
+    <output>
+        <soap12:body use="literal"/>
+    </output>
+</operation><operation name="ReturnRequestDeny">
+    <soap12:operation soapAction="ReturnRequestDeny"/>
+    <input>
+        <soap12:body use="literal"/>
+    </input>
+    <output>
+        <soap12:body use="literal"/>
+    </output>
+</operation><operation name="IssueRejectCertificate">
+    <soap12:operation soapAction="IssueRejectCertificate"/>
+    <input>
+        <soap12:body use="literal"/>
+    </input>
+    <output>
+        <soap12:body use="literal"/>
+    </output>
+</operation><operation name="VerifyIsBankClient">
+    <soap12:operation soapAction="VerifyIsBankClient"/>
+    <input>
+        <soap12:body use="literal"/>
+    </input>
+    <output>
+        <soap12:body use="literal"/>
+    </output>
+</operation><operation name="KillCheck">
+    <soap12:operation soapAction="KillCheck"/>
+    <input>
+        <soap12:body use="literal"/>
+    </input>
+    <output>
+        <soap12:body use="literal"/>
+    </output>
+</operation><operation name="DeferCustodyDepositDate">
+    <soap12:operation soapAction="DeferCustodyDepositDate"/>
+    <input>
+        <soap12:body use="literal"/>
+    </input>
+    <output>
+        <soap12:body use="literal"/>
+    </output>
+</operation><operation name="CheckPendingNotifications">
+    <soap12:operation soapAction="CheckPendingNotifications"/>
+    <input>
+        <soap12:body use="literal"/>
+    </input>
+    <output>
+        <soap12:body use="literal"/>
+    </output>
+</operation><operation name="ECHEQPaidExecuted">
+    <soap12:operation soapAction="ECHEQPaidExecuted"/>
+    <input>
+        <soap12:body use="literal"/>
+    </input>
+    <output>
+        <soap12:body use="literal"/>
+    </output>
+</operation><operation name="ECHEQPaidRejected">
+    <soap12:operation soapAction="ECHEQPaidRejected"/>
+    <input>
+        <soap12:body use="literal"/>
+    </input>
+    <output>
+        <soap12:body use="literal"/>
+    </output>
+</operation><operation name="RetrieveByVisID">
+    <soap12:operation soapAction="RetrieveByVisID"/>
+    <input>
+        <soap12:body use="literal"/>
+    </input>
+    <output>
+        <soap12:body use="literal"/>
+    </output>
+</operation><operation name="ListIssued">
+    <soap12:operation soapAction="ListIssued"/>
+    <input>
+        <soap12:body use="literal"/>
+    </input>
+    <output>
+        <soap12:body use="literal"/>
+    </output>
+</operation><operation name="IssueECHEQ">
+    <soap12:operation soapAction="IssueECHEQ"/>
+    <input>
+        <soap12:body use="literal"/>
+    </input>
+    <output>
+        <soap12:body use="literal"/>
+    </output>
+</operation><operation name="AddCheckAccount">
+    <soap12:operation soapAction="AddCheckAccount"/>
+    <input>
+        <soap12:body use="literal"/>
+    </input>
+    <output>
+        <soap12:body use="literal"/>
+    </output>
+</operation><operation name="ExpireCheck">
+    <soap12:operation soapAction="ExpireCheck"/>
+    <input>
+        <soap12:body use="literal"/>
+    </input>
+    <output>
+        <soap12:body use="literal"/>
+    </output>
+</operation><operation name="NotificationDashboard">
+    <soap12:operation soapAction="NotificationDashboard"/>
+    <input>
+        <soap12:body use="literal"/>
+    </input>
+    <output>
+        <soap12:body use="literal"/>
+    </output>
+</operation><operation name="AddAccountAndIssue">
+    <soap12:operation soapAction="AddAccountAndIssue"/>
+    <input>
+        <soap12:body use="literal"/>
+    </input>
+    <output>
+        <soap12:body use="literal"/>
+    </output>
+</operation><operation name="RetrieveCert">
+    <soap12:operation soapAction="RetrieveCert"/>
+    <input>
+        <soap12:body use="literal"/>
+    </input>
+    <output>
+        <soap12:body use="literal"/>
+    </output>
+</operation><operation name="SetONP">
+    <soap12:operation soapAction="SetONP"/>
+    <input>
+        <soap12:body use="literal"/>
+    </input>
+    <output>
+        <soap12:body use="literal"/>
+    </output>
+</operation><operation name="ListIssuedExecStat">
+    <soap12:operation soapAction="ListIssuedExecStat"/>
+    <input>
+        <soap12:body use="literal"/>
+    </input>
+    <output>
+        <soap12:body use="literal"/>
+    </output>
+</operation><operation name="EndorseWithoutGuarantee">
+    <soap12:operation soapAction="EndorseWithoutGuarantee"/>
+    <input>
+        <soap12:body use="literal"/>
+    </input>
+    <output>
+        <soap12:body use="literal"/>
+    </output>
+</operation><operation name="EndorseInProcurement">
+    <soap12:operation soapAction="EndorseInProcurement"/>
+    <input>
+        <soap12:body use="literal"/>
+    </input>
+    <output>
+        <soap12:body use="literal"/>
+    </output>
+</operation><operation name="Consultar2">
+    <soap12:operation soapAction="Consultar2"/>
+    <input>
+        <soap12:body use="literal"/>
+    </input>
+    <output>
+        <soap12:body use="literal"/>
+    </output>
+</operation><operation name="AvalRepudiate">
+    <soap12:operation soapAction="AvalRepudiate"/>
+    <input>
+        <soap12:body use="literal"/>
+    </input>
+    <output>
+        <soap12:body use="literal"/>
+    </output>
+</operation><operation name="AvalCancel">
+    <soap12:operation soapAction="AvalCancel"/>
+    <input>
+        <soap12:body use="literal"/>
+    </input>
+    <output>
+        <soap12:body use="literal"/>
+    </output>
+</operation><operation name="AvalAccept">
+    <soap12:operation soapAction="AvalAccept"/>
+    <input>
+        <soap12:body use="literal"/>
+    </input>
+    <output>
+        <soap12:body use="literal"/>
+    </output>
+</operation><operation name="IssueAval">
+    <soap12:operation soapAction="IssueAval"/>
+    <input>
+        <soap12:body use="literal"/>
+    </input>
+    <output>
+        <soap12:body use="literal"/>
+    </output>
+</operation><operation name="IssueAssignment">
+    <soap12:operation soapAction="IssueAssignment"/>
+    <input>
+        <soap12:body use="literal"/>
+    </input>
+    <output>
+        <soap12:body use="literal"/>
+    </output>
+</operation><operation name="AssignmentCancel">
+    <soap12:operation soapAction="AssignmentCancel"/>
+    <input>
+        <soap12:body use="literal"/>
+    </input>
+    <output>
+        <soap12:body use="literal"/>
+    </output>
+</operation><operation name="AssignmentAccept">
+    <soap12:operation soapAction="AssignmentAccept"/>
+    <input>
+        <soap12:body use="literal"/>
+    </input>
+    <output>
+        <soap12:body use="literal"/>
+    </output>
+</operation><operation name="AssignmentRepudiate">
+    <soap12:operation soapAction="AssignmentRepudiate"/>
+    <input>
+        <soap12:body use="literal"/>
+    </input>
+    <output>
+        <soap12:body use="literal"/>
+    </output>
+</operation><operation name="RetrieveAssignment">
+    <soap12:operation soapAction="RetrieveAssignment"/>
+    <input>
+        <soap12:body use="literal"/>
+    </input>
+    <output>
+        <soap12:body use="literal"/>
+    </output>
+</operation><operation name="RetrieveMarketInfrastructure">
+    <soap12:operation soapAction="RetrieveMarketInfrastructure"/>
+    <input>
+        <soap12:body use="literal"/>
+    </input>
+    <output>
+        <soap12:body use="literal"/>
+    </output>
+</operation><operation name="IssueECHEQMulti">
+    <soap12:operation soapAction="IssueECHEQMulti"/>
+    <input>
+        <soap12:body use="literal"/>
+    </input>
+    <output>
+        <soap12:body use="literal"/>
+    </output>
+</operation><operation name="AddAccountAndIssueMulti">
+    <soap12:operation soapAction="AddAccountAndIssueMulti"/>
+    <input>
+        <soap12:body use="literal"/>
+    </input>
+    <output>
+        <soap12:body use="literal"/>
+    </output>
+</operation><operation name="ListAccounts">
+    <soap12:operation soapAction="ListAccounts"/>
+    <input>
+        <soap12:body use="literal"/>
+    </input>
+    <output>
+        <soap12:body use="literal"/>
+    </output>
+</operation><operation name="ListCheckStatus">
+    <soap12:operation soapAction="ListCheckStatus"/>
+    <input>
+        <soap12:body use="literal"/>
+    </input>
+    <output>
+        <soap12:body use="literal"/>
+    </output>
+</operation><operation name="EndorseCancel">
+    <soap12:operation soapAction="EndorseCancel"/>
+    <input>
+        <soap12:body use="literal"/>
+    </input>
+    <output>
+        <soap12:body use="literal"/>
+    </output>
+</operation><operation name="RejectOutExchange">
+    <soap12:operation soapAction="RejectOutExchange"/>
+    <input>
+        <soap12:body use="literal"/>
+    </input>
+    <output>
+        <soap12:body use="literal"/>
+    </output>
+</operation>
+</binding><service name="ws">
+    <port name="EcheqServicePort" binding="tns:EcheqServicePortBinding">
+        <soap12:address location="https://lxecheqhomo01.ar.bsch:14000/echeq-soap/ws"/>
+    </port>
+</service>
+
+</definitions>

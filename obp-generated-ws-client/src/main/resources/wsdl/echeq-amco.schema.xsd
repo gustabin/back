@@ -1,0 +1,536 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xs:schema xmlns:tns="http://echeq.amco.com.ar/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://echeq.amco.com.ar/" elementFormDefault="qualified">
+    <xs:element name="ConsImpTotResponse" type="tns:Response" />
+<xs:element name="ConsImpTot" type="tns:ConsImpTot"/>
+<xs:element name="ListReceivedResponse" type="tns:Response" />
+<xs:element name="ListReceived" type="tns:ListReceived"/>
+<xs:element name="ListReceivedOrEndorsedResponse" type="tns:Response" />
+<xs:element name="ListReceivedOrEndorsed" type="tns:ListReceivedOrEndorsed"/>
+<xs:element name="ListReceivedPend_BenefDirResponse" type="tns:Response" />
+<xs:element name="ListReceivedPend_BenefDir" type="tns:ListReceivedPend_BenefDir"/>
+<xs:element name="ListReceivedPend_BenefEndResponse" type="tns:Response" />
+<xs:element name="ListReceivedPend_BenefEnd" type="tns:ListReceivedPend_BenefEnd"/>
+<xs:element name="ListReceivedForDepositResponse" type="tns:Response" />
+<xs:element name="ListReceivedForDeposit" type="tns:ListReceivedForDeposit"/>
+<xs:element name="ListReceivedForCustodyResponse" type="tns:Response" />
+<xs:element name="ListReceivedForCustody" type="tns:ListReceivedForCustody"/>
+<xs:element name="ListReceivedWithPendReturnRequestResponse" type="tns:Response" />
+<xs:element name="ListReceivedWithPendReturnRequest" type="tns:ListReceivedWithPendReturnRequest"/>
+<xs:element name="ListReceivedForPostDatedDepositResponse" type="tns:Response" />
+<xs:element name="ListReceivedForPostDatedDeposit" type="tns:ListReceivedForPostDatedDeposit"/>
+<xs:element name="ListReceivedAndAssignmentResponse" type="tns:Response" />
+<xs:element name="ListReceivedAndAssignment" type="tns:ListReceivedAndAssignment"/>
+<xs:element name="ListReceivedAndEndorsedResponse" type="tns:Response" />
+<xs:element name="ListReceivedAndEndorsed" type="tns:ListReceivedAndEndorsed"/>
+<xs:element name="ListReceivedAndRejectedResponse" type="tns:Response" />
+<xs:element name="ListReceivedAndRejected" type="tns:ListReceivedAndRejected"/>
+<xs:element name="ListReceivedInDiscountResponse" type="tns:Response" />
+<xs:element name="ListReceivedInDiscount" type="tns:ListReceivedInDiscount"/>
+<xs:element name="RetriveByIdResponse" type="tns:Response" />
+<xs:element name="RetriveById" type="tns:RetriveById"/>
+<xs:element name="ReceivedAcceptEcheqResponse" type="tns:Response" />
+<xs:element name="ReceivedAcceptEcheq" type="tns:ReceivedAcceptEcheq"/>
+<xs:element name="ReceivedRepudiateEcheqResponse" type="tns:Response" />
+<xs:element name="ReceivedRepudiateEcheq" type="tns:ReceivedRepudiateEcheq"/>
+<xs:element name="DepositSubmitResponse" type="tns:Response" />
+<xs:element name="DepositSubmit" type="tns:DepositSubmit"/>
+<xs:element name="EndorseSubmitResponse" type="tns:Response" />
+<xs:element name="EndorseSubmit" type="tns:EndorseSubmit"/>
+<xs:element name="CustodySubmitResponse" type="tns:Response" />
+<xs:element name="CustodySubmit" type="tns:CustodySubmit"/>
+<xs:element name="CustodyWithdrawResponse" type="tns:Response" />
+<xs:element name="CustodyWithdraw" type="tns:CustodyWithdraw"/>
+<xs:element name="ReturnRequestSubmitResponse" type="tns:Response" />
+<xs:element name="ReturnRequestSubmit" type="tns:ReturnRequestSubmit"/>
+<xs:element name="ReturnRequestCancelResponse" type="tns:Response" />
+<xs:element name="ReturnRequestCancel" type="tns:ReturnRequestCancel"/>
+<xs:element name="ReturnRequestAcceptResponse" type="tns:Response" />
+<xs:element name="ReturnRequestAccept" type="tns:ReturnRequestAccept"/>
+<xs:element name="ReturnRequestDenyResponse" type="tns:Response" />
+<xs:element name="ReturnRequestDeny" type="tns:ReturnRequestDeny"/>
+<xs:element name="IssueRejectCertificateResponse" type="tns:Response" />
+<xs:element name="IssueRejectCertificate" type="tns:IssueRejectCertificate"/>
+<xs:element name="VerifyIsBankClientResponse" type="tns:Response" />
+<xs:element name="VerifyIsBankClient" type="tns:VerifyIsBankClient"/>
+<xs:element name="KillCheckResponse" type="tns:Response" />
+<xs:element name="KillCheck" type="tns:KillCheck"/>
+<xs:element name="DeferCustodyDepositDateResponse" type="tns:Response" />
+<xs:element name="DeferCustodyDepositDate" type="tns:DeferCustodyDepositDate"/>
+<xs:element name="CheckPendingNotificationsResponse" type="tns:Response" />
+<xs:element name="CheckPendingNotifications" type="tns:CheckPendingNotifications"/>
+<xs:element name="ECHEQPaidExecutedResponse" type="tns:Response" />
+<xs:element name="ECHEQPaidExecuted" type="tns:ECHEQPaidExecuted"/>
+<xs:element name="ECHEQPaidRejectedResponse" type="tns:Response" />
+<xs:element name="ECHEQPaidRejected" type="tns:ECHEQPaidRejected"/>
+<xs:element name="RetrieveByVisIDResponse" type="tns:Response" />
+<xs:element name="RetrieveByVisID" type="tns:RetrieveByVisID"/>
+<xs:element name="ListIssuedResponse" type="tns:Response" />
+<xs:element name="ListIssued" type="tns:ListIssued"/>
+<xs:element name="IssueECHEQResponse" type="tns:Response" />
+<xs:element name="IssueECHEQ" type="tns:IssueECHEQ"/>
+<xs:element name="AddCheckAccountResponse" type="tns:Response" />
+<xs:element name="AddCheckAccount" type="tns:AddCheckAccount"/>
+<xs:element name="ExpireCheckResponse" type="tns:Response" />
+<xs:element name="ExpireCheck" type="tns:ExpireCheck"/>
+<xs:element name="NotificationDashboardResponse" type="tns:Response" />
+<xs:element name="NotificationDashboard" type="tns:NotificationDashboard"/>
+<xs:element name="AddAccountAndIssueResponse" type="tns:Response" />
+<xs:element name="AddAccountAndIssue" type="tns:AddAccountAndIssue"/>
+<xs:element name="RetrieveCertResponse" type="tns:Response" />
+<xs:element name="RetrieveCert" type="tns:RetrieveCert"/>
+<xs:element name="SetONPResponse" type="tns:Response" />
+<xs:element name="SetONP" type="tns:SetONP"/>
+<xs:element name="ListIssuedExecStatResponse" type="tns:Response" />
+<xs:element name="ListIssuedExecStat" type="tns:ListIssuedExecStat"/>
+<xs:element name="EndorseWithoutGuaranteeResponse" type="tns:Response" />
+<xs:element name="EndorseWithoutGuarantee" type="tns:EndorseWithoutGuarantee"/>
+<xs:element name="EndorseInProcurementResponse" type="tns:Response" />
+<xs:element name="EndorseInProcurement" type="tns:EndorseInProcurement"/>
+<xs:element name="Consultar2Response" type="tns:Response" />
+<xs:element name="Consultar2" type="tns:Consultar2"/>
+<xs:element name="AvalRepudiateResponse" type="tns:Response" />
+<xs:element name="AvalRepudiate" type="tns:AvalRepudiate"/>
+<xs:element name="AvalCancelResponse" type="tns:Response" />
+<xs:element name="AvalCancel" type="tns:AvalCancel"/>
+<xs:element name="AvalAcceptResponse" type="tns:Response" />
+<xs:element name="AvalAccept" type="tns:AvalAccept"/>
+<xs:element name="IssueAvalResponse" type="tns:Response" />
+<xs:element name="IssueAval" type="tns:IssueAval"/>
+<xs:element name="IssueAssignmentResponse" type="tns:Response" />
+<xs:element name="IssueAssignment" type="tns:IssueAssignment"/>
+<xs:element name="AssignmentCancelResponse" type="tns:Response" />
+<xs:element name="AssignmentCancel" type="tns:AssignmentCancel"/>
+<xs:element name="AssignmentAcceptResponse" type="tns:Response" />
+<xs:element name="AssignmentAccept" type="tns:AssignmentAccept"/>
+<xs:element name="AssignmentRepudiateResponse" type="tns:Response" />
+<xs:element name="AssignmentRepudiate" type="tns:AssignmentRepudiate"/>
+<xs:element name="RetrieveAssignmentResponse" type="tns:ResponseCesion" />
+<xs:element name="RetrieveAssignment" type="tns:RetrieveAssignment"/>
+<xs:element name="RetrieveMarketInfrastructureResponse" type="tns:Response" />
+<xs:element name="RetrieveMarketInfrastructure" type="tns:RetrieveMarketInfrastructure"/>
+<xs:element name="IssueECHEQMultiResponse" type="tns:Response" />
+<xs:element name="IssueECHEQMulti" type="tns:IssueECHEQMulti"/>
+<xs:element name="AddAccountAndIssueMultiResponse" type="tns:Response" />
+<xs:element name="AddAccountAndIssueMulti" type="tns:AddAccountAndIssueMulti"/>
+<xs:element name="ListAccountsResponse" type="tns:Response" />
+<xs:element name="ListAccounts" type="tns:ListAccounts"/>
+<xs:element name="ListCheckStatusResponse" type="tns:Response" />
+<xs:element name="ListCheckStatus" type="tns:ListCheckStatus"/>
+<xs:element name="EndorseCancelResponse" type="tns:Response" />
+<xs:element name="EndorseCancel" type="tns:EndorseCancel"/>
+<xs:element name="RejectOutExchangeResponse" type="tns:Response" />
+<xs:element name="RejectOutExchange" type="tns:RejectOutExchange"/>
+<xs:complexType name="ConsImpTot">
+<xs:sequence>
+<xs:element name="cuit" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="beneficiario_documento_tipo" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="beneficiario_documento" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="rango_por_fecha_de_emision" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_cnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_scnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_jsessionid" type="xs:string" minOccurs="0" maxOccurs="1"/></xs:sequence>
+</xs:complexType>
+<xs:complexType name="ListReceived">
+<xs:sequence>
+<xs:element name="cuit" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="cheque_numero" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="emisor_cuit" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="beneficiario_documento_tipo" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="beneficiario_documento" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="estado" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="fecha_emision_desde" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="fecha_emision_hasta" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="fecha_pago_desde" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="fecha_pago_hasta" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="numero_pagina" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="cantidad_registros_pagina" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="orderby" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_cnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_scnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_jsessionid" type="xs:string" minOccurs="0" maxOccurs="1"/></xs:sequence>
+</xs:complexType>
+<xs:complexType name="ListReceivedOrEndorsed">
+<xs:sequence>
+<xs:element name="cuit" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="beneficiario_documento_tipo" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="beneficiario_documento" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="fecha_emision_desde" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="fecha_emision_hasta" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="fecha_pago_desde" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="fecha_pago_hasta" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="estado" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="cheque_numero" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="emisor_cuit" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="cuit_beneficiario_original" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="numero_pagina" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="cantidad_registros_pagina" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="orderby" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_cnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_scnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_jsessionid" type="xs:string" minOccurs="0" maxOccurs="1"/></xs:sequence>
+</xs:complexType>
+<xs:complexType name="ListReceivedPend_BenefDir">
+<xs:sequence>
+<xs:element name="cuit" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="beneficiario_documento_tipo" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="beneficiario_documento" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="fecha_emision_desde" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="fecha_emision_hasta" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_cnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_scnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_jsessionid" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="numero_pagina" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="cantidad_registros_pagina" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="orderby" type="xs:string" minOccurs="0" maxOccurs="1"/></xs:sequence>
+</xs:complexType>
+<xs:complexType name="ListReceivedPend_BenefEnd">
+<xs:sequence>
+<xs:element name="cuit" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="beneficiario_documento_tipo" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="beneficiario_documento" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="fecha_emision_desde" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="fecha_emision_hasta" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_cnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_scnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_jsessionid" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="numero_pagina" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="cantidad_registros_pagina" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="orderby" type="xs:string" minOccurs="0" maxOccurs="1"/></xs:sequence>
+</xs:complexType>
+<xs:complexType name="ListReceivedForDeposit">
+<xs:sequence>
+<xs:element name="cuit" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="beneficiario_documento_tipo" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="beneficiario_documento" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="fecha_emision_desde" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="fecha_emision_hasta" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_cnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_scnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_jsessionid" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="numero_pagina" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="cantidad_registros_pagina" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="orderby" type="xs:string" minOccurs="0" maxOccurs="1"/></xs:sequence>
+</xs:complexType>
+<xs:complexType name="ListReceivedForCustody">
+<xs:sequence>
+<xs:element name="cuit" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="beneficiario_documento_tipo" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="beneficiario_documento" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="fecha_emision_desde" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="fecha_emision_hasta" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_cnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_scnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_jsessionid" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="numero_pagina" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="cantidad_registros_pagina" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="orderby" type="xs:string" minOccurs="0" maxOccurs="1"/></xs:sequence>
+</xs:complexType>
+<xs:complexType name="ListReceivedWithPendReturnRequest">
+<xs:sequence>
+<xs:element name="cuit" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="beneficiario_documento_tipo" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="beneficiario_documento" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="fecha_emision_desde" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="fecha_emision_hasta" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_cnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_scnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_jsessionid" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="numero_pagina" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="cantidad_registros_pagina" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="orderby" type="xs:string" minOccurs="0" maxOccurs="1"/></xs:sequence>
+</xs:complexType>
+<xs:complexType name="ListReceivedForPostDatedDeposit">
+<xs:sequence>
+<xs:element name="cuit" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="beneficiario_documento_tipo" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="beneficiario_documento" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="fecha_emision_desde" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="fecha_emision_hasta" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_cnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_scnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_jsessionid" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="numero_pagina" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="cantidad_registros_pagina" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="orderby" type="xs:string" minOccurs="0" maxOccurs="1"/></xs:sequence>
+</xs:complexType>
+<xs:complexType name="ListReceivedAndAssignment">
+<xs:sequence>
+<xs:element name="cuit" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="fecha_emision_desde" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="fecha_emision_hasta" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="fecha_pago_desde" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="fecha_pago_hasta" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="estado" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="cheque_numero" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="emisor_cuit" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="numero_pagina" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="cantidad_registros_pagina" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="orderby" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_cnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_scnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_jsessionid" type="xs:string" minOccurs="0" maxOccurs="1"/></xs:sequence>
+</xs:complexType>
+<xs:complexType name="ListReceivedAndEndorsed">
+<xs:sequence>
+<xs:element name="cuit" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="beneficiario_documento_tipo" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="beneficiario_documento" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="fecha_emision_desde" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="fecha_emision_hasta" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="fecha_pago_desde" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="fecha_pago_hasta" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="estado" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="cheque_numero" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="emisor_cuit" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="cuit_beneficiario_original" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="numero_pagina" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="cantidad_registros_pagina" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="orderby" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_cnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_scnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_jsessionid" type="xs:string" minOccurs="0" maxOccurs="1"/></xs:sequence>
+</xs:complexType>
+<xs:complexType name="ListReceivedAndRejected">
+<xs:sequence>
+<xs:element name="cuit" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="beneficiario_documento_tipo" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="beneficiario_documento" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="fecha_emision_desde" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="fecha_emision_hasta" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_cnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_scnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_jsessionid" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="numero_pagina" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="cantidad_registros_pagina" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="orderby" type="xs:string" minOccurs="0" maxOccurs="1"/></xs:sequence>
+</xs:complexType>
+<xs:complexType name="ListReceivedInDiscount">
+<xs:sequence>
+<xs:element name="cuit" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="fecha_pago_desde" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="fecha_pago_hasta" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="cheque_numero" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="numero_pagina" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="cantidad_registros_pagina" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="orderby" type="xs:string" minOccurs="0" maxOccurs="1"/></xs:sequence>
+</xs:complexType>
+<xs:complexType name="RetriveById">
+<xs:sequence>
+<xs:element name="intcheque_id" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="cuit" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="trk_cnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_scnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_jsessionid" type="xs:string" minOccurs="0" maxOccurs="1"/></xs:sequence>
+</xs:complexType>
+<xs:complexType name="ReceivedAcceptEcheq">
+<xs:sequence>
+<xs:element name="intcheque_id" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="beneficiario_documento_tipo" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="beneficiario_documento" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="firmantes" type="tns:Firmante" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="trk_cnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_scnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_jsessionid" type="xs:string" minOccurs="0" maxOccurs="1"/></xs:sequence>
+</xs:complexType>
+<xs:complexType name="ReceivedRepudiateEcheq">
+<xs:sequence>
+<xs:element name="intcheque_id" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="beneficiario_documento_tipo" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="beneficiario_documento" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="cheque_motivo_repudio" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="firmantes" type="tns:Firmante" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="trk_cnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_scnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_jsessionid" type="xs:string" minOccurs="0" maxOccurs="1"/></xs:sequence>
+</xs:complexType>
+<xs:complexType name="DepositSubmit">
+<xs:sequence>
+<xs:element name="depositos" type="tns:Deposito" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="firmantes" type="tns:Firmante" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="trk_cnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_scnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_jsessionid" type="xs:string" minOccurs="0" maxOccurs="1"/></xs:sequence>
+</xs:complexType>
+<xs:complexType name="EndorseSubmit">
+<xs:sequence>
+<xs:element name="intcheque_id" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="beneficiario_documento_tipo" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="beneficiario_documento" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="nuevo_beneficiario_documento_tipo" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="nuevo_beneficiario_documento" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="tipo_endoso" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="chq_referencias_pago" type="tns:Referencia" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="firmantes" type="tns:Firmante" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="trk_cnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_scnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_jsessionid" type="xs:string" minOccurs="0" maxOccurs="1"/></xs:sequence>
+</xs:complexType>
+<xs:complexType name="CustodySubmit">
+<xs:sequence>
+<xs:element name="intcheque_id" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="beneficiario_documento_tipo" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="beneficiario_documento" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="beneficiario_cbu" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="firmantes" type="tns:Firmante" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="trk_cnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_scnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_jsessionid" type="xs:string" minOccurs="0" maxOccurs="1"/></xs:sequence>
+</xs:complexType>
+<xs:complexType name="CustodyWithdraw">
+<xs:sequence>
+<xs:element name="intcheque_id" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="beneficiario_documento_tipo" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="beneficiario_documento" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="firmantes" type="tns:Firmante" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="trk_cnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_scnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_jsessionid" type="xs:string" minOccurs="0" maxOccurs="1"/></xs:sequence>
+</xs:complexType>
+<xs:complexType name="ReturnRequestSubmit">
+<xs:sequence>
+<xs:element name="intcheque_id" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="emisor_documento_tipo" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="emisor_documento" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="devolucion_motivo" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="firmantes" type="tns:Firmante" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="trk_cnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_scnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_jsessionid" type="xs:string" minOccurs="0" maxOccurs="1"/></xs:sequence>
+</xs:complexType>
+<xs:complexType name="ReturnRequestCancel">
+<xs:sequence>
+<xs:element name="intcheque_id" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="emisor_documento_tipo" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="emisor_documento" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="firmantes" type="tns:Firmante" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="trk_cnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_scnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_jsessionid" type="xs:string" minOccurs="0" maxOccurs="1"/></xs:sequence>
+</xs:complexType>
+<xs:complexType name="ReturnRequestAccept">
+<xs:sequence>
+<xs:element name="intcheque_id" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="beneficiario_documento_tipo" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="beneficiario_documento" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="firmantes" type="tns:Firmante" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="trk_cnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_scnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_jsessionid" type="xs:string" minOccurs="0" maxOccurs="1"/></xs:sequence>
+</xs:complexType>
+<xs:complexType name="ReturnRequestDeny">
+<xs:sequence>
+<xs:element name="intcheque_id" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="beneficiario_documento_tipo" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="beneficiario_documento" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="firmantes" type="tns:Firmante" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="trk_cnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_scnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_jsessionid" type="xs:string" minOccurs="0" maxOccurs="1"/></xs:sequence>
+</xs:complexType>
+<xs:complexType name="IssueRejectCertificate">
+<xs:sequence>
+<xs:element name="intcheque_id" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="beneficiario_documento_tipo" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="beneficiario_documento" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="firmantes" type="tns:Firmante" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="trk_cnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_scnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_jsessionid" type="xs:string" minOccurs="0" maxOccurs="1"/></xs:sequence>
+</xs:complexType>
+<xs:complexType name="VerifyIsBankClient">
+<xs:sequence>
+<xs:element name="beneficiario_documento_tipo" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="beneficiario_documento" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="trk_cnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_scnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_jsessionid" type="xs:string" minOccurs="0" maxOccurs="1"/></xs:sequence>
+</xs:complexType>
+<xs:complexType name="KillCheck">
+<xs:sequence>
+<xs:element name="intcheque_id" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="emisor_documento_tipo" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="emisor_documento" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="cheque_motivo_anulacion" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="firmantes" type="tns:Firmante" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="trk_cnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_scnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_jsessionid" type="xs:string" minOccurs="0" maxOccurs="1"/></xs:sequence>
+</xs:complexType>
+<xs:complexType name="DeferCustodyDepositDate">
+<xs:sequence>
+<xs:element name="intcheque_id" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="nueva_fecha_deposito" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_cnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_scnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_jsessionid" type="xs:string" minOccurs="0" maxOccurs="1"/></xs:sequence>
+</xs:complexType>
+<xs:complexType name="CheckPendingNotifications">
+<xs:sequence>
+<xs:element name="cuit" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="trk_cnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_scnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_jsessionid" type="xs:string" minOccurs="0" maxOccurs="1"/></xs:sequence>
+</xs:complexType>
+<xs:complexType name="ECHEQPaidExecuted">
+<xs:sequence>
+<xs:element name="pagos" type="tns:Pago" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="tipo_pago" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="firmantes" type="tns:Firmante" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="trk_cnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_scnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_jsessionid" type="xs:string" minOccurs="0" maxOccurs="1"/></xs:sequence>
+</xs:complexType>
+<xs:complexType name="ECHEQPaidRejected">
+<xs:sequence>
+<xs:element name="rechazos" type="tns:Rechazo" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="tipo_pago" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="firmantes" type="tns:Firmante" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="trk_cnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_scnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_jsessionid" type="xs:string" minOccurs="0" maxOccurs="1"/></xs:sequence>
+</xs:complexType>
+<xs:complexType name="RetrieveByVisID">
+<xs:sequence>
+<xs:element name="cod_visualizacion" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="trk_cnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_scnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_jsessionid" type="xs:string" minOccurs="0" maxOccurs="1"/></xs:sequence>
+</xs:complexType>
+<xs:complexType name="ListIssued">
+<xs:sequence>
+<xs:element name="cuit" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="cheque_numero" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="emisor_cuit" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="beneficiario_documento_tipo" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="beneficiario_documento" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="emisor_cbu" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="estado" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="monto_desde" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="monto_hasta" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="fecha_emision_desde" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="fecha_emision_hasta" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="fecha_pago_desde" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="fecha_pago_hasta" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="numero_pagina" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="cantidad_registros_pagina" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="orderby" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_cnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_scnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_jsessionid" type="xs:string" minOccurs="0" maxOccurs="1"/></xs:sequence>
+</xs:complexType>
+<xs:complexType name="IssueECHEQ">
+<xs:sequence>
+<xs:element name="numero_chequera" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="emisor_cuit" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="emisor_cbu" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="fecha_pago" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="monto" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="beneficiario_documento_tipo" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="beneficiario_documento" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="beneficiario_email" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="firmantes" type="tns:Firmante" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="numeracion" type="tns:Numeracion" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="cheque_version" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="cheque_instrumento_tipo" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="cheque_tipo" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="cheque_caracter" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="cheque_motivo_pago" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="cheque_concepto" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="cheque_cruzado" type="xs:boolean" minOccurs="1" maxOccurs="1"/><xs:element name="chq_referencias_pago" type="tns:Referencia" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="trk_cnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_scnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_jsessionid" type="xs:string" minOccurs="0" maxOccurs="1"/></xs:sequence>
+</xs:complexType>
+<xs:complexType name="AddCheckAccount">
+<xs:sequence>
+<xs:element name="sucursal_codigo" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="sucursal_nombre" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="sucursal_domicilio" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="sucursal_cp" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="sucursal_provincia" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="emisor_cuit" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="emisor_razon_social" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="emisor_cbu" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="emisor_cuenta" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="emisor_subcuenta" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="emisor_cuenta_fecha_alta" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="emisor_moneda" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="emisor_domicilio" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="emisor_cp" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="emisor_emails" type="tns:Email" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="trk_cnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_scnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_jsessionid" type="xs:string" minOccurs="0" maxOccurs="1"/></xs:sequence>
+</xs:complexType>
+<xs:complexType name="ExpireCheck">
+<xs:sequence>
+<xs:element name="intcheque_id" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="trk_cnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_scnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_jsessionid" type="xs:string" minOccurs="0" maxOccurs="1"/></xs:sequence>
+</xs:complexType>
+<xs:complexType name="NotificationDashboard">
+<xs:sequence>
+<xs:element name="cuit" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="includeList" type="xs:integer" minOccurs="0" maxOccurs="1"/><xs:element name="trk_cnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_scnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_jsessionid" type="xs:string" minOccurs="0" maxOccurs="1"/></xs:sequence>
+</xs:complexType>
+<xs:complexType name="AddAccountAndIssue">
+<xs:sequence>
+<xs:element name="sucursal_codigo" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="sucursal_nombre" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="sucursal_domicilio" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="sucursal_cp" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="sucursal_provincia" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="emisor_cuit" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="emisor_razon_social" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="emisor_cbu" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="emisor_cuenta" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="emisor_subcuenta" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="emisor_cuenta_fecha_alta" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="emisor_moneda" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="emisor_domicilio" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="emisor_cp" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="emisor_emails" type="tns:Email" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="numero_chequera" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="fecha_pago" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="monto" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="beneficiario_documento_tipo" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="beneficiario_documento" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="beneficiario_email" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="firmantes" type="tns:Firmante" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="numeracion" type="tns:Numeracion" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="cheque_version" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="cheque_instrumento_tipo" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="cheque_tipo" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="cheque_caracter" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="cheque_motivo_pago" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="cheque_concepto" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="cheque_cruzado" type="xs:boolean" minOccurs="0" maxOccurs="1"/><xs:element name="chq_referencias_pago" type="tns:Referencia" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="trk_cnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_scnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_jsessionid" type="xs:string" minOccurs="0" maxOccurs="1"/></xs:sequence>
+</xs:complexType>
+<xs:complexType name="RetrieveCert">
+<xs:sequence>
+<xs:element name="cod_visualizacion" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="trk_cnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_scnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_jsessionid" type="xs:string" minOccurs="0" maxOccurs="1"/></xs:sequence>
+</xs:complexType>
+<xs:complexType name="SetONP">
+<xs:sequence>
+<xs:element name="intcheque_id" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="trk_cnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_scnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_jsessionid" type="xs:string" minOccurs="0" maxOccurs="1"/></xs:sequence>
+</xs:complexType>
+<xs:complexType name="ListIssuedExecStat">
+<xs:sequence>
+<xs:element name="cuit" type="xs:string" minOccurs="1" maxOccurs="1"/></xs:sequence>
+</xs:complexType>
+<xs:complexType name="EndorseWithoutGuarantee">
+<xs:sequence>
+<xs:element name="intcheque_id" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="tenedor_documento_tipo" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="tenedor_documento" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="beneficiario_endoso_documento_tipo" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="beneficiario_endoso_documento" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="datos_aval" type="tns:Aval" />
+<xs:element name="firmantes" type="tns:Firmante" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="trk_cnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_scnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_jsessionid" type="xs:string" minOccurs="0" maxOccurs="1"/></xs:sequence>
+</xs:complexType>
+<xs:complexType name="EndorseInProcurement">
+<xs:sequence>
+<xs:element name="intcheque_id" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="tenedor_documento_tipo" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="tenedor_documento" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="beneficiario_endoso_documento_tipo" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="beneficiario_endoso_documento" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="beneficiario_final_documento_tipo" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="beneficiario_final_documento" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="datos_aval" type="tns:Aval" />
+<xs:element name="firmantes" type="tns:Firmante" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="trk_cnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_scnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_jsessionid" type="xs:string" minOccurs="0" maxOccurs="1"/></xs:sequence>
+</xs:complexType>
+<xs:complexType name="Consultar2">
+<xs:sequence>
+<xs:element name="codigo_visualizacion" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="trk_cnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_scnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_jsessionid" type="xs:string" minOccurs="0" maxOccurs="1"/></xs:sequence>
+</xs:complexType>
+<xs:complexType name="AvalRepudiate">
+<xs:sequence>
+<xs:element name="intcheque_id" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="aval_documento_tipo" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="aval_documento" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="motivo_repudio" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="firmantes" type="tns:Firmante" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="trk_cnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_scnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_jsessionid" type="xs:string" minOccurs="0" maxOccurs="1"/></xs:sequence>
+</xs:complexType>
+<xs:complexType name="AvalCancel">
+<xs:sequence>
+<xs:element name="intcheque_id" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="tenedor_documento_tipo" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="tenedor_documento" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="aval_documento_tipo" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="aval_documento" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="motivo_anulacion" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="firmantes" type="tns:Firmante" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="trk_cnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_scnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_jsessionid" type="xs:string" minOccurs="0" maxOccurs="1"/></xs:sequence>
+</xs:complexType>
+<xs:complexType name="AvalAccept">
+<xs:sequence>
+<xs:element name="intcheque_id" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="aval_documento_tipo" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="aval_documento" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="firmantes" type="tns:Firmante" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="trk_cnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_scnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_jsessionid" type="xs:string" minOccurs="0" maxOccurs="1"/></xs:sequence>
+</xs:complexType>
+<xs:complexType name="IssueAval">
+<xs:sequence>
+<xs:element name="intcheque_id" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="tenedor_documento_tipo" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="tenedor_documento" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="aval" type="tns:TagAval" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="firmantes" type="tns:Firmante" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="trk_cnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_scnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_jsessionid" type="xs:string" minOccurs="0" maxOccurs="1"/></xs:sequence>
+</xs:complexType>
+<xs:complexType name="IssueAssignment">
+<xs:sequence>
+<xs:element name="intcheque_id" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="cedente_documento_tipo" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="cedente_documento" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="cesionario_documento_tipo" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="cesionario_documento" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="cesionario_nombre" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="cesionario_domicilio" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="firmantes" type="tns:Firmante" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="trk_cnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_scnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_jsessionid" type="xs:string" minOccurs="0" maxOccurs="1"/></xs:sequence>
+</xs:complexType>
+<xs:complexType name="AssignmentCancel">
+<xs:sequence>
+<xs:element name="intcheque_id" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="cesion_id" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="cedente_documento_tipo" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="cedente_documento" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="firmantes" type="tns:Firmante" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="trk_cnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_scnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_jsessionid" type="xs:string" minOccurs="0" maxOccurs="1"/></xs:sequence>
+</xs:complexType>
+<xs:complexType name="AssignmentAccept">
+<xs:sequence>
+<xs:element name="intcheque_id" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="cesion_id" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="cesionario_documento_tipo" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="cesionario_documento" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="firmantes" type="tns:Firmante" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="trk_cnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_scnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_jsessionid" type="xs:string" minOccurs="0" maxOccurs="1"/></xs:sequence>
+</xs:complexType>
+<xs:complexType name="AssignmentRepudiate">
+<xs:sequence>
+<xs:element name="intcheque_id" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="cesion_id" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="cesionario_documento_tipo" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="cesionario_documento" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="cesion_motivo_repudio" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="firmantes" type="tns:Firmante" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="trk_cnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_scnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_jsessionid" type="xs:string" minOccurs="0" maxOccurs="1"/></xs:sequence>
+</xs:complexType>
+<xs:complexType name="RetrieveAssignment">
+<xs:sequence>
+<xs:element name="intcheque_id" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="cesion_id" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="trk_cnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_scnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_jsessionid" type="xs:string" minOccurs="0" maxOccurs="1"/></xs:sequence>
+</xs:complexType>
+<xs:complexType name="RetrieveMarketInfrastructure">
+<xs:sequence>
+<xs:element name="trk_cnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_scnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_jsessionid" type="xs:string" minOccurs="0" maxOccurs="1"/></xs:sequence>
+</xs:complexType>
+<xs:complexType name="IssueECHEQMulti">
+<xs:sequence>
+<xs:element name="numero_chequera" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="emisor_cuit" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="emisor_cbu" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="fecha_pago" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="monto" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="beneficiario_documento_tipo" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="beneficiario_documento" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="beneficiario_email" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="firmantes" type="tns:Firmante" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="numeracion" type="tns:Numeracion" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="cheque_version" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="cheque_instrumento_tipo" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="cheque_tipo" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="cheque_caracter" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="cheque_motivo_pago" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="cheque_concepto" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="cheque_cruzado" type="xs:boolean" minOccurs="1" maxOccurs="1"/><xs:element name="chq_referencias_pago" type="tns:Referencia" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="trk_cnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_scnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_jsessionid" type="xs:string" minOccurs="0" maxOccurs="1"/></xs:sequence>
+</xs:complexType>
+<xs:complexType name="AddAccountAndIssueMulti">
+<xs:sequence>
+<xs:element name="sucursal_codigo" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="sucursal_nombre" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="sucursal_domicilio" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="sucursal_cp" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="sucursal_provincia" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="emisor_cuit" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="emisor_razon_social" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="emisor_cbu" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="emisor_cuenta" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="emisor_subcuenta" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="emisor_cuenta_fecha_alta" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="emisor_moneda" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="emisor_domicilio" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="emisor_cp" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="emisor_emails" type="tns:Email" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="numero_chequera" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="fecha_pago" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="monto" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="beneficiario_documento_tipo" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="beneficiario_documento" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="beneficiario_email" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="firmantes" type="tns:Firmante" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="numeracion" type="tns:Numeracion" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="cheque_version" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="cheque_instrumento_tipo" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="cheque_tipo" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="cheque_caracter" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="cheque_motivo_pago" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="cheque_concepto" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="cheque_cruzado" type="xs:boolean" minOccurs="0" maxOccurs="1"/><xs:element name="chq_referencias_pago" type="tns:Referencia" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="trk_cnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_scnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_jsessionid" type="xs:string" minOccurs="0" maxOccurs="1"/></xs:sequence>
+</xs:complexType>
+<xs:complexType name="ListAccounts">
+<xs:sequence>
+<xs:element name="cuit" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="cbu" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_cnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_scnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_jsessionid" type="xs:string" minOccurs="0" maxOccurs="1"/></xs:sequence>
+</xs:complexType>
+<xs:complexType name="ListCheckStatus">
+<xs:sequence>
+<xs:element name="intcheque_ids" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded"/><xs:element name="cuit" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="trk_cnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_scnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_jsessionid" type="xs:string" minOccurs="0" maxOccurs="1"/></xs:sequence>
+</xs:complexType>
+<xs:complexType name="EndorseCancel">
+<xs:sequence>
+<xs:element name="intcheque_id" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="endosante_documento_tipo" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="endosante_documento" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="motivo_anulacion" type="xs:string" minOccurs="1" maxOccurs="1"/><xs:element name="firmantes" type="tns:Firmante" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="trk_cnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_scnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_jsessionid" type="xs:string" minOccurs="0" maxOccurs="1"/></xs:sequence>
+</xs:complexType>
+<xs:complexType name="RejectOutExchange">
+<xs:sequence>
+<xs:element name="rechazos" type="tns:RechazoRejectOutExchange" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="firmantes" type="tns:Firmante" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="trk_cnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_scnl" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="trk_jsessionid" type="xs:string" minOccurs="0" maxOccurs="1"/></xs:sequence>
+</xs:complexType>
+<xs:complexType name="IMF">
+<xs:sequence>
+<xs:element name="documento_tipo" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="documento" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="nombre" type="xs:string" minOccurs="0" maxOccurs="1"/></xs:sequence>
+</xs:complexType>
+<xs:complexType name="ResponseCesion">
+<xs:sequence>
+<xs:element name="code" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="message" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="stat" type="tns:CCEStat" />
+<xs:element name="cesion" type="tns:Cesion" />
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="ResponseFull">
+<xs:sequence>
+<xs:element name="code" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="message" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="stat" type="tns:CCEStat" />
+<xs:element name="intcheque_id" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="cod_visualizacion" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="beneficiario_documento_tipo" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="beneficiario_documento" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="beneficiario_razon_social" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="monto_total_emitido" type="xs:double" minOccurs="0" maxOccurs="1"/><xs:element name="monto_total_recib_pend_recepcion" type="xs:double" minOccurs="0" maxOccurs="1"/><xs:element name="monto_total_recibido" type="xs:double" minOccurs="0" maxOccurs="1"/><xs:element name="monto_total_custodia" type="xs:double" minOccurs="0" maxOccurs="1"/><xs:element name="monto_total_emit_pend_recepcion" type="xs:double" minOccurs="0" maxOccurs="1"/><xs:element name="total_cheques" type="xs:double" minOccurs="0" maxOccurs="1"/><xs:element name="cheques" type="tns:Cheques"  minOccurs="0" maxOccurs="1" />
+<xs:element name="cuentas" type="tns:Cuenta" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="infraestructurasMercado" type="tns:IMF" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="Cuenta">
+<xs:sequence>
+<xs:element name="emisor_cbu" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="banco_codigo" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="emisor_cuenta" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="emisor_subcuenta" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="emisor_moneda" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="emisor_cuenta_fecha_alta" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="sucursal_codigo" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="sucursal_nombre" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="sucursal_domicilio" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="sucursal_cp" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="sucursal_provincia" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="emisor_cuit" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="emisor_razon_social" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="emisor_domicilio" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="emisor_cp" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="cuenta_estado" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="cuenta_firmantes" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="fecha_alta" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="fecha_ult_modificacion" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="total_emails" type="xs:double" minOccurs="0" maxOccurs="1"/><xs:element name="emails" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded"/></xs:sequence>
+</xs:complexType>
+<xs:complexType name="Cheques">
+<xs:sequence>
+<xs:element name="echeq" type="tns:Cheque" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="Response">
+<xs:sequence>
+<xs:element name="respuesta" type="tns:ResponseFull" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="bae_CCE_Stat">
+<xs:sequence>
+<xs:element name="bae_CCERegstatus" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="bae_Optimeposted" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="bae_Optimeexec" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="bae_Opid" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="bae_code" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="bae_message" type="xs:string" minOccurs="0" maxOccurs="1"/></xs:sequence>
+</xs:complexType>
+<xs:complexType name="CCEStat">
+<xs:sequence>
+<xs:element name="CCERegstatus" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="Optimeposted" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="Optimeexec" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="Opid" type="xs:string" minOccurs="0" maxOccurs="1"/></xs:sequence>
+</xs:complexType>
+<xs:complexType name="EcheqResponse">
+<xs:sequence>
+<xs:element name="code" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="message" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="status" type="tns:bae_CCE_Stat"  minOccurs="0" maxOccurs="1" />
+<xs:element name="cheque" type="tns:Cheque" />
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="EcheqListResponse">
+<xs:sequence>
+<xs:element name="code" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="message" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="status" type="tns:bae_CCE_Stat"  minOccurs="0" maxOccurs="1" />
+<xs:element name="cheques" type="tns:Cheque" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="TagAval">
+<xs:sequence>
+<xs:element name="aval_documento_tipo" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="aval_documento" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="aval_nombre" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="aval_caracter" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="aval_domicilio" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="aval_importe_avalado" type="xs:double" minOccurs="0" maxOccurs="1"/><xs:element name="aval_sujeto_avalado" type="xs:string" minOccurs="0" maxOccurs="1"/></xs:sequence>
+</xs:complexType>
+<xs:complexType name="Firmante">
+<xs:sequence>
+<xs:element name="documento_tipo" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="documento" type="xs:string" minOccurs="0" maxOccurs="1"/></xs:sequence>
+</xs:complexType>
+<xs:complexType name="Numeracion">
+<xs:sequence>
+<xs:element name="cheque_numero" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="cmc7" type="xs:string" minOccurs="0" maxOccurs="1"/></xs:sequence>
+</xs:complexType>
+<xs:complexType name="Email">
+<xs:sequence>
+<xs:element name="email" type="xs:string" minOccurs="0" maxOccurs="1"/></xs:sequence>
+</xs:complexType>
+<xs:complexType name="Referencia">
+<xs:sequence>
+<xs:element name="referencia" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="valor" type="xs:string" minOccurs="0" maxOccurs="1"/></xs:sequence>
+</xs:complexType>
+<xs:complexType name="CuentaEmisora">
+<xs:sequence>
+<xs:element name="banco_codigo" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="banco_nombre" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="sucursal_codigo" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="sucursal_nombre" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="sucursal_domicilio" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="sucursal_cp" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="sucursal_provincia" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="emisor_cuit" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="emisor_razon_social" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="emisor_cbu" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="emisor_cuenta" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="emisor_subcuenta" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="emisor_cuenta_fecha_alta" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="cuenta_estado" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="emisor_moneda" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="emisor_domicilio" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="emisor_cp" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="emisor_emails" type="tns:Email" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="fecha_ult_modificacion" type="xs:string" minOccurs="0" maxOccurs="1"/></xs:sequence>
+</xs:complexType>
+<xs:complexType name="Beneficiario">
+<xs:sequence>
+<xs:element name="beneficiario_documento_tipo" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="beneficiario_documento" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="beneficiario_nombre" type="xs:string" minOccurs="0" maxOccurs="1"/></xs:sequence>
+</xs:complexType>
+<xs:complexType name="Deposito">
+<xs:sequence>
+<xs:element name="intcheque_id" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="beneficiario_documento_tipo" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="beneficiario_documento" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="beneficiario_cbu" type="xs:string" minOccurs="0" maxOccurs="1"/></xs:sequence>
+</xs:complexType>
+<xs:complexType name="Pago">
+<xs:sequence>
+<xs:element name="intcheque_id" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="beneficiario_documento_tipo" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="beneficiario_documento" type="xs:string" minOccurs="0" maxOccurs="1"/></xs:sequence>
+</xs:complexType>
+<xs:complexType name="Rechazo">
+<xs:sequence>
+<xs:element name="intcheque_id" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="codigo_rechazo" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="motivo_rechazo" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="fecha_hora" type="xs:string" minOccurs="0" maxOccurs="1"/></xs:sequence>
+</xs:complexType>
+<xs:complexType name="RechazoRejectOutExchange">
+<xs:sequence>
+<xs:element name="intcheque_id" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="codigo_rechazo" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="motivo_rechazo" type="xs:string" minOccurs="0" maxOccurs="1"/></xs:sequence>
+</xs:complexType>
+<xs:complexType name="Endoso">
+<xs:sequence>
+<xs:element name="fecha_hora" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="documento_tipo" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="documento" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="tipo_endoso" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="motivo_repudio" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="estado_endoso" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="benef_documento" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="benef_documento_tipo" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="benef_razon_social" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="emisor_documento" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="emisor_documento_tipo" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="emisor_razon_social" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="referencias_pago" type="tns:Referencia" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="Cheque">
+<xs:sequence>
+<xs:element name="cuenta_emisora" type="tns:CuentaEmisora" />
+<xs:element name="numero_chequera" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="intcheque_id" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="cmc7" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="cheque_numero" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="estado" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="emitido_a" type="tns:Beneficiario" />
+<xs:element name="tenencia" type="tns:Beneficiario" />
+<xs:element name="monto" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="monto_letras" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="fecha_pago" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="fecha_emision" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="cheque_tipo" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="cheque_caracter" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="cheque_modo" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="cheque_concepto" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="cheque_motivo_pago" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="motivo_repudio_emision" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="motivo_anulacion" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="agrupador_id" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="cod_visualizacion" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="nro_lote" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="fecha_ult_modif" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="fecha_pago_vencida" type="xs:boolean" minOccurs="0" maxOccurs="1"/><xs:element name="cheque_acordado" type="xs:boolean" minOccurs="0" maxOccurs="1"/><xs:element name="solicitando_acuerdo" type="xs:boolean" minOccurs="0" maxOccurs="1"/><xs:element name="re_presentar" type="xs:boolean" minOccurs="0" maxOccurs="1"/><xs:element name="repudio_endoso" type="xs:boolean" minOccurs="0" maxOccurs="1"/><xs:element name="certificado_emitido" type="xs:boolean" minOccurs="0" maxOccurs="1"/><xs:element name="chq_referencias_pago" type="tns:Referencia" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="endosos" type="tns:Endoso" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="rechazos" type="tns:Rechazo" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="onp" type="xs:boolean" minOccurs="0" maxOccurs="1"/><xs:element name="cbu_custodia" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="cbu_deposito" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="cesion_pendiente" type="xs:boolean" minOccurs="0" maxOccurs="1"/><xs:element name="cedido" type="xs:boolean" minOccurs="0" maxOccurs="1"/><xs:element name="total_cesiones" type="xs:integer" minOccurs="0" maxOccurs="1"/><xs:element name="cesiones" type="tns:Cesion" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="total_avalistas" type="xs:integer" minOccurs="0" maxOccurs="1"/><xs:element name="avalistas" type="tns:Aval" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="status" type="tns:bae_CCE_Stat"  minOccurs="0" maxOccurs="1" />
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="Aval">
+<xs:sequence>
+<xs:element name="aval_caracter" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="aval_domicilio" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="aval_documento_tipo" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="aval_documento" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="aval_importe_avalado" type="xs:double" minOccurs="0" maxOccurs="1"/><xs:element name="aval_sujeto_avalado" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="aval_razon_social" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="aval_fecha" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="aval_entidad" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="aval_estado" type="xs:string" minOccurs="0" maxOccurs="1"/></xs:sequence>
+</xs:complexType>
+<xs:complexType name="Cesion">
+<xs:sequence>
+<xs:element name="cesion_id" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="estado_cesion" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="cedente_documento_tipo" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="cedente_documento" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="cedente_nombre" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="cesionario_documento_tipo" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="cesionario_documento" type="xs:double" minOccurs="0" maxOccurs="1"/><xs:element name="cesionario_nombre" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="cesionario_domicilio" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="fecha_emision_cesion" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="fecha_ult_modificacion_cesion" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="cesion_motivo_repudio" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="entidad_gestora_responsable" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="entidad_responsable_admision" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="intcheque_id" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="cheque_numero" type="xs:string" minOccurs="0" maxOccurs="1"/><xs:element name="monto" type="xs:string" minOccurs="0" maxOccurs="1"/></xs:sequence>
+</xs:complexType>
+
+</xs:schema>

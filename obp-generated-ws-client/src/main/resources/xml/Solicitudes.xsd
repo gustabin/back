@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+          <!-- XML Schema Generated from XML Document on Mon Jun 12 2017 18:05:41 GMT-0300 (Argentina Standard Time) -->
+          <!-- with XmlGrid.net Free Online Service http://xmlgrid.net -->
+       <xs:element name="xml">
+              <xs:complexType>
+                     <xs:sequence>
+                            <xs:element name="header">
+                                   <xs:complexType>
+                                          <xs:sequence>
+                                                 <xs:element name="servicio">
+                                                        <xs:complexType>
+                                                               <xs:sequence>
+                                                                      <xs:element name="nombre" type="xs:string"></xs:element>
+                                                                      <xs:element name="version" type="xs:int"></xs:element>
+                                                                  </xs:sequence>
+                                                           </xs:complexType>
+                                                    </xs:element>
+                                             </xs:sequence>
+                                      </xs:complexType>
+                               </xs:element>
+                            <xs:element name="body">
+                                   <xs:complexType>
+                                          <xs:sequence>
+                                                 <xs:element name="codRes" type="xs:int"></xs:element>
+                                                 <xs:element name="mensaje" type="xs:string"></xs:element>
+                                             </xs:sequence>
+                                      </xs:complexType>
+                               </xs:element>
+                        </xs:sequence>
+                 </xs:complexType>
+          </xs:element>
+   </xs:schema>

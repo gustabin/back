@@ -1,0 +1,613 @@
+#el valor por defecto cuando no se encuentra una oferta para el destino elegido
+ofertaDefault: pp
+#la lista de destinos y sus correspondientes urls, en orden de relevancia
+data:
+  350009ARS35001:
+    - cp
+  350009ARS35002:
+    - auto
+  350009ARS35133:
+    - auto
+  350009ARS35134:
+    - auto
+    - ap
+  350009ARS35135:
+    - pagos
+  350013ARS35001:
+    - cp
+  350013ARS35002:
+    - auto
+  350013ARS35133:
+    - auto
+  350013ARS35134:
+    - auto
+    - ap
+  350013ARS35135:
+    - pagos
+  350013ARS35136:
+    - ip
+  350013ARS35138:
+    - vivienda
+  350013ARS35139:
+    - vivienda
+  350015ARS35001:
+    - cp
+  350015ARS35002:
+    - auto
+  350015ARS35133:
+    - auto
+  350015ARS35134:
+    - auto
+    - ap
+  350015ARS35135:
+    - pagos
+  350015ARS35136:
+    - ip
+  350015ARS35138:
+    - vivienda
+  350015ARS35139:
+    - vivienda
+  350016ARS35001:
+    - cp
+  350016ARS35002:
+    - auto
+  350016ARS35133:
+    - auto
+  350016ARS35134:
+    - auto
+    - ap
+  350016ARS35135:
+    - pagos
+  350016ARS35136:
+    - ip
+  350016ARS35138:
+    - vivienda
+  350016ARS35139:
+    - vivienda
+  350017ARS35001:
+    - cp
+  350017ARS35002:
+    - auto
+  350017ARS35133:
+    - auto
+  350017ARS35134:
+    - auto
+    - ap
+  350017ARS35135:
+    - pagos
+  350017ARS35136:
+    - ip
+  350017ARS35138:
+    - vivienda
+  350017ARS35139:
+    - vivienda
+  350020ARS35001:
+    - cp
+  350020ARS35002:
+    - auto
+  350020ARS35133:
+    - auto
+  350020ARS35134:
+    - auto
+    - ap
+  350020ARS35135:
+    - pagos
+  350020ARS35136:
+    - ip
+  350020ARS35138:
+    - vivienda
+  350020ARS35139:
+    - vivienda
+  350021ARS35001:
+    - cp
+  350021ARS35002:
+    - auto
+  350021ARS35133:
+    - auto
+  350021ARS35134:
+    - auto
+    - ap
+  350021ARS35135:
+    - pagos
+  350021ARS35136:
+    - ip
+  350021ARS35138:
+    - vivienda
+  350021ARS35139:
+    - vivienda
+  350023ARS35001:
+    - cp
+  350023ARS35002:
+    - auto
+  350023ARS35133:
+    - auto
+  350023ARS35134:
+    - auto
+    - ap
+  350023ARS35135:
+    - pagos
+  350023ARS35136:
+    - ip
+  350023ARS35138:
+    - vivienda
+  350023ARS35139:
+    - vivienda
+  350024ARS35001:
+    - cp
+  350024ARS35002:
+    - auto
+  350024ARS35133:
+    - auto
+  350024ARS35134:
+    - auto
+    - ap
+  350024ARS35135:
+    - pagos
+  350024ARS35136:
+    - ip
+  350024ARS35138:
+    - vivienda
+  350024ARS35139:
+    - vivienda
+  350025ARS35001:
+    - cp
+  350025ARS35002:
+    - auto
+  350025ARS35133:
+    - auto
+  350025ARS35134:
+    - auto
+    - ap
+  350025ARS35136:
+    - ip
+  350025ARS35138:
+    - vivienda
+  350025ARS35139:
+    - vivienda
+  350026ARS35001:
+    - cp
+  350026ARS35002:
+    - auto
+  350027ARS35001:
+    - cp
+  350027ARS35002:
+    - auto
+  350027ARS35133:
+    - auto
+  350027ARS35134:
+    - auto
+    - ap
+  350027ARS35135:
+    - pagos
+  350027ARS35136:
+    - ip
+  350027ARS35138:
+    - vivienda
+  350027ARS35139:
+    - vivienda
+  350028ARS35001:
+    - cp
+  350028ARS35002:
+    - auto
+  350029ARS35001:
+    - cp
+  350029ARS35002:
+    - auto
+  350029ARS35133:
+    - auto
+  350029ARS35134:
+    - auto
+    - ap
+  350029ARS35135:
+    - pagos
+  350029ARS35136:
+    - ip
+  350029ARS35138:
+    - vivienda
+  350029ARS35139:
+    - vivienda
+  350034ARS35001:
+    - cp
+  350034ARS35002:
+    - auto
+  350034ARS35133:
+    - auto
+  350034ARS35134:
+    - auto
+    - ap
+  350034ARS35135:
+    - pagos
+  350034ARS35136:
+    - ip
+  350034ARS35138:
+    - vivienda
+  350034ARS35139:
+    - vivienda
+  350036ARS35001:
+    - cp
+  350036ARS35002:
+    - auto
+  350036ARS35133:
+    - auto
+  350036ARS35134:
+    - auto
+    - ap
+  350036ARS35135:
+    - pagos
+  350036ARS35136:
+    - ip
+  350036ARS35138:
+    - vivienda
+  350036ARS35139:
+    - vivienda
+  350037ARS35001:
+    - cp
+  350037ARS35002:
+    - auto
+  350037ARS35133:
+    - auto
+  350037ARS35134:
+    - auto
+    - ap
+  350037ARS35135:
+    - pagos
+  350037ARS35136:
+    - ip
+  350037ARS35138:
+    - vivienda
+  350037ARS35139:
+    - vivienda
+  350038ARS35001:
+    - cp
+  350038ARS35002:
+    - auto
+  350038ARS35133:
+    - auto
+  350038ARS35134:
+    - auto
+    - ap
+  350038ARS35135:
+    - pagos
+  350038ARS35136:
+    - ip
+  350038ARS35138:
+    - vivienda
+  350038ARS35139:
+    - vivienda
+  350039ARS35001:
+    - cp
+  350039ARS35002:
+    - auto
+  350040ARS35002:
+    - auto
+  350042ARS35001:
+    - cp
+  350042ARS35002:
+    - auto
+  350042ARS35133:
+    - auto
+  350042ARS35134:
+    - auto
+    - ap
+  350042ARS35135:
+    - pagos
+  350042ARS35136:
+    - ip
+  350042ARS35138:
+    - vivienda
+  350042ARS35139:
+    - vivienda
+  350044ARS35001:
+    - cp
+  350044ARS35002:
+    - auto
+  350044ARS35133:
+    - auto
+  350044ARS35134:
+    - auto
+    - ap
+  350044ARS35135:
+    - pagos
+  350044ARS35136:
+    - ip
+  350044ARS35138:
+    - vivienda
+  350044ARS35139:
+    - vivienda
+  350046ARS35001:
+    - cp
+  350046ARS35002:
+    - auto
+  350046ARS35133:
+    - auto
+  350046ARS35134:
+    - auto
+    - ap
+  350046ARS35135:
+    - pagos
+  350046ARS35136:
+    - ip
+  350046ARS35138:
+    - vivienda
+  350046ARS35139:
+    - vivienda
+  350047ARS35147:
+    - cp
+    - vivienda
+  350047ARS35148:
+    - vivienda
+  350047ARS35149:
+    - vivienda
+  350047ARS35150:
+    - auto
+  350047ARS35151:
+    - auto
+  350047ARS35152:
+    - pagos
+  350047ARS35153:
+    - cp
+  350047ARS35154:
+    - ip
+  350048ARS35001:
+    - cp
+  350048ARS35002:
+    - auto
+  350049ARS35001:
+    - cp
+  350049ARS35002:
+    - auto
+  350050ARS35001:
+    - cp
+  350050ARS35002:
+    - auto
+  350050ARS35133:
+    - auto
+  350050ARS35134:
+    - auto
+    - ap
+  350050ARS35135:
+    - pagos
+  350050ARS35136:
+    - ip
+  350050ARS35138:
+    - vivienda
+  350050ARS35139:
+    - vivienda
+  350051ARS35001:
+    - cp
+  350051ARS35002:
+    - auto
+  350051ARS35133:
+    - auto
+  350051ARS35134:
+    - auto
+    - ap
+  350051ARS35135:
+    - pagos
+  350051ARS35136:
+    - ip
+  350051ARS35138:
+    - vivienda
+  350051ARS35139:
+    - vivienda
+  350052ARS35133:
+    - auto
+  350053ARS35147:
+    - cp
+    - vivienda
+  350053ARS35148:
+    - vivienda
+  350053ARS35149:
+    - vivienda
+  350053ARS35150:
+    - auto
+  350053ARS35151:
+    - auto
+  350053ARS35152:
+    - pagos
+  350053ARS35153:
+    - cp
+  350053ARS35154:
+    - ip
+  350054ARS35155:
+    - cp
+    - vivienda
+  350054ARS35156:
+    - vivienda
+  350054ARS35157:
+    - vivienda
+  350054ARS35158:
+    - auto
+  350054ARS35159:
+    - auto
+  350054ARS35160:
+    - pagos
+  350054ARS35161:
+    - cp
+  350054ARS35162:
+    - ip
+  350055ARS35147:
+    - cp
+    - vivienda
+  350055ARS35148:
+    - vivienda
+  350055ARS35149:
+    - vivienda
+  350055ARS35150:
+    - auto
+  350055ARS35151:
+    - auto
+  350055ARS35152:
+    - pagos
+  350055ARS35153:
+    - cp
+  350055ARS35154:
+    - ip
+  350056ARS35001:
+    - cp
+  350056ARS35002:
+    - auto
+  350056ARS35133:
+    - auto
+  350056ARS35134:
+    - auto
+    - ap
+  350056ARS35135:
+    - pagos
+  350056ARS35136:
+    - ip
+  350056ARS35138:
+    - vivienda
+  350056ARS35139:
+    - vivienda
+  350057ARS35001:
+    - cp
+  350057ARS35002:
+    - auto
+  350057ARS35133:
+    - auto
+  350057ARS35134:
+    - auto
+    - ap
+  350057ARS35135:
+    - pagos
+  350057ARS35136:
+    - ip
+  350057ARS35138:
+    - vivienda
+  350057ARS35139:
+    - vivienda
+  350058ARS35001:
+    - cp
+  350058ARS35002:
+    - auto
+  350058ARS35133:
+    - auto
+  350058ARS35134:
+    - auto
+    - ap
+  350058ARS35135:
+    - pagos
+  350058ARS35136:
+    - ip
+  350058ARS35138:
+    - vivienda
+  350058ARS35139:
+    - vivienda
+  350059ARS35001:
+    - cp
+  350059ARS35002:
+    - auto
+  350059ARS35133:
+    - auto
+  350059ARS35134:
+    - auto
+    - ap
+  350059ARS35135:
+    - pagos
+  350059ARS35136:
+    - ip
+  350059ARS35138:
+    - vivienda
+  350059ARS35139:
+    - vivienda
+  350060ARS35001:
+    - cp
+  350060ARS35002:
+    - auto
+  350061ARS35001:
+    - cp
+  350061ARS35002:
+    - auto
+  350062ARS35001:
+    - cp
+  350062ARS35002:
+    - auto
+  350063ARS35001:
+    - cp
+  350063ARS35002:
+    - auto
+  350064ARS35001:
+    - cp
+  350064ARS35002:
+    - auto
+  350065ARS35001:
+    - cp
+  350065ARS35002:
+    - auto
+  350066ARS35001:
+    - cp
+  350066ARS35002:
+    - auto
+  350067ARS35001:
+    - cp
+  350067ARS35002:
+    - auto
+  350067ARS35133:
+    - auto
+  350067ARS35134:
+    - auto
+    - ap
+  350067ARS35135:
+    - pagos
+  350067ARS35136:
+    - ip
+  350067ARS35138:
+    - vivienda
+  350067ARS35139:
+    - vivienda
+  350070ARS35147:
+    - cp
+    - vivienda
+  350070ARS35148:
+    - vivienda
+  350070ARS35149:
+    - vivienda
+  350070ARS35150:
+    - auto
+  350070ARS35151:
+    - auto
+  350070ARS35152:
+    - pagos
+  350070ARS35153:
+    - cp
+  350070ARS35154:
+    - ip
+  350071ARS35147:
+    - cp
+    - vivienda
+  350071ARS35148:
+    - vivienda
+  350071ARS35149:
+    - vivienda
+  350071ARS35150:
+    - auto
+  350071ARS35151:
+    - auto
+  350071ARS35152:
+    - pagos
+  350071ARS35153:
+    - cp
+  350071ARS35154:
+    - ip
+  350072ARS35147:
+    - cp
+    - vivienda
+  350072ARS35148:
+    - vivienda
+  350072ARS35149:
+    - vivienda
+  350072ARS35150:
+    - auto
+  350072ARS35151:
+    - auto
+  350072ARS35152:
+    - pagos
+  350072ARS35153:
+    - cp
+  350072ARS35154:
+    - ip
+  350077ARS35001:
+    - cp
+  350077ARS35002:
+    - auto

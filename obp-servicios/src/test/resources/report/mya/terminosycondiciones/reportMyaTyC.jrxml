@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report1" pageWidth="595" pageHeight="842" columnWidth="475" leftMargin="60" rightMargin="60" topMargin="60" bottomMargin="40" uuid="e8b4b920-76f8-410b-a608-c7f5c5f0f01a">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="logo_cabecera" class="java.lang.String"/>
+	<parameter name="cuerpo_tyc" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch">
+			<image hAlign="Center" vAlign="Middle">
+				<reportElement positionType="Float" mode="Opaque" x="-62" y="-60" width="599" height="60" backcolor="#EC0000" uuid="2294bcfa-3de7-4903-8b3d-6094b2fd9056">
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<imageExpression><![CDATA[$P{logo_cabecera}]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="28" splitType="Stretch">
+			<printWhenExpression><![CDATA[$V{PAGE_NUMBER} == 1]]></printWhenExpression>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="174">
+			<printWhenExpression><![CDATA[$V{PAGE_NUMBER} == 1]]></printWhenExpression>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="7" width="475" height="162" forecolor="#333333" uuid="15d6d752-624f-4081-97ef-9f9ce6c81c2b"/>
+				<textElement textAlignment="Center" markup="html">
+					<font fontName="Open Sans Light" size="35"/>
+				</textElement>
+				<text><![CDATA[Términos y condiciones<BR> de uso  de Online Banking<BR> Santander]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="123" splitType="Stretch">
+			<textField isStretchWithOverflow="true">
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="24" width="475" height="99" isPrintWhenDetailOverflows="true" forecolor="#333333" uuid="f2f491d5-a721-4a42-a755-530e498add39"/>
+				<textElement markup="html">
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{cuerpo_tyc}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

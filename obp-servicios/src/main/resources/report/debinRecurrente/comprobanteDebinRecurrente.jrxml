@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="comprobanteExtraccionEfectivo2" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="dcd305c1-33ba-4dfd-bca5-ff8eefa098b0">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="ireport.zoom" value="1.464100000000002"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="218"/>
+	<parameter name="LOGO_CABECERA" class="java.lang.String"/>
+	<parameter name="NRO_CUENTA_DEBITO" class="java.lang.String"/>
+	<parameter name="TIPO_CUENTA_DEBITO" class="java.lang.String"/>
+	<parameter name="LOGO_PIE" class="java.lang.String"/>
+	<parameter name="NOMBRE_EMPRESA" class="java.lang.String"/>
+	<parameter name="SERVICIO" class="java.lang.String"/>
+	<parameter name="CUIT_VENDEDOR" class="java.lang.String"/>
+	<parameter name="REFERENCIA" class="java.lang.String"/>
+	<parameter name="CUIT_COMPRADOR" class="java.lang.String"/>
+	<parameter name="CONCEPTO" class="java.lang.String"/>
+	<parameter name="DESCRIPCION" class="java.lang.String"/>
+	<parameter name="FECHA_OPERACION" class="java.lang.String"/>
+	<parameter name="NRO_COMPROBANTE" class="java.lang.String"/>
+	<parameter name="FECHA_HORA_COMPROBANTE" class="java.lang.String"/>
+	<parameter name="NRO_RECURRENCIA" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="700" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<rectangle>
+				<reportElement x="80" y="30" width="290" height="630" uuid="e3845993-4a0e-42b5-bcc4-386fffe887e8">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</rectangle>
+			<image scaleImage="RealHeight" hAlign="Center">
+				<reportElement x="80" y="32" width="290" height="25" uuid="49c92c75-9e36-400a-8ad5-154573b5f750">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<imageExpression><![CDATA[$P{LOGO_CABECERA}]]></imageExpression>
+			</image>
+			<line>
+				<reportElement x="80" y="65" width="290" height="1" uuid="8f11cfae-6962-41c1-a121-1fcb9a4ec5e1">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement positionType="FixRelativeToBottom" x="90" y="75" width="275" height="15" forecolor="#585858" uuid="baa8e6fe-5f07-4942-be15-54ddd9350a6b">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="Open Sans Light" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Comprobante de adhesión a Debin Recurrente]]></text>
+			</staticText>
+			<line>
+				<reportElement x="80" y="100" width="290" height="1" uuid="da441001-ad83-4d18-a440-7a2251c3f047">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement x="100" y="110" width="250" height="30" forecolor="#585858" uuid="ece67c83-c6d0-474f-b13d-91308a391690"/>
+				<textElement textAlignment="Center">
+					<font fontName="Open Sans Light" size="22"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{NOMBRE_EMPRESA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="145" width="250" height="25" forecolor="#585858" uuid="d1960a6b-8f32-46f8-9875-497f9b7997dc"/>
+				<textElement textAlignment="Center">
+					<font fontName="Open Sans Light" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{SERVICIO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="175" width="250" height="25" forecolor="#585858" uuid="f0b7ab2e-cb2c-4463-8a7a-f2ca6d7e950a"/>
+				<textElement textAlignment="Center">
+					<font fontName="Open Sans Light" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{CUIT_VENDEDOR}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="80" y="215" width="290" height="1" uuid="5b7fc08c-0c19-49f7-bb8a-8ea0d62b7aa4">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="95" y="225" width="100" height="15" forecolor="#585858" uuid="5cfd352a-d81d-494e-8a4a-8c97c3b877de">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Open Sans" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Referencia]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="220" y="225" width="135" height="15" forecolor="#585858" uuid="20a83556-fa80-48ca-85fa-33158508d634">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font fontName="Open Sans Light" size="9" isBold="true" isStrikeThrough="false" isPdfEmbedded="true"/>
+					<paragraph lineSpacing="1_1_2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{REFERENCIA}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="95" y="250" width="260" height="1" uuid="b84775c9-1a2e-43ae-a32c-afc4be11904d">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="0.25" lineStyle="Dotted" lineColor="#000000"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="95" y="260" width="100" height="15" forecolor="#585858" uuid="c703903b-4609-42e4-95d6-c5f5fe41a5fa">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Open Sans" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Cuenta débito]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="220" y="260" width="135" height="15" forecolor="#585858" uuid="a6cf8776-fcf4-4e67-8d31-b7f3014d676b">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font fontName="Open Sans Light" size="9" isBold="true" isStrikeThrough="false" isPdfEmbedded="true"/>
+					<paragraph lineSpacing="1_1_2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{NRO_CUENTA_DEBITO}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="220" y="280" width="135" height="15" forecolor="#585858" uuid="8d43de93-1bb3-43e7-ba5b-cdd27f94393a">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font fontName="Open Sans Light" size="9" isBold="true" isStrikeThrough="false" isPdfEmbedded="true"/>
+					<paragraph lineSpacing="1_1_2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{TIPO_CUENTA_DEBITO}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="95" y="305" width="260" height="1" uuid="ff72c125-3ad2-4225-bfc0-8e97198c7d98">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="0.25" lineStyle="Dotted" lineColor="#000000"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="95" y="315" width="100" height="15" forecolor="#585858" uuid="4d21f6bf-ea68-4d35-b5ec-15c9bf270f35">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Open Sans" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[CUIT comprador]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="220" y="315" width="135" height="15" forecolor="#585858" uuid="c3e386a5-060a-4a61-a9a1-b69abbda182a">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font fontName="Open Sans Light" size="9" isBold="true" isStrikeThrough="false" isPdfEmbedded="true"/>
+					<paragraph lineSpacing="1_1_2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{CUIT_COMPRADOR}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="95" y="340" width="260" height="1" uuid="533f20d7-d71e-4e77-8d45-67befa7d4f83">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="0.25" lineStyle="Dotted" lineColor="#000000"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="95" y="350" width="100" height="15" forecolor="#585858" uuid="893da5fc-f0b5-4cea-a964-6b60e834a07e">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Open Sans" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Concepto]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="220" y="350" width="135" height="15" forecolor="#585858" uuid="9bf94051-256a-47bb-b08e-8d6e828416df">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font fontName="Open Sans Light" size="9" isBold="true" isStrikeThrough="false" isPdfEmbedded="true"/>
+					<paragraph lineSpacing="1_1_2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{CONCEPTO}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="95" y="375" width="260" height="1" uuid="8b63d351-808f-4020-beda-d212eb3f7166">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="0.25" lineStyle="Dotted" lineColor="#000000"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="95" y="385" width="100" height="15" forecolor="#585858" uuid="13fc6532-28df-47fd-8087-e4400f504793">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Open Sans" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Descripción]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="220" y="385" width="135" height="15" forecolor="#585858" uuid="5fc9b623-9e78-435f-b493-e595dfafa2cb">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font fontName="Open Sans Light" size="9" isBold="true" isStrikeThrough="false" isPdfEmbedded="true"/>
+					<paragraph lineSpacing="1_1_2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{DESCRIPCION}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="95" y="410" width="260" height="1" uuid="93ee49ca-ad07-4ade-ad00-1324f00b841c">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="0.25" lineStyle="Dotted" lineColor="#000000"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="95" y="420" width="100" height="15" forecolor="#585858" uuid="28ea1b9c-b8e5-44be-9dca-7066d9f08812">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Open Sans" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Fecha de operación]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="220" y="420" width="135" height="15" forecolor="#585858" uuid="6c89ec91-2b5e-424a-8b93-b5bfc3368867">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font fontName="Open Sans Light" size="9" isBold="true" isStrikeThrough="false" isPdfEmbedded="true"/>
+					<paragraph lineSpacing="1_1_2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{FECHA_OPERACION}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="95" y="445" width="260" height="1" uuid="7e33a863-beb7-4dbd-a931-ddec321ba61a">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="0.25" lineStyle="Dotted" lineColor="#000000"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="95" y="455" width="100" height="15" forecolor="#585858" uuid="df2ce5c0-f5ab-45ad-b8b3-d51b4467a7b2">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Open Sans" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Comprobante]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="220" y="455" width="135" height="15" forecolor="#585858" uuid="ba9f640f-093f-45c6-bf91-18978ce054ae">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font fontName="Open Sans Light" size="9" isBold="true" isStrikeThrough="false" isPdfEmbedded="true"/>
+					<paragraph lineSpacing="1_1_2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{NRO_COMPROBANTE}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="95" y="480" width="260" height="1" uuid="6796cef2-52f4-400b-a043-4b6925ba91a9">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="0.25" lineStyle="Dotted" lineColor="#000000"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="95" y="490" width="100" height="15" forecolor="#585858" uuid="e44651e9-49f8-40b9-8d41-a276ae1cfcf9">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Open Sans" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Número recurrencia]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="220" y="490" width="135" height="15" forecolor="#585858" uuid="b3fb6f6b-9757-4ef3-b689-b3b31161d02c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font fontName="Open Sans Light" size="9" isBold="true" isStrikeThrough="false" isPdfEmbedded="true"/>
+					<paragraph lineSpacing="1_1_2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{NRO_RECURRENCIA}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="95" y="515" width="260" height="1" uuid="b9a12cfb-4e7c-423c-a820-a3c399ec0c90">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="0.25" lineStyle="Dotted" lineColor="#000000"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement x="138" y="585" width="175" height="15" forecolor="#585858" uuid="7128ad91-a57a-4218-853c-977c08ba7613">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="Open Sans" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{FECHA_HORA_COMPROBANTE}]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="175" y="620" width="100" height="25" uuid="8bb3f9da-2e33-4062-bd9f-06cd3a431f98">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<imageExpression><![CDATA[$P{LOGO_PIE}]]></imageExpression>
+			</image>
+		</band>
+	</detail>
+</jasperReport>

@@ -1,0 +1,10 @@
+{
+  "code": "unavailable service",
+  "message": "General error when retrieving accounts information",
+  "errors": [
+    {
+      "code": "error",
+      "message": "General error when retrieving account information"
+    }
+  ]
+}

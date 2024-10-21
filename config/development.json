@@ -1,0 +1,14 @@
+{
+    "server": [{
+            "WEBSPHERE_APP": "ws85_hbdesa10d",
+            "WEBSPHERE_CLUSTER": "false",
+            "WEBSPHERE_INSTANCENAME": "wasobptbdesa-10",
+            "WEBSPHERE_SERVER": "wasobptbdesa.ar.bsch",
+            "WEBSPHERE_SOAP": "8879",
+            "WEBSPHERE_VIRTUAL_HOST": "wasobptbdesa-10-vhost",
+            "WEBSPHERE_CELL": "",
+            "WEBSPHERE_NODE": "wasobptbdesa.ar.bsch",
+            "WEBSPHERE_WAITRESTART": "120"
+        }
+    ]
+}

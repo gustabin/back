@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="subReportEndosos" pageWidth="518" pageHeight="802" columnWidth="518" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="c03a76f2-e35a-4a3a-bd79-27e4d2982edb">
+	<property name="ireport.zoom" value="2.9282000000000012"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="table_8">
+		<pen lineStyle="Dotted"/>
+		<box>
+			<pen lineWidth="0.5" lineStyle="Dotted" lineColor="#C9C9C9"/>
+			<topPen lineWidth="0.0" lineStyle="Dotted" lineColor="#C9C9C9"/>
+			<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#C9C9C9"/>
+			<bottomPen lineWidth="0.0" lineStyle="Dotted" lineColor="#C9C9C9"/>
+			<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#C9C9C9"/>
+		</box>
+	</style>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="cesionarioDocumentoTipo" class="java.lang.String"/>
+	<field name="cesionarioDocumento" class="java.lang.String"/>
+	<field name="cesionarioNombre" class="java.lang.String"/>
+	<field name="cesionarioDomicilio" class="java.lang.String"/>
+	<field name="fechaEmisionCesion" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="76" splitType="Stretch">
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" x="74" y="10" width="166" height="13" uuid="1cf8f3a6-8879-4a97-905a-09e95c8a8cae"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Open Sans" size="9" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cesionarioNombre}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement positionType="Float" x="0" y="74" width="240" height="1" uuid="08a395e3-c9af-4574-98a5-221da5110852"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineStyle="Dotted" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+			<textField isStretchWithOverflow="true" pattern="">
+				<reportElement positionType="Float" x="0" y="10" width="74" height="13" uuid="b2c9a54c-1c10-46d7-ab4b-843cb13fbc92"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Open Sans" size="9" isBold="false" isPdfEmbedded="true"/>
+					<paragraph tabStopWidth="30"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fechaEmisionCesion}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" x="172" y="26" width="68" height="13" uuid="fea012af-1b50-4701-9a5e-d1e868c6a10c"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Open Sans" size="9" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cesionarioDocumento}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="">
+				<reportElement positionType="Float" x="113" y="45" width="127" height="29" uuid="6a502e8f-668d-4419-9b53-4525bf6d4216"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Open Sans" size="9" isBold="false" isPdfEmbedded="true"/>
+					<paragraph tabStopWidth="30"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cesionarioDomicilio}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" x="131" y="26" width="41" height="13" uuid="fd84f5a1-71a0-45b1-82a4-9443d9c9e9a1"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Open Sans" size="9" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cesionarioDocumentoTipo}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="45" width="113" height="29" forecolor="#585858" uuid="e7774c99-6ead-4b54-a92d-b5a0e2e345e6">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Open Sans" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Domicilio del beneficiario de la cesión de derechos]]></text>
+			</staticText>
+		</band>
+	</detail>
+</jasperReport>

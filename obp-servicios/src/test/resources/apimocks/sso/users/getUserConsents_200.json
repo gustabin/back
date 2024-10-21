@@ -1,0 +1,12 @@
+[
+  {
+    "lastUpdatedDate": 1677865606528,
+    "clientId": "pkce-test",
+    "createdDate": 1677865606520,
+    "grantedClientScopes": [
+      "offline_access",
+      "accounts.debit"
+    ],
+    "additionalGrants": []
+  }
+]

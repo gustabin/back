@@ -1,0 +1,13 @@
+{
+  "customers": [
+    {
+      "id": "02569328",
+      "condition": "customer",
+      "humanPerson": {
+        "firstName": "CRISOFORO SERVANDO ADELMO",
+        "lastName": "BUGALLO SANCHEZ",
+        "birthDate": "1967-12-10T00:00:00.000-03:00"
+      }
+    }
+  ]
+}

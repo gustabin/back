@@ -1,0 +1,185 @@
+{
+  "phones": [
+    {
+      "type": "linephone",
+      "class": "particular",
+      "areaCode": "011",
+      "number": "477286054505",
+      "internal": "",
+      "company": null,
+      "isActive": null,
+      "source": "CAC",
+      "updatedAt": "2020-07-07T00:46:38.439-03:00"
+    },
+    {
+      "type": "fax",
+      "class": "work",
+      "areaCode": "011",
+      "number": "477594064506",
+      "internal": "",
+      "company": null,
+      "isActive": null,
+      "source": "",
+      "updatedAt": "2007-04-26T18:20:54.452-03:00"
+    },
+    {
+      "type": "cellphone",
+      "class": "particular",
+      "areaCode": "01115",
+      "number": "563874074507",
+      "internal": "",
+      "company": "personal",
+      "isActive": true,
+      "source": "MYA",
+      "updatedAt": "2014-03-21T23:05:29.831-03:00"
+    },
+    {
+      "type": "linephone",
+      "class": "particular",
+      "areaCode": "011",
+      "number": "470628084508",
+      "internal": "",
+      "company": null,
+      "isActive": null,
+      "source": "",
+      "updatedAt": "2017-07-08T22:02:39.463-03:00"
+    },
+    {
+      "type": "cellphone",
+      "class": "particular",
+      "areaCode": "011",
+      "number": "116374094509",
+      "internal": "",
+      "company": null,
+      "isActive": null,
+      "source": "",
+      "updatedAt": "2017-07-08T22:02:39.463-03:00"
+    },
+    {
+      "type": "linephone",
+      "class": "work",
+      "areaCode": "011",
+      "number": "437325104510",
+      "internal": "",
+      "company": null,
+      "isActive": null,
+      "source": "",
+      "updatedAt": "2017-07-08T22:02:39.463-03:00"
+    },
+    {
+      "type": "linephone",
+      "class": "particular",
+      "areaCode": "11",
+      "number": "47728605",
+      "internal": "",
+      "company": null,
+      "isActive": null,
+      "source": "",
+      "updatedAt": "2021-07-23T11:58:30.634-03:00"
+    },
+    {
+      "type": "linephone",
+      "class": "work",
+      "areaCode": "11",
+      "number": "43411000",
+      "internal": "",
+      "company": null,
+      "isActive": null,
+      "source": "",
+      "updatedAt": "2021-07-23T11:58:30.751-03:00"
+    }
+  ],
+  "emails": [
+    {
+      "isActive": true,
+      "address": "CRISOFOROSER@BUGALLOSANCH.COM.AR",
+      "source": "messages_and_notifications"
+    }
+  ],
+  "addresses": [
+    {
+      "id": "02569328_001",
+      "type": "MAIN",
+      "streetName": "ITALIA",
+      "buildingNumber": "424",
+      "floor": "5",
+      "department": "23",
+      "city": "DIEGO DE ALVE",
+      "state": "AR-S",
+      "country": "ARG",
+      "zipCode": null
+    },
+    {
+      "id": "02569328_004",
+      "type": "WORK",
+      "streetName": "LOS SAUCES",
+      "buildingNumber": "1",
+      "floor": "5",
+      "department": "23",
+      "city": "IRIARTE",
+      "state": "AR-B",
+      "country": "ARG",
+      "zipCode": "B6042ANA"
+    },
+    {
+      "id": "02569328_016",
+      "type": "WORK",
+      "streetName": "BVRD 28",
+      "buildingNumber": "399",
+      "floor": "",
+      "department": "",
+      "city": "FLORENTINO AMEGHINO",
+      "state": "AR-B",
+      "country": "ARG",
+      "zipCode": "B6064ABD"
+    },
+    {
+      "id": "02569328_017",
+      "type": "WORK",
+      "streetName": "C CORREO",
+      "buildingNumber": "91",
+      "floor": "",
+      "department": "",
+      "city": "AMEGHINO",
+      "state": "AR-B",
+      "country": "ARG",
+      "zipCode": "B6064"
+    },
+    {
+      "id": "02569328_018",
+      "type": "WORK",
+      "streetName": "CALLE 11",
+      "buildingNumber": "596",
+      "floor": "",
+      "department": "",
+      "city": "FLORENTINO AMEGHINO",
+      "state": "AR-B",
+      "country": "ARG",
+      "zipCode": "B6064AFL"
+    },
+    {
+      "id": "02569328_019",
+      "type": "WORK",
+      "streetName": "CALLE 22",
+      "buildingNumber": "315",
+      "floor": "",
+      "department": "",
+      "city": "FLORENTINO AMEGHINO",
+      "state": "AR-B",
+      "country": "ARG",
+      "zipCode": "B6064ARG"
+    },
+    {
+      "id": "02569328_020",
+      "type": "WORK",
+      "streetName": "BARTOLOME MITRE",
+      "buildingNumber": "480",
+      "floor": "",
+      "department": "",
+      "city": "CABA",
+      "state": "AR-C",
+      "country": "ARG",
+      "zipCode": null
+    }
+  ]
+}

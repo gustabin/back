@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ComprobanteTransferencias" pageWidth="262" pageHeight="731" columnWidth="262" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="7498fdb2-6542-4002-ae93-85ec2b39d1a5">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="LOGO_CABECERA" class="java.lang.String"/>
+	<parameter name="NOMBRE_APELLIDO" class="java.lang.String"/>
+	<parameter name="IMPORTE" class="java.lang.String"/>
+	<parameter name="NUMERO_CUENTA_ORIGEN" class="java.lang.String"/>
+	<parameter name="TIPO_CUENTA_ORIGEN" class="java.lang.String"/>
+	<parameter name="NUMERO_CUENTA_DESTINO" class="java.lang.String"/>
+	<parameter name="TIPO_CUENTA_DESTINO" class="java.lang.String"/>
+	<parameter name="BANCO" class="java.lang.String"/>
+	<parameter name="DESTINATARIO" class="java.lang.String"/>
+	<parameter name="CUIT" class="java.lang.String"/>
+	<parameter name="FECHA_EJECUCION" class="java.lang.String"/>
+	<parameter name="CONCEPTO" class="java.lang.String"/>
+	<parameter name="DESCRIPCION" class="java.lang.String"/>
+	<parameter name="PLAZO_ACREDITACION" class="java.lang.String"/>
+	<parameter name="COMPROBANTE" class="java.lang.String"/>
+	<parameter name="LOGO_PIE" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="731" splitType="Stretch">
+			<frame>
+				<reportElement x="0" y="60" width="262" height="671" uuid="281cda08-7733-49ee-830d-71eb471a06a2"/>
+				<frame>
+					<reportElement x="0" y="0" width="262" height="80" uuid="09f020be-6fb6-4e17-b1af-837eab25c580"/>
+					<box>
+						<bottomPen lineWidth="0.5" lineColor="#C9C9C9"/>
+					</box>
+					<textField>
+						<reportElement x="0" y="0" width="262" height="40" forecolor="#333333" uuid="cd4b747b-ba2a-412b-b0e8-604c82e3147c"/>
+						<textElement textAlignment="Center" verticalAlignment="Bottom">
+							<font fontName="Open Sans Light" size="22" isPdfEmbedded="false"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$P{NOMBRE_APELLIDO}]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="0" y="40" width="262" height="40" forecolor="#333333" uuid="957e5670-2d01-4a78-bcbf-57769cd6426e"/>
+						<textElement textAlignment="Center" verticalAlignment="Top">
+							<font fontName="Open Sans Light" size="22" isPdfEmbedded="false"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$P{IMPORTE}]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement x="0" y="80" width="262" height="58" uuid="d609d6dd-68c1-4fd4-bd5a-ff4e60325481"/>
+					<frame>
+						<reportElement x="30" y="15" width="202" height="29" uuid="214f00a6-70d9-4f40-a6f0-bdaf7f1e4fb4"/>
+						<staticText>
+							<reportElement positionType="Float" x="0" y="0" width="100" height="13" forecolor="#333333" uuid="80d81d79-a5cd-43e6-b617-96776d0a114c"/>
+							<textElement>
+								<font fontName="Open Sans" size="9"/>
+							</textElement>
+							<text><![CDATA[Origen]]></text>
+						</staticText>
+						<textField isStretchWithOverflow="true">
+							<reportElement x="101" y="13" width="101" height="15" forecolor="#333333" uuid="a24d76e4-0f04-434a-ab65-6ade29198445"/>
+							<textElement textAlignment="Right">
+								<font fontName="Open Sans" size="9"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$P{TIPO_CUENTA_ORIGEN}]]></textFieldExpression>
+						</textField>
+						<textField isStretchWithOverflow="true">
+							<reportElement x="101" y="0" width="101" height="13" forecolor="#333333" uuid="552d955f-dbb2-4272-8dae-a16fbfd58258"/>
+							<textElement textAlignment="Right">
+								<font fontName="Open Sans" size="9" isBold="true"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$P{NUMERO_CUENTA_ORIGEN}]]></textFieldExpression>
+						</textField>
+					</frame>
+				</frame>
+				<line>
+					<reportElement x="20" y="137" width="222" height="1" uuid="ca3f254b-cb09-43eb-ae91-fa4825815a52"/>
+					<graphicElement>
+						<pen lineWidth="0.75" lineStyle="Dotted" lineColor="#C9C9C9"/>
+					</graphicElement>
+				</line>
+				<frame>
+					<reportElement x="0" y="137" width="262" height="58" uuid="79da8ee2-c6c5-4dcf-accd-a60706c022b8"/>
+					<frame>
+						<reportElement x="30" y="15" width="202" height="29" uuid="e0d481a9-8c5f-4e90-84d2-1c91fac5a7a5"/>
+						<staticText>
+							<reportElement positionType="Float" x="0" y="0" width="100" height="13" forecolor="#333333" uuid="f6dc9887-a9ea-40ac-8b75-e99553ff54c7"/>
+							<textElement>
+								<font fontName="Open Sans" size="9"/>
+							</textElement>
+							<text><![CDATA[Destino]]></text>
+						</staticText>
+						<textField isStretchWithOverflow="true">
+							<reportElement x="101" y="13" width="101" height="15" forecolor="#333333" uuid="f9140d6f-818c-4663-bb7f-ef818a5faf7b"/>
+							<textElement textAlignment="Right">
+								<font fontName="Open Sans" size="9"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$P{TIPO_CUENTA_DESTINO}]]></textFieldExpression>
+						</textField>
+						<textField isStretchWithOverflow="true">
+							<reportElement x="101" y="0" width="101" height="13" isPrintWhenDetailOverflows="true" forecolor="#333333" uuid="1500b53f-48b9-44a6-a710-038865a6b434"/>
+							<textElement textAlignment="Right">
+								<font fontName="Open Sans" size="9" isBold="true"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$P{NUMERO_CUENTA_DESTINO}]]></textFieldExpression>
+						</textField>
+					</frame>
+				</frame>
+				<line>
+					<reportElement x="20" y="195" width="222" height="1" uuid="22e6739c-a2eb-4ba6-99d7-c8e79eb67c74"/>
+					<graphicElement>
+						<pen lineWidth="0.75" lineStyle="Dotted" lineColor="#C9C9C9"/>
+					</graphicElement>
+				</line>
+				<frame>
+					<reportElement x="0" y="195" width="262" height="44" uuid="abfff436-1ee8-49eb-9e58-1b09e1b13161"/>
+					<frame>
+						<reportElement x="31" y="15" width="201" height="14" uuid="0ed3c389-6bdc-4249-a990-5ec8cf21e1e8"/>
+						<staticText>
+							<reportElement positionType="Float" x="0" y="0" width="100" height="13" forecolor="#333333" uuid="aec654de-adf4-4c39-bd51-49c8bb3bd1fe"/>
+							<textElement>
+								<font fontName="Open Sans" size="9"/>
+							</textElement>
+							<text><![CDATA[Banco]]></text>
+						</staticText>
+						<textField isStretchWithOverflow="true">
+							<reportElement x="100" y="0" width="101" height="13" isPrintWhenDetailOverflows="true" forecolor="#333333" uuid="640cfdef-2392-4e2a-873f-112455b6b82a"/>
+							<textElement textAlignment="Right">
+								<font fontName="Open Sans" size="9" isBold="true"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$P{BANCO}]]></textFieldExpression>
+						</textField>
+					</frame>
+				</frame>
+				<line>
+					<reportElement x="20" y="238" width="222" height="1" uuid="df4b121d-4deb-4839-ad96-f36c172104a2"/>
+					<graphicElement>
+						<pen lineWidth="0.75" lineStyle="Dotted" lineColor="#C9C9C9"/>
+					</graphicElement>
+				</line>
+				<frame>
+					<reportElement x="0" y="238" width="262" height="44" uuid="4ae42488-1661-4ef9-b4f0-24b9710c6c98"/>
+					<frame>
+						<reportElement x="31" y="15" width="201" height="14" uuid="9c341190-3ba7-4646-b8f9-7b2dd2df68d7"/>
+						<staticText>
+							<reportElement positionType="Float" x="0" y="0" width="100" height="13" forecolor="#333333" uuid="9143631f-4e18-4745-90b1-bf76ee2ab86e"/>
+							<textElement>
+								<font fontName="Open Sans" size="9"/>
+							</textElement>
+							<text><![CDATA[Destinatario]]></text>
+						</staticText>
+						<textField isStretchWithOverflow="true">
+							<reportElement x="100" y="0" width="101" height="13" isPrintWhenDetailOverflows="true" forecolor="#333333" uuid="579f616d-c19c-4b8a-981c-a0dd8f52c9cc"/>
+							<textElement textAlignment="Right">
+								<font fontName="Open Sans" size="9" isBold="true"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$P{DESTINATARIO}]]></textFieldExpression>
+						</textField>
+					</frame>
+				</frame>
+				<line>
+					<reportElement x="20" y="281" width="222" height="1" uuid="51b4a2e9-20d1-4161-ab2d-9238c08e2e19"/>
+					<graphicElement>
+						<pen lineWidth="0.75" lineStyle="Dotted" lineColor="#C9C9C9"/>
+					</graphicElement>
+				</line>
+				<frame>
+					<reportElement x="0" y="281" width="262" height="44" uuid="cd5c65bb-5a50-4703-b75b-cddf8e30af54"/>
+					<frame>
+						<reportElement x="31" y="15" width="201" height="14" uuid="5f74939a-0801-4925-af22-cf20bb7ce5bf"/>
+						<staticText>
+							<reportElement positionType="Float" x="0" y="0" width="112" height="13" isPrintWhenDetailOverflows="true" forecolor="#333333" uuid="4c3b3be2-c0c4-46b5-9ec0-498e47abf48e"/>
+							<textElement>
+								<font fontName="Open Sans" size="9"/>
+							</textElement>
+							<text><![CDATA[CUIT/CUIL del destinatario]]></text>
+						</staticText>
+						<textField isStretchWithOverflow="true">
+							<reportElement x="100" y="0" width="101" height="13" isPrintWhenDetailOverflows="true" forecolor="#333333" uuid="1b456907-426e-4f3d-86ed-4f7cba303846"/>
+							<textElement textAlignment="Right">
+								<font fontName="Open Sans" size="9" isBold="true"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$P{CUIT}]]></textFieldExpression>
+						</textField>
+					</frame>
+				</frame>
+				<line>
+					<reportElement x="20" y="324" width="222" height="1" uuid="7f64e86d-d3b1-4a59-aa0e-3837b77fb7f9"/>
+					<graphicElement>
+						<pen lineWidth="0.75" lineStyle="Dotted" lineColor="#C9C9C9"/>
+					</graphicElement>
+				</line>
+				<frame>
+					<reportElement x="0" y="324" width="262" height="44" uuid="a26449aa-aa4c-472b-84f5-c5394e0f5aa0"/>
+					<frame>
+						<reportElement x="31" y="15" width="201" height="14" uuid="42250f02-1e1c-4d8a-810c-890a3851386e"/>
+						<staticText>
+							<reportElement positionType="Float" x="0" y="0" width="100" height="13" isPrintWhenDetailOverflows="true" forecolor="#333333" uuid="0dc350d4-ec22-40e4-ba00-f9eff47b9be9"/>
+							<textElement>
+								<font fontName="Open Sans" size="9"/>
+							</textElement>
+							<text><![CDATA[Fecha de ejecución]]></text>
+						</staticText>
+						<textField isStretchWithOverflow="true">
+							<reportElement x="100" y="0" width="101" height="13" isPrintWhenDetailOverflows="true" forecolor="#333333" uuid="1557cda5-1e73-4769-83aa-42f82d4bf063"/>
+							<textElement textAlignment="Right">
+								<font fontName="Open Sans" size="9" isBold="true"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$P{FECHA_EJECUCION}]]></textFieldExpression>
+						</textField>
+					</frame>
+				</frame>
+				<line>
+					<reportElement x="20" y="367" width="222" height="1" uuid="de8a841a-dff7-4f1d-b474-b0548599cb6f"/>
+					<graphicElement>
+						<pen lineWidth="0.75" lineStyle="Dotted" lineColor="#C9C9C9"/>
+					</graphicElement>
+				</line>
+				<frame>
+					<reportElement x="0" y="367" width="262" height="44" uuid="12433635-8176-4e34-8c60-87859ac1da49"/>
+					<frame>
+						<reportElement x="31" y="15" width="201" height="14" uuid="e3dac5b2-f857-40fe-a913-83e1c4aa0638"/>
+						<staticText>
+							<reportElement positionType="Float" x="0" y="0" width="100" height="13" isPrintWhenDetailOverflows="true" forecolor="#333333" uuid="5991f599-0a69-49a1-9ac7-33ce8c9adaf1"/>
+							<textElement>
+								<font fontName="Open Sans" size="9"/>
+							</textElement>
+							<text><![CDATA[Concepto]]></text>
+						</staticText>
+						<textField isStretchWithOverflow="true">
+							<reportElement x="100" y="0" width="101" height="13" isPrintWhenDetailOverflows="true" forecolor="#333333" uuid="0456e3b2-7c1f-4c41-a35a-f31db8e226fc"/>
+							<textElement textAlignment="Right">
+								<font fontName="Open Sans" size="9" isBold="true"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$P{CONCEPTO}]]></textFieldExpression>
+						</textField>
+					</frame>
+				</frame>
+				<line>
+					<reportElement x="20" y="410" width="222" height="1" uuid="731974c5-0999-4cb9-acd9-5d02b82abaf7"/>
+					<graphicElement>
+						<pen lineWidth="0.75" lineStyle="Dotted" lineColor="#C9C9C9"/>
+					</graphicElement>
+				</line>
+				<frame>
+					<reportElement x="0" y="410" width="262" height="44" uuid="6d377c61-4c1a-4c05-8dd8-81e6c3318991"/>
+					<frame>
+						<reportElement x="31" y="15" width="201" height="14" uuid="0ee9e3fa-01fc-47cf-8b8d-c74caf3ec98b"/>
+						<staticText>
+							<reportElement positionType="Float" x="0" y="0" width="100" height="13" isPrintWhenDetailOverflows="true" forecolor="#333333" uuid="69be7ccb-6d4c-4fd0-9fe5-69b472da6f33"/>
+							<textElement>
+								<font fontName="Open Sans" size="9"/>
+							</textElement>
+							<text><![CDATA[Descripción]]></text>
+						</staticText>
+						<textField isStretchWithOverflow="true">
+							<reportElement x="100" y="0" width="101" height="13" isPrintWhenDetailOverflows="true" forecolor="#333333" uuid="c6fc7c43-eeb4-4f43-a758-9df7fdf4fb90"/>
+							<textElement textAlignment="Right">
+								<font fontName="Open Sans" size="9" isBold="true"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$P{DESCRIPCION}]]></textFieldExpression>
+						</textField>
+					</frame>
+				</frame>
+				<line>
+					<reportElement x="20" y="453" width="222" height="1" uuid="d4795eba-edb4-44d1-9db4-89cf061fc499"/>
+					<graphicElement>
+						<pen lineWidth="0.75" lineStyle="Dotted" lineColor="#C9C9C9"/>
+					</graphicElement>
+				</line>
+				<frame>
+					<reportElement x="0" y="453" width="262" height="44" uuid="7cd53ff1-4440-4757-9865-49d378c582bf"/>
+					<frame>
+						<reportElement x="31" y="15" width="201" height="14" uuid="c887c5fe-7c3a-4b1b-a40f-4f14aaf06df0"/>
+						<staticText>
+							<reportElement positionType="Float" x="0" y="0" width="100" height="13" isPrintWhenDetailOverflows="true" forecolor="#333333" uuid="bb18e4d4-a8bf-44c1-abbf-464fdc203ec6"/>
+							<textElement>
+								<font fontName="Open Sans" size="9"/>
+							</textElement>
+							<text><![CDATA[Plazo de acreditación]]></text>
+						</staticText>
+						<textField isStretchWithOverflow="true">
+							<reportElement x="100" y="0" width="101" height="13" isPrintWhenDetailOverflows="true" forecolor="#333333" uuid="3374a44c-07d5-4507-bb4e-89e13ad8cce9"/>
+							<textElement textAlignment="Right">
+								<font fontName="Open Sans" size="9" isBold="true"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$P{PLAZO_ACREDITACION}]]></textFieldExpression>
+						</textField>
+					</frame>
+				</frame>
+				<line>
+					<reportElement x="20" y="496" width="222" height="1" uuid="ea68a702-79ce-46c9-adea-8aba4a154c8b"/>
+					<graphicElement>
+						<pen lineWidth="0.75" lineStyle="Dotted" lineColor="#C9C9C9"/>
+					</graphicElement>
+				</line>
+				<frame>
+					<reportElement x="0" y="496" width="262" height="44" uuid="e2a75344-d437-44a5-8e2f-3a76c848af1a"/>
+					<frame>
+						<reportElement x="31" y="15" width="201" height="14" uuid="0a8cfb42-3ea7-45f7-8ae3-b1ebec1faf26"/>
+						<staticText>
+							<reportElement positionType="Float" x="0" y="0" width="100" height="13" isPrintWhenDetailOverflows="true" forecolor="#333333" uuid="b213f66a-0cec-443a-a6e7-36e1f189b8dc"/>
+							<textElement>
+								<font fontName="Open Sans" size="9"/>
+							</textElement>
+							<text><![CDATA[Comprobante]]></text>
+						</staticText>
+						<textField isStretchWithOverflow="true">
+							<reportElement x="100" y="0" width="101" height="13" isPrintWhenDetailOverflows="true" forecolor="#333333" uuid="6f198463-0d90-4ea8-a155-9ed6afaca23b"/>
+							<textElement textAlignment="Right">
+								<font fontName="Open Sans" size="9" isBold="true"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$P{COMPROBANTE}]]></textFieldExpression>
+						</textField>
+					</frame>
+				</frame>
+				<line>
+					<reportElement x="20" y="539" width="222" height="1" uuid="e7a78c40-3cce-4f61-9444-c8e55a4bdfd4"/>
+					<graphicElement>
+						<pen lineWidth="0.75" lineStyle="Dotted" lineColor="#C9C9C9"/>
+					</graphicElement>
+				</line>
+				<image>
+					<reportElement x="79" y="581" width="100" height="50" uuid="0e03a76c-1f88-4dc7-b14d-6c968da79163"/>
+					<imageExpression><![CDATA[$P{LOGO_PIE}]]></imageExpression>
+				</image>
+			</frame>
+			<frame>
+				<reportElement x="0" y="0" width="262" height="60" uuid="fb349d52-cfbd-465f-a6d1-86bb914a4dfe"/>
+				<box>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#C9C9C9"/>
+				</box>
+				<frame>
+					<reportElement mode="Transparent" x="0" y="30" width="262" height="30" uuid="d06bd8c6-7e17-4171-8c62-2e0f3dad371f"/>
+					<staticText>
+						<reportElement mode="Transparent" x="31" y="8" width="201" height="15" forecolor="#333333" uuid="5a3c8a1e-150b-4465-ad22-70a1bf16304f"/>
+						<textElement>
+							<font fontName="Open Sans" size="10" isBold="true" isPdfEmbedded="false"/>
+						</textElement>
+						<text><![CDATA[Comprobante de transferencia]]></text>
+					</staticText>
+				</frame>
+				<image scaleImage="FillFrame" hAlign="Left">
+					<reportElement positionType="Float" mode="Opaque" x="0" y="0" width="262" height="30" backcolor="#FFFFFF" uuid="36963886-ccdb-4d4f-b378-5b588194794a"/>
+					<imageExpression><![CDATA[$P{LOGO_CABECERA}]]></imageExpression>
+				</image>
+			</frame>
+		</band>
+	</detail>
+</jasperReport>

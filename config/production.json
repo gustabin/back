@@ -1,0 +1,47 @@
+{
+    "server": [{
+            "WEBSPHERE_APP": "ws85_hbint",
+            "WEBSPHERE_CLUSTER": "true",
+            "WEBSPHERE_INSTANCENAME": "ClusterOBP-Int",
+            "WEBSPHERE_SERVER": "wasobptbsrv01.ar.bsch",
+            "WEBSPHERE_SOAP": "8879",
+            "WEBSPHERE_VIRTUAL_HOST": "obp-int-vhost",
+            "WEBSPHERE_CELL": "",
+            "WEBSPHERE_NODE": "int-wasobptbsrv01.ar.bsch",
+            "WEBSPHERE_WAITRESTART": "900"
+        },
+        {
+            "WEBSPHERE_APP": "ws85_hbint",
+            "WEBSPHERE_CLUSTER": "true",
+            "WEBSPHERE_INSTANCENAME": "ClusterOBP-Int",
+            "WEBSPHERE_SERVER": "wasobptbsrv02.ar.bsch",
+            "WEBSPHERE_SOAP": "8879",
+            "WEBSPHERE_VIRTUAL_HOST": "obp-int-vhost",
+            "WEBSPHERE_CELL": "",
+            "WEBSPHERE_NODE": "int-wasobptbsrv02.ar.bsch",
+            "WEBSPHERE_WAITRESTART": "900"
+        },
+        {
+            "WEBSPHERE_APP": "ws85_hbext",
+            "WEBSPHERE_CLUSTER": "true",
+            "WEBSPHERE_INSTANCENAME": "ClusterOBP-Ext",
+            "WEBSPHERE_SERVER": "wasobptbsrv01.ar.bsch",
+            "WEBSPHERE_SOAP": "8879",
+            "WEBSPHERE_VIRTUAL_HOST": "obp-ext-vhost",
+            "WEBSPHERE_CELL": "",
+            "WEBSPHERE_NODE": "ext-wasobptbsrv01.ar.bsch",
+            "WEBSPHERE_WAITRESTART": "900"
+        },
+        {
+            "WEBSPHERE_APP": "ws85_hbext",
+            "WEBSPHERE_CLUSTER": "true",
+            "WEBSPHERE_INSTANCENAME": "ClusterOBP-Ext",
+            "WEBSPHERE_SERVER": "wasobptbsrv02.ar.bsch",
+            "WEBSPHERE_SOAP": "8879",
+            "WEBSPHERE_VIRTUAL_HOST": "obp-ext-vhost",
+            "WEBSPHERE_CELL": "",
+            "WEBSPHERE_NODE": "ext-wasobptbsrv02.ar.bsch",
+            "WEBSPHERE_WAITRESTART": "900"
+        }
+    ]
+}

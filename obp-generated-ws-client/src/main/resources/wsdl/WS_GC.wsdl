@@ -1,0 +1,1224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://webService.gestcli.ges.rio.com" xmlns:impl="http://webService.gestcli.ges.rio.com" xmlns:intf="http://webService.gestcli.ges.rio.com" xmlns:tns2="http://webService.core.ges.rio.com" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsi="http://ws-i.org/profiles/basic/1.1/xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+    <schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://webService.gestcli.ges.rio.com" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns2="http://webService.core.ges.rio.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://webService.core.ges.rio.com"/>
+   <element name="destroyResponse">
+    <complexType>
+     <sequence/>
+    </complexType>
+   </element>
+   <element name="altaGestionUser">
+    <complexType>
+     <sequence>
+      <element name="codAsociacion" nillable="true" type="xsd:int"/>
+      <element name="tipoPersona" nillable="true" type="xsd:string"/>
+      <element name="nup" nillable="true" type="xsd:int"/>
+      <element name="codUser" nillable="true" type="xsd:string"/>
+      <element name="medioIngreso" nillable="true" type="xsd:int"/>
+      <element name="comentario" nillable="true" type="xsd:string"/>
+      <element name="infoRequerida" nillable="true" type="impl:ArrayOf_1587703434_32493182_nillable_InfoRequeridaWS"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="altaGestionUserResponse">
+    <complexType>
+     <sequence>
+      <element name="altaGestionUserReturn" nillable="true" type="tns2:ResultadoAltaWS"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="obtenerTiempoNetoSectorGestion">
+    <complexType>
+     <sequence>
+      <element name="ideGestionSector" nillable="true" type="xsd:string"/>
+      <element name="ideGestionNro" nillable="true" type="xsd:int"/>
+      <element name="codSector" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="reservarNroGestion">
+    <complexType>
+     <sequence>
+      <element name="medioIngreso" nillable="true" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>   
+   <element name="obtenerTiempoNetoSectorGestionResponse">
+    <complexType>
+     <sequence>
+      <element name="obtenerTiempoNetoSectorGestionReturn" nillable="true" type="impl:TiempoSector"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="reservarNroGestionResponse">
+    <complexType>
+     <sequence>
+      <element name="reservarNroGestionReturn" nillable="true" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="init">
+    <complexType>
+     <sequence>
+      <element name="arg_0_1" nillable="true" type="xsd:anyType"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="initResponse">
+    <complexType>
+     <sequence/>
+    </complexType>
+   </element>
+   <element name="avanzarGestionAvance">
+    <complexType>
+     <sequence>
+      <element name="codUser" nillable="true" type="xsd:string"/>
+      <element name="ideGestionSector" nillable="true" type="xsd:string"/>
+      <element name="ideGestionNro" nillable="true" type="xsd:string"/>
+      <element name="accion" nillable="true" type="xsd:string"/>
+      <element name="comentario" nillable="true" type="xsd:string"/>
+      <element name="codRtaResolPredef" nillable="true" type="xsd:string"/>
+      <element name="infoRequerida" nillable="true" type="impl:ArrayOf_1587703434_32493182_nillable_InfoRequeridaWS"/>
+      <element name="ideGestionSectorAvance" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="avanzarGestionAvanceResponse">
+    <complexType>
+     <sequence>
+      <element name="avanzarGestionAvanceReturn" nillable="true" type="tns2:RetornoWS"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="resolverGestionParcial">
+    <complexType>
+     <sequence>
+      <element name="codUser" nillable="true" type="xsd:string"/>
+      <element name="ideGestionSector" nillable="true" type="xsd:string"/>
+      <element name="ideGestionNro" nillable="true" type="xsd:string"/>
+      <element name="infoRequerida" nillable="true" type="impl:ArrayOf_1587703434_32493182_nillable_InfoRequeridaWS"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="resolverGestionParcialResponse">
+    <complexType>
+     <sequence>
+      <element name="resolverGestionParcialReturn" nillable="true" type="tns2:RetornoWS"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="resolverGestionFinal">
+    <complexType>
+     <sequence>
+      <element name="codUser" nillable="true" type="xsd:string"/>
+      <element name="ideGestionSector" nillable="true" type="xsd:string"/>
+      <element name="ideGestionNro" nillable="true" type="xsd:string"/>
+      <element name="comentario" nillable="true" type="xsd:string"/>
+      <element name="codRtaResolPredef" nillable="true" type="xsd:string"/>
+      <element name="infoRequerida" nillable="true" type="impl:ArrayOf_1587703434_32493182_nillable_InfoRequeridaWS"/>
+      <element name="ideGestionSectorAvance" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="resolverGestionFinalResponse">
+    <complexType>
+     <sequence>
+      <element name="resolverGestionFinalReturn" nillable="true" type="tns2:RetornoWS"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="altaGestionUser2">
+    <complexType>
+     <sequence>
+      <element name="codAsociacion" nillable="true" type="xsd:int"/>
+      <element name="tipoPersona" nillable="true" type="xsd:string"/>
+      <element name="nup" nillable="true" type="xsd:int"/>
+      <element name="codUser" nillable="true" type="xsd:string"/>
+      <element name="medioIngreso" nillable="true" type="xsd:int"/>
+      <element name="comentarioCliente" nillable="true" type="xsd:string"/>
+      <element name="comentarioReceptor" nillable="true" type="xsd:string"/>
+      <element name="infoRequerida" nillable="true" type="impl:ArrayOf_1587703434_32493182_nillable_InfoRequeridaWS"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="altaGestionUser2Response">
+    <complexType>
+     <sequence>
+      <element name="altaGestionUser2Return" nillable="true" type="tns2:ResultadoAltaWS"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="confirmarImpresionRector">
+    <complexType>
+     <sequence>
+      <element name="cod_user" nillable="true" type="xsd:string"/>
+      <element name="cod_entidad" nillable="true" type="xsd:string"/>
+      <element name="ide_gestion_sector" nillable="true" type="xsd:string"/>
+      <element name="ide_gestion_nro" type="xsd:int"/>
+      <element name="cod_result_impresion" type="xsd:int"/>
+      <element name="desc_result_impresion" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="confirmarImpresionRectorResponse">
+    <complexType>
+     <sequence>
+      <element name="confirmarImpresionRectorReturn" nillable="true" type="impl:ArrayOf_1587703434_1440052060_nillable_string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="altaResolInmeditaUser">
+    <complexType>
+     <sequence>
+      <element name="codAsociacion" nillable="true" type="xsd:int"/>
+      <element name="tipoPersona" nillable="true" type="xsd:string"/>
+      <element name="nup" nillable="true" type="xsd:int"/>
+      <element name="codUser" nillable="true" type="xsd:string"/>
+      <element name="medioIngreso" nillable="true" type="xsd:int"/>
+      <element name="comentario" nillable="true" type="xsd:string"/>
+      <element name="infoRequerida" nillable="true" type="impl:ArrayOf_1587703434_32493182_nillable_InfoRequeridaWS"/>
+      <element name="comentarioResol" nillable="true" type="xsd:string"/>
+      <element name="codRtaResolPredefResol" nillable="true" type="xsd:string"/>
+      <element name="comentarioResp" nillable="true" type="xsd:string"/>
+      <element name="codRtaResolPredefResp" nillable="true" type="xsd:string"/>
+      <element name="favorabilidad" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="altaResolInmeditaUserResponse">
+    <complexType>
+     <sequence>
+      <element name="altaResolInmeditaUserReturn" nillable="true" type="tns2:ResultadoAltaWS"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="altaResolInmedita2">
+    <complexType>
+     <sequence>
+      <element name="codAsociacion" nillable="true" type="xsd:int"/>
+      <element name="tipoPersona" nillable="true" type="xsd:string"/>
+      <element name="nup" nillable="true" type="xsd:int"/>
+      <element name="codSector" nillable="true" type="xsd:string"/>
+      <element name="codUser" nillable="true" type="xsd:string"/>
+      <element name="medioIngreso" nillable="true" type="xsd:int"/>
+      <element name="comentarioCliente" nillable="true" type="xsd:string"/>
+      <element name="comentarioReceptor" nillable="true" type="xsd:string"/>
+      <element name="infoRequerida" nillable="true" type="impl:ArrayOf_1587703434_32493182_nillable_InfoRequeridaWS"/>
+      <element name="comentarioResol" nillable="true" type="xsd:string"/>
+      <element name="codRtaResolPredefResol" nillable="true" type="xsd:string"/>
+      <element name="comentarioResp" nillable="true" type="xsd:string"/>
+      <element name="codRtaResolPredefResp" nillable="true" type="xsd:string"/>
+      <element name="favorabilidad" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="altaResolInmedita2Response">
+    <complexType>
+     <sequence>
+      <element name="altaResolInmedita2Return" nillable="true" type="tns2:ResultadoAltaWS"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="avanzarGestion">
+    <complexType>
+     <sequence>
+      <element name="codUser" nillable="true" type="xsd:string"/>
+      <element name="ideGestionSector" nillable="true" type="xsd:string"/>
+      <element name="ideGestionNro" nillable="true" type="xsd:string"/>
+      <element name="accion" nillable="true" type="xsd:string"/>
+      <element name="comentario" nillable="true" type="xsd:string"/>
+      <element name="codRtaResolPredef" nillable="true" type="xsd:string"/>
+      <element name="infoRequerida" nillable="true" type="impl:ArrayOf_1587703434_32493182_nillable_InfoRequeridaWS"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="avanzarGestionResponse">
+    <complexType>
+     <sequence>
+      <element name="avanzarGestionReturn" nillable="true" type="tns2:RetornoWS"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="obtenerGestionesEjecutivo">
+    <complexType>
+     <sequence>
+      <element name="idEjecutivo" nillable="true" type="xsd:string"/>
+      <element name="dias" nillable="true" type="xsd:int"/>
+      <element name="tiposGestion" nillable="true" type="xsd:string"/>
+      <element name="estadoActual" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="obtenerGestionesEjecutivoResponse">
+    <complexType>
+     <sequence>
+      <element name="obtenerGestionesEjecutivoReturn" nillable="true" type="tns2:RetornoListaGestionClienteWS"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="obtenerInfoAdjResol">
+    <complexType>
+     <sequence>
+      <element name="ideGestionSector" nillable="true" type="xsd:string"/>
+      <element name="ideGestionNro" nillable="true" type="xsd:int"/>
+      <element name="codSectorResol" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="obtenerInfoAdjResolResponse">
+    <complexType>
+     <sequence>
+      <element name="obtenerInfoAdjResolReturn" nillable="true" type="tns2:RetornoListaInfoAdjWS"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="obtenerListaGestiones">
+    <complexType>
+     <sequence>
+      <element name="nup" nillable="true" type="xsd:string"/>
+      <element name="dias" nillable="true" type="xsd:int"/>
+      <element name="tiposGestion" nillable="true" type="xsd:string"/>
+      <element name="estadoActual" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="obtenerListaGestionesResponse">
+    <complexType>
+     <sequence>
+      <element name="obtenerListaGestionesReturn" nillable="true" type="tns2:RetornoListaWS"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="obtenerGestionesSucuAdmin">
+    <complexType>
+     <sequence>
+      <element name="sucuAdmin" nillable="true" type="xsd:string"/>
+      <element name="dias" nillable="true" type="xsd:int"/>
+      <element name="tiposGestion" nillable="true" type="xsd:string"/>
+      <element name="estadoActual" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="obtenerGestionesSucuAdminResponse">
+    <complexType>
+     <sequence>
+      <element name="obtenerGestionesSucuAdminReturn" nillable="true" type="tns2:RetornoListaGestionClienteWS"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="altaGestion2">
+    <complexType>
+     <sequence>
+      <element name="codAsociacion" nillable="true" type="xsd:int"/>
+      <element name="tipoPersona" nillable="true" type="xsd:string"/>
+      <element name="nup" nillable="true" type="xsd:int"/>
+      <element name="codSector" nillable="true" type="xsd:string"/>
+      <element name="codUser" nillable="true" type="xsd:string"/>
+      <element name="medioIngreso" nillable="true" type="xsd:int"/>
+      <element name="comentarioCliente" nillable="true" type="xsd:string"/>
+      <element name="comentarioReceptor" nillable="true" type="xsd:string"/>
+      <element name="infoRequerida" nillable="true" type="impl:ArrayOf_1587703434_32493182_nillable_InfoRequeridaWS"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="altaGestion2Response">
+    <complexType>
+     <sequence>
+      <element name="altaGestion2Return" nillable="true" type="tns2:ResultadoAltaWS"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="altaResolInmeditaUser2">
+    <complexType>
+     <sequence>
+      <element name="codAsociacion" nillable="true" type="xsd:int"/>
+      <element name="tipoPersona" nillable="true" type="xsd:string"/>
+      <element name="nup" nillable="true" type="xsd:int"/>
+      <element name="codUser" nillable="true" type="xsd:string"/>
+      <element name="medioIngreso" nillable="true" type="xsd:int"/>
+      <element name="comentarioCliente" nillable="true" type="xsd:string"/>
+      <element name="comentarioReceptor" nillable="true" type="xsd:string"/>
+      <element name="infoRequerida" nillable="true" type="impl:ArrayOf_1587703434_32493182_nillable_InfoRequeridaWS"/>
+      <element name="comentarioResol" nillable="true" type="xsd:string"/>
+      <element name="codRtaResolPredefResol" nillable="true" type="xsd:string"/>
+      <element name="comentarioResp" nillable="true" type="xsd:string"/>
+      <element name="codRtaResolPredefResp" nillable="true" type="xsd:string"/>
+      <element name="favorabilidad" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="altaResolInmeditaUser2Response">
+    <complexType>
+     <sequence>
+      <element name="altaResolInmeditaUser2Return" nillable="true" type="tns2:ResultadoAltaWS"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="altaGestion">
+    <complexType>
+     <sequence>
+      <element name="codAsociacion" nillable="true" type="xsd:int"/>
+      <element name="tipoPersona" nillable="true" type="xsd:string"/>
+      <element name="nup" nillable="true" type="xsd:int"/>
+      <element name="codSector" nillable="true" type="xsd:string"/>
+      <element name="codUser" nillable="true" type="xsd:string"/>
+      <element name="medioIngreso" nillable="true" type="xsd:int"/>
+      <element name="comentario" nillable="true" type="xsd:string"/>
+      <element name="infoRequerida" nillable="true" type="impl:ArrayOf_1587703434_32493182_nillable_InfoRequeridaWS"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="altaGestionResponse">
+    <complexType>
+     <sequence>
+      <element name="altaGestionReturn" nillable="true" type="tns2:ResultadoAltaWS"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="avanzarGestionConMonto">
+    <complexType>
+     <sequence>
+      <element name="codUser" nillable="true" type="xsd:string"/>
+      <element name="ideGestionSector" nillable="true" type="xsd:string"/>
+      <element name="ideGestionNro" nillable="true" type="xsd:string"/>
+      <element name="accion" nillable="true" type="xsd:string"/>
+      <element name="comentario" nillable="true" type="xsd:string"/>
+      <element name="codRtaResolPredef" nillable="true" type="xsd:string"/>
+      <element name="infoRequerida" nillable="true" type="impl:ArrayOf_1587703434_32493182_nillable_InfoRequeridaWS"/>
+      <element name="monto" nillable="true" type="xsd:string"/>
+      <element name="moneda" nillable="true" type="xsd:string"/>
+      <element name="codSector" nillable="true" type="xsd:string"/>
+      <element name="nroOrdenActor" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="avanzarGestionConMontoResponse">
+    <complexType>
+     <sequence>
+      <element name="avanzarGestionConMontoReturn" nillable="true" type="tns2:RetornoWS"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="anulaGestion">
+    <complexType>
+     <sequence>
+      <element name="ideGestionSector" nillable="true" type="xsd:string"/>
+      <element name="ideGestionNro" nillable="true" type="xsd:int"/>
+      <element name="codUser" nillable="true" type="xsd:string"/>
+      <element name="comentario" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="anulaGestionResponse">
+    <complexType>
+     <sequence>
+      <element name="anulaGestionReturn" nillable="true" type="tns2:RetornoWS"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="obtenerListaReclamos">
+    <complexType>
+     <sequence>
+      <element name="nup" nillable="true" type="xsd:string"/>
+      <element name="dias" nillable="true" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="obtenerListaReclamosResponse">
+    <complexType>
+     <sequence>
+      <element name="obtenerListaReclamosReturn" nillable="true" type="tns2:RetornoListaWS"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="altaResolInmedita">
+    <complexType>
+     <sequence>
+      <element name="codAsociacion" nillable="true" type="xsd:int"/>
+      <element name="tipoPersona" nillable="true" type="xsd:string"/>
+      <element name="nup" nillable="true" type="xsd:int"/>
+      <element name="codSector" nillable="true" type="xsd:string"/>
+      <element name="codUser" nillable="true" type="xsd:string"/>
+      <element name="medioIngreso" nillable="true" type="xsd:int"/>
+      <element name="comentario" nillable="true" type="xsd:string"/>
+      <element name="infoRequerida" nillable="true" type="impl:ArrayOf_1587703434_32493182_nillable_InfoRequeridaWS"/>
+      <element name="comentarioResol" nillable="true" type="xsd:string"/>
+      <element name="codRtaResolPredefResol" nillable="true" type="xsd:string"/>
+      <element name="comentarioResp" nillable="true" type="xsd:string"/>
+      <element name="codRtaResolPredefResp" nillable="true" type="xsd:string"/>
+      <element name="favorabilidad" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="altaResolInmeditaResponse">
+    <complexType>
+     <sequence>
+      <element name="altaResolInmeditaReturn" nillable="true" type="tns2:ResultadoAltaWS"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="avanzarGestionTrama">
+    <complexType>
+     <sequence>
+      <element name="data" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="avanzarGestionTramaResponse">
+    <complexType>
+     <sequence>
+      <element name="avanzarGestionTramaReturn" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="consultaEstadoGestion">
+    <complexType>
+     <sequence>
+      <element name="ideGestionSector" nillable="true" type="xsd:string"/>
+      <element name="ideGestionNro" nillable="true" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="consultaEstadoGestionResponse">
+    <complexType>
+     <sequence>
+      <element name="consultaEstadoGestionReturn" nillable="true" type="tns2:EstadoGestionWS"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="destroy">
+    <complexType>
+     <sequence/>
+    </complexType>
+   </element>
+   <complexType name="ArrayOf_1587703434_32493182_nillable_InfoRequeridaWS">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="InfoRequeridaWS" nillable="true" type="tns2:InfoRequeridaWS"/>
+    </sequence>
+   </complexType>
+   <complexType name="TiempoSector">
+    <sequence>
+     <element name="codRetorno" nillable="true" type="xsd:int"/>
+     <element name="descRetorno" nillable="true" type="xsd:string"/>
+     <element name="tiempoSector" nillable="true" type="xsd:double"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOf_1587703434_1440052060_nillable_string">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="string" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+  </schema>
+    <schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://webService.core.ges.rio.com" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <complexType name="InfoRequeridaWS">
+    <sequence>
+     <element name="codigo" nillable="true" type="xsd:int"/>
+     <element name="descripcion" nillable="true" type="xsd:string"/>
+     <element name="valor" nillable="true" type="tns2:ArrayOf_32493182_1440052060_nillable_string"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOf_32493182_1440052060_nillable_string">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="string" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="ResultadoAltaWS">
+    <sequence>
+     <element name="codRetorno" nillable="true" type="xsd:int"/>
+     <element name="descRetorno" nillable="true" type="xsd:string"/>
+     <element name="ideGestionNro" nillable="true" type="xsd:int"/>
+     <element name="ideGestionSector" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="RetornoWS">
+    <sequence>
+     <element name="codigo" nillable="true" type="xsd:int"/>
+     <element name="descripcion" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="RetornoListaGestionClienteWS">
+    <sequence>
+     <element name="codigo" nillable="true" type="xsd:int"/>
+     <element name="descripcion" nillable="true" type="xsd:string"/>
+     <element name="lista" nillable="true" type="tns2:ArrayOfGestionCliente"/>
+    </sequence>
+   </complexType>
+   <complexType name="GestionCliente">
+    <sequence>
+     <element name="codBandejaActual" nillable="true" type="xsd:string"/>
+     <element name="codUser" nillable="true" type="xsd:string"/>
+     <element name="descConcepto" nillable="true" type="xsd:string"/>
+     <element name="descProducto" nillable="true" type="xsd:string"/>
+     <element name="descSubConcepto" nillable="true" type="xsd:string"/>
+     <element name="descSubProducto" nillable="true" type="xsd:string"/>
+     <element name="fecBandejaActual" nillable="true" type="xsd:dateTime"/>
+     <element name="fecGestionAlta" nillable="true" type="xsd:dateTime"/>
+     <element name="ideGestionNro" nillable="true" type="xsd:int"/>
+     <element name="ideGestionSector" nillable="true" type="xsd:string"/>
+     <element name="cliente" nillable="true" type="xsd:string"/>
+     <element name="nup" nillable="true" type="xsd:string"/>
+     <element name="tpoPers" nillable="true" type="xsd:string"/>
+     <element name="fechaMaxResolucion" nillable="true" type="xsd:dateTime"/>
+     <element name="tpoGestion" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOfGestionCliente">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="GestionCliente" nillable="true" type="tns2:GestionCliente"/>
+    </sequence>
+   </complexType>
+   <complexType name="RetornoListaWS">
+    <sequence>
+     <element name="codigo" nillable="true" type="xsd:int"/>
+     <element name="descripcion" nillable="true" type="xsd:string"/>
+     <element name="lista" nillable="true" type="tns2:ArrayOfGestion"/>
+    </sequence>
+   </complexType>
+   <complexType name="RetornoListaInfoAdjWS">
+    <sequence>
+     <element name="codigo" nillable="true" type="xsd:int"/>
+     <element name="descripcion" nillable="true" type="xsd:string"/>
+     <element name="infosAdjData" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>   
+   <complexType name="Gestion">
+    <sequence>
+     <element name="codBandejaActual" nillable="true" type="xsd:string"/>
+     <element name="codUser" nillable="true" type="xsd:string"/>
+     <element name="descConcepto" nillable="true" type="xsd:string"/>
+     <element name="descProducto" nillable="true" type="xsd:string"/>
+     <element name="descSubConcepto" nillable="true" type="xsd:string"/>
+     <element name="descSubProducto" nillable="true" type="xsd:string"/>
+     <element name="fecBandejaActual" nillable="true" type="xsd:dateTime"/>
+     <element name="fecGestionAlta" nillable="true" type="xsd:dateTime"/>
+     <element name="ideGestionNro" nillable="true" type="xsd:int"/>
+     <element name="ideGestionSector" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOfGestion">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="Gestion" nillable="true" type="tns2:Gestion"/>
+    </sequence>
+   </complexType>
+   <complexType name="EstadoGestionWS">
+    <sequence>
+     <element name="codRetorno" nillable="true" type="xsd:int"/>
+     <element name="descRetorno" nillable="true" type="xsd:string"/>
+     <element name="estadoGestion" nillable="true" type="xsd:string"/>
+     <element name="fecSectorActualGestion" nillable="true" type="xsd:dateTime"/>
+     <element name="setorActualGestion" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+  </schema>
+  </wsdl:types>
+  <wsdl:message name="resolverGestionFinalRequest">
+    <wsdl:part element="impl:resolverGestionFinal" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="altaGestionUserResponse">
+    <wsdl:part element="impl:altaGestionUserResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="obtenerGestionesSucuAdminRequest">
+    <wsdl:part element="impl:obtenerGestionesSucuAdmin" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="altaResolInmeditaRequest">
+    <wsdl:part element="impl:altaResolInmedita" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="confirmarImpresionRectorRequest">
+    <wsdl:part element="impl:confirmarImpresionRector" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="consultaEstadoGestionResponse">
+    <wsdl:part element="impl:consultaEstadoGestionResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="altaResolInmedita2Request">
+    <wsdl:part element="impl:altaResolInmedita2" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="reservarNroGestionResponse">
+    <wsdl:part element="impl:reservarNroGestionResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="obtenerListaGestionesRequest">
+    <wsdl:part element="impl:obtenerListaGestiones" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="obtenerInfoAdjResolRequest">
+    <wsdl:part element="impl:obtenerInfoAdjResol" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="confirmarImpresionRectorResponse">
+    <wsdl:part element="impl:confirmarImpresionRectorResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="altaResolInmeditaResponse">
+    <wsdl:part element="impl:altaResolInmeditaResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="obtenerListaReclamosResponse">
+    <wsdl:part element="impl:obtenerListaReclamosResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="avanzarGestionConMontoResponse">
+    <wsdl:part element="impl:avanzarGestionConMontoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="anulaGestionRequest">
+    <wsdl:part element="impl:anulaGestion" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="altaGestionUser2Response">
+    <wsdl:part element="impl:altaGestionUser2Response" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="altaResolInmeditaUserRequest">
+    <wsdl:part element="impl:altaResolInmeditaUser" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="altaResolInmedita2Response">
+    <wsdl:part element="impl:altaResolInmedita2Response" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="destroyRequest">
+    <wsdl:part element="impl:destroy" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="obtenerListaGestionesResponse">
+    <wsdl:part element="impl:obtenerListaGestionesResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="altaGestion2Response">
+    <wsdl:part element="impl:altaGestion2Response" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="obtenerTiempoNetoSectorGestionResponse">
+    <wsdl:part element="impl:obtenerTiempoNetoSectorGestionResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="obtenerGestionesEjecutivoRequest">
+    <wsdl:part element="impl:obtenerGestionesEjecutivo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="altaGestion2Request">
+    <wsdl:part element="impl:altaGestion2" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="resolverGestionParcialResponse">
+    <wsdl:part element="impl:resolverGestionParcialResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="reservarNroGestionRequest">
+    <wsdl:part element="impl:reservarNroGestion" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="obtenerGestionesSucuAdminResponse">
+    <wsdl:part element="impl:obtenerGestionesSucuAdminResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="anulaGestionResponse">
+    <wsdl:part element="impl:anulaGestionResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="resolverGestionParcialRequest">
+    <wsdl:part element="impl:resolverGestionParcial" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="resolverGestionFinalResponse">
+    <wsdl:part element="impl:resolverGestionFinalResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="obtenerGestionesEjecutivoResponse">
+    <wsdl:part element="impl:obtenerGestionesEjecutivoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="avanzarGestionAvanceRequest">
+    <wsdl:part element="impl:avanzarGestionAvance" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="altaResolInmeditaUser2Response">
+    <wsdl:part element="impl:altaResolInmeditaUser2Response" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="altaGestionUserRequest">
+    <wsdl:part element="impl:altaGestionUser" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="altaGestionUser2Request">
+    <wsdl:part element="impl:altaGestionUser2" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="avanzarGestionConMontoRequest">
+    <wsdl:part element="impl:avanzarGestionConMonto" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="obtenerTiempoNetoSectorGestionRequest">
+    <wsdl:part element="impl:obtenerTiempoNetoSectorGestion" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="avanzarGestionTramaResponse">
+    <wsdl:part element="impl:avanzarGestionTramaResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="consultaEstadoGestionRequest">
+    <wsdl:part element="impl:consultaEstadoGestion" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="avanzarGestionResponse">
+    <wsdl:part element="impl:avanzarGestionResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="altaGestionRequest">
+    <wsdl:part element="impl:altaGestion" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="avanzarGestionRequest">
+    <wsdl:part element="impl:avanzarGestion" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="initResponse">
+    <wsdl:part element="impl:initResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="obtenerInfoAdjResolResponse">
+    <wsdl:part element="impl:obtenerInfoAdjResolResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="initRequest">
+    <wsdl:part element="impl:init" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="altaResolInmeditaUserResponse">
+    <wsdl:part element="impl:altaResolInmeditaUserResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="avanzarGestionAvanceResponse">
+    <wsdl:part element="impl:avanzarGestionAvanceResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="altaGestionResponse">
+    <wsdl:part element="impl:altaGestionResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="obtenerListaReclamosRequest">
+    <wsdl:part element="impl:obtenerListaReclamos" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="destroyResponse">
+    <wsdl:part element="impl:destroyResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="avanzarGestionTramaRequest">
+    <wsdl:part element="impl:avanzarGestionTrama" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="altaResolInmeditaUser2Request">
+    <wsdl:part element="impl:altaResolInmeditaUser2" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="WS_GC">
+    <wsdl:operation name="destroy">
+      <wsdl:input message="impl:destroyRequest" name="destroyRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:destroyResponse" name="destroyResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="altaGestionUser">
+      <wsdl:input message="impl:altaGestionUserRequest" name="altaGestionUserRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:altaGestionUserResponse" name="altaGestionUserResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtenerTiempoNetoSectorGestion">
+      <wsdl:input message="impl:obtenerTiempoNetoSectorGestionRequest" name="obtenerTiempoNetoSectorGestionRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:obtenerTiempoNetoSectorGestionResponse" name="obtenerTiempoNetoSectorGestionResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="reservarNroGestion">
+      <wsdl:input message="impl:reservarNroGestionRequest" name="reservarNroGestionRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:reservarNroGestionResponse" name="reservarNroGestionResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="init">
+      <wsdl:input message="impl:initRequest" name="initRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:initResponse" name="initResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="avanzarGestionAvance">
+      <wsdl:input message="impl:avanzarGestionAvanceRequest" name="avanzarGestionAvanceRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:avanzarGestionAvanceResponse" name="avanzarGestionAvanceResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="resolverGestionParcial">
+      <wsdl:input message="impl:resolverGestionParcialRequest" name="resolverGestionParcialRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:resolverGestionParcialResponse" name="resolverGestionParcialResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="resolverGestionFinal">
+      <wsdl:input message="impl:resolverGestionFinalRequest" name="resolverGestionFinalRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:resolverGestionFinalResponse" name="resolverGestionFinalResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="altaGestionUser2">
+      <wsdl:input message="impl:altaGestionUser2Request" name="altaGestionUser2Request">
+    </wsdl:input>
+      <wsdl:output message="impl:altaGestionUser2Response" name="altaGestionUser2Response">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="confirmarImpresionRector">
+      <wsdl:input message="impl:confirmarImpresionRectorRequest" name="confirmarImpresionRectorRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:confirmarImpresionRectorResponse" name="confirmarImpresionRectorResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="altaResolInmeditaUser">
+      <wsdl:input message="impl:altaResolInmeditaUserRequest" name="altaResolInmeditaUserRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:altaResolInmeditaUserResponse" name="altaResolInmeditaUserResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="altaResolInmedita2">
+      <wsdl:input message="impl:altaResolInmedita2Request" name="altaResolInmedita2Request">
+    </wsdl:input>
+      <wsdl:output message="impl:altaResolInmedita2Response" name="altaResolInmedita2Response">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="avanzarGestion">
+      <wsdl:input message="impl:avanzarGestionRequest" name="avanzarGestionRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:avanzarGestionResponse" name="avanzarGestionResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtenerGestionesEjecutivo">
+      <wsdl:input message="impl:obtenerGestionesEjecutivoRequest" name="obtenerGestionesEjecutivoRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:obtenerGestionesEjecutivoResponse" name="obtenerGestionesEjecutivoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtenerInfoAdjResol">
+      <wsdl:input message="impl:obtenerInfoAdjResolRequest" name="obtenerInfoAdjResolRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:obtenerInfoAdjResolResponse" name="obtenerInfoAdjResolResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtenerListaGestiones">
+      <wsdl:input message="impl:obtenerListaGestionesRequest" name="obtenerListaGestionesRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:obtenerListaGestionesResponse" name="obtenerListaGestionesResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtenerGestionesSucuAdmin">
+      <wsdl:input message="impl:obtenerGestionesSucuAdminRequest" name="obtenerGestionesSucuAdminRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:obtenerGestionesSucuAdminResponse" name="obtenerGestionesSucuAdminResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="altaGestion2">
+      <wsdl:input message="impl:altaGestion2Request" name="altaGestion2Request">
+    </wsdl:input>
+      <wsdl:output message="impl:altaGestion2Response" name="altaGestion2Response">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="altaResolInmeditaUser2">
+      <wsdl:input message="impl:altaResolInmeditaUser2Request" name="altaResolInmeditaUser2Request">
+    </wsdl:input>
+      <wsdl:output message="impl:altaResolInmeditaUser2Response" name="altaResolInmeditaUser2Response">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="altaGestion">
+      <wsdl:input message="impl:altaGestionRequest" name="altaGestionRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:altaGestionResponse" name="altaGestionResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="avanzarGestionConMonto">
+      <wsdl:input message="impl:avanzarGestionConMontoRequest" name="avanzarGestionConMontoRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:avanzarGestionConMontoResponse" name="avanzarGestionConMontoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="anulaGestion">
+      <wsdl:input message="impl:anulaGestionRequest" name="anulaGestionRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:anulaGestionResponse" name="anulaGestionResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtenerListaReclamos">
+      <wsdl:input message="impl:obtenerListaReclamosRequest" name="obtenerListaReclamosRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:obtenerListaReclamosResponse" name="obtenerListaReclamosResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="altaResolInmedita">
+      <wsdl:input message="impl:altaResolInmeditaRequest" name="altaResolInmeditaRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:altaResolInmeditaResponse" name="altaResolInmeditaResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="avanzarGestionTrama">
+      <wsdl:input message="impl:avanzarGestionTramaRequest" name="avanzarGestionTramaRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:avanzarGestionTramaResponse" name="avanzarGestionTramaResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultaEstadoGestion">
+      <wsdl:input message="impl:consultaEstadoGestionRequest" name="consultaEstadoGestionRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:consultaEstadoGestionResponse" name="consultaEstadoGestionResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WS_GCSoapBinding" type="impl:WS_GC">
+<wsaw:UsingAddressing wsdl:required="false"/>
+    <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="destroy">
+      <wsdlsoap:operation soapAction="destroy"/>
+      <wsdl:input name="destroyRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="destroyResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="altaGestionUser">
+      <wsdlsoap:operation soapAction="altaGestionUser"/>
+      <wsdl:input name="altaGestionUserRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="altaGestionUserResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtenerTiempoNetoSectorGestion">
+      <wsdlsoap:operation soapAction="obtenerTiempoNetoSectorGestion"/>
+      <wsdl:input name="obtenerTiempoNetoSectorGestionRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="obtenerTiempoNetoSectorGestionResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="reservarNroGestion">
+      <wsdlsoap:operation soapAction="reservarNroGestion"/>
+      <wsdl:input name="reservarNroGestionRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="reservarNroGestionResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="init">
+      <wsdlsoap:operation soapAction="init"/>
+      <wsdl:input name="initRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="initResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="avanzarGestionAvance">
+      <wsdlsoap:operation soapAction="avanzarGestionAvance"/>
+      <wsdl:input name="avanzarGestionAvanceRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="avanzarGestionAvanceResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="resolverGestionParcial">
+      <wsdlsoap:operation soapAction="resolverGestionParcial"/>
+      <wsdl:input name="resolverGestionParcialRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="resolverGestionParcialResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="resolverGestionFinal">
+      <wsdlsoap:operation soapAction="resolverGestionFinal"/>
+      <wsdl:input name="resolverGestionFinalRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="resolverGestionFinalResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="altaGestionUser2">
+      <wsdlsoap:operation soapAction="altaGestionUser2"/>
+      <wsdl:input name="altaGestionUser2Request">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="altaGestionUser2Response">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="confirmarImpresionRector">
+      <wsdlsoap:operation soapAction="confirmarImpresionRector"/>
+      <wsdl:input name="confirmarImpresionRectorRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="confirmarImpresionRectorResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="altaResolInmeditaUser">
+      <wsdlsoap:operation soapAction="altaResolInmeditaUser"/>
+      <wsdl:input name="altaResolInmeditaUserRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="altaResolInmeditaUserResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="altaResolInmedita2">
+      <wsdlsoap:operation soapAction="altaResolInmedita2"/>
+      <wsdl:input name="altaResolInmedita2Request">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="altaResolInmedita2Response">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="avanzarGestion">
+      <wsdlsoap:operation soapAction="avanzarGestion"/>
+      <wsdl:input name="avanzarGestionRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="avanzarGestionResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtenerGestionesEjecutivo">
+      <wsdlsoap:operation soapAction="obtenerGestionesEjecutivo"/>
+      <wsdl:input name="obtenerGestionesEjecutivoRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="obtenerGestionesEjecutivoResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtenerInfoAdjResol">
+      <wsdlsoap:operation soapAction="obtenerInfoAdjResol"/>
+      <wsdl:input name="obtenerInfoAdjResolRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="obtenerInfoAdjResolResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtenerListaGestiones">
+      <wsdlsoap:operation soapAction="obtenerListaGestiones"/>
+      <wsdl:input name="obtenerListaGestionesRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="obtenerListaGestionesResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtenerGestionesSucuAdmin">
+      <wsdlsoap:operation soapAction="obtenerGestionesSucuAdmin"/>
+      <wsdl:input name="obtenerGestionesSucuAdminRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="obtenerGestionesSucuAdminResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="altaGestion2">
+      <wsdlsoap:operation soapAction="altaGestion2"/>
+      <wsdl:input name="altaGestion2Request">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="altaGestion2Response">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="altaResolInmeditaUser2">
+      <wsdlsoap:operation soapAction="altaResolInmeditaUser2"/>
+      <wsdl:input name="altaResolInmeditaUser2Request">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="altaResolInmeditaUser2Response">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="altaGestion">
+      <wsdlsoap:operation soapAction="altaGestion"/>
+      <wsdl:input name="altaGestionRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="altaGestionResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="avanzarGestionConMonto">
+      <wsdlsoap:operation soapAction="avanzarGestionConMonto"/>
+      <wsdl:input name="avanzarGestionConMontoRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="avanzarGestionConMontoResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="anulaGestion">
+      <wsdlsoap:operation soapAction="anulaGestion"/>
+      <wsdl:input name="anulaGestionRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="anulaGestionResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtenerListaReclamos">
+      <wsdlsoap:operation soapAction="obtenerListaReclamos"/>
+      <wsdl:input name="obtenerListaReclamosRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="obtenerListaReclamosResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="altaResolInmedita">
+      <wsdlsoap:operation soapAction="altaResolInmedita"/>
+      <wsdl:input name="altaResolInmeditaRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="altaResolInmeditaResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="avanzarGestionTrama">
+      <wsdlsoap:operation soapAction="avanzarGestionTrama"/>
+      <wsdl:input name="avanzarGestionTramaRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="avanzarGestionTramaResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultaEstadoGestion">
+      <wsdlsoap:operation soapAction="consultaEstadoGestion"/>
+      <wsdl:input name="consultaEstadoGestionRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="consultaEstadoGestionResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WS_GCService">
+    <wsdl:port binding="impl:WS_GCSoapBinding" name="WS_GC">
+      <wsdlsoap:address location="http://wasdesafront04.ar.bsch:9080/gec/services/WS_GC"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,2471 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://webservices.banelco.com" xmlns:soapenc12="http://www.w3.org/2003/05/soap-encoding" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns9="http://dto.model.pmctas.banelco.com" xmlns:ns12="http://funcion.entretenimientos.imp.business.model.pmctas.banelco.com" xmlns:ns5="http://cuenta.imp.business.model.pmctas.banelco.com" xmlns:ns13="http://servicios.webservices.banelco.com" xmlns:ns6="http://business.model.pmctas.banelco.com" xmlns:ns10="http://ticket.imp.business.model.pmctas.banelco.com" xmlns:ns7="http://usuario.imp.business.model.pmctas.banelco.com" xmlns:ns11="http://util.java" xmlns:ns8="http://login.services.pmctas.banelco.com" xmlns:ns2="http://imp.business.model.pmctas.banelco.com" xmlns:ns1="http://model.webservices.banelco.com" xmlns:ns4="http://empresa.imp.business.model.pmctas.banelco.com" xmlns:ns3="http://empresa.imp.business.banelco.com" xmlns:tns="http://webservices.banelco.com" xmlns:soap11="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc11="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap12="http://www.w3.org/2003/05/soap-envelope">
+  <wsdl:types>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://model.webservices.banelco.com">
+<xsd:complexType name="WSServiceData">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="canal" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="terminal" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="WSUserData">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="numeroDocumento" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="tipoDocumento" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+
+<xsd:complexType name="WSTerminalData">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="datosTerminal" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="futureUse1" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="futureUse2" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="idSession" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="ipOrigen" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="Ticket">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="canal" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="detalleTicket" nillable="true" type="ns1:DetalleTicket"/>
+<xsd:element minOccurs="0" name="empresa" nillable="true" type="ns6:IEmpresaBase"/>
+<xsd:element minOccurs="0" name="fecha" type="xsd:dateTime"/>
+<xsd:element minOccurs="0" name="fiid" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="hostOnLine" type="xsd:boolean"/>
+
+<xsd:element minOccurs="0" name="nroControl" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="nroTransaccion" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="sorteo" nillable="true" type="ns6:ISorteo"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="DetalleTicket">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="adhesion" nillable="true" type="ns10:AdhesionBean"/>
+<xsd:element minOccurs="0" name="detallePago" nillable="true" type="ns10:DetalleTicketPagoBean"/>
+<xsd:element minOccurs="0" name="entretenimientos" nillable="true" type="ns10:EntretenimientosBean"/>
+<xsd:element minOccurs="0" name="pasajes" nillable="true" type="ns10:PasajesBean"/>
+<xsd:element minOccurs="0" name="periodo" nillable="true" type="ns10:PeriodoBean"/>
+<xsd:element minOccurs="0" name="prepago" nillable="true" type="ns10:PrePagoBean"/>
+<xsd:element minOccurs="0" name="prepagoPes" nillable="true" type="ns10:PrePagoPesBean"/>
+<xsd:element minOccurs="0" name="vep" nillable="true" type="ns10:VepBean"/>
+<xsd:element minOccurs="0" name="veraz" nillable="true" type="ns10:VerazBean"/>
+</xsd:sequence>
+
+</xsd:complexType>
+<xsd:complexType name="ArrayOfTicket">
+<xsd:sequence>
+<xsd:element maxOccurs="unbounded" minOccurs="0" name="Ticket" nillable="true" type="ns1:Ticket"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:schema>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://imp.business.model.pmctas.banelco.com">
+<xsd:complexType name="CoordenadasBean">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="canal" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="cantCoorDisp" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="coordenada1" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="coordenada2" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="coordenada3" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="coordenada4" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="coordenadaDisplay1" nillable="true" type="xsd:string"/>
+
+<xsd:element minOccurs="0" name="coordenadaDisplay2" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="coordenadaDisplay3" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="coordenadaDisplay4" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="hash" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="importe" type="xsd:double"/>
+<xsd:element minOccurs="0" name="nroSerie" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="referencia" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="BancoBean">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="codigo" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="emailSolicitudTC" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="fiid" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="info" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="mailContactoAlBanco" type="xsd:boolean"/>
+<xsd:element minOccurs="0" name="nombre" nillable="true" type="xsd:string"/>
+
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="RubroBean">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="codigo" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="info" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="nombre" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="orden" type="xsd:int"/>
+<xsd:element minOccurs="0" name="tipo" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="tipoRubro" nillable="true" type="ns2:TipoRubroBean"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="TipoRubroBean"/>
+<xsd:complexType name="DeudaInfoBean">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="agregadaManualmente" nillable="true" type="xsd:boolean"/>
+<xsd:element minOccurs="0" name="coordenadas" nillable="true" type="ns6:ICoordenadas"/>
+
+<xsd:element minOccurs="0" name="cuenta" nillable="true" type="ns6:ICuenta"/>
+<xsd:element minOccurs="0" name="descPantalla" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="descripcionUsuario" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="empresa" nillable="true" type="ns6:IEmpresaBase"/>
+<xsd:element minOccurs="0" name="error" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="fechaStopDebit" type="xsd:dateTime"/>
+<xsd:element minOccurs="0" name="flagControlPagoDirecto" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="idAdelanto" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="idCliente" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="importe" type="xsd:double"/>
+<xsd:element minOccurs="0" name="modoAlta" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="moneda" nillable="true" type="ns5:MonedaBean"/>
+<xsd:element minOccurs="0" name="nroFactura" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="otroImporte" type="xsd:double"/>
+<xsd:element minOccurs="0" name="pagoRecurrente" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="requiereCoordenadas" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="topePagoAutomatico" nillable="true" type="xsd:double"/>
+
+<xsd:element minOccurs="0" name="vencimiento" type="xsd:dateTime"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="ComboBean">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="codigo" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="info" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="nombre" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="TiemposBean">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="dispatchOK" nillable="true" type="xsd:boolean"/>
+<xsd:element minOccurs="0" name="tandemOK" nillable="true" type="xsd:boolean"/>
+<xsd:element minOccurs="0" name="tiempoDispatch" nillable="true" type="xsd:long"/>
+<xsd:element minOccurs="0" name="tiempoTM" nillable="true" type="xsd:long"/>
+<xsd:element minOccurs="0" name="tiempoTandem" nillable="true" type="xsd:long"/>
+
+<xsd:element minOccurs="0" name="tmOK" nillable="true" type="xsd:boolean"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="ArrayOfRubroBean">
+<xsd:sequence>
+<xsd:element maxOccurs="unbounded" minOccurs="0" name="RubroBean" nillable="true" type="ns2:RubroBean"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="PendienteHistoricoBean">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="historico" nillable="true" type="ns6:ArrayOfIDeudaInfo"/>
+<xsd:element minOccurs="0" name="pendiente" nillable="true" type="ns6:ArrayOfIDeudaInfo"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="TarjetaBean">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="clase" nillable="true" type="xsd:int"/>
+
+<xsd:element minOccurs="0" name="fechaVencimiento" type="xsd:dateTime"/>
+<xsd:element minOccurs="0" name="id" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="miembro" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="numero" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="pin" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="sucursal" nillable="true" type="xsd:int"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="ArrayOfDeudaInfoBean">
+<xsd:sequence>
+<xsd:element maxOccurs="unbounded" minOccurs="0" name="DeudaInfoBean" nillable="true" type="ns2:DeudaInfoBean"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:schema>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://webservices.banelco.com">
+<xsd:element name="validarCoordenadas">
+<xsd:complexType>
+
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="ns1:WSServiceData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in1" nillable="true" type="ns1:WSUserData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in2" nillable="true" type="ns1:WSTerminalData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in3" nillable="true" type="ns2:CoordenadasBean"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="validarCoordenadasResponse">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="out" nillable="true" type="ns2:CoordenadasBean"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="bajaDescripcionDeuda">
+<xsd:complexType>
+
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="ns1:WSServiceData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in1" nillable="true" type="ns1:WSUserData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in2" nillable="true" type="ns1:WSTerminalData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in3" nillable="true" type="ns4:EmpresaBean"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in4" nillable="true" type="ns2:DeudaInfoBean"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="bajaDescripcionDeudaResponse">
+<xsd:complexType/>
+</xsd:element>
+<xsd:element name="userLogin">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="ns1:WSServiceData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in1" nillable="true" type="ns1:WSUserData"/>
+
+<xsd:element maxOccurs="1" minOccurs="1" name="in2" nillable="true" type="ns1:WSTerminalData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in3" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="userLoginResponse">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="out" nillable="true" type="ns8:WSLoginResult"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="obtenerDatoAdicional">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="obtenerDatoAdicionalResponse">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="out" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="echo">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="echoResponse">
+
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="out" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="listarEmpresas">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="ns9:RubroDTO"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="listarEmpresasResponse">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="out" nillable="true" type="ns4:ArrayOfEmpresaBean"/>
+
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="intentarInterconexionConBanco">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="ns1:WSServiceData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in1" nillable="true" type="ns1:WSUserData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in2" nillable="true" type="ns1:WSTerminalData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in3" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in4" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="intentarInterconexionConBancoResponse">
+<xsd:complexType/>
+</xsd:element>
+
+<xsd:element name="buscarEmpresa">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="buscarEmpresaResponse">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="out" nillable="true" type="ns6:IEmpresa"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="listarEmpresasPrepaga">
+<xsd:complexType>
+<xsd:sequence>
+
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="ns9:RubroDTO"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="listarEmpresasPrepagaResponse">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="out" nillable="true" type="ns4:ArrayOfEmpresaPrepagoBean"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="realizarPago">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="ns1:WSServiceData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in1" nillable="true" type="ns1:WSUserData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in2" nillable="true" type="ns1:WSTerminalData"/>
+
+<xsd:element maxOccurs="1" minOccurs="1" name="in3" nillable="true" type="ns4:EmpresaBean"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in4" nillable="true" type="ns2:DeudaInfoBean"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in5" nillable="true" type="ns5:CuentaBean"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="realizarPagoResponse">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="out" nillable="true" type="ns1:Ticket"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="adherirEmpresa">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="ns1:WSServiceData"/>
+
+<xsd:element maxOccurs="1" minOccurs="1" name="in1" nillable="true" type="ns1:WSUserData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in2" nillable="true" type="ns1:WSTerminalData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in3" nillable="true" type="ns9:AdhesionDTO"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="adherirEmpresaResponse">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="out" nillable="true" type="ns1:Ticket"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="echoTest">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="ns1:WSServiceData"/>
+
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="echoTestResponse">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="out" nillable="true" type="ns2:TiemposBean"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="intentarInterconexion">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="ns1:WSServiceData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in1" nillable="true" type="ns1:WSUserData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in2" nillable="true" type="ns1:WSTerminalData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in3" nillable="true" type="xsd:string"/>
+
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="intentarInterconexionResponse">
+<xsd:complexType/>
+</xsd:element>
+<xsd:element name="buscarEmpresa1">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in1" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="buscarEmpresa1Response">
+<xsd:complexType>
+<xsd:sequence>
+
+<xsd:element maxOccurs="1" minOccurs="1" name="out" nillable="true" type="ns6:IEmpresa"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="desvincularEmpresa">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="ns1:WSServiceData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in1" nillable="true" type="ns1:WSUserData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in2" nillable="true" type="ns1:WSTerminalData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in3" nillable="true" type="ns9:DesvinculacionDTO"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="desvincularEmpresaResponse">
+<xsd:complexType/>
+</xsd:element>
+
+<xsd:element name="listarRubros">
+<xsd:complexType/>
+</xsd:element>
+<xsd:element name="listarRubrosResponse">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="out" nillable="true" type="ns2:ArrayOfRubroBean"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="login">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="ns1:WSServiceData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in1" nillable="true" type="ns1:WSUserData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in2" nillable="true" type="ns1:WSTerminalData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in3" nillable="true" type="xsd:string"/>
+
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="loginResponse">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="out" nillable="true" type="ns8:WSLoginResult"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="modificacionDescripcionDeuda">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="ns1:WSServiceData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in1" nillable="true" type="ns1:WSUserData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in2" nillable="true" type="ns1:WSTerminalData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in3" nillable="true" type="ns4:EmpresaBean"/>
+
+<xsd:element maxOccurs="1" minOccurs="1" name="in4" nillable="true" type="ns2:DeudaInfoBean"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="modificacionDescripcionDeudaResponse">
+<xsd:complexType/>
+</xsd:element>
+<xsd:element name="consultarComprobantePDF">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="ns1:WSServiceData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in1" nillable="true" type="ns1:WSUserData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in2" nillable="true" type="ns1:WSTerminalData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in3" nillable="true" type="ns1:Ticket"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+
+<xsd:element name="consultarComprobantePDFResponse">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="out" nillable="true" type="xsd:base64Binary"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="listarEmpresas1">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="ns9:RubroDTO"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in1" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="listarEmpresas1Response">
+<xsd:complexType>
+
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="out" nillable="true" type="ns4:ArrayOfEmpresaBean"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="consultarUltimosPagos">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="ns1:WSServiceData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in1" nillable="true" type="ns1:WSUserData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in2" nillable="true" type="ns1:WSTerminalData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in3" nillable="true" type="ns9:UltimosPagosDTO"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="consultarUltimosPagosResponse">
+<xsd:complexType>
+
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="out" nillable="true" type="ns13:WsUltimosPagosRespuestaDTO"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="consultarLimitesYDisponibles">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="ns1:WSServiceData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in1" nillable="true" type="ns1:WSUserData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in2" nillable="true" type="ns1:WSTerminalData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in3" nillable="true" type="ns5:CuentaBean"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="consultarLimitesYDisponiblesResponse">
+<xsd:complexType>
+
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="out" nillable="true" type="ns5:CuentaBean"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="cambiarPin">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="ns1:WSServiceData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in1" nillable="true" type="ns1:WSUserData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in2" nillable="true" type="ns1:WSTerminalData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in3" nillable="true" type="ns9:CambioPinDTO"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="cambiarPinResponse">
+<xsd:complexType/>
+
+</xsd:element>
+<xsd:element name="convertirTicketPDF">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="ns1:WSServiceData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in1" nillable="true" type="ns1:WSUserData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in2" nillable="true" type="ns1:WSTerminalData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in3" nillable="true" type="ns1:Ticket"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="convertirTicketPDFResponse">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="out" nillable="true" type="xsd:base64Binary"/>
+</xsd:sequence>
+</xsd:complexType>
+
+</xsd:element>
+<xsd:element name="solicitarCoordenadas">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="ns1:WSServiceData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in1" nillable="true" type="ns1:WSUserData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in2" nillable="true" type="ns1:WSTerminalData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in3" nillable="true" type="ns2:CoordenadasBean"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="solicitarCoordenadasResponse">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="out" nillable="true" type="ns2:CoordenadasBean"/>
+</xsd:sequence>
+</xsd:complexType>
+
+</xsd:element>
+<xsd:element name="consultarEstadoPago">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="ns1:WSServiceData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in1" nillable="true" type="ns1:WSUserData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in2" nillable="true" type="ns1:WSTerminalData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in3" nillable="true" type="ns9:UltimosPagosDTO"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="consultarEstadoPagoResponse">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="out" nillable="true" type="ns13:WsUltimosPagosRespuestaDTO"/>
+</xsd:sequence>
+</xsd:complexType>
+
+</xsd:element>
+<xsd:element name="obtenerDeudasEIdentificaciones">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="ns1:WSServiceData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in1" nillable="true" type="ns1:WSUserData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in2" nillable="true" type="ns1:WSTerminalData"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="obtenerDeudasEIdentificacionesResponse">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="out" nillable="true" type="ns2:PendienteHistoricoBean"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+
+<xsd:element name="altaDescripcionDeuda">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="ns1:WSServiceData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in1" nillable="true" type="ns1:WSUserData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in2" nillable="true" type="ns1:WSTerminalData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in3" nillable="true" type="ns4:EmpresaBean"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in4" nillable="true" type="ns2:DeudaInfoBean"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="altaDescripcionDeudaResponse">
+<xsd:complexType/>
+</xsd:element>
+<xsd:element name="altaTarjetaVirtual">
+<xsd:complexType>
+<xsd:sequence>
+
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="ns1:WSServiceData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in1" nillable="true" type="ns1:WSUserData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in2" nillable="true" type="ns1:WSTerminalData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in3" nillable="true" type="ns7:UserBean"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in4" nillable="true" type="ns2:TarjetaBean"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in5" nillable="true" type="ns5:ArrayOfCuentaBean"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="altaTarjetaVirtualResponse">
+<xsd:complexType/>
+</xsd:element>
+<xsd:element name="listarRubros1">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="listarRubros1Response">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="out" nillable="true" type="ns2:ArrayOfRubroBean"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="consultarFacturaElectronica">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="ns1:WSServiceData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in1" nillable="true" type="ns1:WSUserData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in2" nillable="true" type="ns1:WSTerminalData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in3" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in4" nillable="true" type="xsd:string"/>
+
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="consultarFacturaElectronicaResponse">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="out" nillable="true" type="xsd:base64Binary"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="desvincularFactura">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="ns1:WSServiceData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in1" nillable="true" type="ns1:WSUserData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in2" nillable="true" type="ns1:WSTerminalData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in3" nillable="true" type="ns9:DesvinculacionDTO"/>
+
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="desvincularFacturaResponse">
+<xsd:complexType/>
+</xsd:element>
+<xsd:element name="obtenerServiciosAdheridos">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="ns1:WSServiceData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in1" nillable="true" type="ns1:WSUserData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in2" nillable="true" type="ns1:WSTerminalData"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="obtenerServiciosAdheridosResponse">
+<xsd:complexType>
+
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="out" nillable="true" type="ns2:ArrayOfDeudaInfoBean"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="listarSubRubros">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="ns9:RubroDTO"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="listarSubRubrosResponse">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="out" nillable="true" type="ns2:ArrayOfRubroBean"/>
+</xsd:sequence>
+
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="obtenerDeudaEmpresa">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="ns1:WSServiceData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in1" nillable="true" type="ns1:WSUserData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in2" nillable="true" type="ns1:WSTerminalData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in3" nillable="true" type="ns9:EmpresaClienteDTO"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="obtenerDeudaEmpresaResponse">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="out" nillable="true" type="ns2:ArrayOfDeudaInfoBean"/>
+</xsd:sequence>
+
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="cambiarEmail">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="ns1:WSServiceData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in1" nillable="true" type="ns1:WSUserData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in2" nillable="true" type="ns1:WSTerminalData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in3" nillable="true" type="ns9:CambioEmailDTO"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="cambiarEmailResponse">
+<xsd:complexType/>
+</xsd:element>
+<xsd:element name="listarEmpresasPrepaga1">
+<xsd:complexType>
+
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="ns9:RubroDTO"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in1" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="listarEmpresasPrepaga1Response">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="out" nillable="true" type="ns4:ArrayOfEmpresaPrepagoBean"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="realizarPagoBancaEmpresa1">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="ns1:WSServiceData"/>
+
+<xsd:element maxOccurs="1" minOccurs="1" name="in1" nillable="true" type="ns1:WSUserData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in2" nillable="true" type="ns1:WSTerminalData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in3" nillable="true" type="ns4:EmpresaBean"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in4" nillable="true" type="ns2:DeudaInfoBean"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in5" nillable="true" type="ns5:CuentaBean"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in6" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="realizarPagoBancaEmpresa1Response">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="out" nillable="true" type="ns1:Ticket"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="listarSubRubros1">
+
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="ns9:RubroDTO"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in1" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="listarSubRubros1Response">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="out" nillable="true" type="ns2:ArrayOfRubroBean"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="realizarPagoBancaEmpresa">
+<xsd:complexType>
+<xsd:sequence>
+
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="ns1:WSServiceData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in1" nillable="true" type="ns1:WSUserData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in2" nillable="true" type="ns1:WSTerminalData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in3" nillable="true" type="ns4:EmpresaBean"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in4" nillable="true" type="ns2:DeudaInfoBean"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in5" nillable="true" type="ns5:CuentaBean"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="realizarPagoBancaEmpresaResponse">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="out" nillable="true" type="ns1:Ticket"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+</xsd:schema>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://empresa.imp.business.model.pmctas.banelco.com">
+<xsd:complexType name="EmpresaBean">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="banco" nillable="true" type="ns2:BancoBean"/>
+<xsd:element minOccurs="0" name="codigo" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="datoAdicional" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="datosAyudaEmpresaBean" nillable="true" type="ns3:DatosAyudaEmpresaBean"/>
+<xsd:element minOccurs="0" name="datosEBPPBean" nillable="true" type="ns4:DatosEBPPBean"/>
+<xsd:element minOccurs="0" name="importePermitido" nillable="true" type="ns4:ImportePermitidoBean"/>
+<xsd:element minOccurs="0" name="info" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="moneda" nillable="true" type="ns5:MonedaBean"/>
+<xsd:element minOccurs="0" name="nombre" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="orden" nillable="true" type="xsd:int"/>
+<xsd:element minOccurs="0" name="permitePagosRecurrentes" nillable="true" type="xsd:boolean"/>
+<xsd:element minOccurs="0" name="permiteUsd" nillable="true" type="xsd:boolean"/>
+<xsd:element minOccurs="0" name="rubro" nillable="true" type="ns2:RubroBean"/>
+<xsd:element minOccurs="0" name="soloConsulta" nillable="true" type="xsd:boolean"/>
+
+<xsd:element minOccurs="0" name="tipoAdhesion" nillable="true" type="ns4:TipoAdhesionBean"/>
+<xsd:element minOccurs="0" name="tipoEmpresa" nillable="true" type="ns4:TipoEmpresaBean"/>
+<xsd:element minOccurs="0" name="tipoPago" nillable="true" type="ns4:TipoPagoBean"/>
+<xsd:element minOccurs="0" name="tituloIdentificacion" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="DatosEBPPBean">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="codigo" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="codigoEBPP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="fechaAlta" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="fechaAltaDate" type="xsd:dateTime"/>
+<xsd:element minOccurs="0" name="fiid" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="formateo" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="info" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="nombre" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="urlPropia" nillable="true" type="xsd:string"/>
+
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="TipoAdhesionBean">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="codigo" nillable="true" type="xsd:int"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="TipoPagoBean">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="codigo" nillable="true" type="xsd:int"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="TipoEmpresaBean">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="codigo" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="descripcion" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+
+</xsd:complexType>
+<xsd:complexType name="ImportePermitidoBean">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="codigo" nillable="true" type="xsd:int"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="ArrayOfEmpresaBean">
+<xsd:sequence>
+<xsd:element maxOccurs="unbounded" minOccurs="0" name="EmpresaBean" nillable="true" type="ns4:EmpresaBean"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="ArrayOfEmpresaPrepagoBean">
+<xsd:sequence>
+<xsd:element maxOccurs="unbounded" minOccurs="0" name="EmpresaPrepagoBean" nillable="true" type="ns4:EmpresaPrepagoBean"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="EmpresaPrepagoBean">
+
+<xsd:sequence>
+<xsd:element minOccurs="0" name="banco" nillable="true" type="ns2:BancoBean"/>
+<xsd:element minOccurs="0" name="codigo" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="datosAyudaEmpresaBean" nillable="true" type="ns3:DatosAyudaEmpresaBean"/>
+<xsd:element minOccurs="0" name="datosPrePago" type="xsd:int"/>
+<xsd:element minOccurs="0" name="id" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="info" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="montos" nillable="true" type="ns6:ArrayOfIBase"/>
+<xsd:element minOccurs="0" name="nombre" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="nroLeyenda" type="xsd:int"/>
+<xsd:element minOccurs="0" name="orden" nillable="true" type="xsd:int"/>
+<xsd:element minOccurs="0" name="permiteUsd" nillable="true" type="xsd:boolean"/>
+<xsd:element minOccurs="0" name="rubro" nillable="true" type="ns2:RubroBean"/>
+<xsd:element minOccurs="0" name="tipoEmpresa" nillable="true" type="ns4:TipoEmpresaBean"/>
+<xsd:element minOccurs="0" name="tituloIdentificacion" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+
+</xsd:schema>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://empresa.imp.business.banelco.com">
+<xsd:complexType name="DatosAyudaEmpresaBean">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="cantidadVencimientos" nillable="true" type="xsd:int"/>
+<xsd:element minOccurs="0" name="fiid" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="longitudClaveMaxima" nillable="true" type="xsd:int"/>
+<xsd:element minOccurs="0" name="longitudClaveMinima" nillable="true" type="xsd:int"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:schema>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://cuenta.imp.business.model.pmctas.banelco.com">
+<xsd:complexType name="MonedaBean">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="codigo" nillable="true" type="xsd:int"/>
+<xsd:element minOccurs="0" name="simbolo" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+
+</xsd:complexType>
+<xsd:complexType name="TipoCuentaBean">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="codigo" nillable="true" type="xsd:int"/>
+<xsd:element minOccurs="0" name="descripcionCorta" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="descripcionLarga" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="ArrayOfCuentaBean">
+<xsd:sequence>
+<xsd:element maxOccurs="unbounded" minOccurs="0" name="CuentaBean" nillable="true" type="ns5:CuentaBean"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="CuentaBean">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="cbu" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="disponible" nillable="true" type="xsd:double"/>
+
+<xsd:element minOccurs="0" name="intereses" nillable="true" type="xsd:double"/>
+<xsd:element minOccurs="0" name="limite" nillable="true" type="xsd:double"/>
+<xsd:element minOccurs="0" name="moneda" nillable="true" type="ns5:MonedaBean"/>
+<xsd:element minOccurs="0" name="numero" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="saldo" nillable="true" type="xsd:double"/>
+<xsd:element minOccurs="0" name="tipo" nillable="true" type="ns5:TipoCuentaBean"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:schema>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://business.model.pmctas.banelco.com">
+<xsd:complexType name="IEmpresaBase">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="banco" nillable="true" type="ns2:BancoBean"/>
+<xsd:element minOccurs="0" name="codigo" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="datosAyudaEmpresaBean" nillable="true" type="ns3:DatosAyudaEmpresaBean"/>
+<xsd:element minOccurs="0" name="orden" nillable="true" type="xsd:int"/>
+<xsd:element minOccurs="0" name="permiteUsd" nillable="true" type="xsd:boolean"/>
+
+<xsd:element minOccurs="0" name="rubro" nillable="true" type="ns2:RubroBean"/>
+<xsd:element minOccurs="0" name="tipoEmpresa" nillable="true" type="ns4:TipoEmpresaBean"/>
+<xsd:element minOccurs="0" name="tituloIdentificacion" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="nombre" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="ICuenta">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="cbu" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="disponible" nillable="true" type="xsd:double"/>
+<xsd:element minOccurs="0" name="intereses" nillable="true" type="xsd:double"/>
+<xsd:element minOccurs="0" name="limite" nillable="true" type="xsd:double"/>
+<xsd:element minOccurs="0" name="moneda" nillable="true" type="ns5:MonedaBean"/>
+<xsd:element minOccurs="0" name="numero" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="saldo" nillable="true" type="xsd:double"/>
+<xsd:element minOccurs="0" name="tipo" nillable="true" type="ns5:TipoCuentaBean"/>
+</xsd:sequence>
+
+</xsd:complexType>
+<xsd:complexType name="ICoordenadas">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="canal" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="cantCoorDisp" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="coordenada1" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="coordenada2" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="coordenada3" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="coordenada4" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="coordenadaDisplay1" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="coordenadaDisplay2" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="coordenadaDisplay3" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="coordenadaDisplay4" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="hash" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="nroSerie" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+
+<xsd:complexType name="IEmpresa">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="datoAdicional" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="datosEBPPBean" nillable="true" type="ns4:DatosEBPPBean"/>
+<xsd:element minOccurs="0" name="importePermitido" nillable="true" type="ns4:ImportePermitidoBean"/>
+<xsd:element minOccurs="0" name="moneda" nillable="true" type="ns5:MonedaBean"/>
+<xsd:element minOccurs="0" name="permitePagosRecurrentes" nillable="true" type="xsd:boolean"/>
+<xsd:element minOccurs="0" name="soloConsulta" nillable="true" type="xsd:boolean"/>
+<xsd:element minOccurs="0" name="tipoAdhesion" nillable="true" type="ns4:TipoAdhesionBean"/>
+<xsd:element minOccurs="0" name="tipoPago" nillable="true" type="ns4:TipoPagoBean"/>
+<xsd:element minOccurs="0" name="banco" nillable="true" type="ns2:BancoBean"/>
+<xsd:element minOccurs="0" name="codigo" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="datosAyudaEmpresaBean" nillable="true" type="ns3:DatosAyudaEmpresaBean"/>
+<xsd:element minOccurs="0" name="orden" nillable="true" type="xsd:int"/>
+<xsd:element minOccurs="0" name="permiteUsd" nillable="true" type="xsd:boolean"/>
+<xsd:element minOccurs="0" name="rubro" nillable="true" type="ns2:RubroBean"/>
+<xsd:element minOccurs="0" name="tipoEmpresa" nillable="true" type="ns4:TipoEmpresaBean"/>
+
+<xsd:element minOccurs="0" name="tituloIdentificacion" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="nombre" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="ArrayOfIBase">
+<xsd:sequence>
+<xsd:element maxOccurs="unbounded" minOccurs="0" name="IBase" nillable="true" type="ns6:IBase"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="IBase">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="codigo" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="nombre" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="ISorteo">
+<xsd:sequence>
+
+<xsd:element minOccurs="0" name="fiid" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="importe" type="xsd:double"/>
+<xsd:element minOccurs="0" name="premio" type="xsd:int"/>
+<xsd:element minOccurs="0" name="resultado" type="xsd:int"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="IFuncion">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="codigo" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="complejo" nillable="true" type="ns6:IComplejo"/>
+<xsd:element minOccurs="0" name="fechaFuncion" nillable="true" type="ns11:GregorianCalendar"/>
+<xsd:element minOccurs="0" name="idioma" nillable="true" type="ns2:ComboBean"/>
+<xsd:element minOccurs="0" name="informacionVenta" nillable="true" type="ns12:InformacionVentaBean"/>
+<xsd:element minOccurs="0" name="pelicula" nillable="true" type="ns6:IPelicula"/>
+<xsd:element minOccurs="0" name="sala" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+
+<xsd:complexType name="IComplejo">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="codigo" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="nombre" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="userField" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="IPelicula">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="calificacion" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="codigo" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="duracion" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="nombre" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="nombreCorto" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="tipoDePelicula" nillable="true" type="ns2:ComboBean"/>
+<xsd:element minOccurs="0" name="userField" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+
+</xsd:complexType>
+<xsd:complexType name="ArrayOfIDeudaInfo">
+<xsd:sequence>
+<xsd:element maxOccurs="unbounded" minOccurs="0" name="IDeudaInfo" nillable="true" type="ns6:IDeudaInfo"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="IDeudaInfo">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="agregadaManualmente" nillable="true" type="xsd:boolean"/>
+<xsd:element minOccurs="0" name="coordenadas" nillable="true" type="ns6:ICoordenadas"/>
+<xsd:element minOccurs="0" name="cuenta" nillable="true" type="ns6:ICuenta"/>
+<xsd:element minOccurs="0" name="descPantalla" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="descripcionUsuario" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="empresa" nillable="true" type="ns6:IEmpresaBase"/>
+<xsd:element minOccurs="0" name="error" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="fechaStopDebit" type="xsd:dateTime"/>
+<xsd:element minOccurs="0" name="flagControlPagoDirecto" nillable="true" type="xsd:string"/>
+
+<xsd:element minOccurs="0" name="idAdelanto" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="idCliente" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="importe" type="xsd:double"/>
+<xsd:element minOccurs="0" name="modoAlta" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="moneda" nillable="true" type="ns5:MonedaBean"/>
+<xsd:element minOccurs="0" name="nroFactura" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="otroImporte" type="xsd:double"/>
+<xsd:element minOccurs="0" name="pagoRecurrente" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="requiereCoordenadas" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="topePagoAutomatico" nillable="true" type="xsd:double"/>
+<xsd:element minOccurs="0" name="vencimiento" type="xsd:dateTime"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:schema>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://login.services.pmctas.banelco.com">
+<xsd:complexType name="WSLoginResult">
+<xsd:sequence>
+
+<xsd:element minOccurs="0" name="cuentaList" nillable="true" type="ns5:ArrayOfCuentaBean"/>
+<xsd:element minOccurs="0" name="usuario" nillable="true" type="ns7:UserBean"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:schema>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://usuario.imp.business.model.pmctas.banelco.com">
+<xsd:complexType name="UserBean">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="avisoVenc" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="avisoVencMobile" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="banco" nillable="true" type="ns2:BancoBean"/>
+<xsd:element minOccurs="0" name="comportamiento" nillable="true" type="ns7:ComportamientoUsuarioBean"/>
+<xsd:element minOccurs="0" name="datosIdentificacion" nillable="true" type="ns7:DatosIdentificacionBean"/>
+<xsd:element minOccurs="0" name="datosLaborales" nillable="true" type="ns7:DatosLaboralesBean"/>
+<xsd:element minOccurs="0" name="datosPersonales" nillable="true" type="ns7:DatosPersonalesBean"/>
+<xsd:element minOccurs="0" name="email" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="fechaNac" type="xsd:dateTime"/>
+
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="DatosPersonalesBean">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="celular" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="dirCalle" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="dirCodPostal" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="dirDepto" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="dirLocalidad" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="dirNumero" nillable="true" type="xsd:int"/>
+<xsd:element minOccurs="0" name="dirPiso" nillable="true" type="xsd:int"/>
+<xsd:element minOccurs="0" name="dirProvincia" nillable="true" type="xsd:int"/>
+<xsd:element minOccurs="0" name="email" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="estadoCivil" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="fechaNac" type="xsd:dateTime"/>
+<xsd:element minOccurs="0" name="nombre" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="operadorCelular" nillable="true" type="xsd:string"/>
+
+<xsd:element minOccurs="0" name="sexo" nillable="true" type="xsd:int"/>
+<xsd:element minOccurs="0" name="telLaboral" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="telefono" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="DatosIdentificacionBean">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="nickName" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="nroDocumento" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="perfil" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="poseeTC" type="xsd:boolean"/>
+<xsd:element minOccurs="0" name="tipoDocumento" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="tipoDocumentoOriginal" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="tokenSeguridad" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="ultimoAcceso" type="xsd:dateTime"/>
+</xsd:sequence>
+</xsd:complexType>
+
+<xsd:complexType name="ComportamientoUsuarioBean">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="datosAdicionales" nillable="true" type="xsd:boolean"/>
+<xsd:element minOccurs="0" name="docDuplicado" nillable="true" type="xsd:boolean"/>
+<xsd:element minOccurs="0" name="firstLogin" nillable="true" type="xsd:boolean"/>
+<xsd:element minOccurs="0" name="needsIdChange" nillable="true" type="xsd:boolean"/>
+<xsd:element minOccurs="0" name="needsNroControl" nillable="true" type="xsd:boolean"/>
+<xsd:element minOccurs="0" name="needsPinChange" nillable="true" type="xsd:boolean"/>
+<xsd:element minOccurs="0" name="requierePIN" nillable="true" type="xsd:boolean"/>
+<xsd:element minOccurs="0" name="requiereTC" nillable="true" type="xsd:boolean"/>
+<xsd:element minOccurs="0" name="viewTerms" nillable="true" type="xsd:boolean"/>
+<xsd:element minOccurs="0" name="viewTermsEntretenimientos" nillable="true" type="xsd:boolean"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="DatosLaboralesBean">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="prefijoCUIT" nillable="true" type="xsd:string"/>
+
+<xsd:element minOccurs="0" name="sufijoCUIT" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:schema>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://dto.model.pmctas.banelco.com">
+<xsd:complexType name="RubroDTO">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="fiid" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="rubro" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="tipoDeRubro" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="AdhesionDTO">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="coordenadas" nillable="true" type="ns6:ICoordenadas"/>
+<xsd:element minOccurs="0" name="empresa" nillable="true" type="ns6:IEmpresaBase"/>
+<xsd:element minOccurs="0" name="identificacion" nillable="true" type="xsd:string"/>
+
+<xsd:element minOccurs="0" name="password" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="DesvinculacionDTO">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="factura" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="idEmpresa" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="identificacion" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="password" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="UltimosPagosDTO">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="idCliente" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="idEmpresa" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="idOperacion" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="nroSecuencia" type="xsd:int"/>
+
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="CambioPinDTO">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="pinActual" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="pinNuevo" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="EmpresaClienteDTO">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="idCliente" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="idEmpresa" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="CambioEmailDTO">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="baja" type="xsd:boolean"/>
+
+<xsd:element minOccurs="0" name="email" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="novedades" type="xsd:boolean"/>
+<xsd:element minOccurs="0" name="password" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="vencimientos" type="xsd:boolean"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:schema>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://ticket.imp.business.model.pmctas.banelco.com">
+<xsd:complexType name="VepBean">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="anio" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="concepto" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="cuenta" nillable="true" type="ns6:ICuenta"/>
+<xsd:element minOccurs="0" name="cuota" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="descExtracto" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="idCliente" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="importe" type="xsd:double"/>
+
+<xsd:element minOccurs="0" name="impuesto" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="leyendaEmpresa" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="leyendaPago" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="moneda" nillable="true" type="ns5:MonedaBean"/>
+<xsd:element minOccurs="0" name="periodo" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="subConcepto" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="vep" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="AdhesionBean">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="cuenta" nillable="true" type="ns6:ICuenta"/>
+<xsd:element minOccurs="0" name="empresa" nillable="true" type="ns6:IEmpresaBase"/>
+<xsd:element minOccurs="0" name="idCliente" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="importe" type="xsd:double"/>
+<xsd:element minOccurs="0" name="leyendaEmpresa" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="leyendaPago" nillable="true" type="xsd:string"/>
+
+<xsd:element minOccurs="0" name="moneda" nillable="true" type="ns5:MonedaBean"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="PasajesBean">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="clave" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="cuenta" nillable="true" type="ns6:ICuenta"/>
+<xsd:element minOccurs="0" name="empresa" nillable="true" type="ns6:IEmpresaBase"/>
+<xsd:element minOccurs="0" name="fechaVencimiento" type="xsd:dateTime"/>
+<xsd:element minOccurs="0" name="idCliente" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="importe" type="xsd:double"/>
+<xsd:element minOccurs="0" name="leyendaEmpresa" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="leyendaPago" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="moneda" nillable="true" type="ns5:MonedaBean"/>
+<xsd:element minOccurs="0" name="nroSerie" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="reserva" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+
+</xsd:complexType>
+<xsd:complexType name="EntretenimientosBean">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="cantidadEntradas" type="xsd:int"/>
+<xsd:element minOccurs="0" name="codigoReserva" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="codigoRespuesta" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="cuenta" nillable="true" type="ns6:ICuenta"/>
+<xsd:element minOccurs="0" name="funcion" nillable="true" type="ns6:IFuncion"/>
+<xsd:element minOccurs="0" name="idCliente" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="importe" type="xsd:double"/>
+<xsd:element minOccurs="0" name="leyendaEmpresa" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="leyendaPago" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="moneda" nillable="true" type="ns5:MonedaBean"/>
+<xsd:element minOccurs="0" name="ubicacion" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="DetalleTicketPagoBean">
+
+<xsd:sequence>
+<xsd:element minOccurs="0" name="cuenta" nillable="true" type="ns6:ICuenta"/>
+<xsd:element minOccurs="0" name="idCliente" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="importe" type="xsd:double"/>
+<xsd:element minOccurs="0" name="leyendaEmpresa" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="leyendaPago" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="moneda" nillable="true" type="ns5:MonedaBean"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="PrePagoPesBean">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="clave" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="codigoAutorizacion" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="cuenta" nillable="true" type="ns6:ICuenta"/>
+<xsd:element minOccurs="0" name="empresa" nillable="true" type="ns6:IEmpresaBase"/>
+<xsd:element minOccurs="0" name="fechaVencimiento" type="xsd:dateTime"/>
+<xsd:element minOccurs="0" name="idCliente" nillable="true" type="xsd:string"/>
+
+<xsd:element minOccurs="0" name="importe" type="xsd:double"/>
+<xsd:element minOccurs="0" name="leyendaEmpresa" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="leyendaPago" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="moneda" nillable="true" type="ns5:MonedaBean"/>
+<xsd:element minOccurs="0" name="nroSerie" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="VerazBean">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="clave" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="cuenta" nillable="true" type="ns6:ICuenta"/>
+<xsd:element minOccurs="0" name="empresa" nillable="true" type="ns6:IEmpresaBase"/>
+<xsd:element minOccurs="0" name="fechaVencimiento" type="xsd:dateTime"/>
+<xsd:element minOccurs="0" name="idCliente" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="importe" type="xsd:double"/>
+<xsd:element minOccurs="0" name="informe" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="leyendaEmpresa" nillable="true" type="xsd:string"/>
+
+<xsd:element minOccurs="0" name="leyendaPago" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="moneda" nillable="true" type="ns5:MonedaBean"/>
+<xsd:element minOccurs="0" name="nroSerie" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="PeriodoBean">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="anio" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="cuenta" nillable="true" type="ns6:ICuenta"/>
+<xsd:element minOccurs="0" name="idCliente" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="importe" type="xsd:double"/>
+<xsd:element minOccurs="0" name="leyendaEmpresa" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="leyendaPago" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="moneda" nillable="true" type="ns5:MonedaBean"/>
+<xsd:element minOccurs="0" name="periodo" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+
+<xsd:complexType name="PrePagoBean">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="clave" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="cuenta" nillable="true" type="ns6:ICuenta"/>
+<xsd:element minOccurs="0" name="empresa" nillable="true" type="ns6:IEmpresaBase"/>
+<xsd:element minOccurs="0" name="fechaVencimiento" type="xsd:dateTime"/>
+<xsd:element minOccurs="0" name="idCliente" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="importe" type="xsd:double"/>
+<xsd:element minOccurs="0" name="leyendaEmpresa" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="leyendaPago" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="moneda" nillable="true" type="ns5:MonedaBean"/>
+<xsd:element minOccurs="0" name="nroSerie" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:schema>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://funcion.entretenimientos.imp.business.model.pmctas.banelco.com">
+<xsd:complexType name="InformacionVentaBean">
+
+<xsd:sequence>
+<xsd:element minOccurs="0" name="cargoAdicional" nillable="true" type="xsd:double"/>
+<xsd:element minOccurs="0" name="fechaTopeSeleccionPersonal" type="xsd:dateTime"/>
+<xsd:element minOccurs="0" name="fechaTopeVenta" type="xsd:dateTime"/>
+<xsd:element minOccurs="0" name="fechaVigenciaDesde" nillable="true" type="ns11:GregorianCalendar"/>
+<xsd:element minOccurs="0" name="fechaVigenciaHasta" nillable="true" type="ns11:GregorianCalendar"/>
+<xsd:element minOccurs="0" name="maximoEntradas" nillable="true" type="xsd:int"/>
+<xsd:element minOccurs="0" name="seleccionPersonal" nillable="true" type="xsd:boolean"/>
+<xsd:element minOccurs="0" name="tarifasDisponibles" nillable="true" type="xsd:ArrayOfAnyType"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:schema>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://www.w3.org/2001/XMLSchema">
+<xsd:complexType name="ArrayOfAnyType">
+<xsd:sequence>
+<xsd:element maxOccurs="unbounded" minOccurs="0" name="anyType" nillable="true" type="xsd:anyType"/>
+</xsd:sequence>
+
+</xsd:complexType>
+</xsd:schema>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://util.java">
+<xsd:complexType name="GregorianCalendar">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="firstDayOfWeek" type="xsd:int"/>
+<xsd:element minOccurs="0" name="gregorianChange" type="xsd:dateTime"/>
+<xsd:element minOccurs="0" name="lenient" type="xsd:boolean"/>
+<xsd:element minOccurs="0" name="minimalDaysInFirstWeek" type="xsd:int"/>
+<xsd:element minOccurs="0" name="time" type="xsd:dateTime"/>
+<xsd:element minOccurs="0" name="timeInMillis" type="xsd:long"/>
+<xsd:element minOccurs="0" name="timeZone" nillable="true" type="ns11:TimeZone"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType abstract="true" name="TimeZone">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="DSTSavings" type="xsd:int"/>
+
+<xsd:element minOccurs="0" name="ID" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="displayName" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="rawOffset" type="xsd:int"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:schema>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://servicios.webservices.banelco.com">
+<xsd:complexType name="WsUltimosPagosRespuestaDTO">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="lista" nillable="true" type="ns1:ArrayOfTicket"/>
+<xsd:element minOccurs="0" name="nroSecuencia" type="xsd:int"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="listarEmpresasPrepagaRequest">
+
+    <wsdl:part name="parameters" element="tns:listarEmpresasPrepaga">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="obtenerDeudasEIdentificacionesResponse">
+    <wsdl:part name="parameters" element="tns:obtenerDeudasEIdentificacionesResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="solicitarCoordenadasRequest">
+    <wsdl:part name="parameters" element="tns:solicitarCoordenadas">
+
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="modificacionDescripcionDeudaRequest">
+    <wsdl:part name="parameters" element="tns:modificacionDescripcionDeuda">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="altaTarjetaVirtualRequest">
+    <wsdl:part name="parameters" element="tns:altaTarjetaVirtual">
+    </wsdl:part>
+
+  </wsdl:message>
+  <wsdl:message name="buscarEmpresaRequest">
+    <wsdl:part name="parameters" element="tns:buscarEmpresa">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="realizarPagoBancaEmpresa1Response">
+    <wsdl:part name="parameters" element="tns:realizarPagoBancaEmpresa1Response">
+    </wsdl:part>
+  </wsdl:message>
+
+  <wsdl:message name="consultarFacturaElectronicaRequest">
+    <wsdl:part name="parameters" element="tns:consultarFacturaElectronica">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="userLoginRequest">
+    <wsdl:part name="parameters" element="tns:userLogin">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="listarRubrosResponse">
+
+    <wsdl:part name="parameters" element="tns:listarRubrosResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="listarSubRubrosResponse">
+    <wsdl:part name="parameters" element="tns:listarSubRubrosResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="listarEmpresasResponse">
+    <wsdl:part name="parameters" element="tns:listarEmpresasResponse">
+
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="cambiarPinRequest">
+    <wsdl:part name="parameters" element="tns:cambiarPin">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="echoTestRequest">
+    <wsdl:part name="parameters" element="tns:echoTest">
+    </wsdl:part>
+
+  </wsdl:message>
+  <wsdl:message name="solicitarCoordenadasResponse">
+    <wsdl:part name="parameters" element="tns:solicitarCoordenadasResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="adherirEmpresaResponse">
+    <wsdl:part name="parameters" element="tns:adherirEmpresaResponse">
+    </wsdl:part>
+  </wsdl:message>
+
+  <wsdl:message name="intentarInterconexionRequest">
+    <wsdl:part name="parameters" element="tns:intentarInterconexion">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="consultarFacturaElectronicaResponse">
+    <wsdl:part name="parameters" element="tns:consultarFacturaElectronicaResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="intentarInterconexionConBancoResponse">
+
+    <wsdl:part name="parameters" element="tns:intentarInterconexionConBancoResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="listarSubRubrosRequest">
+    <wsdl:part name="parameters" element="tns:listarSubRubros">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="obtenerDatoAdicionalResponse">
+    <wsdl:part name="parameters" element="tns:obtenerDatoAdicionalResponse">
+
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="intentarInterconexionResponse">
+    <wsdl:part name="parameters" element="tns:intentarInterconexionResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="intentarInterconexionConBancoRequest">
+    <wsdl:part name="parameters" element="tns:intentarInterconexionConBanco">
+    </wsdl:part>
+
+  </wsdl:message>
+  <wsdl:message name="desvincularEmpresaRequest">
+    <wsdl:part name="parameters" element="tns:desvincularEmpresa">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="consultarComprobantePDFRequest">
+    <wsdl:part name="parameters" element="tns:consultarComprobantePDF">
+    </wsdl:part>
+  </wsdl:message>
+
+  <wsdl:message name="listarSubRubros1Response">
+    <wsdl:part name="parameters" element="tns:listarSubRubros1Response">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="buscarEmpresaResponse">
+    <wsdl:part name="parameters" element="tns:buscarEmpresaResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="buscarEmpresa1Request">
+
+    <wsdl:part name="parameters" element="tns:buscarEmpresa1">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="modificacionDescripcionDeudaResponse">
+    <wsdl:part name="parameters" element="tns:modificacionDescripcionDeudaResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="obtenerDeudaEmpresaRequest">
+    <wsdl:part name="parameters" element="tns:obtenerDeudaEmpresa">
+
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="listarEmpresasPrepagaResponse">
+    <wsdl:part name="parameters" element="tns:listarEmpresasPrepagaResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="bajaDescripcionDeudaResponse">
+    <wsdl:part name="parameters" element="tns:bajaDescripcionDeudaResponse">
+    </wsdl:part>
+
+  </wsdl:message>
+  <wsdl:message name="echoTestResponse">
+    <wsdl:part name="parameters" element="tns:echoTestResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="realizarPagoRequest">
+    <wsdl:part name="parameters" element="tns:realizarPago">
+    </wsdl:part>
+  </wsdl:message>
+
+  <wsdl:message name="altaDescripcionDeudaResponse">
+    <wsdl:part name="parameters" element="tns:altaDescripcionDeudaResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="bajaDescripcionDeudaRequest">
+    <wsdl:part name="parameters" element="tns:bajaDescripcionDeuda">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="loginRequest">
+
+    <wsdl:part name="parameters" element="tns:login">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="validarCoordenadasRequest">
+    <wsdl:part name="parameters" element="tns:validarCoordenadas">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="listarRubrosRequest">
+    <wsdl:part name="parameters" element="tns:listarRubros">
+
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="realizarPagoBancaEmpresa1Request">
+    <wsdl:part name="parameters" element="tns:realizarPagoBancaEmpresa1">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="realizarPagoResponse">
+    <wsdl:part name="parameters" element="tns:realizarPagoResponse">
+    </wsdl:part>
+
+  </wsdl:message>
+  <wsdl:message name="realizarPagoBancaEmpresaResponse">
+    <wsdl:part name="parameters" element="tns:realizarPagoBancaEmpresaResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="listarEmpresasPrepaga1Response">
+    <wsdl:part name="parameters" element="tns:listarEmpresasPrepaga1Response">
+    </wsdl:part>
+  </wsdl:message>
+
+  <wsdl:message name="listarRubros1Request">
+    <wsdl:part name="parameters" element="tns:listarRubros1">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="desvincularEmpresaResponse">
+    <wsdl:part name="parameters" element="tns:desvincularEmpresaResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="desvincularFacturaResponse">
+
+    <wsdl:part name="parameters" element="tns:desvincularFacturaResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="loginResponse">
+    <wsdl:part name="parameters" element="tns:loginResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="desvincularFacturaRequest">
+    <wsdl:part name="parameters" element="tns:desvincularFactura">
+
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="listarEmpresas1Request">
+    <wsdl:part name="parameters" element="tns:listarEmpresas1">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="altaTarjetaVirtualResponse">
+    <wsdl:part name="parameters" element="tns:altaTarjetaVirtualResponse">
+    </wsdl:part>
+
+  </wsdl:message>
+  <wsdl:message name="consultarComprobantePDFResponse">
+    <wsdl:part name="parameters" element="tns:consultarComprobantePDFResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="validarCoordenadasResponse">
+    <wsdl:part name="parameters" element="tns:validarCoordenadasResponse">
+    </wsdl:part>
+  </wsdl:message>
+
+  <wsdl:message name="obtenerDeudasEIdentificacionesRequest">
+    <wsdl:part name="parameters" element="tns:obtenerDeudasEIdentificaciones">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="listarEmpresasRequest">
+    <wsdl:part name="parameters" element="tns:listarEmpresas">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="altaDescripcionDeudaRequest">
+
+    <wsdl:part name="parameters" element="tns:altaDescripcionDeuda">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="consultarEstadoPagoRequest">
+    <wsdl:part name="parameters" element="tns:consultarEstadoPago">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="consultarUltimosPagosResponse">
+    <wsdl:part name="parameters" element="tns:consultarUltimosPagosResponse">
+
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="consultarEstadoPagoResponse">
+    <wsdl:part name="parameters" element="tns:consultarEstadoPagoResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="cambiarPinResponse">
+    <wsdl:part name="parameters" element="tns:cambiarPinResponse">
+    </wsdl:part>
+
+  </wsdl:message>
+  <wsdl:message name="convertirTicketPDFRequest">
+    <wsdl:part name="parameters" element="tns:convertirTicketPDF">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="echoResponse">
+    <wsdl:part name="parameters" element="tns:echoResponse">
+    </wsdl:part>
+  </wsdl:message>
+
+  <wsdl:message name="cambiarEmailResponse">
+    <wsdl:part name="parameters" element="tns:cambiarEmailResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="listarEmpresas1Response">
+    <wsdl:part name="parameters" element="tns:listarEmpresas1Response">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="obtenerDeudaEmpresaResponse">
+
+    <wsdl:part name="parameters" element="tns:obtenerDeudaEmpresaResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="obtenerServiciosAdheridosResponse">
+    <wsdl:part name="parameters" element="tns:obtenerServiciosAdheridosResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="consultarLimitesYDisponiblesRequest">
+    <wsdl:part name="parameters" element="tns:consultarLimitesYDisponibles">
+
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="listarRubros1Response">
+    <wsdl:part name="parameters" element="tns:listarRubros1Response">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="realizarPagoBancaEmpresaRequest">
+    <wsdl:part name="parameters" element="tns:realizarPagoBancaEmpresa">
+    </wsdl:part>
+
+  </wsdl:message>
+  <wsdl:message name="adherirEmpresaRequest">
+    <wsdl:part name="parameters" element="tns:adherirEmpresa">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="listarEmpresasPrepaga1Request">
+    <wsdl:part name="parameters" element="tns:listarEmpresasPrepaga1">
+    </wsdl:part>
+  </wsdl:message>
+
+  <wsdl:message name="listarSubRubros1Request">
+    <wsdl:part name="parameters" element="tns:listarSubRubros1">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="echoRequest">
+    <wsdl:part name="parameters" element="tns:echo">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="buscarEmpresa1Response">
+
+    <wsdl:part name="parameters" element="tns:buscarEmpresa1Response">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="obtenerServiciosAdheridosRequest">
+    <wsdl:part name="parameters" element="tns:obtenerServiciosAdheridos">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="userLoginResponse">
+    <wsdl:part name="parameters" element="tns:userLoginResponse">
+
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="consultarLimitesYDisponiblesResponse">
+    <wsdl:part name="parameters" element="tns:consultarLimitesYDisponiblesResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="convertirTicketPDFResponse">
+    <wsdl:part name="parameters" element="tns:convertirTicketPDFResponse">
+    </wsdl:part>
+
+  </wsdl:message>
+  <wsdl:message name="consultarUltimosPagosRequest">
+    <wsdl:part name="parameters" element="tns:consultarUltimosPagos">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="cambiarEmailRequest">
+    <wsdl:part name="parameters" element="tns:cambiarEmail">
+    </wsdl:part>
+  </wsdl:message>
+
+  <wsdl:message name="obtenerDatoAdicionalRequest">
+    <wsdl:part name="parameters" element="tns:obtenerDatoAdicional">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="ISoapClientV2PortType">
+    <wsdl:operation name="validarCoordenadas">
+      <wsdl:input name="validarCoordenadasRequest" message="tns:validarCoordenadasRequest">
+    </wsdl:input>
+      <wsdl:output name="validarCoordenadasResponse" message="tns:validarCoordenadasResponse">
+
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="bajaDescripcionDeuda">
+      <wsdl:input name="bajaDescripcionDeudaRequest" message="tns:bajaDescripcionDeudaRequest">
+    </wsdl:input>
+      <wsdl:output name="bajaDescripcionDeudaResponse" message="tns:bajaDescripcionDeudaResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="userLogin">
+
+      <wsdl:input name="userLoginRequest" message="tns:userLoginRequest">
+    </wsdl:input>
+      <wsdl:output name="userLoginResponse" message="tns:userLoginResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtenerDatoAdicional">
+      <wsdl:input name="obtenerDatoAdicionalRequest" message="tns:obtenerDatoAdicionalRequest">
+    </wsdl:input>
+      <wsdl:output name="obtenerDatoAdicionalResponse" message="tns:obtenerDatoAdicionalResponse">
+
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="echo">
+      <wsdl:input name="echoRequest" message="tns:echoRequest">
+    </wsdl:input>
+      <wsdl:output name="echoResponse" message="tns:echoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarEmpresas">
+
+      <wsdl:input name="listarEmpresasRequest" message="tns:listarEmpresasRequest">
+    </wsdl:input>
+      <wsdl:output name="listarEmpresasResponse" message="tns:listarEmpresasResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="intentarInterconexionConBanco">
+      <wsdl:input name="intentarInterconexionConBancoRequest" message="tns:intentarInterconexionConBancoRequest">
+    </wsdl:input>
+      <wsdl:output name="intentarInterconexionConBancoResponse" message="tns:intentarInterconexionConBancoResponse">
+
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="buscarEmpresa">
+      <wsdl:input name="buscarEmpresaRequest" message="tns:buscarEmpresaRequest">
+    </wsdl:input>
+      <wsdl:output name="buscarEmpresaResponse" message="tns:buscarEmpresaResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarEmpresasPrepaga">
+
+      <wsdl:input name="listarEmpresasPrepagaRequest" message="tns:listarEmpresasPrepagaRequest">
+    </wsdl:input>
+      <wsdl:output name="listarEmpresasPrepagaResponse" message="tns:listarEmpresasPrepagaResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="realizarPago">
+      <wsdl:input name="realizarPagoRequest" message="tns:realizarPagoRequest">
+    </wsdl:input>
+      <wsdl:output name="realizarPagoResponse" message="tns:realizarPagoResponse">
+
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="adherirEmpresa">
+      <wsdl:input name="adherirEmpresaRequest" message="tns:adherirEmpresaRequest">
+    </wsdl:input>
+      <wsdl:output name="adherirEmpresaResponse" message="tns:adherirEmpresaResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="echoTest">
+
+      <wsdl:input name="echoTestRequest" message="tns:echoTestRequest">
+    </wsdl:input>
+      <wsdl:output name="echoTestResponse" message="tns:echoTestResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="intentarInterconexion">
+      <wsdl:input name="intentarInterconexionRequest" message="tns:intentarInterconexionRequest">
+    </wsdl:input>
+      <wsdl:output name="intentarInterconexionResponse" message="tns:intentarInterconexionResponse">
+
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="buscarEmpresa1">
+      <wsdl:input name="buscarEmpresa1Request" message="tns:buscarEmpresa1Request">
+    </wsdl:input>
+      <wsdl:output name="buscarEmpresa1Response" message="tns:buscarEmpresa1Response">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="desvincularEmpresa">
+
+      <wsdl:input name="desvincularEmpresaRequest" message="tns:desvincularEmpresaRequest">
+    </wsdl:input>
+      <wsdl:output name="desvincularEmpresaResponse" message="tns:desvincularEmpresaResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarRubros">
+      <wsdl:input name="listarRubrosRequest" message="tns:listarRubrosRequest">
+    </wsdl:input>
+      <wsdl:output name="listarRubrosResponse" message="tns:listarRubrosResponse">
+
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="login">
+      <wsdl:input name="loginRequest" message="tns:loginRequest">
+    </wsdl:input>
+      <wsdl:output name="loginResponse" message="tns:loginResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modificacionDescripcionDeuda">
+
+      <wsdl:input name="modificacionDescripcionDeudaRequest" message="tns:modificacionDescripcionDeudaRequest">
+    </wsdl:input>
+      <wsdl:output name="modificacionDescripcionDeudaResponse" message="tns:modificacionDescripcionDeudaResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarComprobantePDF">
+      <wsdl:input name="consultarComprobantePDFRequest" message="tns:consultarComprobantePDFRequest">
+    </wsdl:input>
+      <wsdl:output name="consultarComprobantePDFResponse" message="tns:consultarComprobantePDFResponse">
+
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarEmpresas1">
+      <wsdl:input name="listarEmpresas1Request" message="tns:listarEmpresas1Request">
+    </wsdl:input>
+      <wsdl:output name="listarEmpresas1Response" message="tns:listarEmpresas1Response">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarUltimosPagos">
+
+      <wsdl:input name="consultarUltimosPagosRequest" message="tns:consultarUltimosPagosRequest">
+    </wsdl:input>
+      <wsdl:output name="consultarUltimosPagosResponse" message="tns:consultarUltimosPagosResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarLimitesYDisponibles">
+      <wsdl:input name="consultarLimitesYDisponiblesRequest" message="tns:consultarLimitesYDisponiblesRequest">
+    </wsdl:input>
+      <wsdl:output name="consultarLimitesYDisponiblesResponse" message="tns:consultarLimitesYDisponiblesResponse">
+
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cambiarPin">
+      <wsdl:input name="cambiarPinRequest" message="tns:cambiarPinRequest">
+    </wsdl:input>
+      <wsdl:output name="cambiarPinResponse" message="tns:cambiarPinResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="convertirTicketPDF">
+
+      <wsdl:input name="convertirTicketPDFRequest" message="tns:convertirTicketPDFRequest">
+    </wsdl:input>
+      <wsdl:output name="convertirTicketPDFResponse" message="tns:convertirTicketPDFResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="solicitarCoordenadas">
+      <wsdl:input name="solicitarCoordenadasRequest" message="tns:solicitarCoordenadasRequest">
+    </wsdl:input>
+      <wsdl:output name="solicitarCoordenadasResponse" message="tns:solicitarCoordenadasResponse">
+
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarEstadoPago">
+      <wsdl:input name="consultarEstadoPagoRequest" message="tns:consultarEstadoPagoRequest">
+    </wsdl:input>
+      <wsdl:output name="consultarEstadoPagoResponse" message="tns:consultarEstadoPagoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtenerDeudasEIdentificaciones">
+
+      <wsdl:input name="obtenerDeudasEIdentificacionesRequest" message="tns:obtenerDeudasEIdentificacionesRequest">
+    </wsdl:input>
+      <wsdl:output name="obtenerDeudasEIdentificacionesResponse" message="tns:obtenerDeudasEIdentificacionesResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="altaDescripcionDeuda">
+      <wsdl:input name="altaDescripcionDeudaRequest" message="tns:altaDescripcionDeudaRequest">
+    </wsdl:input>
+      <wsdl:output name="altaDescripcionDeudaResponse" message="tns:altaDescripcionDeudaResponse">
+
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="altaTarjetaVirtual">
+      <wsdl:input name="altaTarjetaVirtualRequest" message="tns:altaTarjetaVirtualRequest">
+    </wsdl:input>
+      <wsdl:output name="altaTarjetaVirtualResponse" message="tns:altaTarjetaVirtualResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarRubros1">
+
+      <wsdl:input name="listarRubros1Request" message="tns:listarRubros1Request">
+    </wsdl:input>
+      <wsdl:output name="listarRubros1Response" message="tns:listarRubros1Response">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarFacturaElectronica">
+      <wsdl:input name="consultarFacturaElectronicaRequest" message="tns:consultarFacturaElectronicaRequest">
+    </wsdl:input>
+      <wsdl:output name="consultarFacturaElectronicaResponse" message="tns:consultarFacturaElectronicaResponse">
+
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="desvincularFactura">
+      <wsdl:input name="desvincularFacturaRequest" message="tns:desvincularFacturaRequest">
+    </wsdl:input>
+      <wsdl:output name="desvincularFacturaResponse" message="tns:desvincularFacturaResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtenerServiciosAdheridos">
+
+      <wsdl:input name="obtenerServiciosAdheridosRequest" message="tns:obtenerServiciosAdheridosRequest">
+    </wsdl:input>
+      <wsdl:output name="obtenerServiciosAdheridosResponse" message="tns:obtenerServiciosAdheridosResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarSubRubros">
+      <wsdl:input name="listarSubRubrosRequest" message="tns:listarSubRubrosRequest">
+    </wsdl:input>
+      <wsdl:output name="listarSubRubrosResponse" message="tns:listarSubRubrosResponse">
+
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtenerDeudaEmpresa">
+      <wsdl:input name="obtenerDeudaEmpresaRequest" message="tns:obtenerDeudaEmpresaRequest">
+    </wsdl:input>
+      <wsdl:output name="obtenerDeudaEmpresaResponse" message="tns:obtenerDeudaEmpresaResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cambiarEmail">
+
+      <wsdl:input name="cambiarEmailRequest" message="tns:cambiarEmailRequest">
+    </wsdl:input>
+      <wsdl:output name="cambiarEmailResponse" message="tns:cambiarEmailResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarEmpresasPrepaga1">
+      <wsdl:input name="listarEmpresasPrepaga1Request" message="tns:listarEmpresasPrepaga1Request">
+    </wsdl:input>
+      <wsdl:output name="listarEmpresasPrepaga1Response" message="tns:listarEmpresasPrepaga1Response">
+
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="realizarPagoBancaEmpresa1">
+      <wsdl:input name="realizarPagoBancaEmpresa1Request" message="tns:realizarPagoBancaEmpresa1Request">
+    </wsdl:input>
+      <wsdl:output name="realizarPagoBancaEmpresa1Response" message="tns:realizarPagoBancaEmpresa1Response">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarSubRubros1">
+
+      <wsdl:input name="listarSubRubros1Request" message="tns:listarSubRubros1Request">
+    </wsdl:input>
+      <wsdl:output name="listarSubRubros1Response" message="tns:listarSubRubros1Response">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="realizarPagoBancaEmpresa">
+      <wsdl:input name="realizarPagoBancaEmpresaRequest" message="tns:realizarPagoBancaEmpresaRequest">
+    </wsdl:input>
+      <wsdl:output name="realizarPagoBancaEmpresaResponse" message="tns:realizarPagoBancaEmpresaResponse">
+
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ISoapClientV2HttpBinding" type="tns:ISoapClientV2PortType">
+    <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="validarCoordenadas">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="validarCoordenadasRequest">
+        <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+      <wsdl:output name="validarCoordenadasResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="bajaDescripcionDeuda">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="bajaDescripcionDeudaRequest">
+        <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+      <wsdl:output name="bajaDescripcionDeudaResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="userLogin">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="userLoginRequest">
+        <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+      <wsdl:output name="userLoginResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtenerDatoAdicional">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="obtenerDatoAdicionalRequest">
+        <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+      <wsdl:output name="obtenerDatoAdicionalResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="echo">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="echoRequest">
+        <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+      <wsdl:output name="echoResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarEmpresas">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="listarEmpresasRequest">
+        <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+      <wsdl:output name="listarEmpresasResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="intentarInterconexionConBanco">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="intentarInterconexionConBancoRequest">
+        <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+      <wsdl:output name="intentarInterconexionConBancoResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="buscarEmpresa">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="buscarEmpresaRequest">
+        <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+      <wsdl:output name="buscarEmpresaResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarEmpresasPrepaga">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="listarEmpresasPrepagaRequest">
+        <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+      <wsdl:output name="listarEmpresasPrepagaResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="realizarPago">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="realizarPagoRequest">
+        <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+      <wsdl:output name="realizarPagoResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="adherirEmpresa">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="adherirEmpresaRequest">
+        <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+      <wsdl:output name="adherirEmpresaResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="echoTest">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="echoTestRequest">
+        <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+      <wsdl:output name="echoTestResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="intentarInterconexion">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="intentarInterconexionRequest">
+        <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+      <wsdl:output name="intentarInterconexionResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="buscarEmpresa1">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="buscarEmpresa1Request">
+        <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+      <wsdl:output name="buscarEmpresa1Response">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="desvincularEmpresa">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="desvincularEmpresaRequest">
+        <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+      <wsdl:output name="desvincularEmpresaResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarRubros">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="listarRubrosRequest">
+        <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+      <wsdl:output name="listarRubrosResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="login">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="loginRequest">
+        <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+      <wsdl:output name="loginResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modificacionDescripcionDeuda">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="modificacionDescripcionDeudaRequest">
+        <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+      <wsdl:output name="modificacionDescripcionDeudaResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarComprobantePDF">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="consultarComprobantePDFRequest">
+        <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+      <wsdl:output name="consultarComprobantePDFResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarEmpresas1">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="listarEmpresas1Request">
+        <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+      <wsdl:output name="listarEmpresas1Response">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarUltimosPagos">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="consultarUltimosPagosRequest">
+        <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+      <wsdl:output name="consultarUltimosPagosResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarLimitesYDisponibles">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="consultarLimitesYDisponiblesRequest">
+        <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+      <wsdl:output name="consultarLimitesYDisponiblesResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cambiarPin">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="cambiarPinRequest">
+        <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+      <wsdl:output name="cambiarPinResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="convertirTicketPDF">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="convertirTicketPDFRequest">
+        <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+      <wsdl:output name="convertirTicketPDFResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="solicitarCoordenadas">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="solicitarCoordenadasRequest">
+        <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+      <wsdl:output name="solicitarCoordenadasResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarEstadoPago">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="consultarEstadoPagoRequest">
+        <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+      <wsdl:output name="consultarEstadoPagoResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtenerDeudasEIdentificaciones">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="obtenerDeudasEIdentificacionesRequest">
+        <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+      <wsdl:output name="obtenerDeudasEIdentificacionesResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="altaDescripcionDeuda">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="altaDescripcionDeudaRequest">
+        <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+      <wsdl:output name="altaDescripcionDeudaResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="altaTarjetaVirtual">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="altaTarjetaVirtualRequest">
+        <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+      <wsdl:output name="altaTarjetaVirtualResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarRubros1">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="listarRubros1Request">
+        <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+      <wsdl:output name="listarRubros1Response">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarFacturaElectronica">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="consultarFacturaElectronicaRequest">
+        <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+      <wsdl:output name="consultarFacturaElectronicaResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="desvincularFactura">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="desvincularFacturaRequest">
+        <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+      <wsdl:output name="desvincularFacturaResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtenerServiciosAdheridos">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="obtenerServiciosAdheridosRequest">
+        <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+      <wsdl:output name="obtenerServiciosAdheridosResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarSubRubros">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="listarSubRubrosRequest">
+        <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+      <wsdl:output name="listarSubRubrosResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtenerDeudaEmpresa">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="obtenerDeudaEmpresaRequest">
+        <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+      <wsdl:output name="obtenerDeudaEmpresaResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cambiarEmail">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="cambiarEmailRequest">
+        <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+      <wsdl:output name="cambiarEmailResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarEmpresasPrepaga1">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="listarEmpresasPrepaga1Request">
+        <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+      <wsdl:output name="listarEmpresasPrepaga1Response">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="realizarPagoBancaEmpresa1">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="realizarPagoBancaEmpresa1Request">
+        <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+      <wsdl:output name="realizarPagoBancaEmpresa1Response">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarSubRubros1">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="listarSubRubros1Request">
+        <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+      <wsdl:output name="listarSubRubros1Response">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="realizarPagoBancaEmpresa">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="realizarPagoBancaEmpresaRequest">
+        <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+      <wsdl:output name="realizarPagoBancaEmpresaResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ISoapClientV2">
+    <wsdl:port name="ISoapClientV2HttpPort" binding="tns:ISoapClientV2HttpBinding">
+      <wsdlsoap:address location="https://200.59.131.202/services/2.1/BNLCSoapClient"/>
+
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

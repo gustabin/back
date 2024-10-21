@@ -1,0 +1,609 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://webservices.banelco.com" xmlns:soapenc12="http://www.w3.org/2003/05/soap-encoding" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns5="http://banelcomap.services.external.banelco.com" xmlns:ns2="http://business.model.cds.banelco.com" xmlns:ns1="http://model.webservices.banelco.com" xmlns:ns4="http://dto.banelco.com" xmlns:ns3="http://dto.cds.banelco.com" xmlns:tns="http://webservices.banelco.com" xmlns:soap11="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc11="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap12="http://www.w3.org/2003/05/soap-envelope">
+  <wsdl:types>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://model.webservices.banelco.com">
+<xsd:complexType name="WSServiceData">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="canal" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="terminal" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="WSUserData">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="numeroDocumento" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="tipoDocumento" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="WSTerminalData">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="datosTerminal" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="futureUse1" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="futureUse2" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="idSession" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="ipOrigen" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="WSTarjetaDTO">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="miembro" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="numero" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="WSTerminalDTO">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="canal" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="datosTerminal" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="direccionIP" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="terminal" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="EstadoCajeroRequestDTO">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="idCajero" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:schema>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://webservices.banelco.com">
+<xsd:element name="consultarEstadoCajero">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="ns1:WSServiceData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in1" nillable="true" type="ns1:WSUserData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in2" nillable="true" type="ns1:WSTerminalData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in3" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="consultarEstadoCajeroResponse">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="out" nillable="true" type="ns2:ICajero"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="consultarCuentaPreferida">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="ns1:WSTerminalData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in1" nillable="true" type="ns1:WSUserData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in2" nillable="true" type="ns1:WSTarjetaDTO"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="consultarCuentaPreferidaResponse">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="out" nillable="true" type="ns3:ConsultaCuentaPreferidaResponseDTO"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="blanquearAlfa">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="ns1:WSTerminalData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in1" nillable="true" type="ns1:WSUserData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in2" nillable="true" type="ns1:WSTarjetaDTO"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="blanquearAlfaResponse">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="out" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="consultarEstadoCajeroConBanco">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="ns1:WSServiceData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in1" nillable="true" type="ns1:WSUserData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in2" nillable="true" type="ns1:WSTerminalData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in3" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in4" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="consultarEstadoCajeroConBancoResponse">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="out" nillable="true" type="ns2:ICajero"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="asignarLimiteVIP">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="ns1:WSTerminalDTO"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in1" nillable="true" type="ns1:WSUserData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in2" nillable="true" type="ns1:WSTarjetaDTO"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in3" nillable="true" type="xsd:double"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in4" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="asignarLimiteVIPResponse">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="out" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="getEstadoCajero">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="ns1:WSTerminalDTO"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in1" nillable="true" type="ns1:WSUserData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in2" nillable="true" type="ns1:EstadoCajeroRequestDTO"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="getEstadoCajeroResponse">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="out" nillable="true" type="ns4:EstadoCajeroResponseDTO"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="blanquearPinAlfa">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="ns1:WSTerminalData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in1" nillable="true" type="ns1:WSUserData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in2" nillable="true" type="ns1:WSTarjetaDTO"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="blanquearPinAlfaResponse">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="out" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="blanquearPin">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="ns1:WSTerminalData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in1" nillable="true" type="ns1:WSUserData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in2" nillable="true" type="ns1:WSTarjetaDTO"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="blanquearPinResponse">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="out" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="modificarCuentaPreferida">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="ns1:WSTerminalData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in1" nillable="true" type="ns1:WSUserData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in2" nillable="true" type="ns1:WSTarjetaDTO"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in3" nillable="true" type="ns3:CuentaPreferidaDTO"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="modificarCuentaPreferidaResponse">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="out" type="xsd:boolean"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="modificarCotizacion">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="ns1:WSTerminalDTO"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in1" nillable="true" type="ns1:WSUserData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in2" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in3" nillable="true" type="xsd:string"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in4" nillable="true" type="xsd:double"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in5" nillable="true" type="xsd:double"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="modificarCotizacionResponse">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="out" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="cambiarClase">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="ns1:WSTerminalDTO"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in1" nillable="true" type="ns1:WSUserData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in2" nillable="true" type="ns1:WSTarjetaDTO"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in3" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="cambiarClaseResponse">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="out" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="consultaEstadoCajeroWithId">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" nillable="true" type="ns1:WSServiceData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in1" nillable="true" type="ns1:WSUserData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in2" nillable="true" type="ns1:WSTerminalData"/>
+<xsd:element maxOccurs="1" minOccurs="1" name="in3" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="consultaEstadoCajeroWithIdResponse">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="out" nillable="true" type="ns5:InfoCajeroDTO"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+</xsd:schema>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://business.model.cds.banelco.com">
+<xsd:complexType name="ICajero">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="estado" type="xsd:boolean"/>
+<xsd:element minOccurs="0" name="expendeDolares" type="xsd:boolean"/>
+<xsd:element minOccurs="0" name="expendePesos" type="xsd:boolean"/>
+<xsd:element minOccurs="0" name="idCajero" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:schema>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://dto.cds.banelco.com">
+<xsd:complexType name="ConsultaCuentaPreferidaResponseDTO">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="cuentasPreferidasDTO" nillable="true" type="ns3:ArrayOfCuentaPreferidaDTO"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="ArrayOfCuentaPreferidaDTO">
+<xsd:sequence>
+<xsd:element maxOccurs="unbounded" minOccurs="0" name="CuentaPreferidaDTO" nillable="true" type="ns3:CuentaPreferidaDTO"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="CuentaPreferidaDTO">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="numero" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="preferida" type="xsd:boolean"/>
+<xsd:element minOccurs="0" name="tipo" nillable="true" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:schema>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://dto.banelco.com">
+<xsd:complexType name="EstadoCajeroResponseDTO">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="bandaHoraria" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="disponibleHopper1" nillable="true" type="xsd:double"/>
+<xsd:element minOccurs="0" name="disponibleHopper2" nillable="true" type="xsd:double"/>
+<xsd:element minOccurs="0" name="disponibleHopper3" nillable="true" type="xsd:double"/>
+<xsd:element minOccurs="0" name="disponibleHopper4" nillable="true" type="xsd:double"/>
+<xsd:element minOccurs="0" name="extraccion" nillable="true" type="xsd:boolean"/>
+<xsd:element minOccurs="0" name="idBanco" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="idCajero" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="monedaHopper1" type="xsd:int"/>
+<xsd:element minOccurs="0" name="monedaHopper2" type="xsd:int"/>
+<xsd:element minOccurs="0" name="monedaHopper3" type="xsd:int"/>
+<xsd:element minOccurs="0" name="monedaHopper4" type="xsd:int"/>
+<xsd:element minOccurs="0" name="respuesta" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="servicioActivo" nillable="true" type="xsd:boolean"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:schema>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://banelcomap.services.external.banelco.com">
+<xsd:complexType name="InfoCajeroDTO">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="accesoPublico" type="xsd:boolean"/>
+<xsd:element minOccurs="0" name="aceptaDepositos" type="xsd:boolean"/>
+<xsd:element minOccurs="0" name="aptoNoVidente" type="xsd:boolean"/>
+<xsd:element minOccurs="0" name="bandaHoraria" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="cantCajeros" type="xsd:int"/>
+<xsd:element minOccurs="0" name="cirrus" type="xsd:boolean"/>
+<xsd:element minOccurs="0" name="dolaresDisponibles" type="xsd:boolean"/>
+<xsd:element minOccurs="0" name="esExclusivo" type="xsd:boolean"/>
+<xsd:element minOccurs="0" name="extraccion" type="xsd:boolean"/>
+<xsd:element minOccurs="0" name="horarioRestringido" type="xsd:boolean"/>
+<xsd:element minOccurs="0" name="idBanco" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="nombreBanco" nillable="true" type="xsd:string"/>
+<xsd:element minOccurs="0" name="pesosDisponibles" type="xsd:boolean"/>
+<xsd:element minOccurs="0" name="reconocimientoImagen" type="xsd:boolean"/>
+<xsd:element minOccurs="0" name="servicioActivo" type="xsd:boolean"/>
+<xsd:element minOccurs="0" name="tieneDolares" type="xsd:boolean"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="blanquearPinAlfaResponse">
+    <wsdl:part name="parameters" element="tns:blanquearPinAlfaResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="blanquearPinAlfaRequest">
+    <wsdl:part name="parameters" element="tns:blanquearPinAlfa">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="consultarEstadoCajeroConBancoResponse">
+    <wsdl:part name="parameters" element="tns:consultarEstadoCajeroConBancoResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="blanquearAlfaRequest">
+    <wsdl:part name="parameters" element="tns:blanquearAlfa">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="consultaEstadoCajeroWithIdResponse">
+    <wsdl:part name="parameters" element="tns:consultaEstadoCajeroWithIdResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getEstadoCajeroResponse">
+    <wsdl:part name="parameters" element="tns:getEstadoCajeroResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getEstadoCajeroRequest">
+    <wsdl:part name="parameters" element="tns:getEstadoCajero">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="consultaEstadoCajeroWithIdRequest">
+    <wsdl:part name="parameters" element="tns:consultaEstadoCajeroWithId">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="consultarEstadoCajeroRequest">
+    <wsdl:part name="parameters" element="tns:consultarEstadoCajero">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="consultarEstadoCajeroResponse">
+    <wsdl:part name="parameters" element="tns:consultarEstadoCajeroResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="modificarCuentaPreferidaRequest">
+    <wsdl:part name="parameters" element="tns:modificarCuentaPreferida">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="asignarLimiteVIPResponse">
+    <wsdl:part name="parameters" element="tns:asignarLimiteVIPResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="consultarCuentaPreferidaRequest">
+    <wsdl:part name="parameters" element="tns:consultarCuentaPreferida">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="blanquearPinResponse">
+    <wsdl:part name="parameters" element="tns:blanquearPinResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="consultarEstadoCajeroConBancoRequest">
+    <wsdl:part name="parameters" element="tns:consultarEstadoCajeroConBanco">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="cambiarClaseResponse">
+    <wsdl:part name="parameters" element="tns:cambiarClaseResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="modificarCotizacionRequest">
+    <wsdl:part name="parameters" element="tns:modificarCotizacion">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="asignarLimiteVIPRequest">
+    <wsdl:part name="parameters" element="tns:asignarLimiteVIP">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="cambiarClaseRequest">
+    <wsdl:part name="parameters" element="tns:cambiarClase">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="modificarCotizacionResponse">
+    <wsdl:part name="parameters" element="tns:modificarCotizacionResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="blanquearPinRequest">
+    <wsdl:part name="parameters" element="tns:blanquearPin">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="modificarCuentaPreferidaResponse">
+    <wsdl:part name="parameters" element="tns:modificarCuentaPreferidaResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="blanquearAlfaResponse">
+    <wsdl:part name="parameters" element="tns:blanquearAlfaResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="consultarCuentaPreferidaResponse">
+    <wsdl:part name="parameters" element="tns:consultarCuentaPreferidaResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="ICentroDeServiciosClientPortType">
+    <wsdl:operation name="consultarEstadoCajero">
+      <wsdl:input name="consultarEstadoCajeroRequest" message="tns:consultarEstadoCajeroRequest">
+    </wsdl:input>
+      <wsdl:output name="consultarEstadoCajeroResponse" message="tns:consultarEstadoCajeroResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarCuentaPreferida">
+      <wsdl:input name="consultarCuentaPreferidaRequest" message="tns:consultarCuentaPreferidaRequest">
+    </wsdl:input>
+      <wsdl:output name="consultarCuentaPreferidaResponse" message="tns:consultarCuentaPreferidaResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="blanquearAlfa">
+      <wsdl:input name="blanquearAlfaRequest" message="tns:blanquearAlfaRequest">
+    </wsdl:input>
+      <wsdl:output name="blanquearAlfaResponse" message="tns:blanquearAlfaResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarEstadoCajeroConBanco">
+      <wsdl:input name="consultarEstadoCajeroConBancoRequest" message="tns:consultarEstadoCajeroConBancoRequest">
+    </wsdl:input>
+      <wsdl:output name="consultarEstadoCajeroConBancoResponse" message="tns:consultarEstadoCajeroConBancoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="asignarLimiteVIP">
+      <wsdl:input name="asignarLimiteVIPRequest" message="tns:asignarLimiteVIPRequest">
+    </wsdl:input>
+      <wsdl:output name="asignarLimiteVIPResponse" message="tns:asignarLimiteVIPResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEstadoCajero">
+      <wsdl:input name="getEstadoCajeroRequest" message="tns:getEstadoCajeroRequest">
+    </wsdl:input>
+      <wsdl:output name="getEstadoCajeroResponse" message="tns:getEstadoCajeroResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="blanquearPinAlfa">
+      <wsdl:input name="blanquearPinAlfaRequest" message="tns:blanquearPinAlfaRequest">
+    </wsdl:input>
+      <wsdl:output name="blanquearPinAlfaResponse" message="tns:blanquearPinAlfaResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="blanquearPin">
+      <wsdl:input name="blanquearPinRequest" message="tns:blanquearPinRequest">
+    </wsdl:input>
+      <wsdl:output name="blanquearPinResponse" message="tns:blanquearPinResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modificarCuentaPreferida">
+      <wsdl:input name="modificarCuentaPreferidaRequest" message="tns:modificarCuentaPreferidaRequest">
+    </wsdl:input>
+      <wsdl:output name="modificarCuentaPreferidaResponse" message="tns:modificarCuentaPreferidaResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modificarCotizacion">
+      <wsdl:input name="modificarCotizacionRequest" message="tns:modificarCotizacionRequest">
+    </wsdl:input>
+      <wsdl:output name="modificarCotizacionResponse" message="tns:modificarCotizacionResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cambiarClase">
+      <wsdl:input name="cambiarClaseRequest" message="tns:cambiarClaseRequest">
+    </wsdl:input>
+      <wsdl:output name="cambiarClaseResponse" message="tns:cambiarClaseResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultaEstadoCajeroWithId">
+      <wsdl:input name="consultaEstadoCajeroWithIdRequest" message="tns:consultaEstadoCajeroWithIdRequest">
+    </wsdl:input>
+      <wsdl:output name="consultaEstadoCajeroWithIdResponse" message="tns:consultaEstadoCajeroWithIdResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ICentroDeServiciosClientHttpBinding" type="tns:ICentroDeServiciosClientPortType">
+    <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="consultarEstadoCajero">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="consultarEstadoCajeroRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="consultarEstadoCajeroResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarCuentaPreferida">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="consultarCuentaPreferidaRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="consultarCuentaPreferidaResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="blanquearAlfa">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="blanquearAlfaRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="blanquearAlfaResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarEstadoCajeroConBanco">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="consultarEstadoCajeroConBancoRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="consultarEstadoCajeroConBancoResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="asignarLimiteVIP">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="asignarLimiteVIPRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="asignarLimiteVIPResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEstadoCajero">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="getEstadoCajeroRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getEstadoCajeroResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="blanquearPinAlfa">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="blanquearPinAlfaRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="blanquearPinAlfaResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="blanquearPin">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="blanquearPinRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="blanquearPinResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modificarCuentaPreferida">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="modificarCuentaPreferidaRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="modificarCuentaPreferidaResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modificarCotizacion">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="modificarCotizacionRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="modificarCotizacionResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cambiarClase">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="cambiarClaseRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="cambiarClaseResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultaEstadoCajeroWithId">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="consultaEstadoCajeroWithIdRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="consultaEstadoCajeroWithIdResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ICentroDeServiciosClient">
+    <wsdl:port name="ICentroDeServiciosClientHttpPort" binding="tns:ICentroDeServiciosClientHttpBinding">
+      <wsdlsoap:address location="https://wssrv3.banelcoservices.com.ar/services//CentroDeServiciosClient"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

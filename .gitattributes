@@ -1,0 +1,24 @@
+# Set the default behavior, in case people don't have core.autocrlf set.
+* text=auto
+
+# jmx files will have lf line endings on checkout.
+*.jmx text eol=lf
+
+# Declare files and folders that will always have CRLF line endings on checkout.
+obp-base/** text=crlf
+obp-builder/** text=crlf
+obp-ear/** text=crlf
+obp-generated-ws-client/** text=crlf
+obp-pom/** text=crlf
+obp-servicios/** text=crlf
+obp-webapp/** text=crlf
+
+# Denote all files that are truly binary and should not be modified.
+*.png binary
+*.jpg binary
+*.jasper binary
+*.svg binary
+*.eot binary
+*.ttf binary
+*.woff binary
+*.woff2 binary

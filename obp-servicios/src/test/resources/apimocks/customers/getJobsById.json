@@ -1,0 +1,16 @@
+{
+  "jobs": [
+    {
+      "companyName": "EMPRESA COMERCIAL",
+      "companyType": "large_company",
+      "activitySector": "COME",
+      "activityType": "self_employment",
+      "income": 5000.00,
+      "incomeUpdatedAt": "2021-11-03T00:00:00.000-03:00",
+      "position": "employee",
+      "isEmployee": false,
+      "workRelationshipType": "permanent",
+      "startDate": "2015-08-12T00:00:00.000-03:00"
+    }
+  ]
+}

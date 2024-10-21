@@ -1,0 +1,851 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="DetalleEcheq" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2196aed8-f594-4a19-985c-7eee6fff25e1">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="ireport.zoom" value="1.366026910730148"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="495"/>
+	<parameter name="LOGO_CABECERA" class="java.lang.String"/>
+	<parameter name="IMPORTE" class="java.lang.String"/>
+	<parameter name="EMISOR_CUIT" class="java.lang.String"/>
+	<parameter name="EMISOR_RAZON_SOCIAL" class="java.lang.String"/>
+	<parameter name="NOMBRE_BENEFICIARIO" class="java.lang.String"/>
+	<parameter name="COMPROBANTE" class="java.lang.String"/>
+	<parameter name="FECHA_PAGO" class="java.lang.String"/>
+	<parameter name="LOGO_CIERRE" class="java.lang.String"/>
+	<parameter name="FECHA_EMISION" class="java.lang.String"/>
+	<parameter name="FECHA" class="java.lang.String"/>
+	<parameter name="NUMERO_CHEQUE" class="java.lang.String"/>
+	<parameter name="CUIT_BENEFICIARIO" class="java.lang.String"/>
+	<parameter name="LEGALES" class="java.lang.String"/>
+	<parameter name="GRILLA_ORIGEN" class="java.lang.String"/>
+	<parameter name="NUMERO_CUENTA" class="java.lang.String"/>
+	<parameter name="TIPO_CUENTA" class="java.lang.String"/>
+	<parameter name="ALIAS_CUENTA" class="java.lang.String"/>
+	<parameter name="ESTADO" class="java.lang.String"/>
+	<parameter name="MODALIDAD" class="java.lang.String"/>
+	<parameter name="ENDOSOS" class="java.util.List"/>
+	<parameter name="CUIT" class="java.lang.String"/>
+	<parameter name="RAZON_SOCIAL" class="java.lang.String"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String"/>
+	<parameter name="CARACTER" class="java.lang.String"/>
+	<parameter name="DOMICILIO_EMISOR" class="java.lang.String"/>
+	<parameter name="ENTIDAD_GIRADA" class="java.lang.String"/>
+	<parameter name="DOMICILIO_PAGO" class="java.lang.String"/>
+	<parameter name="CMC7" class="java.lang.String"/>
+	<parameter name="MOTIVO" class="java.lang.String"/>
+	<parameter name="TIPO_CHEQUE" class="java.lang.String"/>
+	<parameter name="ID" class="java.lang.String"/>
+	<parameter name="CESIONES" class="java.util.List"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="372" splitType="Stretch">
+			<image>
+				<reportElement positionType="Float" mode="Transparent" x="109" y="0" width="262" height="36" backcolor="#FFFFFF" uuid="e5280d44-0e5c-413e-9c4c-be3cb047317c">
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#C9C9C9"/>
+				</graphicElement>
+				<imageExpression><![CDATA[$P{LOGO_CABECERA}]]></imageExpression>
+			</image>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="173" y="176" width="186" height="13" forecolor="#333333" uuid="3ee1cc2c-0b8e-4041-90a9-12fb30f9077c">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font fontName="Open Sans Semibold" size="9" isBold="true" isItalic="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{ESTADO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="256" y="269" width="103" height="13" forecolor="#333333" uuid="e65c9fb1-a519-42dc-a824-b3277a7bc084">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font fontName="Open Sans Semibold" size="9" isBold="true" isItalic="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{MODALIDAD}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="120" y="269" width="99" height="13" forecolor="#585858" uuid="03f8d890-217f-41be-9595-56dcbc56fd41">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Open Sans" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Modalidad]]></text>
+			</staticText>
+			<line>
+				<reportElement key="horizontal" positionType="Float" mode="Opaque" x="120" y="259" width="240" height="1" forecolor="#000000" backcolor="#FFFFFF" uuid="7240efbf-3a4b-4251-962b-d13cc4774fa9">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<graphicElement fill="Solid">
+					<pen lineWidth="0.75" lineStyle="Dotted" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement key="horizontal" positionType="Float" mode="Opaque" x="120" y="290" width="240" height="1" forecolor="#000000" backcolor="#FFFFFF" uuid="33357e3d-554b-4433-8a4c-b86a830f17f9">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<graphicElement fill="Solid">
+					<pen lineWidth="0.75" lineStyle="Dotted" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+			<rectangle>
+				<reportElement positionType="Float" stretchType="RelativeToBandHeight" mode="Opaque" x="109" y="58" width="262" height="99" uuid="12da468f-86d2-4fc8-bb34-c8011bf7c508">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</rectangle>
+			<textField>
+				<reportElement x="126" y="75" width="229" height="22" forecolor="#333333" uuid="0afa5446-47c0-4224-956e-ddaa3d8ec3e1">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Open Sans" size="16" isBold="false" isItalic="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{IMPORTE}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement stretchType="RelativeToBandHeight" x="115" y="103" width="250" height="22" isPrintWhenDetailOverflows="true" forecolor="#333333" uuid="9b101846-d062-448c-8072-72fa06316ad8">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Open Sans" size="10" isBold="false" isItalic="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{RAZON_SOCIAL}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="120" y="176" width="40" height="13" forecolor="#585858" uuid="a9557140-bc47-40a8-b075-9f6ba1a4ec35">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Open Sans" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Estado]]></text>
+			</staticText>
+			<textField>
+				<reportElement positionType="Float" x="239" y="127" width="100" height="15" forecolor="#333333" uuid="c3fd8a9e-8c5d-4794-a131-8a284ac2f201">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Open Sans" size="10" isBold="false" isItalic="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{CUIT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="118" y="41" width="241" height="13" forecolor="#333333" uuid="d575bace-7e9c-49e5-b131-bad3eb4e760a">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="Open Sans Semibold" size="8" isBold="true" isItalic="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{GRILLA_ORIGEN}.equals("RECIBIDOS") ? "Detalle de Echeq recibido" : ($P{GRILLA_ORIGEN}.equals("EMITIDOS") ? "Detalle de Echeq emitido" : ($P{GRILLA_ORIGEN}.equals("CEDIDOS") ? "Detalle de Echeq cedido" :"Detalle de Echeq endosado"))]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="167" y="127" width="70" height="15" forecolor="#585858" uuid="5328e698-b972-4f61-b188-3bf9816d6def">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Open Sans" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[CUIT/CUIL/CDI]]></text>
+			</staticText>
+			<textField>
+				<reportElement positionType="Float" x="234" y="238" width="125" height="13" forecolor="#333333" uuid="1c3f3dfe-7b3d-4c6f-93c3-a89b6e78aaf9">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font fontName="Open Sans Semibold" size="9" isBold="true" isItalic="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{CARACTER}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement key="horizontal" positionType="Float" mode="Opaque" x="120" y="197" width="240" height="1" forecolor="#000000" backcolor="#FFFFFF" uuid="8ac55012-868e-434b-8738-e1749c6ab3aa">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<graphicElement fill="Solid">
+					<pen lineWidth="0.75" lineStyle="Dotted" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement positionType="Float" x="120" y="238" width="99" height="13" forecolor="#585858" uuid="b6ae32f8-386b-46d6-b9bc-f554eff5d727">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Open Sans" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Carácter]]></text>
+			</staticText>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="109" y="13" width="1" height="359" forecolor="#000000" backcolor="#FFFFFF" uuid="24ec1216-7563-4482-b8d4-5a02dc9f634f"/>
+				<graphicElement fill="Solid">
+					<pen lineWidth="0.5" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="371" y="0" width="1" height="372" forecolor="#000000" backcolor="#FFFFFF" uuid="b4f57c7a-f922-4737-97be-776a7438f915"/>
+				<graphicElement fill="Solid">
+					<pen lineWidth="0.5" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="109" y="0" width="262" height="1" forecolor="#000000" backcolor="#FFFFFF" uuid="1c50390a-4c32-4f18-8ba2-45e46095905b"/>
+				<graphicElement fill="Solid">
+					<pen lineWidth="0.5" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement positionType="Float" x="120" y="207" width="99" height="13" forecolor="#585858" uuid="808ac3f4-0064-4275-a609-b1fe48da5871">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Open Sans" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Cheque]]></text>
+			</staticText>
+			<line>
+				<reportElement key="horizontal" positionType="Float" mode="Opaque" x="120" y="228" width="240" height="1" forecolor="#000000" backcolor="#FFFFFF" uuid="1c041e9e-4cae-450d-a3ae-d76a417b3ba5">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<graphicElement fill="Solid">
+					<pen lineWidth="0.75" lineStyle="Dotted" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement positionType="Float" x="234" y="207" width="125" height="13" forecolor="#333333" uuid="54d0149a-b775-4735-891d-966fec7289b6">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font fontName="Open Sans Semibold" size="9" isBold="true" isItalic="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{TIPO_CHEQUE}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="120" y="300" width="99" height="13" forecolor="#585858" uuid="4dc4e799-5e2c-49a3-9836-e7aaf10d0a5d">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Open Sans" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Fecha de emisión]]></text>
+			</staticText>
+			<textField>
+				<reportElement positionType="Float" x="256" y="300" width="103" height="13" forecolor="#333333" uuid="a1a6a66c-ed42-4e8b-b817-9a9b75e59d85">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font fontName="Open Sans Semibold" size="9" isBold="true" isItalic="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{FECHA_EMISION}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement key="horizontal" positionType="Float" mode="Opaque" x="120" y="366" width="240" height="1" forecolor="#000000" backcolor="#FFFFFF" uuid="e5d0845e-46a9-44f1-8b60-2ef7b3f6e72b">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<graphicElement fill="Solid">
+					<pen lineWidth="0.75" lineStyle="Dotted" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement positionType="Float" x="234" y="329" width="125" height="25" forecolor="#333333" uuid="abf5bd58-7810-4180-b75d-e7ba6ebc7c9f">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font fontName="Open Sans Semibold" size="9" isBold="true" isItalic="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{DOMICILIO_EMISOR}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="120" y="329" width="99" height="13" forecolor="#585858" uuid="030555c7-cf93-4611-bec5-6f40b4290afa">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Open Sans" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Domicilio del emisor]]></text>
+			</staticText>
+			<line>
+				<reportElement key="horizontal" positionType="Float" mode="Opaque" x="120" y="321" width="240" height="1" forecolor="#000000" backcolor="#FFFFFF" uuid="dd10aa22-5658-4a96-8f1b-ebbedbe222e3">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<graphicElement fill="Solid">
+					<pen lineWidth="0.75" lineStyle="Dotted" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+		</band>
+		<band height="37" splitType="Stretch">
+			<printWhenExpression><![CDATA[($P{GRILLA_ORIGEN}.equals("RECIBIDOS") || $P{GRILLA_ORIGEN}.equals("EMITIDOS")) && $P{NUMERO_CUENTA} != null]]></printWhenExpression>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="109" y="0" width="1" height="37" forecolor="#000000" backcolor="#FFFFFF" uuid="d9d2a2d7-4093-4ebf-bec4-522f13efa5c4"/>
+				<graphicElement fill="Solid">
+					<pen lineWidth="0.5" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement positionType="Float" x="196" y="24" width="163" height="13" forecolor="#333333" uuid="9419b1d5-a934-47c8-9618-e030b60fa36c">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<printWhenExpression><![CDATA[$P{NUMERO_CUENTA} != null]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font fontName="Open Sans Regular" size="8" isBold="false" isItalic="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($P{ALIAS_CUENTA} != null && !$P{ALIAS_CUENTA}.equals("")) ? $P{TIPO_CUENTA} : $P{NUMERO_CUENTA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="120" y="10" width="103" height="13" forecolor="#585858" uuid="5f1f7296-d429-454e-853d-4cdf3ceaef00">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="Open Sans" size="9" isBold="false" isItalic="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{GRILLA_ORIGEN}.equals("RECIBIDOS") ? "Cuenta depósito" : "Cuenta débito"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="223" y="10" width="136" height="13" isPrintWhenDetailOverflows="true" forecolor="#333333" uuid="3d446350-18af-49ac-92ab-755615307e9b">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<printWhenExpression><![CDATA[$P{NUMERO_CUENTA} != null]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font fontName="Open Sans Semibold" size="9" isBold="true" isItalic="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($P{ALIAS_CUENTA} != null && !$P{ALIAS_CUENTA}.equals("")) ? "Cuenta \"" + $P{ALIAS_CUENTA} + "\"" : $P{TIPO_CUENTA}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="371" y="0" width="1" height="37" forecolor="#000000" backcolor="#FFFFFF" uuid="8a0c37e1-d142-4a36-a439-bfafacb3e60d"/>
+				<graphicElement fill="Solid">
+					<pen lineWidth="0.5" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+		</band>
+		<band height="13">
+			<printWhenExpression><![CDATA[($P{GRILLA_ORIGEN}.equals("RECIBIDOS") || $P{GRILLA_ORIGEN}.equals("EMITIDOS")) && $P{NUMERO_CUENTA} != null && ($P{ALIAS_CUENTA} != null && !$P{ALIAS_CUENTA}.equals(""))]]></printWhenExpression>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" mode="Transparent" x="196" y="0" width="163" height="13" isPrintWhenDetailOverflows="true" forecolor="#333333" uuid="6e8032fb-b319-4ae9-ad50-4dffdca707a9">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<printWhenExpression><![CDATA[$P{NUMERO_CUENTA} != null]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font fontName="Open Sans Regular" size="8" isBold="false" isItalic="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($P{ALIAS_CUENTA} != null && !$P{ALIAS_CUENTA}.equals("")) ? $P{NUMERO_CUENTA} : ""]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="109" y="0" width="1" height="13" forecolor="#000000" backcolor="#FFFFFF" uuid="5ba56776-4016-41ff-8e0d-b13ea41d031c"/>
+				<graphicElement fill="Solid">
+					<pen lineWidth="0.5" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="371" y="0" width="1" height="13" forecolor="#000000" backcolor="#FFFFFF" uuid="7d2a88da-eb81-4e40-a29e-027c2cbb50b9"/>
+				<graphicElement fill="Solid">
+					<pen lineWidth="0.5" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+		</band>
+		<band height="9">
+			<printWhenExpression><![CDATA[($P{GRILLA_ORIGEN}.equals("RECIBIDOS") || $P{GRILLA_ORIGEN}.equals("EMITIDOS")) && $P{NUMERO_CUENTA} != null]]></printWhenExpression>
+			<line>
+				<reportElement key="horizontal" positionType="Float" mode="Opaque" x="120" y="8" width="240" height="1" forecolor="#000000" backcolor="#FFFFFF" uuid="19dfd988-efb9-42e8-81b7-e25e7adec5c6">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<graphicElement fill="Solid">
+					<pen lineWidth="0.75" lineStyle="Dotted" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="109" y="0" width="1" height="9" forecolor="#000000" backcolor="#FFFFFF" uuid="c4656d55-9d1e-4138-9b52-822e812ee770"/>
+				<graphicElement fill="Solid">
+					<pen lineWidth="0.5" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="371" y="0" width="1" height="9" forecolor="#000000" backcolor="#FFFFFF" uuid="f9a73379-b5a0-4786-859c-2c716a365ad4"/>
+				<graphicElement fill="Solid">
+					<pen lineWidth="0.5" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+		</band>
+		<band height="32" splitType="Stretch">
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="109" y="0" width="1" height="32" forecolor="#000000" backcolor="#FFFFFF" uuid="22bd1260-83fd-4c94-b043-d01581e5f118"/>
+				<graphicElement fill="Solid">
+					<pen lineWidth="0.5" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="371" y="0" width="1" height="32" forecolor="#000000" backcolor="#FFFFFF" uuid="42475017-8cbd-46be-860c-f5019b982e57"/>
+				<graphicElement fill="Solid">
+					<pen lineWidth="0.5" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement positionType="Float" x="120" y="10" width="99" height="13" forecolor="#585858" uuid="04c10f58-3288-4e52-8e9d-b0d3c2d4faf2">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Open Sans" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Fecha de pago]]></text>
+			</staticText>
+			<textField>
+				<reportElement positionType="Float" x="256" y="10" width="103" height="13" forecolor="#333333" uuid="6845dae6-30d2-4c91-8b48-7d4565a2eba1">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font fontName="Open Sans Semibold" size="9" isBold="true" isItalic="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{FECHA_PAGO}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement key="horizontal" positionType="Float" mode="Opaque" x="120" y="31" width="240" height="1" forecolor="#000000" backcolor="#FFFFFF" uuid="3353d808-4517-426e-bffe-9ec76ce4fff3">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<graphicElement fill="Solid">
+					<pen lineWidth="0.75" lineStyle="Dotted" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+		</band>
+		<band height="50">
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="109" y="0" width="1" height="50" forecolor="#000000" backcolor="#FFFFFF" uuid="01300e58-3593-44e6-b18a-f99d0c72e8dc"/>
+				<graphicElement fill="Solid">
+					<pen lineWidth="0.5" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="371" y="0" width="1" height="50" forecolor="#000000" backcolor="#FFFFFF" uuid="c1f77cb3-28ce-42e2-91bc-6e24088ddf03"/>
+				<graphicElement fill="Solid">
+					<pen lineWidth="0.5" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement key="horizontal" positionType="Float" mode="Opaque" x="120" y="49" width="240" height="1" forecolor="#000000" backcolor="#FFFFFF" uuid="9b4553b0-a6ef-4001-afd5-7a0d8e9ea512">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<graphicElement fill="Solid">
+					<pen lineWidth="0.75" lineStyle="Dotted" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement positionType="Float" x="120" y="11" width="132" height="29" forecolor="#585858" uuid="5c21bc5f-fdf2-42eb-af4b-342bb0d2f8df">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Open Sans" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Nombre de la entidad girada]]></text>
+			</staticText>
+			<textField>
+				<reportElement positionType="Float" x="256" y="11" width="103" height="29" forecolor="#333333" uuid="f3e3f117-7b1b-4f9b-9efe-5ed0a109b512">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font fontName="Open Sans Semibold" size="9" isBold="true" isItalic="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{ENTIDAD_GIRADA}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="38" splitType="Stretch">
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="109" y="0" width="1" height="38" forecolor="#000000" backcolor="#FFFFFF" uuid="2b60a0a0-3711-438a-963a-735f38caa82a"/>
+				<graphicElement fill="Solid">
+					<pen lineWidth="0.5" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="371" y="0" width="1" height="38" forecolor="#000000" backcolor="#FFFFFF" uuid="377d1f93-5ce4-4d2f-855e-2aeae8e8b75a"/>
+				<graphicElement fill="Solid">
+					<pen lineWidth="0.5" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement key="horizontal" positionType="Float" mode="Opaque" x="120" y="37" width="240" height="1" forecolor="#000000" backcolor="#FFFFFF" uuid="b89a7d68-8076-4ee2-b957-1b3da63c02c7">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<graphicElement fill="Solid">
+					<pen lineWidth="0.75" lineStyle="Dotted" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement positionType="Float" x="120" y="7" width="99" height="16" forecolor="#585858" uuid="bb8c2514-19c2-450f-a2aa-aaaf7cb73fa1">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Open Sans" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Domicilio de pago]]></text>
+			</staticText>
+			<textField>
+				<reportElement positionType="Float" x="223" y="7" width="136" height="25" forecolor="#333333" uuid="ec6e6253-bf26-4771-8294-23e0a2500d4a">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font fontName="Open Sans Semibold" size="9" isBold="true" isItalic="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{DOMICILIO_PAGO}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="32" splitType="Stretch">
+			<printWhenExpression><![CDATA[$P{NUMERO_CHEQUE} != null && !$P{NUMERO_CHEQUE}.equals("")]]></printWhenExpression>
+			<line>
+				<reportElement key="horizontal" positionType="Float" mode="Opaque" x="120" y="31" width="240" height="1" forecolor="#000000" backcolor="#FFFFFF" uuid="035d0ba6-2b6d-4030-8edf-f87b245af78f">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<graphicElement fill="Solid">
+					<pen lineWidth="0.75" lineStyle="Dotted" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="371" y="0" width="1" height="32" forecolor="#000000" backcolor="#FFFFFF" uuid="e02aa947-8054-4ac4-b00b-73e842b56499"/>
+				<graphicElement fill="Solid">
+					<pen lineWidth="0.5" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="109" y="0" width="1" height="32" forecolor="#000000" backcolor="#FFFFFF" uuid="ad2caa20-2288-425e-841a-6018280ff417"/>
+				<graphicElement fill="Solid">
+					<pen lineWidth="0.5" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement positionType="Float" x="120" y="9" width="99" height="13" forecolor="#585858" uuid="9c899a2f-7c51-4b31-960b-bed4a6483c1e">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Open Sans" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Número de Echeq]]></text>
+			</staticText>
+			<textField>
+				<reportElement positionType="Float" x="223" y="9" width="136" height="13" forecolor="#333333" uuid="bcbb4332-5fcd-470c-90e9-22e22061deba">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font fontName="Open Sans Semibold" size="9" isBold="true" isItalic="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{NUMERO_CHEQUE}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="32" splitType="Stretch">
+			<line>
+				<reportElement key="horizontal" positionType="Float" mode="Opaque" x="120" y="31" width="240" height="1" forecolor="#000000" backcolor="#FFFFFF" uuid="a2e161a3-3955-4209-8b58-a800653b8cea">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<graphicElement fill="Solid">
+					<pen lineWidth="0.75" lineStyle="Dotted" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="109" y="0" width="1" height="32" forecolor="#000000" backcolor="#FFFFFF" uuid="2100db18-71e9-4f5e-9eba-21b0570e7ecf"/>
+				<graphicElement fill="Solid">
+					<pen lineWidth="0.5" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="371" y="0" width="1" height="32" forecolor="#000000" backcolor="#FFFFFF" uuid="a980c48a-224a-4aeb-96e8-037f5a20af82"/>
+				<graphicElement fill="Solid">
+					<pen lineWidth="0.5" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement positionType="Float" x="120" y="9" width="65" height="13" forecolor="#585858" uuid="cef829a8-7413-43a7-9b72-d81d15ea04ed">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Open Sans" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[CMC7]]></text>
+			</staticText>
+			<textField>
+				<reportElement positionType="Float" x="196" y="9" width="163" height="13" forecolor="#333333" uuid="f3b8c9ad-0231-4281-b89d-9fcfa543946a">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font fontName="Open Sans Semibold" size="9" isBold="true" isItalic="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{CMC7}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="32" splitType="Stretch">
+			<staticText>
+				<reportElement positionType="Float" x="120" y="9" width="65" height="13" forecolor="#585858" uuid="f57c0f62-1eb0-4b02-979c-0a127542cb4c">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Open Sans" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[ID Cheque]]></text>
+			</staticText>
+			<line>
+				<reportElement key="horizontal" positionType="Float" mode="Opaque" x="120" y="31" width="240" height="1" forecolor="#000000" backcolor="#FFFFFF" uuid="4430e956-3ec8-4227-816b-a6da07037e4d">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<graphicElement fill="Solid">
+					<pen lineWidth="0.75" lineStyle="Dotted" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement positionType="Float" x="196" y="9" width="163" height="13" forecolor="#333333" uuid="40fe4b0e-33f8-4228-bf6e-cdf11bb062f7">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font fontName="Open Sans Semibold" size="9" isBold="true" isItalic="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{ID}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="109" y="0" width="1" height="32" forecolor="#000000" backcolor="#FFFFFF" uuid="1c2a9a61-29ed-411c-8b7e-dcb3b4495521"/>
+				<graphicElement fill="Solid">
+					<pen lineWidth="0.5" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="371" y="0" width="1" height="32" forecolor="#000000" backcolor="#FFFFFF" uuid="e95dd00e-aba4-4ce5-bd74-b07030980afb"/>
+				<graphicElement fill="Solid">
+					<pen lineWidth="0.5" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+		</band>
+		<band height="61" splitType="Stretch">
+			<printWhenExpression><![CDATA[$P{ENDOSOS} != null && !$P{ENDOSOS}.isEmpty()]]></printWhenExpression>
+			<staticText>
+				<reportElement positionType="Float" x="120" y="19" width="99" height="13" forecolor="#585858" uuid="55836c6d-4156-4626-b12a-0bd16069dab0">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Open Sans" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Endosos]]></text>
+			</staticText>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="109" y="0" width="1" height="61" forecolor="#000000" backcolor="#FFFFFF" uuid="34bb3bee-db15-4e07-9746-192eca9d09ec"/>
+				<graphicElement fill="Solid">
+					<pen lineWidth="0.5" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="371" y="0" width="1" height="61" forecolor="#000000" backcolor="#FFFFFF" uuid="84393649-b8a8-4f94-b366-5e6e9752b753"/>
+				<graphicElement fill="Solid">
+					<pen lineWidth="0.5" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+			<subreport>
+				<reportElement stretchType="RelativeToTallestObject" x="120" y="42" width="240" height="7" isPrintWhenDetailOverflows="true" uuid="8951f4a8-1db7-4519-9cb7-006a9da48e40"/>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($P{ENDOSOS})]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "subReportEndosos.jasper"]]></subreportExpression>
+			</subreport>
+			<line>
+				<reportElement positionType="Float" x="120" y="42" width="240" height="1" uuid="b489139a-35a5-4973-9136-8c6693f7d31f"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineStyle="Dotted" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+		</band>
+		<band height="61" splitType="Stretch">
+			<printWhenExpression><![CDATA[$P{CESIONES} != null && !$P{CESIONES}.isEmpty()]]></printWhenExpression>
+			<staticText>
+				<reportElement positionType="Float" x="120" y="19" width="99" height="13" forecolor="#585858" uuid="55836c6d-4156-4626-b12a-0bd16069dab0">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Open Sans" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cesiones]]></text>
+			</staticText>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="109" y="0" width="1" height="61" forecolor="#000000" backcolor="#FFFFFF" uuid="34bb3bee-db15-4e07-9746-192eca9d09ec"/>
+				<graphicElement fill="Solid">
+					<pen lineWidth="0.5" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="371" y="0" width="1" height="61" forecolor="#000000" backcolor="#FFFFFF" uuid="84393649-b8a8-4f94-b366-5e6e9752b753"/>
+				<graphicElement fill="Solid">
+					<pen lineWidth="0.5" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+			<subreport>
+				<reportElement stretchType="RelativeToTallestObject" x="120" y="42" width="240" height="7" isPrintWhenDetailOverflows="true" uuid="8951f4a8-1db7-4519-9cb7-006a9da48e40"/>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($P{CESIONES})]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "subReportCedidos.jasper"]]></subreportExpression>
+			</subreport>
+			<line>
+				<reportElement positionType="Float" x="120" y="42" width="240" height="1" uuid="b489139a-35a5-4973-9136-8c6693f7d31f"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineStyle="Dotted" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+		</band>
+		<band height="100" splitType="Stretch">
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="120" y="11" width="239" height="16" isPrintWhenDetailOverflows="true" forecolor="#333333" uuid="70cdc60c-d40d-461e-844d-972a1e3183a2">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<printWhenExpression><![CDATA[($P{GRILLA_ORIGEN}.equals("EMITIDOS") || $P{GRILLA_ORIGEN}.equals("ENDOSADOS")) && $P{LEGALES} != null && !$P{LEGALES}.isEmpty()]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="Open Sans" size="7" isBold="false" isItalic="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{LEGALES}]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement positionType="Float" mode="Opaque" x="205" y="57" width="87" height="18" backcolor="#FFFFFF" uuid="8e65d53d-4186-4453-98fa-312b89862fd3">
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<imageExpression><![CDATA[$P{LOGO_CIERRE}]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement positionType="Float" x="196" y="39" width="87" height="11" forecolor="#585858" uuid="fa173c53-7f3b-41aa-aef3-46c51a67ed23">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="Open Sans Semibold" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{FECHA}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="109" y="0" width="1" height="100" forecolor="#000000" backcolor="#FFFFFF" uuid="02d10fc1-41d9-4895-80a8-89d8014e04c8"/>
+				<graphicElement fill="Solid">
+					<pen lineWidth="0.5" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="371" y="0" width="1" height="100" forecolor="#000000" backcolor="#FFFFFF" uuid="df7bb11e-fca3-429d-bbee-6ce1b1caf374"/>
+				<graphicElement fill="Solid">
+					<pen lineWidth="0.5" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="Float" mode="Opaque" x="109" y="99" width="262" height="1" forecolor="#000000" backcolor="#FFFFFF" uuid="2b9df464-070c-4209-99c1-57b40a5298ff"/>
+				<graphicElement fill="Solid">
+					<pen lineWidth="0.5" lineColor="#C9C9C9"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+</jasperReport>

@@ -1,0 +1,212 @@
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns1="http://webservices.api.transferencias.banelco.com/"
+	name="AliasBCRAClient" targetNamespace="http://webservices.api.transferencias.banelco.com/">
+	<wsdl:types>
+		<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			xmlns:tns="http://webservices.api.transferencias.banelco.com/"
+			attributeFormDefault="unqualified" elementFormDefault="unqualified"
+			targetNamespace="http://webservices.api.transferencias.banelco.com/">
+			<xs:complexType name="requestAlias">
+				<xs:complexContent>
+					<xs:extension base="tns:request">
+						<xs:sequence>
+							<xs:element minOccurs="0" name="alias" type="xs:string" />
+							<xs:element minOccurs="0" name="cbu" type="xs:string" />
+							<xs:element minOccurs="0" name="cuit" type="xs:string" />
+							<xs:element minOccurs="0" name="reasigna" type="xs:string" />
+							<xs:element minOccurs="0" name="terminalDTO" type="tns:terminalDTO" />
+							<xs:element minOccurs="0" name="tipoCta" type="xs:string" />
+							<xs:element minOccurs="0" name="tipoPersona" type="xs:string" />
+							<xs:element minOccurs="0" name="usuarioDTO" type="tns:usuarioDTO" />
+						</xs:sequence>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:complexType abstract="true" name="request">
+				<xs:sequence />
+			</xs:complexType>
+			<xs:complexType name="terminalDTO">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="canal" type="xs:string" />
+					<xs:element minOccurs="0" name="datosTerminal" type="xs:string" />
+					<xs:element minOccurs="0" name="direccionIp" type="xs:string" />
+					<xs:element minOccurs="0" name="terminal" type="xs:string" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="usuarioDTO">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="nroDocumento" type="xs:string" />
+					<xs:element minOccurs="0" name="tipoDocumento" type="xs:string" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="responseAlias">
+				<xs:complexContent>
+					<xs:extension base="tns:response">
+						<xs:sequence>
+							<xs:element minOccurs="0" name="alias" type="xs:string" />
+							<xs:element minOccurs="0" name="cbu" type="xs:string" />
+							<xs:element minOccurs="0" name="error" type="tns:error" />
+							<xs:element minOccurs="0" name="estado" type="xs:string" />
+							<xs:element minOccurs="0" name="reasigna" type="xs:string" />
+						</xs:sequence>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:complexType abstract="true" name="response">
+				<xs:sequence />
+			</xs:complexType>
+			<xs:complexType name="error">
+				<xs:complexContent>
+					<xs:extension base="tns:response">
+						<xs:sequence>
+							<xs:element minOccurs="0" name="codigo" type="xs:string" />
+							<xs:element minOccurs="0" name="mensaje" type="xs:string" />
+						</xs:sequence>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:complexType name="requestModificaAlias">
+				<xs:complexContent>
+					<xs:extension base="tns:request">
+						<xs:sequence>
+							<xs:element minOccurs="0" name="alias" type="xs:string" />
+							<xs:element minOccurs="0" name="aliasOriginal" type="xs:string" />
+							<xs:element minOccurs="0" name="cbu" type="xs:string" />
+							<xs:element minOccurs="0" name="cuit" type="xs:string" />
+							<xs:element minOccurs="0" name="reasigna" type="xs:string" />
+							<xs:element minOccurs="0" name="terminalDTO" type="tns:terminalDTO" />
+							<xs:element minOccurs="0" name="tipoCta" type="xs:string" />
+							<xs:element minOccurs="0" name="tipoPersona" type="xs:string" />
+							<xs:element minOccurs="0" name="usuarioDTO" type="tns:usuarioDTO" />
+						</xs:sequence>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:complexType name="requestConsultaCBU">
+				<xs:complexContent>
+					<xs:extension base="tns:request">
+						<xs:sequence>
+							<xs:element minOccurs="0" name="cbu" type="xs:string" />
+							<xs:element minOccurs="0" name="terminalDTO" type="tns:terminalDTO" />
+							<xs:element minOccurs="0" name="usuarioDTO" type="tns:usuarioDTO" />
+						</xs:sequence>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:complexType name="requestConsultaAlias">
+				<xs:complexContent>
+					<xs:extension base="tns:request">
+						<xs:sequence>
+							<xs:element minOccurs="0" name="alias" type="xs:string" />
+							<xs:element minOccurs="0" name="terminalDTO" type="tns:terminalDTO" />
+							<xs:element minOccurs="0" name="usuarioDTO" type="tns:usuarioDTO" />
+						</xs:sequence>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:element name="TransferenciasException" type="tns:TransferenciasException" />
+			<xs:complexType name="TransferenciasException">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="codigo" type="xs:string" />
+					<xs:element minOccurs="0" name="mensaje" type="xs:string" />
+					<xs:element minOccurs="0" name="message" type="xs:string" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="bajaAlias" nillable="true" type="tns:requestAlias" />
+			<xs:element name="bajaAliasResponse" nillable="true"
+				type="tns:responseAlias" />
+			<xs:element name="modificarAlias" nillable="true"
+				type="tns:requestModificaAlias" />
+			<xs:element name="modificarAliasResponse" nillable="true"
+				type="tns:responseAlias" />
+			<xs:element name="echo" nillable="true" type="xs:string" />
+			<xs:element name="echoResponse" nillable="true" type="xs:string" />
+			<xs:element name="obtenerAliasDesdeCBU" nillable="true"
+				type="tns:requestConsultaCBU" />
+			<xs:element name="obtenerAliasDesdeCBUResponse" nillable="true"
+				type="tns:responseAlias" />
+			<xs:element name="obtenerCBUDesdeAlias" nillable="true"
+				type="tns:requestConsultaAlias" />
+			<xs:element name="obtenerCBUDesdeAliasResponse" nillable="true"
+				type="tns:responseAlias" />
+			<xs:element name="altaAlias" nillable="true" type="tns:requestAlias" />
+			<xs:element name="altaAliasResponse" nillable="true"
+				type="tns:responseAlias" />
+		</xs:schema>
+	</wsdl:types>
+	<wsdl:message name="modificarAlias">
+		<wsdl:part element="ns1:modificarAlias" name="modificarAlias"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="altaAlias">
+		<wsdl:part element="ns1:altaAlias" name="altaAlias"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="obtenerCBUDesdeAliasResponse">
+		<wsdl:part element="ns1:obtenerCBUDesdeAliasResponse" name="obtenerCBUDesdeAliasResponse"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="obtenerAliasDesdeCBUResponse">
+		<wsdl:part element="ns1:obtenerAliasDesdeCBUResponse" name="obtenerAliasDesdeCBUResponse"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="bajaAliasResponse">
+		<wsdl:part element="ns1:bajaAliasResponse" name="bajaAliasResponse"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="TransferenciasException">
+		<wsdl:part element="ns1:TransferenciasException" name="TransferenciasException"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="echoResponse">
+		<wsdl:part element="ns1:echoResponse" name="echoResponse"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="echo">
+		<wsdl:part element="ns1:echo" name="echo"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="obtenerCBUDesdeAlias">
+		<wsdl:part element="ns1:obtenerCBUDesdeAlias" name="obtenerCBUDesdeAlias"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="obtenerAliasDesdeCBU">
+		<wsdl:part element="ns1:obtenerAliasDesdeCBU" name="obtenerAliasDesdeCBU"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="modificarAliasResponse">
+		<wsdl:part element="ns1:modificarAliasResponse" name="modificarAliasResponse"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="altaAliasResponse">
+		<wsdl:part element="ns1:altaAliasResponse" name="altaAliasResponse"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="bajaAlias">
+		<wsdl:part element="ns1:bajaAlias" name="bajaAlias"></wsdl:part>
+	</wsdl:message>
+	<wsdl:portType name="AliasBCRAClient">
+		<wsdl:documentation>Endpoint WS-Transferencias. SOAP con WS-Security
+		</wsdl:documentation>
+		<wsdl:operation name="bajaAlias">
+			<wsdl:input message="ns1:bajaAlias" name="bajaAlias"></wsdl:input>
+			<wsdl:output message="ns1:bajaAliasResponse" name="bajaAliasResponse"></wsdl:output>
+			<wsdl:fault message="ns1:TransferenciasException" name="TransferenciasException"></wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="modificarAlias">
+			<wsdl:input message="ns1:modificarAlias" name="modificarAlias"></wsdl:input>
+			<wsdl:output message="ns1:modificarAliasResponse" name="modificarAliasResponse"></wsdl:output>
+			<wsdl:fault message="ns1:TransferenciasException" name="TransferenciasException"></wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="echo">
+			<wsdl:input message="ns1:echo" name="echo"></wsdl:input>
+			<wsdl:output message="ns1:echoResponse" name="echoResponse"></wsdl:output>
+			<wsdl:fault message="ns1:TransferenciasException" name="TransferenciasException"></wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="obtenerAliasDesdeCBU">
+			<wsdl:input message="ns1:obtenerAliasDesdeCBU" name="obtenerAliasDesdeCBU"></wsdl:input>
+			<wsdl:output message="ns1:obtenerAliasDesdeCBUResponse"
+				name="obtenerAliasDesdeCBUResponse"></wsdl:output>
+			<wsdl:fault message="ns1:TransferenciasException" name="TransferenciasException"></wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="obtenerCBUDesdeAlias">
+			<wsdl:input message="ns1:obtenerCBUDesdeAlias" name="obtenerCBUDesdeAlias"></wsdl:input>
+			<wsdl:output message="ns1:obtenerCBUDesdeAliasResponse"
+				name="obtenerCBUDesdeAliasResponse"></wsdl:output>
+			<wsdl:fault message="ns1:TransferenciasException" name="TransferenciasException"></wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="altaAlias">
+			<wsdl:input message="ns1:altaAlias" name="altaAlias"></wsdl:input>
+			<wsdl:output message="ns1:altaAliasResponse" name="altaAliasResponse"></wsdl:output>
+			<wsdl:fault message="ns1:TransferenciasException" name="TransferenciasException"></wsdl:fault>
+		</wsdl:operation>
+	</wsdl:portType>
+</wsdl:definitions>

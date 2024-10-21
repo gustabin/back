@@ -1,0 +1,853 @@
+{
+  "accounts": [
+    {
+      "accountId": "00720010002001705737",
+      "accountNumber": "002001705737",
+      "branch": "0010",
+      "type": "saving",
+      "currency": "ars",
+      "cbuDetails": {
+        "number": "0720010630000017057379"
+      },
+      "status": "open",
+      "description": "CAJA DE AHORRO PESOS",
+      "customerId": "00276937",
+      "signatureType": "unipersonal",
+      "agreementNumber": "0733505",
+      "openingBranch": "0010",
+      "balances": [
+        {
+          "amount": 82203.21,
+          "type": "main",
+          "currency": "ars"
+        },
+        {
+          "amount": 0.00,
+          "type": "overdraft",
+          "currency": "ars"
+        },
+        {
+          "amount": 0.00,
+          "type": "unpaid",
+          "currency": "ars"
+        },
+        {
+          "amount": 0.00,
+          "type": "total_agreement",
+          "currency": "ars"
+        },
+        {
+          "amount": 0.00,
+          "type": "withholding",
+          "currency": "ars"
+        },
+        {
+          "amount": 0.00,
+          "type": "withholding_24hs",
+          "currency": "ars"
+        },
+        {
+          "amount": 0.00,
+          "type": "cheque_withholding_24hs",
+          "currency": "ars"
+        },
+        {
+          "amount": 0.00,
+          "type": "precautionary_withholding",
+          "currency": "ars"
+        },
+        {
+          "amount": 0.00,
+          "type": "withholding_48hs",
+          "currency": "ars"
+        },
+        {
+          "amount": 0.00,
+          "type": "withholding_72hs",
+          "currency": "ars"
+        },
+        {
+          "amount": 0.00,
+          "type": "cheque_without_withholding",
+          "currency": "ars"
+        },
+        {
+          "amount": 82203.21,
+          "type": "real",
+          "currency": "ars"
+        },
+        {
+          "amount": 0.00,
+          "type": "total_agreement_available",
+          "currency": "ars"
+        }
+      ],
+      "tags": [],
+      "accountDetails": [
+        {
+          "type": "saving",
+          "currency": "ars",
+          "balances": [
+            {
+              "amount": 82203.21,
+              "type": "main",
+              "currency": "ars"
+            },
+            {
+              "amount": 82203.21,
+              "type": "real",
+              "currency": "ars"
+            }
+          ]
+        }
+      ],
+      "creationDate": "2017-10-12T00:00:00.000-03:00",
+      "participantQuality": "owner",
+      "cbu": "0720010630000017057379"
+    },
+    {
+      "accountId": "00720033005000081995",
+      "accountNumber": "005000081995",
+      "branch": "0033",
+      "type": "current",
+      "currency": "ars",
+      "cbuDetails": {
+        "number": "0720033520000000819954"
+      },
+      "status": "open",
+      "description": "CUENTA CORRIENTE EN PESOS",
+      "customerId": "00276937",
+      "signatureType": "indistinct",
+      "agreementNumber": "0000000",
+      "openingBranch": "0033",
+      "balances": [
+        {
+          "amount": 8518.13,
+          "type": "main",
+          "currency": "ars"
+        },
+        {
+          "amount": 0.00,
+          "type": "overdraft",
+          "currency": "ars"
+        },
+        {
+          "amount": 0.00,
+          "type": "unpaid",
+          "currency": "ars"
+        },
+        {
+          "amount": 0.00,
+          "type": "total_agreement",
+          "currency": "ars"
+        },
+        {
+          "amount": 0.00,
+          "type": "withholding",
+          "currency": "ars"
+        },
+        {
+          "amount": 0.00,
+          "type": "withholding_24hs",
+          "currency": "ars"
+        },
+        {
+          "amount": 0.00,
+          "type": "cheque_withholding_24hs",
+          "currency": "ars"
+        },
+        {
+          "amount": 0.00,
+          "type": "precautionary_withholding",
+          "currency": "ars"
+        },
+        {
+          "amount": 0.00,
+          "type": "withholding_48hs",
+          "currency": "ars"
+        },
+        {
+          "amount": 0.00,
+          "type": "withholding_72hs",
+          "currency": "ars"
+        },
+        {
+          "amount": 0.00,
+          "type": "cheque_without_withholding",
+          "currency": "ars"
+        },
+        {
+          "amount": 8518.13,
+          "type": "real",
+          "currency": "ars"
+        },
+        {
+          "amount": 0.00,
+          "type": "total_agreement_available",
+          "currency": "ars"
+        }
+      ],
+      "tags": [
+        "overdraft",
+        "miscellaneous",
+        "company_account"
+      ],
+      "accountDetails": [
+        {
+          "type": "current",
+          "currency": "ars",
+          "balances": [
+            {
+              "amount": 8518.13,
+              "type": "main",
+              "currency": "ars"
+            },
+            {
+              "amount": 8518.13,
+              "type": "real",
+              "currency": "ars"
+            }
+          ]
+        }
+      ],
+      "creationDate": "2004-05-06T00:00:00.000-03:00",
+      "participantQuality": "owner",
+      "cbu": "0720033520000000819954"
+    },
+    {
+      "accountId": "00720033005000090450",
+      "accountNumber": "005000090450",
+      "branch": "0033",
+      "type": "current",
+      "currency": "ars",
+      "cbuDetails": {
+        "number": "0720033520000000904504"
+      },
+      "status": "open",
+      "description": "CUENTA CORRIENTE EN PESOS",
+      "customerId": "10308730",
+      "signatureType": "indistinct_to_the_order",
+      "agreementNumber": "0000000",
+      "openingBranch": "0033",
+      "balances": [
+        {
+          "amount": 42973.94,
+          "type": "main",
+          "currency": "ars"
+        },
+        {
+          "amount": 2500.00,
+          "type": "overdraft",
+          "currency": "ars"
+        },
+        {
+          "amount": 0.00,
+          "type": "unpaid",
+          "currency": "ars"
+        },
+        {
+          "amount": 2500.00,
+          "type": "total_agreement",
+          "currency": "ars"
+        },
+        {
+          "amount": 0.00,
+          "type": "withholding",
+          "currency": "ars"
+        },
+        {
+          "amount": 0.00,
+          "type": "withholding_24hs",
+          "currency": "ars"
+        },
+        {
+          "amount": 0.00,
+          "type": "cheque_withholding_24hs",
+          "currency": "ars"
+        },
+        {
+          "amount": 0.00,
+          "type": "precautionary_withholding",
+          "currency": "ars"
+        },
+        {
+          "amount": 0.00,
+          "type": "withholding_48hs",
+          "currency": "ars"
+        },
+        {
+          "amount": 0.00,
+          "type": "withholding_72hs",
+          "currency": "ars"
+        },
+        {
+          "amount": 0.00,
+          "type": "cheque_without_withholding",
+          "currency": "ars"
+        },
+        {
+          "amount": 42973.94,
+          "type": "real",
+          "currency": "ars"
+        },
+        {
+          "amount": 2500.00,
+          "type": "total_agreement_available",
+          "currency": "ars"
+        }
+      ],
+      "tags": [
+        "overdraft",
+        "miscellaneous",
+        "company_account"
+      ],
+      "accountDetails": [
+        {
+          "type": "current",
+          "currency": "ars",
+          "balances": [
+            {
+              "amount": 42973.94,
+              "type": "main",
+              "currency": "ars"
+            },
+            {
+              "amount": 42973.94,
+              "type": "real",
+              "currency": "ars"
+            }
+          ]
+        }
+      ],
+      "creationDate": "2009-10-29T00:00:00.000-03:00",
+      "participantQuality": "legal_representative",
+      "cbu": "0720033520000000904504"
+    },
+    {
+      "accountId": "00720033005000090467",
+      "accountNumber": "005000090467",
+      "branch": "0033",
+      "type": "current",
+      "currency": "ars",
+      "cbuDetails": {
+        "number": "0720033520000000904672"
+      },
+      "status": "open",
+      "description": "CUENTA CORRIENTE ESPECIAL EN $",
+      "customerId": "10308730",
+      "signatureType": "indistinct_to_the_order",
+      "agreementNumber": "0000000",
+      "openingBranch": "0033",
+      "balances": [
+        {
+          "amount": 3425479.45,
+          "type": "main",
+          "currency": "ars"
+        },
+        {
+          "amount": 0.00,
+          "type": "overdraft",
+          "currency": "ars"
+        },
+        {
+          "amount": 0.00,
+          "type": "unpaid",
+          "currency": "ars"
+        },
+        {
+          "amount": 0.00,
+          "type": "total_agreement",
+          "currency": "ars"
+        },
+        {
+          "amount": 0.00,
+          "type": "withholding",
+          "currency": "ars"
+        },
+        {
+          "amount": 0.00,
+          "type": "withholding_24hs",
+          "currency": "ars"
+        },
+        {
+          "amount": 0.00,
+          "type": "cheque_withholding_24hs",
+          "currency": "ars"
+        },
+        {
+          "amount": 0.00,
+          "type": "precautionary_withholding",
+          "currency": "ars"
+        },
+        {
+          "amount": 0.00,
+          "type": "withholding_48hs",
+          "currency": "ars"
+        },
+        {
+          "amount": 0.00,
+          "type": "withholding_72hs",
+          "currency": "ars"
+        },
+        {
+          "amount": 0.00,
+          "type": "cheque_without_withholding",
+          "currency": "ars"
+        },
+        {
+          "amount": 3425479.45,
+          "type": "real",
+          "currency": "ars"
+        },
+        {
+          "amount": 0.00,
+          "type": "total_agreement_available",
+          "currency": "ars"
+        }
+      ],
+      "tags": [
+        "overdraft"
+      ],
+      "accountDetails": [
+        {
+          "type": "current",
+          "currency": "ars",
+          "balances": [
+            {
+              "amount": 3425479.45,
+              "type": "main",
+              "currency": "ars"
+            },
+            {
+              "amount": 3425479.45,
+              "type": "real",
+              "currency": "ars"
+            }
+          ]
+        }
+      ],
+      "creationDate": "2009-11-02T00:00:00.000-03:00",
+      "participantQuality": "legal_representative",
+      "cbu": "0720033520000000904672"
+    },
+    {
+      "accountId": "00720033006000090474",
+      "accountNumber": "006000090474",
+      "branch": "0033",
+      "type": "current",
+      "currency": "usd",
+      "cbuDetails": {
+        "number": "0720033521000000904741"
+      },
+      "status": "open",
+      "description": "CTA CTE ESPECIAL U$S  SIN INTERES",
+      "customerId": "10308730",
+      "signatureType": "indistinct_to_the_order",
+      "agreementNumber": "0000000",
+      "openingBranch": "0033",
+      "balances": [
+        {
+          "amount": 8414.11,
+          "type": "main",
+          "currency": "usd"
+        },
+        {
+          "amount": 0.00,
+          "type": "overdraft",
+          "currency": "usd"
+        },
+        {
+          "amount": 0.00,
+          "type": "unpaid",
+          "currency": "usd"
+        },
+        {
+          "amount": 0.00,
+          "type": "total_agreement",
+          "currency": "usd"
+        },
+        {
+          "amount": 0.00,
+          "type": "withholding",
+          "currency": "usd"
+        },
+        {
+          "amount": 0.00,
+          "type": "withholding_24hs",
+          "currency": "usd"
+        },
+        {
+          "amount": 0.00,
+          "type": "cheque_withholding_24hs",
+          "currency": "usd"
+        },
+        {
+          "amount": 0.00,
+          "type": "precautionary_withholding",
+          "currency": "usd"
+        },
+        {
+          "amount": 0.00,
+          "type": "withholding_48hs",
+          "currency": "usd"
+        },
+        {
+          "amount": 0.00,
+          "type": "withholding_72hs",
+          "currency": "usd"
+        },
+        {
+          "amount": 0.00,
+          "type": "cheque_without_withholding",
+          "currency": "usd"
+        },
+        {
+          "amount": 8414.11,
+          "type": "real",
+          "currency": "usd"
+        },
+        {
+          "amount": 0.00,
+          "type": "total_agreement_available",
+          "currency": "usd"
+        }
+      ],
+      "tags": [
+        "overdraft"
+      ],
+      "accountDetails": [
+        {
+          "type": "current",
+          "currency": "usd",
+          "balances": [
+            {
+              "amount": 8414.11,
+              "type": "main",
+              "currency": "usd"
+            },
+            {
+              "amount": 8414.11,
+              "type": "real",
+              "currency": "usd"
+            }
+          ]
+        }
+      ],
+      "creationDate": "2009-11-02T00:00:00.000-03:00",
+      "participantQuality": "legal_representative",
+      "cbu": "0720033521000000904741"
+    },
+    {
+      "accountId": "00720033007003663936",
+      "accountNumber": "007003663936",
+      "branch": "0033",
+      "type": "unique",
+      "cbuDetails": {
+        "number": "0720033588000036639368"
+      },
+      "status": "open",
+      "category": "BUSINESS_PLATINUM",
+      "description": "CUENTAS A LA VISTA",
+      "customerId": "00276937",
+      "signatureType": "unipersonal",
+      "agreementNumber": "0000000",
+      "openingBranch": "0033",
+      "balances": [
+        {
+          "amount": 22020.02,
+          "type": "main",
+          "currency": "ars"
+        },
+        {
+          "amount": 0.00,
+          "type": "overdraft",
+          "currency": "ars"
+        },
+        {
+          "amount": 0.00,
+          "type": "unpaid",
+          "currency": "ars"
+        },
+        {
+          "amount": 8000.00,
+          "type": "total_agreement",
+          "currency": "ars"
+        },
+        {
+          "amount": 0.00,
+          "type": "withholding",
+          "currency": "ars"
+        },
+        {
+          "amount": 0.00,
+          "type": "withholding_24hs",
+          "currency": "ars"
+        },
+        {
+          "amount": 0.00,
+          "type": "cheque_withholding_24hs",
+          "currency": "ars"
+        },
+        {
+          "amount": 0.00,
+          "type": "precautionary_withholding",
+          "currency": "ars"
+        },
+        {
+          "amount": 0.00,
+          "type": "withholding_48hs",
+          "currency": "ars"
+        },
+        {
+          "amount": 0.00,
+          "type": "withholding_72hs",
+          "currency": "ars"
+        },
+        {
+          "amount": 0.00,
+          "type": "cheque_without_withholding",
+          "currency": "ars"
+        },
+        {
+          "amount": 6533.77,
+          "type": "main",
+          "currency": "usd"
+        },
+        {
+          "amount": 0.00,
+          "type": "overdraft",
+          "currency": "usd"
+        },
+        {
+          "amount": 0.00,
+          "type": "unpaid",
+          "currency": "usd"
+        },
+        {
+          "amount": 0.00,
+          "type": "total_agreement",
+          "currency": "usd"
+        },
+        {
+          "amount": 0.00,
+          "type": "withholding",
+          "currency": "usd"
+        },
+        {
+          "amount": 0.00,
+          "type": "withholding_24hs",
+          "currency": "usd"
+        },
+        {
+          "amount": 0.00,
+          "type": "cheque_withholding_24hs",
+          "currency": "usd"
+        },
+        {
+          "amount": 0.00,
+          "type": "precautionary_withholding",
+          "currency": "usd"
+        },
+        {
+          "amount": 0.00,
+          "type": "withholding_48hs",
+          "currency": "usd"
+        },
+        {
+          "amount": 0.00,
+          "type": "withholding_72hs",
+          "currency": "usd"
+        },
+        {
+          "amount": 0.00,
+          "type": "cheque_without_withholding",
+          "currency": "usd"
+        },
+        {
+          "amount": 22020.02,
+          "type": "real",
+          "currency": "ars"
+        },
+        {
+          "amount": 8000.00,
+          "type": "total_agreement_available",
+          "currency": "ars"
+        },
+        {
+          "amount": 6533.77,
+          "type": "real",
+          "currency": "usd"
+        },
+        {
+          "amount": 0.00,
+          "type": "total_agreement_available",
+          "currency": "usd"
+        }
+      ],
+      "tags": [
+        "overdraft"
+      ],
+      "accountDetails": [
+        {
+          "type": "saving",
+          "currency": "ars",
+          "balances": [
+            {
+              "amount": 22010.02,
+              "type": "main",
+              "currency": "ars"
+            },
+            {
+              "amount": 22010.02,
+              "type": "real",
+              "currency": "ars"
+            }
+          ]
+        },
+        {
+          "type": "current",
+          "currency": "ars",
+          "balances": [
+            {
+              "amount": 10.00,
+              "type": "main",
+              "currency": "ars"
+            },
+            {
+              "amount": 10.00,
+              "type": "real",
+              "currency": "ars"
+            }
+          ]
+        },
+        {
+          "type": "saving",
+          "currency": "usd",
+          "balances": [
+            {
+              "amount": 6533.77,
+              "type": "main",
+              "currency": "usd"
+            },
+            {
+              "amount": 6533.77,
+              "type": "real",
+              "currency": "usd"
+            }
+          ]
+        }
+      ],
+      "creationDate": "2013-11-27T00:00:00.000-03:00",
+      "participantQuality": "owner",
+      "cbu": "0720033588000036639368"
+    },
+    {
+      "accountId": "00720420005000006220",
+      "accountNumber": "005000006220",
+      "branch": "0420",
+      "type": "current",
+      "currency": "ars",
+      "cbuDetails": {
+        "number": "0720420720000000062204"
+      },
+      "status": "open",
+      "description": "CUENTA CORRIENTE EN PESOS",
+      "customerId": "10308730",
+      "signatureType": "unipersonal_to_the_order",
+      "agreementNumber": "0000000",
+      "openingBranch": "0420",
+      "balances": [
+        {
+          "amount": 153932.42,
+          "type": "main",
+          "currency": "ars"
+        },
+        {
+          "amount": 0.00,
+          "type": "overdraft",
+          "currency": "ars"
+        },
+        {
+          "amount": 0.00,
+          "type": "unpaid",
+          "currency": "ars"
+        },
+        {
+          "amount": 0.00,
+          "type": "total_agreement",
+          "currency": "ars"
+        },
+        {
+          "amount": 0.00,
+          "type": "withholding",
+          "currency": "ars"
+        },
+        {
+          "amount": 0.00,
+          "type": "withholding_24hs",
+          "currency": "ars"
+        },
+        {
+          "amount": 0.00,
+          "type": "cheque_withholding_24hs",
+          "currency": "ars"
+        },
+        {
+          "amount": 0.00,
+          "type": "precautionary_withholding",
+          "currency": "ars"
+        },
+        {
+          "amount": 0.00,
+          "type": "withholding_48hs",
+          "currency": "ars"
+        },
+        {
+          "amount": 0.00,
+          "type": "withholding_72hs",
+          "currency": "ars"
+        },
+        {
+          "amount": 0.00,
+          "type": "cheque_without_withholding",
+          "currency": "ars"
+        },
+        {
+          "amount": 153932.42,
+          "type": "real",
+          "currency": "ars"
+        },
+        {
+          "amount": 0.00,
+          "type": "total_agreement_available",
+          "currency": "ars"
+        }
+      ],
+      "tags": [
+        "overdraft",
+        "company_account"
+      ],
+      "accountDetails": [
+        {
+          "type": "current",
+          "currency": "ars",
+          "balances": [
+            {
+              "amount": 153932.42,
+              "type": "main",
+              "currency": "ars"
+            },
+            {
+              "amount": 153932.42,
+              "type": "real",
+              "currency": "ars"
+            }
+          ]
+        }
+      ],
+      "creationDate": "2016-08-22T00:00:00.000-03:00",
+      "participantQuality": "legal_representative",
+      "cbu": "0720420720000000062204"
+    }
+  ]
+}

@@ -1,0 +1,172 @@
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://impl.webservices.api.transferencias.banelco.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns2="http://schemas.xmlsoap.org/soap/http" xmlns:ns1="http://webservices.api.transferencias.banelco.com/" name="AliasBCRAClient" targetNamespace="http://impl.webservices.api.transferencias.banelco.com/">
+<!-- 	<wsdl:import location="https://200.59.131.202/transf-api/external/AliasBCRAClient?wsdl=AliasBCRAClient.wsdl" namespace="http://webservices.api.transferencias.banelco.com/"></wsdl:import> -->
+	<wsdl:import location="aliasBCRA.wsdl" namespace="http://webservices.api.transferencias.banelco.com/"></wsdl:import>
+	<wsdl:binding name="AliasBCRAClientSoapBinding" type="ns1:AliasBCRAClient">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<wsp:PolicyReference URI="#SecurityServiceSignThenEncryptPolicy"/>
+		<wsdl:operation name="bajaAlias">
+			<soap:operation soapAction="" style="document"/>
+			<wsdl:input name="bajaAlias">
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output name="bajaAliasResponse">
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="TransferenciasException">
+				<soap:fault name="TransferenciasException" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="modificarAlias">
+			<soap:operation soapAction="" style="document"/>
+			<wsdl:input name="modificarAlias">
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output name="modificarAliasResponse">
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="TransferenciasException">
+				<soap:fault name="TransferenciasException" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="echo">
+			<soap:operation soapAction="" style="document"/>
+			<wsdl:input name="echo">
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output name="echoResponse">
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="TransferenciasException">
+				<soap:fault name="TransferenciasException" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="obtenerAliasDesdeCBU">
+			<soap:operation soapAction="" style="document"/>
+			<wsdl:input name="obtenerAliasDesdeCBU">
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output name="obtenerAliasDesdeCBUResponse">
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="TransferenciasException">
+				<soap:fault name="TransferenciasException" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="obtenerCBUDesdeAlias">
+			<soap:operation soapAction="" style="document"/>
+			<wsdl:input name="obtenerCBUDesdeAlias">
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output name="obtenerCBUDesdeAliasResponse">
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="TransferenciasException">
+				<soap:fault name="TransferenciasException" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="altaAlias">
+			<soap:operation soapAction="" style="document"/>
+			<wsdl:input name="altaAlias">
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output name="altaAliasResponse">
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="TransferenciasException">
+				<soap:fault name="TransferenciasException" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="AliasBCRAClient">
+		<wsdl:port binding="tns:AliasBCRAClientSoapBinding" name="TransferenciasClientImplPort">
+			<soap:address location="https://200.59.131.202/transf-api/external/AliasBCRAClient"/>
+		</wsdl:port>
+	</wsdl:service>
+	<wsp:Policy xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702" wsu:Id="SecurityServiceSignThenEncryptPolicy">
+		<wsp:ExactlyOne>
+			<wsp:All>
+				<sp:AsymmetricBinding>
+					<wsp:Policy>
+						<sp:InitiatorToken>
+							<wsp:Policy>
+								<sp:X509Token sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient">
+									<wsp:Policy>
+										<sp:WssX509V3Token10/>
+										<sp:WssX509V3Token11/>
+									</wsp:Policy>
+								</sp:X509Token>
+							</wsp:Policy>
+						</sp:InitiatorToken>
+						<sp:RecipientToken>
+							<wsp:Policy>
+								<sp:X509Token sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/Always">
+									<wsp:Policy>
+										<sp:WssX509V3Token10/>
+										<sp:WssX509V3Token11/>
+									</wsp:Policy>
+								</sp:X509Token>
+							</wsp:Policy>
+						</sp:RecipientToken>
+						<sp:AlgorithmSuite>
+							<wsp:Policy>
+								<sp:Basic128Rsa15/>
+								<sp:Basic256Rsa15/>
+								<sp:Basic128Sha256Rsa15/>
+								<sp:Basic256Sha256Rsa15/>
+							</wsp:Policy>
+						</sp:AlgorithmSuite>
+						<sp:Layout>
+							<wsp:Policy>
+								<sp:Lax/>
+							</wsp:Policy>
+						</sp:Layout>
+						<sp:IncludeTimestamp/>
+						<sp:ProtectTokens/>
+						<sp:OnlySignEntireHeadersAndBody/>
+					</wsp:Policy>
+				</sp:AsymmetricBinding>
+				<sp:Wss10>
+					<wsp:Policy>
+						<sp:MustSupportRefKeyIdentifier/>
+						<sp:MustSupportRefIssuerSerial/>
+						<sp:MustSupportRefThumbprint/>
+						<sp:MustSupportRefEncryptedKey/>
+					</wsp:Policy>
+				</sp:Wss10>
+				<sp:Wss11>
+					<wsp:Policy>
+						<sp:MustSupportRefKeyIdentifier/>
+						<sp:MustSupportRefIssuerSerial/>
+						<sp:MustSupportRefThumbprint/>
+						<sp:MustSupportRefEncryptedKey/>
+						<sp:RequireSignatureConfirmation/>
+					</wsp:Policy>
+				</sp:Wss11>
+			</wsp:All>
+		</wsp:ExactlyOne>
+		<wsp:Policy wsu:Id="InputBindingPolicy">
+			<wsp:ExactlyOne>
+				<wsp:All>
+					<sp:EncryptedParts>
+						<sp:Body/>
+					</sp:EncryptedParts>
+					<sp:SignedParts>
+						<sp:Body/>
+					</sp:SignedParts>
+				</wsp:All>
+			</wsp:ExactlyOne>
+		</wsp:Policy>
+		<wsp:Policy wsu:Id="OutputBindingPolicy">
+			<wsp:ExactlyOne>
+				<wsp:All>
+					<sp:EncryptedParts>
+						<sp:Body/>
+					</sp:EncryptedParts>
+					<sp:SignedParts>
+						<sp:Body/>
+					</sp:SignedParts>
+				</wsp:All>
+			</wsp:ExactlyOne>
+		</wsp:Policy>
+	</wsp:Policy>
+</wsdl:definitions>

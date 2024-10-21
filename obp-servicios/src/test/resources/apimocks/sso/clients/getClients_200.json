@@ -1,0 +1,542 @@
+[
+  {
+    "id": "d3db9c28-d5ce-49e9-995f-16f45e5aac3b",
+    "clientId": "account",
+    "name": "${client_account}",
+    "rootUrl": "${authBaseUrl}",
+    "baseUrl": "/realms/santander/account/",
+    "surrogateAuthRequired": false,
+    "enabled": true,
+    "alwaysDisplayInConsole": false,
+    "clientAuthenticatorType": "client-secret",
+    "redirectUris": [
+      "/realms/santander/account/*"
+    ],
+    "webOrigins": [],
+    "notBefore": 0,
+    "bearerOnly": false,
+    "consentRequired": false,
+    "standardFlowEnabled": true,
+    "implicitFlowEnabled": false,
+    "directAccessGrantsEnabled": false,
+    "serviceAccountsEnabled": false,
+    "publicClient": true,
+    "frontchannelLogout": false,
+    "protocol": "openid-connect",
+    "attributes": {},
+    "authenticationFlowBindingOverrides": {},
+    "fullScopeAllowed": false,
+    "nodeReRegistrationTimeout": 0,
+    "defaultClientScopes": [
+      "web-origins",
+      "profile",
+      "roles",
+      "email"
+    ],
+    "optionalClientScopes": [
+      "address",
+      "phone",
+      "offline_access",
+      "microprofile-jwt"
+    ],
+    "access": {
+      "view": true,
+      "configure": true,
+      "manage": true
+    }
+  },
+  {
+    "id": "32ce1830-7993-4632-b767-c5147297e8d1",
+    "clientId": "account-console",
+    "name": "${client_account-console}",
+    "rootUrl": "${authBaseUrl}",
+    "baseUrl": "/realms/santander/account/",
+    "surrogateAuthRequired": false,
+    "enabled": true,
+    "alwaysDisplayInConsole": false,
+    "clientAuthenticatorType": "client-secret",
+    "redirectUris": [
+      "/realms/santander/account",
+      "/realms/santander/account/*"
+    ],
+    "webOrigins": [],
+    "notBefore": 0,
+    "bearerOnly": false,
+    "consentRequired": false,
+    "standardFlowEnabled": true,
+    "implicitFlowEnabled": false,
+    "directAccessGrantsEnabled": false,
+    "serviceAccountsEnabled": false,
+    "publicClient": true,
+    "frontchannelLogout": false,
+    "protocol": "openid-connect",
+    "attributes": {
+      "saml.multivalued.roles": "false",
+      "saml.force.post.binding": "false",
+      "frontchannel.logout.session.required": "false",
+      "oauth2.device.authorization.grant.enabled": "false",
+      "backchannel.logout.revoke.offline.tokens": "false",
+      "saml.server.signature.keyinfo.ext": "false",
+      "use.refresh.tokens": "true",
+      "oidc.ciba.grant.enabled": "false",
+      "backchannel.logout.session.required": "false",
+      "client_credentials.use_refresh_token": "false",
+      "saml.client.signature": "false",
+      "require.pushed.authorization.requests": "false",
+      "pkce.code.challenge.method": "S256",
+      "saml.allow.ecp.flow": "false",
+      "saml.assertion.signature": "false",
+      "id.token.as.detached.signature": "false",
+      "saml.encrypt": "false",
+      "saml.server.signature": "false",
+      "exclude.session.state.from.auth.response": "false",
+      "saml.artifact.binding": "false",
+      "saml_force_name_id_format": "false",
+      "tls.client.certificate.bound.access.tokens": "false",
+      "acr.loa.map": "{}",
+      "saml.authnstatement": "false",
+      "display.on.consent.screen": "false",
+      "token.response.type.bearer.lower-case": "false",
+      "saml.onetimeuse.condition": "false"
+    },
+    "authenticationFlowBindingOverrides": {},
+    "fullScopeAllowed": false,
+    "nodeReRegistrationTimeout": 0,
+    "protocolMappers": [
+      {
+        "id": "40b55063-2a74-4a98-801f-a34134284290",
+        "name": "audience resolve",
+        "protocol": "openid-connect",
+        "protocolMapper": "oidc-audience-resolve-mapper",
+        "consentRequired": false,
+        "config": {}
+      }
+    ],
+    "defaultClientScopes": [
+      "web-origins",
+      "profile",
+      "roles",
+      "email"
+    ],
+    "optionalClientScopes": [
+      "address",
+      "phone",
+      "offline_access",
+      "microprofile-jwt"
+    ],
+    "access": {
+      "view": true,
+      "configure": true,
+      "manage": true
+    }
+  },
+  {
+    "id": "fbaa6978-bdae-4cc0-ba03-2626feb664b0",
+    "clientId": "admin-cli",
+    "name": "${client_admin-cli}",
+    "surrogateAuthRequired": false,
+    "enabled": true,
+    "alwaysDisplayInConsole": false,
+    "clientAuthenticatorType": "client-secret",
+    "redirectUris": [],
+    "webOrigins": [],
+    "notBefore": 0,
+    "bearerOnly": false,
+    "consentRequired": false,
+    "standardFlowEnabled": false,
+    "implicitFlowEnabled": false,
+    "directAccessGrantsEnabled": true,
+    "serviceAccountsEnabled": false,
+    "publicClient": true,
+    "frontchannelLogout": false,
+    "protocol": "openid-connect",
+    "attributes": {},
+    "authenticationFlowBindingOverrides": {},
+    "fullScopeAllowed": false,
+    "nodeReRegistrationTimeout": 0,
+    "defaultClientScopes": [
+      "web-origins",
+      "profile",
+      "roles",
+      "email"
+    ],
+    "optionalClientScopes": [
+      "address",
+      "phone",
+      "offline_access",
+      "microprofile-jwt"
+    ],
+    "access": {
+      "view": true,
+      "configure": true,
+      "manage": true
+    }
+  },
+  {
+    "id": "354cba70-0fa5-41e8-af7a-03a166b2ef7a",
+    "clientId": "broker",
+    "name": "${client_broker}",
+    "surrogateAuthRequired": false,
+    "enabled": true,
+    "alwaysDisplayInConsole": false,
+    "clientAuthenticatorType": "client-secret",
+    "redirectUris": [],
+    "webOrigins": [],
+    "notBefore": 0,
+    "bearerOnly": true,
+    "consentRequired": false,
+    "standardFlowEnabled": true,
+    "implicitFlowEnabled": false,
+    "directAccessGrantsEnabled": false,
+    "serviceAccountsEnabled": false,
+    "publicClient": false,
+    "frontchannelLogout": false,
+    "protocol": "openid-connect",
+    "attributes": {},
+    "authenticationFlowBindingOverrides": {},
+    "fullScopeAllowed": false,
+    "nodeReRegistrationTimeout": 0,
+    "defaultClientScopes": [
+      "web-origins",
+      "profile",
+      "roles",
+      "email"
+    ],
+    "optionalClientScopes": [
+      "address",
+      "phone",
+      "offline_access",
+      "microprofile-jwt"
+    ],
+    "access": {
+      "view": true,
+      "configure": true,
+      "manage": true
+    }
+  },
+  {
+    "id": "33a9b634-87be-482f-988b-dfb273912b34",
+    "clientId": "pkce-test",
+    "name": "wallet-1",
+    "surrogateAuthRequired": false,
+    "enabled": true,
+    "alwaysDisplayInConsole": false,
+    "clientAuthenticatorType": "client-secret",
+    "redirectUris": [
+      "http://localhost:8082/auth/realms/santander/account"
+    ],
+    "webOrigins": [],
+    "notBefore": 0,
+    "bearerOnly": false,
+    "consentRequired": true,
+    "standardFlowEnabled": true,
+    "implicitFlowEnabled": false,
+    "directAccessGrantsEnabled": true,
+    "serviceAccountsEnabled": false,
+    "publicClient": false,
+    "frontchannelLogout": false,
+    "protocol": "openid-connect",
+    "attributes": {
+      "saml.force.post.binding": "false",
+      "saml.multivalued.roles": "false",
+      "frontchannel.logout.session.required": "false",
+      "oauth2.device.authorization.grant.enabled": "false",
+      "client_type": "wallet",
+      "backchannel.logout.revoke.offline.tokens": "false",
+      "saml.server.signature.keyinfo.ext": "false",
+      "use.refresh.tokens": "true",
+      "oidc.ciba.grant.enabled": "false",
+      "backchannel.logout.session.required": "true",
+      "client_credentials.use_refresh_token": "false",
+      "require.pushed.authorization.requests": "false",
+      "saml.client.signature": "false",
+      "client-type": "wallet",
+      "pkce.code.challenge.method": "S256",
+      "saml.allow.ecp.flow": "false",
+      "id.token.as.detached.signature": "false",
+      "saml.assertion.signature": "false",
+      "client.secret.creation.time": "1675349056",
+      "saml.encrypt": "false",
+      "login_theme": "base-with-attribute",
+      "saml.server.signature": "false",
+      "exclude.session.state.from.auth.response": "false",
+      "saml.artifact.binding": "false",
+      "saml_force_name_id_format": "false",
+      "tls.client.certificate.bound.access.tokens": "false",
+      "acr.loa.map": "{}",
+      "saml.authnstatement": "false",
+      "display.on.consent.screen": "false",
+      "token.response.type.bearer.lower-case": "false",
+      "saml.onetimeuse.condition": "false"
+    },
+    "authenticationFlowBindingOverrides": {
+      "browser": "1f3448fe-0b1b-4139-a663-86acc1e6cece"
+    },
+    "fullScopeAllowed": true,
+    "nodeReRegistrationTimeout": -1,
+    "protocolMappers": [
+      {
+        "id": "04071bd5-dc6b-4df6-86c8-957a75c816d4",
+        "name": "aud",
+        "protocol": "openid-connect",
+        "protocolMapper": "oidc-audience-mapper",
+        "consentRequired": false,
+        "config": {
+          "included.client.audience": "pkce-test",
+          "id.token.claim": "true",
+          "access.token.claim": "true",
+          "userinfo.token.claim": "true"
+        }
+      },
+      {
+        "id": "22f8ffd1-f0b8-42a0-aa30-ae295dd18292",
+        "name": "Trace Id",
+        "protocol": "openid-connect",
+        "protocolMapper": "trace-id-protocol-mapper",
+        "consentRequired": false,
+        "config": {
+          "id.token.claim": "true",
+          "access.token.claim": "true",
+          "claim.name": "trace_id",
+          "userinfo.token.claim": "true"
+        }
+      },
+      {
+        "id": "ac6dd790-bbb3-4612-a627-d86b0bc9ac5d",
+        "name": "Custom Issuer",
+        "protocol": "openid-connect",
+        "protocolMapper": "custom-issuer-protocol-mapper",
+        "consentRequired": false,
+        "config": {
+          "id.token.claim": "true",
+          "access.token.claim": "true",
+          "custom.issuer": "0072",
+          "userinfo.token.claim": "true"
+        }
+      },
+      {
+        "id": "400517d8-5889-4c1d-8d0c-58a6a85086ee",
+        "name": "CUIL as subject",
+        "protocol": "openid-connect",
+        "protocolMapper": "oidc-usermodel-attribute-mapper",
+        "consentRequired": false,
+        "config": {
+          "userinfo.token.claim": "true",
+          "user.attribute": "cuil",
+          "id.token.claim": "true",
+          "access.token.claim": "true",
+          "claim.name": "sub",
+          "jsonType.label": "String"
+        }
+      },
+      {
+        "id": "91b49dc8-35a8-4b82-9e54-f2c5b9d4b402",
+        "name": "Consented Accounts",
+        "protocol": "openid-connect",
+        "protocolMapper": "consented-accounts-protocol-mapper",
+        "consentRequired": false,
+        "config": {
+          "id.token.claim": "true",
+          "access.token.claim": "true",
+          "claim.name": "accounts",
+          "userinfo.token.claim": "true"
+        }
+      }
+    ],
+    "defaultClientScopes": [],
+    "optionalClientScopes": [
+      "offline_access",
+      "accounts.debit"
+    ],
+    "access": {
+      "view": true,
+      "configure": true,
+      "manage": true
+    }
+  },
+  {
+    "id": "70f22e7c-6f6d-4b02-9d8e-ced0f4c46bca",
+    "clientId": "realm-management",
+    "name": "${client_realm-management}",
+    "rootUrl": "${authBaseUrl}",
+    "surrogateAuthRequired": false,
+    "enabled": true,
+    "alwaysDisplayInConsole": false,
+    "clientAuthenticatorType": "client-secret",
+    "redirectUris": [
+      "/admin/santander/console/*"
+    ],
+    "webOrigins": [],
+    "notBefore": 0,
+    "bearerOnly": false,
+    "consentRequired": false,
+    "standardFlowEnabled": false,
+    "implicitFlowEnabled": false,
+    "directAccessGrantsEnabled": false,
+    "serviceAccountsEnabled": true,
+    "publicClient": false,
+    "frontchannelLogout": false,
+    "protocol": "openid-connect",
+    "attributes": {
+      "access.token.lifespan": "43200",
+      "saml.multivalued.roles": "false",
+      "saml.force.post.binding": "false",
+      "frontchannel.logout.session.required": "false",
+      "oauth2.device.authorization.grant.enabled": "false",
+      "backchannel.logout.revoke.offline.tokens": "false",
+      "saml.server.signature.keyinfo.ext": "false",
+      "use.refresh.tokens": "true",
+      "oidc.ciba.grant.enabled": "false",
+      "backchannel.logout.session.required": "false",
+      "client_credentials.use_refresh_token": "true",
+      "saml.client.signature": "false",
+      "require.pushed.authorization.requests": "false",
+      "saml.allow.ecp.flow": "false",
+      "saml.assertion.signature": "false",
+      "id.token.as.detached.signature": "false",
+      "client.secret.creation.time": "1675358242",
+      "saml.encrypt": "false",
+      "saml.server.signature": "false",
+      "exclude.session.state.from.auth.response": "false",
+      "saml.artifact.binding": "false",
+      "saml_force_name_id_format": "false",
+      "tls.client.certificate.bound.access.tokens": "false",
+      "acr.loa.map": "{}",
+      "saml.authnstatement": "false",
+      "display.on.consent.screen": "false",
+      "token.response.type.bearer.lower-case": "false",
+      "saml.onetimeuse.condition": "false"
+    },
+    "authenticationFlowBindingOverrides": {},
+    "fullScopeAllowed": false,
+    "nodeReRegistrationTimeout": 0,
+    "protocolMappers": [
+      {
+        "id": "03a566f4-a132-4bee-a0af-4da7834e2a0a",
+        "name": "Client IP Address",
+        "protocol": "openid-connect",
+        "protocolMapper": "oidc-usersessionmodel-note-mapper",
+        "consentRequired": false,
+        "config": {
+          "user.session.note": "clientAddress",
+          "id.token.claim": "true",
+          "access.token.claim": "true",
+          "claim.name": "clientAddress",
+          "jsonType.label": "String"
+        }
+      },
+      {
+        "id": "24df4095-47d7-4e45-8745-51fb19991bb6",
+        "name": "Client ID",
+        "protocol": "openid-connect",
+        "protocolMapper": "oidc-usersessionmodel-note-mapper",
+        "consentRequired": false,
+        "config": {
+          "user.session.note": "clientId",
+          "id.token.claim": "true",
+          "access.token.claim": "true",
+          "claim.name": "clientId",
+          "jsonType.label": "String"
+        }
+      },
+      {
+        "id": "80e94148-288c-46b4-ab7f-a628da9e3aec",
+        "name": "Client Host",
+        "protocol": "openid-connect",
+        "protocolMapper": "oidc-usersessionmodel-note-mapper",
+        "consentRequired": false,
+        "config": {
+          "user.session.note": "clientHost",
+          "id.token.claim": "true",
+          "access.token.claim": "true",
+          "claim.name": "clientHost",
+          "jsonType.label": "String"
+        }
+      }
+    ],
+    "defaultClientScopes": [
+      "web-origins",
+      "profile",
+      "roles",
+      "email"
+    ],
+    "optionalClientScopes": [
+      "address",
+      "phone",
+      "offline_access",
+      "microprofile-jwt"
+    ],
+    "access": {
+      "view": true,
+      "configure": true,
+      "manage": true
+    }
+  },
+  {
+    "id": "8183e54d-7a42-463e-83dc-46fe76663af2",
+    "clientId": "security-admin-console",
+    "name": "${client_security-admin-console}",
+    "rootUrl": "${authAdminUrl}",
+    "baseUrl": "/admin/santander/console/",
+    "surrogateAuthRequired": false,
+    "enabled": true,
+    "alwaysDisplayInConsole": false,
+    "clientAuthenticatorType": "client-secret",
+    "redirectUris": [
+      "/admin/santander/console/*"
+    ],
+    "webOrigins": [
+      "+"
+    ],
+    "notBefore": 0,
+    "bearerOnly": false,
+    "consentRequired": false,
+    "standardFlowEnabled": true,
+    "implicitFlowEnabled": false,
+    "directAccessGrantsEnabled": false,
+    "serviceAccountsEnabled": false,
+    "publicClient": true,
+    "frontchannelLogout": false,
+    "protocol": "openid-connect",
+    "attributes": {
+      "pkce.code.challenge.method": "S256"
+    },
+    "authenticationFlowBindingOverrides": {},
+    "fullScopeAllowed": false,
+    "nodeReRegistrationTimeout": 0,
+    "protocolMappers": [
+      {
+        "id": "649bbad1-0b7e-4aee-af6f-64d465696e93",
+        "name": "locale",
+        "protocol": "openid-connect",
+        "protocolMapper": "oidc-usermodel-attribute-mapper",
+        "consentRequired": false,
+        "config": {
+          "userinfo.token.claim": "true",
+          "user.attribute": "locale",
+          "id.token.claim": "true",
+          "access.token.claim": "true",
+          "claim.name": "locale",
+          "jsonType.label": "String"
+        }
+      }
+    ],
+    "defaultClientScopes": [
+      "web-origins",
+      "profile",
+      "roles",
+      "email"
+    ],
+    "optionalClientScopes": [
+      "address",
+      "phone",
+      "offline_access",
+      "microprofile-jwt"
+    ],
+    "access": {
+      "view": true,
+      "configure": true,
+      "manage": true
+    }
+  }
+]

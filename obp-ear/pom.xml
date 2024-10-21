@@ -1,0 +1,99 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>ar.com.santanderrio.obp</groupId>
+		<artifactId>obp-pom</artifactId>
+		<version>0.0.16-PIPELINE-RELEASE</version>
+	</parent>
+	<version>1.1-SNAPSHOT</version>
+	<artifactId>obp-ear</artifactId>
+	<packaging>ear</packaging>
+
+	<name>Proyecto obp</name>
+	<properties>
+		<obp-servicios-version>0.0.2-SNAPSHOT</obp-servicios-version>
+		<sonar.skip>true</sonar.skip>
+	</properties>
+
+	<profiles>
+		<profile>
+			<id>conHbWar</id>
+			<dependencies>
+				<dependency>
+					<groupId>ar.com.santanderrio.obp</groupId>
+					<artifactId>obp-webapp</artifactId>
+					<version>0.0.1-SNAPSHOT</version>
+					<type>war</type>
+				</dependency>
+			</dependencies>
+			<build>
+				<plugins>
+					<plugin>
+						<artifactId>maven-ear-plugin</artifactId>
+						<version>2.10.1</version>
+						<configuration>
+							<modules combine.children="append">
+								<webModule>
+									<groupId>ar.com.santanderrio.obp</groupId>
+									<artifactId>obp-webapp</artifactId>
+									<bundleFileName>hb.war</bundleFileName>
+									<contextRoot>/obp-webapp</contextRoot>
+								</webModule>
+							</modules>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+
+	<build>
+		<finalName>ws85_hbdesa0</finalName>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>versions-maven-plugin</artifactId>
+					<version>2.1</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-ear-plugin</artifactId>
+					<version>2.10.1</version>
+					<configuration>
+						<modules>
+							<webModule>
+								<groupId>ar.com.santanderrio.obp</groupId>
+								<artifactId>obp-servicios</artifactId>
+								<bundleFileName>hbservicios.war</bundleFileName>
+								<contextRoot>/obp-servicios</contextRoot>
+							</webModule>
+							<!-- <webModule>
+								<groupId>ar.com.santanderrio.obp</groupId>
+								<artifactId>obp-webapp</artifactId>
+								<bundleFileName>hb.war</bundleFileName>
+								<contextRoot>/obp-webapp</contextRoot>
+							</webModule> -->
+						</modules>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>ar.com.santanderrio.obp</groupId>
+			<artifactId>obp-servicios</artifactId>
+			<version>${obp-servicios-version}</version>
+			<type>war</type>
+		</dependency>
+		<!-- <dependency>
+			<groupId>ar.com.santanderrio.obp</groupId>
+			<artifactId>obp-webapp</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			<type>war</type>
+		</dependency> -->
+	</dependencies>
+</project>

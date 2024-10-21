@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="debug">
+    <appenders>
+      <Console name="Console" target="SYSTEM_OUT">
+       <PatternLayout pattern="%p [%C{1} at %t] - %m%n"/>
+      </Console>
+     </appenders>
+     <Loggers>
+      <Logger name="ar.com.santanderrio" level="INFO" additivity="false">
+       <AppenderRef ref="Console" />
+      </Logger>
+      <Root level="INFO">
+       <AppenderRef ref="Console" />
+      </Root>
+     </Loggers> 
+</Configuration>

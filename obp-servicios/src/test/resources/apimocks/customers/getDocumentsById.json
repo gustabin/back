@@ -1,0 +1,14 @@
+{
+  "documents": [
+    {
+      "isPrincipal": true,
+      "type": "dni",
+      "number": "00018593959"
+    },
+    {
+      "isPrincipal": false,
+      "type": "cuit",
+      "number": "20185939597"
+    }
+  ]
+}

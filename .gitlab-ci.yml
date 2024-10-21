@@ -1,0 +1,10 @@
+### L## INCLUDE, DECLARAR CI DE OTROS PROYECTOS ######
+include:
+  #pipeline Legacy
+  - project: 'santander-tecnologia/global-ci-templates'
+    file: 'f5/.gitlab-ci.yml'
+    ref: 'master'
+  # ref: 'master'
+  # User variables
+  - local: '.ci-variables.yml'
+

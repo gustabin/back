@@ -1,0 +1,217 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions name="PlanVServiceImplService" targetNamespace="http://services.planv.visa.com/" xmlns:ns1="http://cxf.apache.org/bindings/xformat" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://services.planv.visa.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://services.planv.visa.com/" xmlns="http://services.planv.visa.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:complexType name="informacionPlanV">
+<xs:sequence>
+<xs:element minOccurs="0" name="codigoCuotificacionCuenta" type="xs:string" />
+<xs:element minOccurs="0" name="codigoRespuesta" type="xs:string" />
+<xs:element name="cuotasMaximo" type="xs:int" />
+<xs:element name="cuotasMinimo" type="xs:int" />
+<xs:element minOccurs="0" name="cuotificaSaldos" type="xs:string" />
+<xs:element name="disponibleCuotas" type="xs:double" />
+<xs:element name="limiteFinanciacion" type="xs:double" />
+<xs:element name="montoMaximo" type="xs:double" />
+<xs:element name="montoMaximoAFinanciar" type="xs:double" />
+<xs:element name="montoMinimo" type="xs:double" />
+<xs:element name="pagoMinimo" type="xs:double" />
+<xs:element name="pagosIngresados" type="xs:double" />
+<xs:element name="saldoDolares" type="xs:double" />
+<xs:element name="saldoPesos" type="xs:double" />
+<xs:element name="saldoPesosMasDolares" type="xs:double" />
+<xs:element name="TNAHasta12Cuotas" type="xs:double" />
+<xs:element name="TNAHasta18Cuotas" type="xs:double" />
+<xs:element name="TNAHasta24Cuotas" type="xs:double" />
+<xs:element name="TNAHasta36Cuotas" type="xs:double" />
+<xs:element name="TNAHasta3Cuotas" type="xs:double" />
+<xs:element name="TNAHasta60Cuotas" type="xs:double" />
+<xs:element name="TNAHasta6Cuotas" type="xs:double" />
+<xs:element name="TNAHasta9Cuotas" type="xs:double" />
+<xs:element minOccurs="0" name="ultimoCierreCuenta" type="xs:string" />
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="confirmacionSolicitudPlanV">
+<xs:sequence>
+<xs:element minOccurs="0" name="codigoRespuesta" type="xs:string" />
+<xs:element name="costoFinancieroTotal" type="xs:double" />
+<xs:element name="importeCuotas" type="xs:double" />
+<xs:element minOccurs="0" name="moneda" type="xs:string" />
+<xs:element name="montoCargosAdministrativos" type="xs:double" />
+<xs:element name="montoSeguroDeVida" type="xs:double" />
+<xs:element name="montoSolicitud" type="xs:double" />
+<xs:element minOccurs="0" name="numeroComprobante" type="xs:string" />
+<xs:element minOccurs="0" name="numeroTarjeta" type="xs:string" />
+<xs:element name="planCuotas" type="xs:int" />
+<xs:element name="TNA" type="xs:double" />
+<xs:element name="totalIVA" type="xs:double" />
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="solicitudPlanV">
+<xs:sequence>
+<xs:element name="CFT" type="xs:double" />
+<xs:element name="cantidadCuotas" type="xs:int" />
+<xs:element minOccurs="0" name="codigoRespuesta" type="xs:string" />
+<xs:element name="cuotasPendientesDeLiquidar" type="xs:int" />
+<xs:element minOccurs="0" name="fechaSolicitud" type="xs:string" />
+<xs:element name="importeCuota" type="xs:double" />
+<xs:element name="importePendienteDeLiquidar" type="xs:double" />
+<xs:element name="montoSolicitud" type="xs:double" />
+<xs:element minOccurs="0" name="numeroComprobante" type="xs:string" />
+<xs:element minOccurs="0" name="numeroCuenta" type="xs:string" />
+<xs:element minOccurs="0" name="numeroTarjeta" type="xs:string" />
+<xs:element name="TNA" type="xs:double" />
+<xs:element minOccurs="0" name="tipoPlanV" type="xs:string" />
+</xs:sequence>
+</xs:complexType>
+<xs:element name="getInformacionPlanV" type="getInformacionPlanV" />
+<xs:complexType name="getInformacionPlanV">
+<xs:sequence>
+<xs:element minOccurs="0" name="arg0" type="xs:string" />
+</xs:sequence>
+</xs:complexType>
+<xs:element name="getInformacionPlanVResponse" type="getInformacionPlanVResponse" />
+<xs:complexType name="getInformacionPlanVResponse">
+<xs:sequence>
+<xs:element minOccurs="0" name="return" type="informacionPlanV" />
+</xs:sequence>
+</xs:complexType>
+<xs:element name="confirmarSolicitudPlanV" type="confirmarSolicitudPlanV" />
+<xs:complexType name="confirmarSolicitudPlanV">
+<xs:sequence>
+<xs:element minOccurs="0" name="arg0" type="xs:string" />
+</xs:sequence>
+</xs:complexType>
+<xs:element name="confirmarSolicitudPlanVResponse" type="confirmarSolicitudPlanVResponse" />
+<xs:complexType name="confirmarSolicitudPlanVResponse">
+<xs:sequence>
+<xs:element minOccurs="0" name="return" type="confirmacionSolicitudPlanV" />
+</xs:sequence>
+</xs:complexType>
+<xs:element name="echo" type="echo" />
+<xs:complexType name="echo">
+<xs:sequence>
+<xs:element minOccurs="0" name="arg0" type="xs:string" />
+</xs:sequence>
+</xs:complexType>
+<xs:element name="echoResponse" type="echoResponse" />
+<xs:complexType name="echoResponse">
+<xs:sequence>
+<xs:element minOccurs="0" name="return" type="xs:string" />
+</xs:sequence>
+</xs:complexType>
+<xs:element name="getSolicitudesPlanV" type="getSolicitudesPlanV" />
+<xs:complexType name="getSolicitudesPlanV">
+<xs:sequence>
+<xs:element minOccurs="0" name="arg0" type="xs:string" />
+</xs:sequence>
+</xs:complexType>
+<xs:element name="getSolicitudesPlanVResponse" type="getSolicitudesPlanVResponse" />
+<xs:complexType name="getSolicitudesPlanVResponse">
+<xs:sequence>
+<xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="solicitudPlanV" />
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="getSolicitudesPlanV">
+    <wsdl:part element="tns:getSolicitudesPlanV" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getInformacionPlanVResponse">
+    <wsdl:part element="tns:getInformacionPlanVResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getSolicitudesPlanVResponse">
+    <wsdl:part element="tns:getSolicitudesPlanVResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="echoResponse">
+    <wsdl:part element="tns:echoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="echo">
+    <wsdl:part element="tns:echo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="confirmarSolicitudPlanV">
+    <wsdl:part element="tns:confirmarSolicitudPlanV" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="confirmarSolicitudPlanVResponse">
+    <wsdl:part element="tns:confirmarSolicitudPlanVResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getInformacionPlanV">
+    <wsdl:part element="tns:getInformacionPlanV" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="PlanVService">
+    <wsdl:operation name="getInformacionPlanV">
+      <wsdl:input message="tns:getInformacionPlanV" name="getInformacionPlanV">
+    </wsdl:input>
+      <wsdl:output message="tns:getInformacionPlanVResponse" name="getInformacionPlanVResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="confirmarSolicitudPlanV">
+      <wsdl:input message="tns:confirmarSolicitudPlanV" name="confirmarSolicitudPlanV">
+    </wsdl:input>
+      <wsdl:output message="tns:confirmarSolicitudPlanVResponse" name="confirmarSolicitudPlanVResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="echo">
+      <wsdl:input message="tns:echo" name="echo">
+    </wsdl:input>
+      <wsdl:output message="tns:echoResponse" name="echoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSolicitudesPlanV">
+      <wsdl:input message="tns:getSolicitudesPlanV" name="getSolicitudesPlanV">
+    </wsdl:input>
+      <wsdl:output message="tns:getSolicitudesPlanVResponse" name="getSolicitudesPlanVResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PlanVServiceImplServiceSoapBinding" type="tns:PlanVService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getInformacionPlanV">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getInformacionPlanV">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getInformacionPlanVResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="confirmarSolicitudPlanV">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="confirmarSolicitudPlanV">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="confirmarSolicitudPlanVResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="echo">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="echo">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="echoResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSolicitudesPlanV">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getSolicitudesPlanV">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getSolicitudesPlanVResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PlanVServiceImplService">
+    <wsdl:port binding="tns:PlanVServiceImplServiceSoapBinding" name="PlanVServiceImplPort">
+      <soap:address location="https://lnx-vhtest.visa.com.ar/wsplanv/services" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
